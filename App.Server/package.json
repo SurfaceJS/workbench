@@ -1,0 +1,19 @@
+{
+  "name": "surface-workbench-app-server",
+  "version": "0.0.0",
+  "description": "basic server to development and testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HitalloExiled/Surface-Workbench.git"
+  },
+  "author": "HitalloExiled",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
+  },
+  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme"
+}

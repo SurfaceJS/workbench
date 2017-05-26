@@ -1,0 +1,18 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "workbench.iconTheme": "vs-seti",
+    "typescript.tsdk": "App.Client/node_modules/typescript/lib",
+    "files.exclude":
+    {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.vs": true,
+        "**/.DS_Store": true,
+        "**/**/*.config": true,
+        "**/**/*.js": true,
+        "**/**/*.map": true,
+        "**/**/node_modules": true
+    }
+}

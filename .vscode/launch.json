@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations":
+    [
+        {
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch compiler",
+            "program": "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\tasks\\build",
+            "args": [
+                "project", "./"
+            ],
+            "cwd":     "${workspaceRoot}\\App.Client",
+            "protocol": "inspector"
+        }
+    ]
+}
