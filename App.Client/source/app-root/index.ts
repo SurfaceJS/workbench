@@ -1,1 +1,4 @@
-console.log("working!!!");
+export function foo()
+{
+    console.log("working!!!");
+}

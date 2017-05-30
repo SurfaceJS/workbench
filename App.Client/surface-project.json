@@ -4,7 +4,5 @@
     "public":        "../App.Server/public",
     "publicPath":    "",
     "filename":      "[name]/[hash].js",
-    "libraryTarget": "umd",
-    "modules":       ["node_modules"],
     "target":        "es6"
 }
