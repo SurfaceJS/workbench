@@ -7,9 +7,9 @@
             "request":  "launch",
             "name":     "Launch compiler",
             "program":  "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\tasks\\build",
-            "args":     ["project", "./"],
+            //"args":     ["project=./"],
             "cwd":      "${workspaceRoot}\\App.Client",
-            "protocol": "legacy"
+            "protocol": "inspector"
         }
     ]
 }

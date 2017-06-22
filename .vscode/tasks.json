@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "tasks":
+    [
+        {
+            "taskName":       "build",
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "tsc -p .\\node_modules\\@surface\\compiler && node .\\node_modules\\@surface\\compiler\\tasks\\build project=./"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\App.Client\\"
+            },
+            "showOutput":     "always",
+            "isBackground":   true,
+            "problemMatcher": ["$tsc-watch"]
+        }
+    ]
+}
