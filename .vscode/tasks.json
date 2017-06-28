@@ -8,7 +8,7 @@
             "taskName":       "build",
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "tsc -p .\\node_modules\\@surface\\compiler && node .\\node_modules\\@surface\\compiler\\tasks\\build project=./"],
+            "args":           ["/c", "tsc -p .\\node_modules\\@surface\\cli && surface"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\App.Client\\"
