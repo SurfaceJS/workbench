@@ -17,7 +17,5 @@
     "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
   },
   "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
-  "dependencies": {
-    "@surface/cli": "0.0.0"
-  }
+  "dependencies": {}
 }
