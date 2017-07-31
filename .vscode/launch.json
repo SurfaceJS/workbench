@@ -3,6 +3,35 @@
     "configurations":
     [
         {
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Server",
+            "program": "${workspaceRoot}\\App.Server\\start\\index.js",
+            "cwd":     "${workspaceRoot}\\App.Server"
+        },
+        {
+            "type":          "node",
+            "request":       "launch",
+            "name":          "Launch Client",
+            "program":       "${workspaceRoot}\\App.Client\\tasks\\build.js",
+            "cwd":           "${workspaceRoot}\\App.Client",
+            "outFiles": []
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:1337",
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceRoot}"
+        },
+        {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch compiler",

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
   },
-  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme"
+  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
+  "dependencies": {
+    "@types/node": "^8.0.17"
+  }
 }
