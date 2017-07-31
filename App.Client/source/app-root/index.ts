@@ -1,4 +1,7 @@
-export function foo()
+class Foo
 {
-    console.log("working!!!");
+    public constructor()
+    {
+        console.log("working!!!");
+    }
 }
