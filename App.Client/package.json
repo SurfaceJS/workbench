@@ -1,0 +1,21 @@
+{
+  "name": "surface-workbench-app-client",
+  "version": "0.0.0",
+  "description": "basic client to development and testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/@surface/compiler/tasks/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HitalloExiled/Surface-Workbench.git"
+  },
+  "author": "HitalloExiled",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
+  },
+  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
+  "dependencies": {}
+}
