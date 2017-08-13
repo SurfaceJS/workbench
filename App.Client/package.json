@@ -17,5 +17,7 @@
     "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
   },
   "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
 }

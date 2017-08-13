@@ -11,9 +11,15 @@
       "es2016",
       "es2017"
     ],
-    "target":    "es5",
-    "typeRoots": ["./core/types"]
+    "target":    "es6",
+    "typeRoots": [ ]
   },
-  "include": ["./"],
-  "exclude": ["./compiler"]
+  "include":
+  [
+    "./"
+  ],
+  "exclude":
+  [
+    "../node_modules"
+  ]
 }
