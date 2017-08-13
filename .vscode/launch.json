@@ -12,8 +12,8 @@
         {
             "type":          "node",
             "request":       "launch",
-            "name":          "Launch Client",
-            "program":       "${workspaceRoot}\\App.Client\\tasks\\build.js",
+            "name":          "Launch Build",
+            "program":       "${workspaceRoot}\\Surface\\source\\@surface\\compiler\\index.js",
             "cwd":           "${workspaceRoot}\\App.Client",
             "outFiles": []
         },

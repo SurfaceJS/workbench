@@ -1,8 +1,8 @@
 {
-    "context":    "source",
+    "context":    "./source",
     "entry":      { "app-root": "./app-root/index.ts" },
     "public":     "../App.Server/public",
     "publicPath": "",
     "filename":   "[name]/[hash].js",
-    "target":     "es6"
+    "modules":    ["./node_modules"]
 }
