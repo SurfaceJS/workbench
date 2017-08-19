@@ -1,0 +1,1 @@
+(cd %~dp0Surface\source\@surface\enumerable & tsc) & (cd %~dp0Surface\source\@surface\custom-element & tsc) & (cd %~dp0Surface\source\@surface\compiler & tsc) & cd %~dp0
