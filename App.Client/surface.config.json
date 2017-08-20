@@ -4,5 +4,16 @@
     "public":     "../App.Server/public",
     "publicPath": "",
     "filename":   "[name]/[hash].js",
-    "modules":    ["./node_modules"]
+    "modules":    ["./node_modules"],
+    "plugins":
+    [
+        {
+            "name": "html-template",
+            "options":
+            {
+                "entries": ["./source/app-root"],
+                "template": "./source/template.html"
+            }
+        }
+    ]
 }
