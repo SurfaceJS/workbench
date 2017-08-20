@@ -1,0 +1,1 @@
+node ./tasks/npm-link.js link
