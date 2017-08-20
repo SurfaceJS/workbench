@@ -14,7 +14,17 @@
             "request":       "launch",
             "name":          "Launch Build",
             "program":       "${workspaceRoot}\\Surface\\source\\@surface\\compiler\\index.js",
+            "runtimeArgs":   ["--preserve-symlinks"],
             "cwd":           "${workspaceRoot}\\App.Client",
+            "outFiles": []
+        },
+        {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Linking",
+            "program":  "F:\\Projects\\Surface-Workbench\\tasks\\npm-link",
+            "args":     ["r"],
+            "cwd":      "${workspaceRoot}\\tasks\\",
             "outFiles": []
         },
         {

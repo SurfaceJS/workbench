@@ -3,6 +3,7 @@
   "compilerOptions":
   {
     "baseUrl": "./",
+    "preserveSymlinks": true,
     "module":  "es2015",
     "lib":
     [
@@ -14,7 +15,8 @@
     "target": "es6",
     "typeRoots":
     [
-      "../node_modules/@surface/common/@types"
+      "../node_modules/@surface/common/@types",
+      "../node_modules/@surface/custom-element/@types"
     ]
   },
   "include":

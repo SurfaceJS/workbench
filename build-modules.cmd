@@ -1,1 +1,1 @@
-(cd %~dp0Surface\source\@surface\enumerable & tsc) & (cd %~dp0Surface\source\@surface\custom-element & tsc) & (cd %~dp0Surface\source\@surface\compiler & tsc) & cd %~dp0
+(cd %~dp0Surface\source\@surface\common & tsc) & (cd %~dp0Surface\source\@surface\enumerable & tsc) & (cd %~dp0Surface\source\@surface\custom-element & tsc) & (cd %~dp0Surface\source\@surface\compiler & tsc) & (cd %~dp0Surface\source\@surface\html-template-plugin & tsc) & cd %~dp0
