@@ -1,18 +1,10 @@
-const Util = require('util');
+
 const Path = require('path');
 
-let exec = Util.promisify(require('child_process').exec);
+const modules = require('./modules');
+const execute = require('./execute');
 
 let action = process.argv[2];
-
-let modules =
-[
-    { name: 'common',               dependencies: [] },
-    { name: 'html-template-plugin', dependencies: ['common'] },
-    { name: 'compiler',             dependencies: ['common'] },
-    { name: 'enumerable',           dependencies: ['common'] },
-    { name: 'custom-element',       dependencies: ['common', 'enumerable'] },
-];
 
 let surfacePath = Path.resolve(__dirname, '../Surface/source/@surface');
 let clientPath  = Path.resolve(__dirname, '../App.Client');
@@ -28,21 +20,6 @@ else if (action == 'u' || action == 'unlink')
 else if (action == 'r' || action == 'relink')
 {
     relink();
-}
-
-async function execute(label, command)
-{
-    try
-    {
-        const { stdout, stderr } = await exec(command);
-        console.log(label, stdout);
-        if (stderr)
-            console.log(stderr, stderr);
-    }
-    catch(err)
-    {
-        console.log(err.message)
-    }
 }
 
 async function link()

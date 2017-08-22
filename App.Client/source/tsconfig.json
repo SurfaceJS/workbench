@@ -15,13 +15,15 @@
     "target": "es6",
     "typeRoots":
     [
-      "../node_modules/@surface/common/@types",
-      "../node_modules/@surface/custom-element/@types"
+      "../node_modules/@surface/custom-element/@types",
+      "../node_modules/@surface/common/@types"
     ]
   },
   "include":
   [
-    "./"
+    "./",
+    "../node_modules/@surface/enumerable",
+    "../node_modules/@surface/custom-element"
   ],
   "exclude":
   [

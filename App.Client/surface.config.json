@@ -1,6 +1,6 @@
 {
     "context":    "./source",
-    "entry":      { "app-root": "./app-root/index.ts" },
+    "entry":      { ".": "./app-root/index.ts" },
     "public":     "../App.Server/public",
     "publicPath": "",
     "filename":   "[name]/[hash].js",
@@ -11,8 +11,8 @@
             "name": "html-template",
             "options":
             {
-                "entries": ["./source/app-root"],
-                "template": "./source/template.html"
+                "entries": { ".": "./app-root" },
+                "template": "./template.html"
             }
         }
     ]
