@@ -13,7 +13,7 @@
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Build",
-            "program":       "${workspaceRoot}\\Surface\\source\\@surface\\compiler\\index.js",
+            "program":       "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
             "runtimeArgs":   ["--preserve-symlinks"],
             "cwd":           "${workspaceRoot}\\App.Client",
             "outFiles": []
