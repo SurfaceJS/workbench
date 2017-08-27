@@ -4,7 +4,7 @@ import { component }     from '@surface/custom-element/decorators';
 import template from "index.html";
 import style    from "index.scss";
 
-@component('foo-element', template, style)
+@component('app-root', template, style)
 export class App extends CustomElement
 {
     public constructor()

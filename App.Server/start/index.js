@@ -14,9 +14,9 @@ HTTP.createServer((request, response) => {
         }
         else if (request.url && /^\/[^\/]+$/.test(request.url)) {
             if (request.url.indexOf(".") > 0)
-                Utils.loadFile(response, Path.join(DEFAULT, request.url || ""));
+                Utils.loadFile(response, Path.join(DEFAULT, request.url));
             else
-                Utils.loadFile(response, Path.join(DEFAULT, "index.html"));
+                Utils.loadFile(response, Path.join(PUBLIC, request.url, "index.html"));
         }
         else if (request.url) {
             let url = request.url.replace(/\/(.*)/, "$1");
