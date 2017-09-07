@@ -24,7 +24,7 @@
             "request":  "launch",
             "name":     "Launch Linking",
             "program":  "F:\\Projects\\Surface-Workbench\\tasks\\link",
-            "args":     ["u"],
+            "args":     ["r"],
             "cwd":      "${workspaceRoot}\\tasks\\",
             "outFiles": []
         },

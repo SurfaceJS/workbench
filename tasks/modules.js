@@ -1,9 +1,8 @@
-module.exports = 
-[
-    { name: 'core',                 dependencies: [] },
-    { name: 'common',               dependencies: ['core'] },
-    { name: 'compiler',             dependencies: ['core', 'common'] },
-    { name: 'html-template-plugin', dependencies: ['core', 'common'] },
-    { name: 'enumerable',           dependencies: ['core'] },
-    { name: 'custom-element',       dependencies: ['core', 'enumerable'] },
-];
+const FS   = require('fs');
+const Path = require('path');
+
+let surface = Path.resolve(__dirname, '../Surface/source/@surface');
+
+let modules = FS.readdirSync(surface).map(x => require(Path.join(surface, x, 'package.json')));
+
+module.exports = modules;
