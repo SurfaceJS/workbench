@@ -29,6 +29,14 @@
             "outFiles": []
         },
         {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Publish",
+            "program":  "F:\\Projects\\Surface-Workbench\\tasks\\publish",
+            "cwd":      "${workspaceRoot}\\tasks\\",
+            "outFiles": []
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
