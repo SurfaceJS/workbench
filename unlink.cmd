@@ -1,1 +1,1 @@
-node ./tasks/npm-link.js unlink
+node ./tasks/link.js unlink

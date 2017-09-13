@@ -1,1 +1,1 @@
-node ./tasks/npm-link.js link
+node ./tasks/link.js link

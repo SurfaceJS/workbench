@@ -1,9 +1,9 @@
 {
     "context":    "./source",
-    "entry":      { ".": ["./app-root/index.ts", "./views"] },
+    "entry":      ["./app-root/index.ts", "./views"],
     "public":     "../App.Server/public",
     "publicPath": "",
-    "filename":   "[name]/[id].[hash].js",
+    "filename":   "[name]/[hash].js",
     "modules":    ["./node_modules"],
     "plugins":
     [

@@ -3,18 +3,19 @@
     "configurations":
     [
         {
-            "type":    "node",
-            "request": "launch",
-            "name":    "Launch Server",
-            "program": "${workspaceRoot}\\App.Server\\start\\index.js",
-            "cwd":     "${workspaceRoot}\\App.Server"
+            "type":          "node",
+            "request":       "launch",
+            "name":          "Launch Server",
+            "program":       "${workspaceRoot}\\App.Server\\start\\index.js",
+            "cwd":           "${workspaceRoot}\\App.Server",
+            "preLaunchTask": "surface"
         },
         {
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Build",
             "program":       "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
-            "runtimeArgs":   ["--preserve-symlinks"],
+            //"runtimeArgs":   ["--preserve-symlinks"],
             "cwd":           "${workspaceRoot}\\App.Client",
             "outFiles": []
         },
@@ -22,7 +23,7 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Linking",
-            "program":  "F:\\Projects\\Surface-Workbench\\tasks\\npm-link",
+            "program":  "F:\\Projects\\Surface-Workbench\\tasks\\link",
             "args":     ["r"],
             "cwd":      "${workspaceRoot}\\tasks\\",
             "outFiles": []
