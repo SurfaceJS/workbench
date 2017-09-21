@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
   "dependencies": {
+    "@surface/compiler": "0.0.1",
+    "@surface/custom-element": "0.0.1",
+    "@surface/html-template-plugin": "0.0.1",
     "tslib": "^1.7.1"
   }
 }
