@@ -50,19 +50,10 @@ async function unlink()
 {
     for (let $module of modules)
     {
-        for (let dependence of Common.objectToDictionary($module.dependencies).filter(x => x.key.startsWith('@surface/')))
-        {
-            let targetModule = Path.normalize(`${root}\\${$module.name}\\node_modules\\${dependence.key}`);
-            
-            if (FS.existsSync(targetModule))
-                await Common.execute(`Unlinking ${$module.name} dependence[${dependence.key}]:`, `rmdir ${targetModule}`);
-            
-        }
-
         let targetFolder = Path.normalize(`${root}\\${$module.name}\\node_modules\\@surface`);
 
         if (FS.existsSync(targetFolder))
-            await Common.execute(`Removing @surface on ${$module.name}:`, `rmdir ${targetFolder}`);
+            await Common.execute(`Removing @surface on ${$module.name}:`, `rmdir /s /q ${targetFolder}`);
     }
 
     if (FS.existsSync(`${client}\\node_modules\\@surface`))
