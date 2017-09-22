@@ -3,18 +3,26 @@
     "configurations":
     [
         {
-            "type":    "node",
-            "request": "launch",
-            "name":    "Launch Server",
-            "program": "${workspaceRoot}\\App.Server\\start\\index.js",
-            "cwd":     "${workspaceRoot}\\App.Server"
+            "type":          "node",
+            "request":       "launch",
+            "name":          "Launch Server",
+            "program":       "${workspaceRoot}\\App.Server\\start\\index.js",
+            "cwd":           "${workspaceRoot}\\App.Server",
+            "preLaunchTask": "surface"
         },
         {
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Build",
             "program":       "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
-            "runtimeArgs":   ["--preserve-symlinks"],
+            "cwd":           "${workspaceRoot}\\App.Client",
+            "outFiles": []
+        },
+        {
+            "type":          "node",
+            "request":       "launch",
+            "name":          "Launch Build All",
+            "program":       "${workspaceRoot}\\tasks\\build",
             "cwd":           "${workspaceRoot}\\App.Client",
             "outFiles": []
         },
@@ -22,10 +30,19 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Linking",
-            "program":  "F:\\Projects\\Surface-Workbench\\tasks\\npm-link",
+            "program":  "${workspaceRoot}\\tasks\\link",
             "args":     ["r"],
             "cwd":      "${workspaceRoot}\\tasks\\",
             "outFiles": []
+        },
+        
+        {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Publish",
+            "program":  "${workspaceRoot}\\tasks\\publish",
+            "cwd":      "${workspaceRoot}\\tasks\\",
+            "console":  "integratedTerminal"
         },
         {
             "type": "chrome",
