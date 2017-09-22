@@ -13,7 +13,7 @@
         {
             "type":          "node",
             "request":       "launch",
-            "name":          "Launch Build",
+            "name":          "Launch Surface Compiler",
             "program":       "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
             "cwd":           "${workspaceRoot}\\App.Client",
             "outFiles": []
