@@ -1,9 +1,8 @@
 const FS   = require('fs');
 const Path = require('path');
 
+const Common  = require('./common');
 const modules = require('./modules');
-const execute = require('./execute');
-const Utils   = require('./utils');
 
 let action = process.argv[2];
 
@@ -27,47 +26,38 @@ async function link()
 {
     for (let $module of modules)
     {
-        for (let dependence of Utils.objectToDictionary($module.dependencies).filter(x => x.key.startsWith('@surface/')))
+        for (let dependence of Common.objectToDictionary($module.dependencies).filter(x => x.key.startsWith('@surface/')))
         {
             let source = Path.normalize(`${root}\\${dependence.key}`);
             let target = Path.normalize(`${root}\\${$module.name}\\node_modules`);
 
-            Utils.makeDir(target + '\\@surface');
+            Common.makeDir(target + '\\@surface');
 
             target = Path.normalize(`${target}\\${dependence.key}`);
 
             if (!FS.existsSync(target))
-                await execute(`Linking ${$module.name} dependence[${dependence.key}]:`, `mklink /J ${target} ${source}`);
+                await Common.execute(`Linking ${$module.name} dependence[${dependence.key}]:`, `mklink /J ${target} ${source}`);
         }
     }
         
     if (!FS.existsSync(`${client}\\node_modules\\@surface`))
-        await execute(`Linking @surface on client:`, `mklink /J ${client}\\node_modules\\@surface ${root}\\@surface`);
+        await Common.execute(`Linking @surface on client:`, `mklink /J ${client}\\node_modules\\@surface ${root}\\@surface`);
 
     console.log('Linking done!');
 }
 
 async function unlink()
 {
-    if (FS.existsSync(`${client}\\node_modules\\@surface`))
-        await execute(`Unlinking @surface link on client:`, `rmdir ${client}\\node_modules\\@surface`);
-
     for (let $module of modules)
     {
-        for (let dependence of Utils.objectToDictionary($module.dependencies).filter(x => x.key.startsWith('@surface/')))
-        {
-            let targetModule = Path.normalize(`${root}\\${$module.name}\\node_modules\\${dependence.key}`);
-            
-            if (FS.existsSync(targetModule))
-                await execute(`Unlinking ${$module.name} dependence[${dependence.key}]:`, `rmdir ${targetModule}`);
-            
-        }
-
         let targetFolder = Path.normalize(`${root}\\${$module.name}\\node_modules\\@surface`);
 
         if (FS.existsSync(targetFolder))
-            await execute(`Removing @surface on ${$module.name}:`, `rmdir ${targetFolder}`);
-    }    
+            await Common.execute(`Removing @surface on ${$module.name}:`, `rmdir /s /q ${targetFolder}`);
+    }
+
+    if (FS.existsSync(`${client}\\node_modules\\@surface`))
+        await Common.execute(`Unlinking @surface link on client:`, `rmdir /s /q ${client}\\node_modules\\@surface`);
 
     console.log('Unlinking done!');
 }
