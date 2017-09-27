@@ -1,6 +1,6 @@
 {
     "context":    "./source",
-    "entry":      ["./app-root/index.ts", "./views"],
+    "entry":      { ".": ["./app-root/index.ts"] },
     "public":     "../App.Server/public",
     "publicPath": "",
     "filename":   "[name]/[hash].js",
@@ -12,6 +12,14 @@
             "options":
             {
                 "template": "./template.html"
+            }
+        },
+        {
+            "name": "code-splitter",
+            "options":
+            {
+                "entries": ["./views"],
+                "relativePath": false
             }
         }
     ]

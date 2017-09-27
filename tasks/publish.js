@@ -35,7 +35,7 @@ async function run()
     for (let $module of toPublish)
     {
         let source = Path.normalize(Path.join(root, $module));
-        Common.cleanup(source, /\.(js(\.map)?|d\.ts)$/, /@types|node_modules/);
+        Common.cleanup(source, /\.(js(\.map)?|d\.ts)$/, /lazy-loader|@types|node_modules/);
         await Common.execute(`Compiling ${source}`, `tsc -p ${source} --noEmit false --declaration true`);
 
         await Common.execute(`Publishing ${$module}:`, `npm set ${token} & cd ${source} && npm publish --access public`);

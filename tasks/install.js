@@ -6,13 +6,10 @@ let root = Path.resolve(__dirname, '../Surface/source');
 
 let commands = [];
 
-commands.push(Common.execute(`Compiling server`, `tsc -p ${Path.resolve(__dirname, '../App.Server/start')}`));
-
 for (let $module of modules)
 {
     let source = Path.normalize(Path.join(root, $module.name));
-    Common.cleanup(source, /\.(js(\.map)?|d\.ts)$/, /lazy-loader|@types|node_modules/);
-    commands.push(Common.execute(`Compiling ${$module.name}`, `tsc -p ${source}`));
+    commands.push(Common.execute(`Installing ${$module.name}`, `cd ${source} && npm install`));
 }
 
 Promise.all(commands).then(() => console.log('\nDone!'));
