@@ -1,6 +1,5 @@
-const FS   = require('fs');
-const Path = require('path');
-
+const FS      = require('fs');
+const Path    = require('path');
 const Common  = require('./common');
 const modules = require('./modules');
 

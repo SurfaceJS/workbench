@@ -1,1 +1,10 @@
-{"@surface/common":"0.0.1","@surface/compiler":"0.0.1","@surface/core":"0.0.1","@surface/custom-element":"0.0.1","@surface/enumerable":"0.0.1","@surface/html-template-plugin":"0.0.1"}
+{
+    "@surface/common": "0.0.3",
+    "@surface/compiler": "0.0.2",
+    "@surface/core": "0.0.2",
+    "@surface/custom-element": "0.0.2",
+    "@surface/enumerable": "0.0.2",
+    "@surface/html-template-plugin": "0.0.2",
+    "@surface/code-splitter-plugin": "0.0.3",
+    "@surface/lazy-loader": "0.0.1"
+}
