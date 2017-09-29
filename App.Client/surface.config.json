@@ -4,7 +4,6 @@
     "public":     "../App.Server/public",
     "publicPath": "",
     "filename":   "[name]/[hash].js",
-    "modules":    ["./node_modules"],
     "plugins":
     [
         {
