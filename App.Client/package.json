@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
   "dependencies": {
-    "@surface/code-splitter-plugin": "0.0.4",
-    "@surface/compiler": "0.0.3",
-    "@surface/custom-element": "0.0.3",
-    "@surface/html-template-plugin": "0.0.3",
+    "@surface/code-splitter-plugin": "0.0.5",
+    "@surface/compiler": "0.0.4",
+    "@surface/custom-element": "0.0.4",
+    "@surface/html-template-plugin": "0.0.4",
     "@surface/lazy-loader": "0.0.2",
     "tslib": "1.7.1"
   }
