@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./node_modules/@surface/compiler/tasks/build.js"
+    "build": "node ./node_modules/@surface/compiler/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
   "dependencies": {
-    "@surface/compiler": "0.0.1",
-    "@surface/custom-element": "0.0.1",
-    "@surface/html-template-plugin": "0.0.1",
-    "tslib": "^1.7.1"
+    "@surface/code-splitter-plugin": "0.0.4",
+    "@surface/compiler": "0.0.3",
+    "@surface/custom-element": "0.0.3",
+    "@surface/html-template-plugin": "0.0.3",
+    "@surface/lazy-loader": "0.0.2",
+    "tslib": "1.7.1"
   }
 }
