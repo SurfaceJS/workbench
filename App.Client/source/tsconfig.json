@@ -19,7 +19,7 @@
     "target":    "es6",
     "typeRoots":
     [
-      "../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/core/@types" */
+      "../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/compiler/@types" */
     ]
   },
   "include": ["./"],
