@@ -6,6 +6,9 @@ let root = Path.resolve(__dirname, '../Surface/source');
 
 let commands = [];
 
+commands.push(Common.execute(`Installing Client`, `cd ${Path.resolve(__dirname, '../App.Client')} && npm install`));
+commands.push(Common.execute(`Installing Client`, `cd ${Path.resolve(__dirname, '../App.Server')} && npm install`));
+
 for (let $module of modules)
 {
     let source = Path.normalize(Path.join(root, $module.name));

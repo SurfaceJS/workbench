@@ -2,7 +2,6 @@
     "context":    "./source",
     "entry":      { ".": ["./app-root/index.ts"] },
     "public":     "../App.Server/public",
-    "publicPath": "",
     "filename":   "[name]/[hash].js",
     "plugins":
     [
