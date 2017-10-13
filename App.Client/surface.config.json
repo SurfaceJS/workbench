@@ -1,8 +1,8 @@
 {
-    "context":    "./source",
-    "entry":      { ".": ["./app-root/index.ts"] },
-    "public":     "../App.Server/public",
-    "filename":   "[name]/[hash].js",
+    "context":  "./source",
+    "entry":    { "app": "./app-root/index.ts" },
+    "filename": "[name]/[hash].js",
+    "output":   "../App.Server/public",
     "plugins":
     [
         {
