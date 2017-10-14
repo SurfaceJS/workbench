@@ -16,8 +16,7 @@
             "name": "code-splitter",
             "options":
             {
-                "entries": ["./views"],
-                "relativePath": false
+                "entries": ["./views"]
             }
         }
     ]

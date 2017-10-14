@@ -1,18 +1,18 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "workbench.iconTheme": "vs-seti",
+    "workbench.iconTheme": "vscode-icons",
     "typescript.tsdk": "App.Client/node_modules/typescript/lib",
     "files.exclude":
     {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false,
-        "**/.vs": false,
-        "**/.DS_Store": false,
-        "**/**/*.config": false,
-        "**/**/*.js": false,
-        "**/**/*.map": false,
-        "**/**/node_modules": false
+        "**/.git":             true,
+        "**/.svn":             true,
+        "**/.hg":              true,
+        "**/CVS":              true,
+        "**/.vs":              true,
+        "**/.DS_Store":        true,
+        "**/**/*.config":      true,
+        "**/Surface/**/*.js":  true,
+        "**/Surface/**/*.map": true,
+        "**/Surface/**/node_modules":  true
     }
 }
