@@ -2,7 +2,6 @@ const FS   = require('fs');
 const Path = require('path');
 const Util = require('util');
 
-
 let exec = Util.promisify(require('child_process').exec);
 
 /**

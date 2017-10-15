@@ -1,10 +1,8 @@
 {
-    "context":    "./source",
-    "entry":      { ".": ["./app-root/index.ts"] },
-    "public":     "../App.Server/public",
-    "publicPath": "",
-    "filename":   "[name]/[hash].js",
-    "modules":    ["./node_modules"],
+    "context":  "./source",
+    "entry":    { "app": "./app-root/index.ts" },
+    "filename": "[name]/[hash].js",
+    "output":   "../App.Server/public",
     "plugins":
     [
         {
@@ -18,8 +16,7 @@
             "name": "code-splitter",
             "options":
             {
-                "entries": ["./views"],
-                "relativePath": false
+                "entries": ["./views"]
             }
         }
     ]

@@ -11,19 +11,20 @@
             "preLaunchTask": "surface"
         },
         {
-            "type":          "node",
-            "request":       "launch",
-            "name":          "Launch Surface Compiler",
-            "program":       "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
-            "cwd":           "${workspaceRoot}\\App.Client",
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Surface Compiler",
+            "program":  "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
+            "args":     ["--task", "rebuild","--env", "dev", "--config", "./surface.config.json"],
+            "cwd":      "${workspaceRoot}\\App.Client",
             "outFiles": []
         },
         {
-            "type":          "node",
-            "request":       "launch",
-            "name":          "Launch Build All",
-            "program":       "${workspaceRoot}\\tasks\\build",
-            "cwd":           "${workspaceRoot}\\App.Client",
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Build All",
+            "program":  "${workspaceRoot}\\tasks\\build",
+            "cwd":      "${workspaceRoot}\\App.Client",
             "outFiles": []
         },
         {
@@ -45,17 +46,17 @@
             "console":  "integratedTerminal"
         },
         {
-            "type": "chrome",
+            "type":    "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:1337",
+            "name":    "Launch Chrome against localhost",
+            "url":     "http://localhost:1337",
             "webRoot": "${workspaceRoot}"
         },
         {
-            "type": "chrome",
+            "type":    "chrome",
             "request": "attach",
-            "name": "Attach to Chrome",
-            "port": 9222,
+            "name":    "Attach to Chrome",
+            "port":    9222,
             "webRoot": "${workspaceRoot}"
         },
         {

@@ -11,22 +11,17 @@
       "es2016",
       "es2017"
     ],
+    "paths": {
+      "@surface/*": ["../../Surface/source/@surface/*"]
+    },
     "sourceMap": true,
     "target":    "es6",
+    "traceResolution": false,
     "typeRoots":
     [
-      "../node_modules/@surface/custom-element/@types",
-      "../node_modules/@surface/common/@types"
+      "../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/compiler/@types" */
     ]
   },
-  "include":
-  [
-    "./",
-    "../node_modules/@surface/enumerable",
-    "../node_modules/@surface/custom-element"
-  ],
-  "exclude":
-  [
-    "../node_modules"
-  ]
+  "include": ["./"],
+  "exclude": ["../node_modules"]
 }
