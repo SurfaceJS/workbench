@@ -3,6 +3,7 @@
     "entry":    { "app": "./app-root/index.ts" },
     "filename": "[name]/[hash].js",
     "output":   "../App.Server/public",
+    "tsconfig": "./sourc",
     "plugins":
     [
         {

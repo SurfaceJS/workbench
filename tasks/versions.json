@@ -1,6 +1,6 @@
 {
     "@surface/common": "0.0.7",
-    "@surface/compiler": "0.0.7",
+    "@surface/compiler": "0.0.8",
     "@surface/custom-element": "0.0.5",
     "@surface/enumerable": "0.0.4",
     "@surface/html-template-plugin": "0.0.6",
