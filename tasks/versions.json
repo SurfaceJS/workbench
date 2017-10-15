@@ -1,7 +1,7 @@
 {
     "@surface/common": "0.0.5",
     "@surface/compiler": "0.0.4",
-    "@surface/core": "0.0.3",
+    "@surface/types": "0.0.3",
     "@surface/custom-element": "0.0.4",
     "@surface/enumerable": "0.0.3",
     "@surface/html-template-plugin": "0.0.4",
