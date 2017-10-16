@@ -4,15 +4,15 @@
     "typescript.tsdk": "App.Client/node_modules/typescript/lib",
     "files.exclude":
     {
-        "**/.git":             true,
-        "**/.svn":             true,
-        "**/.hg":              true,
-        "**/CVS":              true,
-        "**/.vs":              true,
-        "**/.DS_Store":        true,
-        "**/**/*.config":      true,
-        "**/Surface/**/*.js":  true,
-        "**/Surface/**/*.map": true,
+        "**/.git":                     true,
+        "**/.svn":                     true,
+        "**/.hg":                      true,
+        "**/CVS":                      true,
+        "**/.vs":                      true,
+        "**/.DS_Store":                true,
+        "**/**/*.config":              true,
+        "**/Surface/**/*.js":          true,
+        "**/Surface/**/*.map":         true,
         "**/Surface/**/node_modules":  true
     }
 }

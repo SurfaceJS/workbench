@@ -1,1 +1,1 @@
-unlink && install && link && build
+unlink && install && relink && build
