@@ -57,6 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
-App.Server/public/*
+/App.Server/public/*
+*.js
+*.js.map
 *.orig
-.cache-loader
+!/tasks/
+
