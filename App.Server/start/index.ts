@@ -5,7 +5,7 @@ import Utils = require("./content/utils");
 const PORT    = process.env.port || "1337"
 const ROOT    = Path.resolve(__dirname, "../");
 const PUBLIC  = Path.join(ROOT, "public");
-const DEFAULT = Path.join(PUBLIC, "./");
+const DEFAULT = Path.join(PUBLIC, "./app");
 
 HTTP.createServer
 (
@@ -13,21 +13,9 @@ HTTP.createServer
     {
         try
         {
-            if (request.url == "/")
+            if (request.url)
             {
-                Utils.loadFile(response, Path.join(DEFAULT, "index.html"));
-            }
-            else if (request.url && /^\/[^\/]+$/.test(request.url))
-            {
-                if (request.url.indexOf(".") > 0) 
-                    Utils.loadFile(response, Path.join(DEFAULT, request.url));
-                else
-                    Utils.loadFile(response, Path.join(PUBLIC, request.url, "index.html"));
-            }
-            else if (request.url)
-            {
-                let url = request.url.replace(/\/(.*)/, "$1");
-                Utils.loadFile(response, Path.resolve(PUBLIC, url));
+                Utils.loadFile(response, Utils.resolveUrl(PUBLIC, DEFAULT, request.url));
             }
         }
         catch (error)

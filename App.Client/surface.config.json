@@ -9,9 +9,8 @@
             "name": "html-template",
             "options":
             {
-                "filename":         "[name]/index.html",
-                "template":         "./template.html",
-                "useRelativePaths": true
+                "filename": "[name]/index.html",
+                "template": "./template.html"
             }
         },
         {
