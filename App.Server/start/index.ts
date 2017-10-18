@@ -5,7 +5,7 @@ import Utils = require("./content/utils");
 const PORT    = process.env.port || "1337"
 const ROOT    = Path.resolve(__dirname, "../");
 const PUBLIC  = Path.join(ROOT, "public");
-const DEFAULT = Path.join(PUBLIC, "./app");
+const DEFAULT = Path.join(PUBLIC, "./app-root");
 
 HTTP.createServer
 (

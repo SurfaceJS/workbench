@@ -18,7 +18,7 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js"],
+            "args":           ["/c", ".\\node_modules\\.bin\\surface -t rebuild"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\App.Client"

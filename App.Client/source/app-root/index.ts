@@ -1,19 +1,26 @@
 import { CustomElement } from '@surface/custom-element';
 import { component }     from '@surface/custom-element/decorators';
+import { Router }        from '@surface/router';
 
 import lazyLoader from '@surface/lazy-loader';
 
 import template from "index.html";
 import style    from "index.scss";
 
-@component('app-root', template, style)
+@component<App>('app-root', template, style)
 export class App extends CustomElement
 {
+    private router: Router;
     public constructor()
     {
-        super();
-        console.log("working!!!");
-        let foo = lazyLoader('views/home-view');
-        foo.then(x => console.log(x));
+        super();        
+        this.router = new Router({ window, onRoute: this.setView });
+        this.router.routeTo('/');
+    }
+    
+    public async setView(path: string)
+    {
+        let view = await lazyLoader('views/home-view');
+        console.log(view);
     }
 }
