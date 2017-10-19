@@ -2,7 +2,7 @@ import { CustomElement } from '@surface/custom-element';
 import { component }     from '@surface/custom-element/decorators';
 import { Router }        from '@surface/router';
 
-//import lazyLoader from '@surface/lazy-loader';
+import lazyLoader from '@surface/lazy-loader';
 
 import template from "index.html";
 import style    from "index.scss";
@@ -22,5 +22,6 @@ export class App extends CustomElement
     public async setView(path: Router.Path)
     {
         console.log(path);
+        await lazyLoader(path.root);
     }
 }
