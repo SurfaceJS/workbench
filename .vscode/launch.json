@@ -15,7 +15,7 @@
             "request":  "launch",
             "name":     "Launch Surface Compiler",
             "program":  "${workspaceRoot}\\App.Client\\node_modules\\@surface\\compiler\\index.js",
-            "args":     ["--task", "rebuild","--env", "dev", "--config", "./surface.config.json"],
+            "args":     ["--task", "rebuild","--env", "dev", "--config", "./surface.config.json", "--watch", "true"],
             "cwd":      "${workspaceRoot}\\App.Client",
             "outFiles": []
         },

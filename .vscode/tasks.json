@@ -25,6 +25,19 @@
             },
             "showOutput":   "always",
             "isBackground": false
+        },
+        {
+            "taskName":       "surface-watch",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", ".\\node_modules\\.bin\\surface --task rebuild --watch true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\App.Client"
+            },
+            "showOutput":   "always",
+            "isBackground": false
         }
     ]
 }

@@ -20,21 +20,28 @@ export function loadFile(response: HTTP.ServerResponse, path: string): void
     }
 }
 
-export function resolveUrl(root: string, defaultRoute: string, url: string): string
+export function resolveUrl(root: string, url: string, defaultRoute: string): string|null|undefined
 {
-    url = url.replace(/^\//, "") || 'index.html';
-
+    url          = url.replace(/^\//, "")          || '';
+    defaultRoute = defaultRoute.replace(/^\//, "") || '';
+    
     let targets =
     [
         Path.resolve(root, url),
         Path.resolve(root, url, 'index.html'),
+        Path.resolve(root, url, 'index.htm'),
         Path.resolve(root, url, 'default.html'),
+        Path.resolve(root, url, 'default.htm'),
         Path.resolve(root, url + '.html'),
-        Path.resolve(defaultRoute, url),
-        Path.resolve(defaultRoute, url, 'index.html'),
-        Path.resolve(defaultRoute, url, 'default.html'),
-        Path.resolve(defaultRoute, url + '.html'),
-    ]
+        Path.resolve(root, url + '.htm'),
+        Path.resolve(root, defaultRoute),
+        Path.resolve(root, defaultRoute, 'index.html'),
+        Path.resolve(root, defaultRoute, 'index.htm'),
+        Path.resolve(root, defaultRoute, 'default.html'),
+        Path.resolve(root, defaultRoute, 'default.htm'),
+        Path.resolve(root, defaultRoute + '.html'),
+        Path.resolve(root, defaultRoute + '.htm'),
+    ];
 
     return targets.filter(x => FS.existsSync(x) && FS.lstatSync(x).isFile())[0];
 }

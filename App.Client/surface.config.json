@@ -1,6 +1,6 @@
 {
     "context":  "./source",
-    "entry":    ["./app-root/index.ts"],
+    "entry":    ["./app/index.ts"],
     "filename": "[name]/[hash].js",
     "output":   "../App.Server/public",
     "plugins":

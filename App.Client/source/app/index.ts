@@ -2,7 +2,7 @@ import { CustomElement } from '@surface/custom-element';
 import { component }     from '@surface/custom-element/decorators';
 import { Router }        from '@surface/router';
 
-import lazyLoader from '@surface/lazy-loader';
+//import lazyLoader from '@surface/lazy-loader';
 
 import template from "index.html";
 import style    from "index.scss";
@@ -14,13 +14,13 @@ export class App extends CustomElement
     public constructor()
     {
         super();        
-        this.router = new Router({ window, onRoute: this.setView });
-        this.router.routeTo('/');
+        this.router = new Router().when('/*', this.setView);
+
+        this.router.routeTo(window.location);
     }
     
-    public async setView(path: string)
+    public async setView(path: Router.Path)
     {
-        let view = await lazyLoader('views/home-view');
-        console.log(view);
+        console.log(path);
     }
 }

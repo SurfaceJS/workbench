@@ -1,11 +1,16 @@
-import HTTP  = require("http");
-import Path  = require("path");
-import Utils = require("./content/utils");
+import { Configuration } from './types';
 
-const PORT    = process.env.port || "1337"
-const ROOT    = Path.resolve(__dirname, "../");
-const PUBLIC  = Path.join(ROOT, "public");
-const DEFAULT = Path.join(PUBLIC, "./app-root");
+import HTTP  = require('http');
+import Path  = require('path');
+import Utils = require('./content/utils');
+
+const ROOT = Path.resolve(__dirname, '../')
+
+let config = require('../server.config.json') as Configuration;
+
+config.defaultRoute = config.defaultRoute || '/';
+config.notFound     = config.notFound     || '/not-found';
+config.wwwRoot      = Path.resolve(ROOT, config.wwwRoot);
 
 HTTP.createServer
 (
@@ -15,14 +20,17 @@ HTTP.createServer
         {
             if (request.url)
             {
-                Utils.loadFile(response, Utils.resolveUrl(PUBLIC, DEFAULT, request.url));
+                let path = Utils.resolveUrl(config.wwwRoot, request.url, config.defaultRoute!);
+
+                path = path || config.notFound || '';
+                Utils.loadFile(response, path);
             }
         }
         catch (error)
         {
-            response.writeHead(404, { "Content-Type": "text/plain" });
+            response.writeHead(404, { 'Content-Type': 'text/plain' });
             response.end(error.message);
         }
     }
 )
-.listen(PORT);
+.listen(config.port);

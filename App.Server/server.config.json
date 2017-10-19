@@ -1,0 +1,6 @@
+{
+    "defaultRoute": "/app",
+    "port":         1337,
+    "notFound":     "/app",
+    "wwwRoot":      "./public"
+}
