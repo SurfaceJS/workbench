@@ -11,8 +11,8 @@
         "**/.vs":                      true,
         "**/.DS_Store":                true,
         "**/**/*.config":              true,
-        "**/Surface/**/*.js":          true,
-        "**/Surface/**/*.map":         true,
-        "**/Surface/**/node_modules":  true
+        "**/modules/**/*.js":          true,
+        "**/modules/**/*.map":         true,
+        "**/modules/**/node_modules":  true
     }
 }

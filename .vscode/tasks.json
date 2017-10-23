@@ -21,7 +21,7 @@
             "args":           ["/c", "node ./node_modules/@surface/compiler/index.js"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\App.Client"
+                "cwd": "${workspaceRoot}\\client"
             },
             "showOutput":   "always",
             "isBackground": false

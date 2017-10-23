@@ -12,10 +12,10 @@
       "es2017"
     ],
     "paths": {
-      "@surface/*": ["../../Surface/source/@surface/*"]
+      "@surface/*": ["../node_modules/@surface/*"]
     },
-    "sourceMap": true,
-    "target":    "es6",
+    "sourceMap":       true,
+    "target":          "es6",
     "traceResolution": false,
     "typeRoots":
     [
