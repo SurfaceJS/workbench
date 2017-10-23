@@ -1,14 +1,14 @@
 {
     "compilerOptions":
     {        
-        "allowSyntheticDefaultImports":   true,
-        "allowJs":                        true,
-        "alwaysStrict":                   true,
-        "baseUrl":                        "./",
-        "checkJs":                        true,
-        "emitDecoratorMetadata":          true,
-        "experimentalDecorators":         true,
-        "importHelpers":                  true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs":                      true,
+        "alwaysStrict":                 true,
+        "baseUrl":                      "./",
+        "checkJs":                      true,
+        "emitDecoratorMetadata":        true,
+        "experimentalDecorators":       true,
+        "importHelpers":                true,
         "lib":
         [
             "es2015",
