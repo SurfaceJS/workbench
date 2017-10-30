@@ -9,7 +9,7 @@ paths.server  = Path.resolve(__dirname, paths.server);
 
 let commands = [];
 
-commands.push(Common.execute(`Compiling server`, `tsc -p ${paths.server}`));
+commands.push(Common.execute(`Compiling server`, `tsc -p ${Path.join(paths.server, 'source')}`));
 
 for (let $module of modules)
 {

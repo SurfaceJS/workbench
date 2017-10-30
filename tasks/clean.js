@@ -4,7 +4,8 @@ const modules  = require('./modules');
 const paths    = require('./paths');
 const patterns = require('./patterns');
 
-paths.modules = Path.resolve(__dirname, Path.join(paths.modules));
+paths.modules = Path.resolve(__dirname, paths.modules);
+paths.server  = Path.resolve(__dirname, Path.join(paths.server, 'source'));
 
 for (let $module of modules)
 {
@@ -12,3 +13,6 @@ for (let $module of modules)
     console.log(`Cleaning ${$module.name}`);
     Common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
 }
+
+console.log(`Cleaning server`);
+Common.cleanup(paths.server, patterns.clean.include, patterns.clean.exclude);

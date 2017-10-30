@@ -1,6 +1,14 @@
 {
-    "defaultRoute": "/app",
-    "port":         1337,
-    "notFound":     "/app",
-    "wwwRoot":      "./public"
+    "routes":
+    {
+        "fallback": "/app",
+        "paths":
+        [
+            "/{controlle}/{action}/{id?}",
+            "/api/{controlle}/{action}/{id?}"
+        ]
+    },
+    "port":    1337,
+    "startup": "./source/startup",
+    "wwwroot": "./wwwroot"
 }

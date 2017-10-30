@@ -6,9 +6,9 @@
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Server",
-            "program":       "${workspaceRoot}\\server\\source\\index.js",
-            "cwd":           "${workspaceRoot}\\server",
-            "preLaunchTask": "surface"
+            "program":       "${workspaceRoot}\\server\\node_modules\\@surface\\server\\index.js",
+            "cwd":           "${workspaceRoot}\\server"//,
+            //"preLaunchTask": "surface"
         },
         {
             "type":     "node",

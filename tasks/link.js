@@ -8,6 +8,13 @@ let action = process.argv[2];
 
 paths.modules = Path.resolve(__dirname, paths.modules);
 paths.client  = Path.resolve(__dirname, paths.client);
+paths.server  = Path.resolve(__dirname, paths.server);
+
+let targets =
+[
+    { name: 'Client', path: paths.client },
+    { name: 'Server', path: paths.server }
+];
 
 if (action == 'l' || action == 'link')
 {
@@ -40,8 +47,11 @@ async function link()
         }
     }
         
-    if (!FS.existsSync(Path.join(paths.client, 'node_modules', '@surface')))
-        await Common.execute(`Linking @surface on client:`, `mklink /J ${Path.join(paths.client, 'node_modules', '@surface')} ${Path.join(paths.modules, '@surface')}`);
+    for (let target of targets)
+    {
+        if (!FS.existsSync(Path.join(target.path, 'node_modules', '@surface')))
+            await Common.execute(`Linking @surface on ${target.name}:`, `mklink /J ${Path.join(target.path, 'node_modules', '@surface')} ${Path.join(paths.modules, '@surface')}`);
+    }
 
     console.log('Linking done!');
 }
@@ -56,8 +66,11 @@ async function unlink()
             await Common.execute(`Removing @surface on ${$module.name}:`, `rmdir /s /q ${targetFolder}`);
     }
 
-    if (FS.existsSync(Path.join(paths.client, 'node_modules', '@surface')))
-        await Common.execute(`Unlinking @surface link on client:`, `rmdir /s /q ${Path.join(paths.client, 'node_modules', '@surface')}`);
+    for (let target of targets)
+    {
+        if (FS.existsSync(Path.join(target.path, 'node_modules', '@surface')))
+            await Common.execute(`Unlinking @surface link on client:`, `rmdir /s /q ${Path.join(target.path, 'node_modules', '@surface')}`);
+    }
 
     console.log('Unlinking done!');
 }
