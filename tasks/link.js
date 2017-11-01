@@ -69,7 +69,7 @@ async function unlink()
     for (let target of targets)
     {
         if (FS.existsSync(Path.join(target.path, 'node_modules', '@surface')))
-            await Common.execute(`Unlinking @surface link on client:`, `rmdir /s /q ${Path.join(target.path, 'node_modules', '@surface')}`);
+            await Common.execute(`Unlinking @surface link on ${target.name}:`, `rmdir /s /q ${Path.join(target.path, 'node_modules', '@surface')}`);
     }
 
     console.log('Unlinking done!');
