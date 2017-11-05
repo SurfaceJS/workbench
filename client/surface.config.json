@@ -2,7 +2,7 @@
     "context":  "./source",
     "entry":    ["./app/index.ts"],
     "filename": "[name]/[hash].js",
-    "output":   "../server/wwwroot",
+    "output":   "../server/build/wwwroot",
     "plugins":
     [
         {

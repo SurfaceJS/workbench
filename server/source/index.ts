@@ -4,4 +4,4 @@ import { Configuration } from '@surface/web-host/configuration';
 
 const config = new Configuration(__dirname, serverConfig);
 
-WebHost.run(config);
+WebHost.create(config).run();

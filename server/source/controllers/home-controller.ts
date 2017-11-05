@@ -1,5 +1,5 @@
-import { Controller }   from '@surface/server/library/controller';
-import { ActionResult } from '@surface/server/library/action-result';
+import { Controller }   from '@surface/web-host/controller';
+import { ActionResult } from '@surface/web-host/action-result';
 
 export class Home extends Controller
 {

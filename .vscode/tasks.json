@@ -14,6 +14,32 @@
             "isBackground":   false
         },
         {
+            "taskName":       "build-server",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\server"
+            },
+            "showOutput":     "always",
+            "isBackground":   false
+        },
+        {
+            "taskName":       "watch-server",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\server"
+            },
+            "showOutput":     "always",
+            "isBackground":   false
+        },
+        {
             "taskName":       "surface",
             "isBuildCommand": true,
             "command":        "cmd",
