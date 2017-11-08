@@ -10,6 +10,7 @@ let targets =
 [
     { name: 'Client', path: path.resolve(paths.client, '../node_modules/@surface') },
     { name: 'Server', path: path.resolve(paths.server, '../node_modules/@surface') },
+    { name: 'Tests',  path: path.resolve(paths.tests,  '../node_modules/@surface') }
 ];
 
 if (action == 'l' || action == 'link')

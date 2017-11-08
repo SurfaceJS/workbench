@@ -18,6 +18,7 @@ Promise.all(commands).then
         [
             common.execute(`Installing Client`, `cd ${paths.client} && npm install`),
             common.execute(`Installing Server`, `cd ${paths.server} && npm install`),
+            common.execute(`Installing Tests`,  `cd ${paths.tests} && npm install`)
         ]
     )
     .then(() =>console.log('\nDone!'))

@@ -14,6 +14,32 @@
             "isBackground":   false
         },
         {
+            "taskName":       "build-client",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\client"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "watch-client",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\client"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
             "taskName":       "build-server",
             "isBuildCommand": true,
             "command":        "cmd",
@@ -23,8 +49,8 @@
             {
                 "cwd": "${workspaceRoot}\\server"
             },
-            "showOutput":     "always",
-            "isBackground":   false
+            "showOutput":   "always",
+            "isBackground": false
         },
         {
             "taskName":       "watch-server",
@@ -36,34 +62,34 @@
             {
                 "cwd": "${workspaceRoot}\\server"
             },
-            "showOutput":     "always",
-            "isBackground":   false
+            "showOutput":   "always",
+            "isBackground": false
         },
         {
-            "taskName":       "surface",
+            "taskName":       "build-tests",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
             "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\client"
+                "cwd": "${workspaceRoot}\\tests"
             },
             "showOutput":   "always",
             "isBackground": false
         },
         {
-            "taskName":       "surface-watch",
+            "taskName":       "watch-tests",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
             "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\client"
+                "cwd": "${workspaceRoot}\\tests"
             },
             "showOutput":   "always",
             "isBackground": false
-        }
+        }        
     ]
 }
