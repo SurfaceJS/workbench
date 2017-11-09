@@ -6,11 +6,11 @@
   "dependencies": {
     "@types/node": "8.0.33"
   },
-  "description": "Basic server to development and testing.",
+  "description": "Testing setup.",
   "homepage": "https://github.com/SurfaceJS/workbench#readme",
   "license": "MIT",
   "main": "./build/index.js",
-  "name": "surface-workbench-server",
+  "name": "surface-workbench-tests",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SurfaceJS/workbench.git"

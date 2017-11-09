@@ -5,13 +5,13 @@ const util = require('util');
 let exec = util.promisify(require('child_process').exec);
 
 /**
- * @param path    {string}
- * @param pattern {RegExp}
- * @param exclude {RegExp}
+ * @param targetPath {string}
+ * @param pattern    {RegExp}
+ * @param exclude    {RegExp}
  */
-module.exports.cleanup = function(path, pattern, exclude)
+module.exports.cleanup = function(targetPath, pattern, exclude)
 {
-    for (let source of fs.readdirSync(path).map(x => path.join(path, x)))
+    for (let source of fs.readdirSync(targetPath).map(x => path.join(targetPath, x)))
     {
         if (exclude.test(source))
             continue;
