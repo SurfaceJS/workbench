@@ -4,14 +4,9 @@ export function execute()
 {
     let routes =
     [
-        '/{controller}',
-        '/{controller=home}/{action=index}/{id=1}',
-        '/{controller}/*/{action}/{id?}',
-        '/{area}/{controller}/{action}/{id?}',
-        '/api/{controller}',
-        '/api/{controller=home}/{action=index}/{id=1}',
-        '/api/{controller}/*/{action}/{id?}',
-        '/api/{controller}/{action}/{id?}'
+        '/{controller}/{action}/{id?}',
+        '/{controller=home}/{action=index}/{id?}',
+        '/adm/{controller=home}/{action=index}/{id?}',
     ];
 
     let router = Router.create(RoutingType.Abstract, routes);
