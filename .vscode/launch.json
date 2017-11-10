@@ -44,6 +44,14 @@
             "console":  "integratedTerminal"
         },
         {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Install",
+            "program":  "${workspaceRoot}\\tasks\\install",
+            "cwd":      "${workspaceRoot}\\tasks\\",
+            "console":  "integratedTerminal"
+        },
+        {
             "type":    "chrome",
             "request": "launch",
             "name":    "Launch Chrome against localhost",
