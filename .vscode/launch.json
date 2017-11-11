@@ -15,7 +15,7 @@
             "request":       "launch",
             "name":          "Launch Tests",
             "program":       "${workspaceRoot}\\tests\\build\\index.js",
-            "cwd":           "${workspaceRoot}\\tests\\build"//,
+            "cwd":           "${workspaceRoot}\\tests\\build"
             //"preLaunchTask": "build-tests"
         },
         {
@@ -23,8 +23,7 @@
             "request":  "launch",
             "name":     "Launch Build All",
             "program":  "${workspaceRoot}\\tasks\\build",
-            "cwd":      "${workspaceRoot}\\client",
-            "outFiles": []
+            "cwd":      "${workspaceRoot}\\client"
         },
         {
             "type":     "node",
@@ -32,8 +31,7 @@
             "name":     "Launch Linking",
             "program":  "${workspaceRoot}\\tasks\\link",
             "args":     ["r"],
-            "cwd":      "${workspaceRoot}\\tasks\\",
-            "outFiles": []
+            "cwd":      "${workspaceRoot}\\tasks\\"
         },
         {
             "type":     "node",

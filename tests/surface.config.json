@@ -3,5 +3,12 @@
     "entry":    "index.ts",
     "filename": "index.js",
     "output":   "build",
-    "webpackConfig": { "target": "node", "node": { "__dirname": false }}
+    "webpackConfig":
+    {
+        "output":
+        {
+            "devtoolModuleFilenameTemplate": "[absolute-resource-path]"
+        },
+        "target": "node",
+        "node": { "__dirname": false }}
 }

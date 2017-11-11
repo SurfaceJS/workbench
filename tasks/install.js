@@ -3,6 +3,8 @@ const common  = require('./common');
 const modules = require('./modules');
 const paths   = require('./paths');
 
+const fullInstall = !!process.argv[2];
+
 let commands = [];
 
 for (let $module of modules)
@@ -12,8 +14,8 @@ for (let $module of modules)
     let dependencies = require(path.join(source, 'package.json')).dependencies || {};
 
     let targets = Object.keys(dependencies)
-        .filter(x => !x.startsWith('@surface/'))
-        .map(key => `${key}@${dependencies[key]}`)
+        .filter(x => !x.startsWith('@surface/') || fullInstall)
+        .map(key => `${key}@${dependencies[key].replace(/^(\^|\~)/, '')}`)
         .join(' ');
 
     if (targets)
@@ -27,7 +29,7 @@ for (let targetPath of [paths.client, paths.server, paths.tests])
     let dependencies = require(path.join(source, 'package.json')).dependencies || {};
 
     let targets = Object.keys(dependencies)
-        .filter(x => !x.startsWith('@surface/'))
+        .filter(x => !x.startsWith('@surface/') || fullInstall)
         .map(key => `${key}@${dependencies[key]}`)
         .join(' ');
 

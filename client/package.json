@@ -2,7 +2,7 @@
     "author": "HitalloExiled",
     "bugs": {
         "url": "https://github.com/SurfaceJS/workbench/issues"
-    },    
+    },
     "dependencies": {
         "@surface/code-splitter-plugin": "0.0.8",
         "@surface/compiler": "0.0.7",
@@ -16,7 +16,7 @@
     "homepage": "https://github.com/SurfaceJS/workbench#readme",
     "license": "MIT",
     "main": "./build/index.js",
-    "name": "surface-workbench-client",    
+    "name": "surface-workbench-client",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SurfaceJS/workbench.git"
@@ -25,5 +25,5 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "./node_modules/.bin/surface"
     },
-    "version": "0.0.0"    
+    "version": "0.0.0"
 }
