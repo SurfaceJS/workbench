@@ -30,7 +30,7 @@
         "sourceMap":                      true,
         "strictNullChecks":               true,
         "suppressImplicitAnyIndexErrors": true,
-        "target":                         "es6",
+        "target":                         "esnext",
         "typeRoots":                      ["../node_modules/@types", "../node_modules/@surface/compiler/@types"]
     },
   "include": ["."],

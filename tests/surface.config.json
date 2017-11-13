@@ -7,7 +7,7 @@
     {
         "output":
         {
-            "devtoolModuleFilenameTemplate": "[absolute-resource-path]"
+            "devtoolModuleFilenameTemplate": "webpack:///[resource-path]"
         },
         "target": "node",
         "node": { "__dirname": false }}
