@@ -7,16 +7,16 @@
             "request":       "launch",
             "name":          "Launch Server",
             "program":       "${workspaceRoot}\\server\\build\\index.js",
-            "cwd":           "${workspaceRoot}\\server\\build"//,
-            //"preLaunchTask": "build-server"
+            "cwd":           "${workspaceRoot}\\server\\build"
+            //"preLaunchTask": "server[build]"
         },
         {
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Tests",
-            "program":       "${workspaceRoot}\\tests\\build\\index.js",
-            "cwd":           "${workspaceRoot}\\tests\\build"
-            //"preLaunchTask": "build-tests"
+            "program":       "${workspaceRoot}\\modules\\tests\\build\\index.js",
+            "cwd":           "${workspaceRoot}\\modules\\tests\\build"
+            //"preLaunchTask": "tests[build]"
         },
         {
             "type":     "node",
@@ -68,7 +68,7 @@
             "request":  "launch",
             "name":     "Launch compiler",
             "program":  "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
-            "args":     ["-c", "./tests"],
+            "args":     ["-c", "modules/tests"],
             "cwd":      "${workspaceRoot}",
             "protocol": "inspector"
         }

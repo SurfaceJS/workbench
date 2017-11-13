@@ -14,7 +14,7 @@
             "isBackground":   false
         },
         {
-            "taskName":       "build-client",
+            "taskName":       "client[build]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -27,7 +27,7 @@
             "isBackground": false
         },
         {
-            "taskName":       "watch-client",
+            "taskName":       "client[watch]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -40,7 +40,7 @@
             "isBackground": false
         },
         {
-            "taskName":       "build-server",
+            "taskName":       "server[build]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -53,7 +53,7 @@
             "isBackground": false
         },
         {
-            "taskName":       "watch-server",
+            "taskName":       "server[watch]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -66,27 +66,27 @@
             "isBackground": false
         },
         {
-            "taskName":       "build-tests",
+            "taskName":       "tests[build]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
             "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\tests"
+                "cwd": "${workspaceRoot}\\modules\\tests"
             },
             "showOutput":   "always",
             "isBackground": false
         },
         {
-            "taskName":       "watch-tests",
+            "taskName":       "tests[watch]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
             "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\tests"
+                "cwd": "${workspaceRoot}\\modules\\tests"
             },
             "showOutput":   "always",
             "isBackground": false
