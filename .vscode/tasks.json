@@ -5,7 +5,7 @@
     "tasks":
     [
         {
-            "taskName":       "build",
+            "taskName":       "build-all",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -44,10 +44,10 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
+            "args":           ["/c", "tsc"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\server"
+                "cwd": "${workspaceRoot}\\server\\source"
             },
             "showOutput":   "always",
             "isBackground": false
@@ -57,10 +57,10 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "args":           ["/c", "tsc -w"],
             "options":
             {
-                "cwd": "${workspaceRoot}\\server"
+                "cwd": "${workspaceRoot}\\server\\source"
             },
             "showOutput":   "always",
             "isBackground": false

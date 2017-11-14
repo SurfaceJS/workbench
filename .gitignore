@@ -58,6 +58,7 @@ typings/
 .env
 
 # project
+wwwroot/
 build/
 *.js
 *.js.map

@@ -1,0 +1,1 @@
+node ../tasks/link unlink && node ../tasks/install && node ../tasks/link link

@@ -1,0 +1,1 @@
+node ../tasks/link.js relink

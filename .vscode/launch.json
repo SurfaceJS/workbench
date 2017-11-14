@@ -6,8 +6,8 @@
             "type":          "node",
             "request":       "launch",
             "name":          "Launch Server",
-            "program":       "${workspaceRoot}\\server\\build\\index.js",
-            "cwd":           "${workspaceRoot}\\server\\build"
+            "program":       "${workspaceRoot}\\server\\source\\index.js",
+            "cwd":           "${workspaceRoot}\\server\\source"
             //"preLaunchTask": "server[build]"
         },
         {
@@ -68,7 +68,7 @@
             "request":  "launch",
             "name":     "Launch compiler",
             "program":  "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
-            "args":     ["-c", "modules/tests"],
+            "args":     ["-c", "server"],
             "cwd":      "${workspaceRoot}",
             "protocol": "inspector"
         }

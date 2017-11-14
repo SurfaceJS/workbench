@@ -1,1 +1,0 @@
-node tests/node_modules/@surface/compiler -c ./tests & node ./tests/build/index

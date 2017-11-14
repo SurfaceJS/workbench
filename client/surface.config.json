@@ -1,15 +1,15 @@
 {
     "context":  "./source",
-    "entry":    ["./app/index.ts"],
+    "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
-    "output":   "../server/build/wwwroot",
+    "output":   "../server/wwwroot",
     "plugins":
     [
         {
             "name": "html-template",
             "options":
             {
-                "filename": "[name]/index.html",
+                "filename": "[name]/[hash].html",
                 "template": "./template.html"
             }
         },

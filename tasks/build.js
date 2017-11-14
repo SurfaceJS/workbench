@@ -6,7 +6,7 @@ const patterns = require('./patterns');
 
 let commands = [];
 
-//commands.push(Common.execute(`Compiling server`, `tsc -p ${Path.join(paths.server, 'source')}`));
+commands.push(common.execute(`Compiling server`, `tsc -p ${paths.server}`));
 
 for (let $module of modules)
 {
