@@ -1,1 +1,1 @@
-node ../tasks/link.js unlink
+node %~dp0/../tasks/link.js unlink

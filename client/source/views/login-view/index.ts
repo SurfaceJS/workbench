@@ -1,4 +1,4 @@
 import { CustomElement } from '@surface/custom-element';
 
-export class Login extends CustomElement
+export default class Login extends CustomElement
 { }

@@ -1,1 +1,1 @@
-node ../tasks/clean
+node %~dp0/../tasks/clean

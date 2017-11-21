@@ -12,11 +12,11 @@
         "**/.vs":                  true,
         "**/.DS_Store":            true,
         "**/CVS":                  true,
-        "**/node_modules":         false,
+        "**/node_modules":         true,
         "**/package-lock.json":    true,
-        "modules/source/**/*.js":  false,
+        "modules/source/**/*.js":  true,
         "modules/source/**/*.map": true,
-        "server/source/**/*.js":   false,
+        "server/source/**/*.js":   true,
         "server/source/**/*.map":  true
     }
 }

@@ -1,11 +1,11 @@
 {
     "routes":
     [
-        { "path": "/{controller=home}/{action=index}/{id?}", "default": true },
+        { "path": "/{controller}/{action=index}/{id?}", "default": true },
         { "path": "/api/{controller}/{action}/{id?}" },
         { "path": "/app", "fallback": true }
     ],
     "port":    1337,
     "startup": "./source/startup",
-    "wwwroot": "./wwwroot"
+    "wwwroot": "../wwwroot"
 }

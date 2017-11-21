@@ -1,1 +1,1 @@
-node ../tasks/build
+node %~dp0/../tasks/build
