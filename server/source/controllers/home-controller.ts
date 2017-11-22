@@ -1,9 +1,10 @@
-import { ActionResult } from '@surface/web-host/action-result';
-import { Controller }   from '@surface/web-host/controller';
+import { ObjectLiteral } from '@surface/types';
+import { ActionResult }  from '@surface/web-host/action-result';
+import { Controller }    from '@surface/web-host/controller';
 
 export default class HomeController extends Controller
 {
-    public index(data: any): ActionResult
+    public index(inbound?: ObjectLiteral<string>): ActionResult
     {
         if (this.httpContext.request.method == 'GET')
             return super.view();
@@ -11,7 +12,7 @@ export default class HomeController extends Controller
             return super.json(null);
     }
 
-    public edit(data: any): ActionResult
+    public edit(inbound?: ObjectLiteral<string>): ActionResult
     {
         if (this.httpContext.request.method == 'GET')
             return super.view('edit');

@@ -68,7 +68,7 @@
             "request":  "launch",
             "name":     "Launch compiler",
             "program":  "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
-            "args":     ["-c", "server"],
+            "args":     ["-c", "client"],
             "cwd":      "${workspaceRoot}",
             "protocol": "inspector"
         }

@@ -3,4 +3,7 @@ import { Configuration } from '@surface/web-host/configuration';
 
 const config = new Configuration(__dirname, require('../server.config.json'));
 
-WebHost.create(config).run();
+WebHost.create(config)
+    .useStatic()
+    .useMvc()
+    .run();
