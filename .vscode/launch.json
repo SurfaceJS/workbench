@@ -9,8 +9,9 @@
             "program":     "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
             "args":        ["-c", "client"],
             "cwd":         "${workspaceRoot}",
-            "protocol":    "inspector",
-            "runtimeArgs": ["--preserve-symlinks"]
+            "protocol":    "inspector"//,
+            //"runtimeArgs": ["--preserve-symlinks"]
+
         },
         {
             "type":        "node",
@@ -65,14 +66,14 @@
             "request": "launch",
             "name":    "Launch Chrome against localhost",
             "url":     "http://localhost:1337",
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceRoot}\\server\\wwwroot"
         },
         {
             "type":    "chrome",
             "request": "attach",
             "name":    "Attach to Chrome",
             "port":    9222,
-            "webRoot": "${workspaceRoot}"
-        }        
+            "webRoot": "${workspaceRoot}\\server\\wwwroot"
+        }
     ]
 }

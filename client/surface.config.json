@@ -1,5 +1,5 @@
 {
-    "context":  "./source",
+    "context":  "source",
     "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
     "output":   "../server/wwwroot",
@@ -9,15 +9,15 @@
             "name": "html-template",
             "options":
             {
-                "filename": "[name]/[hash].html",
-                "template": "./template.html"
+                "filename": "[name]/index.html",
+                "template": "template.html"
             }
         },
         {
             "name": "code-splitter",
             "options":
             {
-                "entries": ["./views"]
+                "entries": ["views"]
             }
         }
     ]
