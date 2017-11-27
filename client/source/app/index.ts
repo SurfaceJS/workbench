@@ -5,6 +5,7 @@ import { define }              from '@surface/custom-element/decorators';
 import { load }                from '@surface/lazy-loader';
 import { Router, RoutingType } from '@surface/router';
 import { Route }               from '@surface/router/route';
+import { Constructor }         from '@surface/types';
 
 @define<App>('app-root', template, style)
 export class App extends CustomElement
@@ -17,12 +18,12 @@ export class App extends CustomElement
             .mapRoute('default', '{view}/{action}/{id?}')
             .when('*', this.setView);
 
-        this.router.routeTo(window.location.pathname + window.location.search);
+        this.router.match(window.location.pathname + window.location.search);
     }
     
-    public async setView(routeData: Route.Data)
-    {
-        console.log(routeData);
-        await load(routeData.route);
+    public async setView(routeData: Route.IData)
+    {        
+        let viewConstructor = await load<Constructor<Object>>(routeData.route.replace(/^\//, ''));
+        console.log(new viewConstructor());
     }
 }
