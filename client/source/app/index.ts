@@ -1,29 +1,38 @@
-import template                from "./index.html";
-import style                   from "./index.scss";
-import { CustomElement }       from '@surface/custom-element';
-import { define }              from '@surface/custom-element/decorators';
-import { load }                from '@surface/lazy-loader';
-import { Router, RoutingType } from '@surface/router';
-import { Route }               from '@surface/router/route';
-import { Constructor }         from '@surface/types';
+import template from "./index.html";
+import style    from "./index.scss";
 
-@define<App>('app-root', template, style)
+import { CustomElement } from '@surface/custom-element';
+import { element }       from '@surface/custom-element/decorators';
+import { Router }        from '@surface/router';
+
+import { ViewManager } from '@surface/view-manager';
+
+import '@surface/view-host';
+import { ViewHost } from '@surface/view-host';
+
+@element('app-root', template, style)
 export class App extends CustomElement
 {
-    private router: Router;
+    private _viewHost:    ViewHost;
+    private _viewManager: ViewManager;
+
+    private _contactLink: HTMLLinkElement;
+    private _homeLink:    HTMLLinkElement;
+    private _loginLink:   HTMLLinkElement;
+
     public constructor()
     {
         super();
-        this.router = Router.create(RoutingType.History)
-            .mapRoute('default', '{view}/{action}/{id?}')
-            .when('*', this.setView);
+        this._viewHost    = super.attach('surface-view-host');
+        this._contactLink = super.attach('#contact-link');
+        this._homeLink    = super.attach('#home-link');
+        this._loginLink   = super.attach('#login-link');
 
-        this.router.match(window.location.pathname + window.location.search);
-    }
-    
-    public async setView(routeData: Route.IData)
-    {        
-        let viewConstructor = await load<Constructor<Object>>(routeData.route.replace(/^\//, ''));
-        console.log(new viewConstructor());
+        this._viewManager = ViewManager.configure(this._viewHost, new Router().mapRoute('default', '{view=home}/{action=index}/{id?}', true));
+        this._viewManager.routeTo(window.location.pathname + window.location.search);
+
+        this._contactLink.onclick = () => this._viewManager.routeTo(this._contactLink.getAttribute('route') || '/');
+        this._homeLink.onclick    = () => this._viewManager.routeTo(this._homeLink.getAttribute('route') || '/');
+        this._loginLink.onclick   = () => this._viewManager.routeTo(this._loginLink.getAttribute('route') || '/');
     }
 }

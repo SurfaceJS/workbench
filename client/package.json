@@ -4,11 +4,6 @@
         "url": "https://github.com/SurfaceJS/workbench/issues"
     },
     "dependencies": {
-        "@surface/code-splitter-plugin": "0.0.8",
-        "@surface/compiler": "0.0.7",
-        "@surface/custom-element": "0.0.5",
-        "@surface/html-template-plugin": "0.0.6",
-        "@surface/lazy-loader": "0.0.3",
         "@types/node": "8.0.50",
         "tslib": "1.8.0"
     },

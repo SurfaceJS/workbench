@@ -18,7 +18,7 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
+            "args":           ["/c", "node --preserve-symlinks ./node_modules/@surface/compiler/index.js -t rebuild"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\client"
@@ -31,7 +31,7 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "args":           ["/c", "node --preserve-symlinks ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\client"

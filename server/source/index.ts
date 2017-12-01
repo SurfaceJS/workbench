@@ -4,11 +4,11 @@ import { Router }        from '@surface/router';
 
 const configuration = new Configuration(__dirname, require('../server.config.json'));
 
-WebHost.create(configuration)
+WebHost.configure(configuration)
     .useStatic()
     .useMvc
     (
-        Router.create()
+        new Router()
             .mapRoute('default', '{controller}/{action=index}/{id?}', true)
             .mapRoute('api', 'api/{controller}/{action=index}/{id?}')
     )
