@@ -6,9 +6,9 @@ import { View }    from '@surface/view';
 @element('login-view', template)
 export default class Login extends View
 {
-    //public constructor()
-    //{
-    //    super();
-    //    this.$name = 'Login';
-    //}
+    public constructor()
+    {
+        super();
+        this.$name = 'Login';
+    }
 }

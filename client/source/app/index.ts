@@ -1,14 +1,11 @@
-import template from "./index.html";
-import style    from "./index.scss";
+import template from './index.html';
+import style    from './index.scss';
 
 import { CustomElement } from '@surface/custom-element';
 import { element }       from '@surface/custom-element/decorators';
 import { Router }        from '@surface/router';
-
-import { ViewManager } from '@surface/view-manager';
-
-import '@surface/view-host';
-import { ViewHost } from '@surface/view-host';
+import { ViewManager }   from '@surface/view-manager';
+import { ViewHost }      from '@surface/view-host';
 
 @element('app-root', template, style)
 export class App extends CustomElement
@@ -31,8 +28,8 @@ export class App extends CustomElement
         this._viewManager = ViewManager.configure(this._viewHost, new Router().mapRoute('default', '{view=home}/{action=index}/{id?}', true));
         this._viewManager.routeTo(window.location.pathname + window.location.search);
 
-        this._contactLink.onclick = () => this._viewManager.routeTo(this._contactLink.getAttribute('route') || '/');
-        this._homeLink.onclick    = () => this._viewManager.routeTo(this._homeLink.getAttribute('route') || '/');
-        this._loginLink.onclick   = () => this._viewManager.routeTo(this._loginLink.getAttribute('route') || '/');
+        this._contactLink.onclick = () => this._viewManager.routeTo('/contact');
+        this._homeLink.onclick    = () => this._viewManager.routeTo('/');
+        this._loginLink.onclick   = () => this._viewManager.routeTo('/login');
     }
 }
