@@ -1,5 +1,0 @@
-{
-    "client":  "../client",
-    "modules": "../modules/source",
-    "server":  "../server/start"
-}

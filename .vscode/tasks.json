@@ -5,7 +5,7 @@
     "tasks":
     [
         {
-            "taskName":       "build",
+            "taskName":       "build-all",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
@@ -14,17 +14,82 @@
             "isBackground":   false
         },
         {
-            "taskName":       "surface",
+            "taskName":       "client[build]",
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js"],
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\client"
             },
             "showOutput":   "always",
             "isBackground": false
-        }
+        },
+        {
+            "taskName":       "client[watch]",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node --preserve-symlinks ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\client"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "server[build]",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "tsc"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\server\\source"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "server[watch]",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "tsc -w"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\server\\source"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "tests[build]",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\modules\\tests"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "tests[watch]",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\modules\\tests"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        }        
     ]
 }

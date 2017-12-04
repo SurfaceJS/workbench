@@ -1,1 +1,0 @@
-node ./tasks/link.js link

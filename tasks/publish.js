@@ -1,21 +1,19 @@
-const FS       = require('fs');
-const Path     = require('path');
-const Common   = require('./common');
+const fs       = require('fs');
+const path     = require('path');
+const common   = require('./common');
 const modules  = require('./modules');
 const paths    = require('./paths');
 const patterns = require('./patterns');
 
-paths.modules = Path.resolve(__dirname, paths.modules);
-
 async function run()
 {
-    let token = FS.readFileSync(Path.normalize(`${process.env.USERPROFILE}/.npmrc`)).toString().replace('\n', '');
+    let token = fs.readFileSync(path.normalize(`${process.env.USERPROFILE}/.npmrc`)).toString().replace('\n', '');
 
-    let versionsFile = Path.resolve(__dirname, './versions.json')
+    let versionsFile = path.resolve(__dirname, './versions.json')
 
     let versions = { };
     
-    if (FS.existsSync(versionsFile))
+    if (fs.existsSync(versionsFile))
         versions = require(versionsFile);
     
     let toPublish = [];
@@ -23,20 +21,21 @@ async function run()
     modules.forEach(x => checkVersion(x));
     toPublish.forEach(x => checkDependencies(x));
     
+
     for (let $module of toPublish)
     {
-        let source = Path.normalize(Path.join(paths.modules, $module.name));
+        let source = path.normalize(path.join(paths.modules, $module.name));
 
-        FS.writeFileSync(Path.resolve(source, 'package.json'), JSON.stringify($module, null, 4));
+        fs.writeFileSync(path.resolve(source, 'package.json'), JSON.stringify($module, null, 4));
 
-        Common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
-        await Common.execute(`Compiling ${source}`, `tsc -p ${source} --noEmit false --declaration true`);
+        common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
+        await common.execute(`Compiling ${source}`, `tsc -p ${source} --noEmit false --declaration true`);
         
-        await Common.execute(`Publishing ${$module.name}:`, `npm set ${token} & cd ${source} && npm publish --access public`);
+        await common.execute(`Publishing ${$module.name}:`, `npm set ${token} & cd ${source} && npm publish --access public`);
     }
     
     if (toPublish.length > 0)
-        FS.writeFileSync(versionsFile, JSON.stringify(versions, null, 4));
+        fs.writeFileSync(versionsFile, JSON.stringify(versions, null, 4));
     
     function checkVersion($module)
     {

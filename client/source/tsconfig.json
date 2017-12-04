@@ -1,27 +1,25 @@
-{
-  "extends": "../configurations/tsconfig.json",
-  "compilerOptions":
-  {
-    "baseUrl": "./",
-    "module":  "es2015",
-    "lib":
-    [
-      "dom",
-      "es2015",
-      "es2016",
-      "es2017"
-    ],
-    "paths": {
-      "@surface/*": ["../node_modules/@surface/*"]
+{ 
+    "compilerOptions":
+    {
+        "allowSyntheticDefaultImports":   true,
+        "alwaysStrict":                   true,
+        "baseUrl":                        ".",
+        "emitDecoratorMetadata":          true,
+        "experimentalDecorators":         true,
+        "importHelpers":                  true,
+        "lib":                            ["dom", "esnext"],
+        "noEmitOnError":                  true,
+        "noImplicitReturns":              true,
+        "noImplicitThis":                 true,
+        "noUnusedLocals":                 true,
+        "module":                         "esnext",
+        "moduleResolution":               "node",
+        "strictNullChecks":               true,
+        "suppressImplicitAnyIndexErrors": true,
+        "sourceMap":                      true,
+        "target":                         "esnext",
+        "traceResolution":                false,
+        "typeRoots":                      ["../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/compiler/@types" */]
     },
-    "sourceMap":       true,
-    "target":          "es6",
-    "traceResolution": false,
-    "typeRoots":
-    [
-      "../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/compiler/@types" */
-    ]
-  },
-  "include": ["./"],
-  "exclude": ["../node_modules"]
+    "include": ["."]
 }

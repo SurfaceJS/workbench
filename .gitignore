@@ -57,9 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
-/server/wwwroot/
+# project
+wwwroot/
+build/
 *.js
 *.js.map
 *.orig
-!/tasks/
+!/tasks/**/*.js
 

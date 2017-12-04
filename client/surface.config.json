@@ -1,6 +1,6 @@
 {
-    "context":  "./source",
-    "entry":    ["./app-root/index.ts", "./views/"],
+    "context":  "source",
+    "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
     "output":   "../server/wwwroot",
     "plugins":
@@ -10,14 +10,15 @@
             "options":
             {
                 "filename": "[name]/index.html",
-                "template": "./template.html"
+                "template": "template.html"
             }
         },
         {
             "name": "code-splitter",
             "options":
             {
-                "entries": ["./views"]
+                "entries":      ["views"],
+                "useRealPaths": true
             }
         }
     ]

@@ -1,21 +1,23 @@
 {
   "author": "HitalloExiled",
   "bugs": {
-    "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
+    "url": "https://github.com/SurfaceJS/workbench/issues"
   },
   "dependencies": {
-    "@types/node": "8.0.33"
+    "@types/node": "8.0.33",
+    "tslib": "1.8.0"
   },
-  "description": "basic server to development and testing",
-  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
+  "description": "Basic server to development and testing.",
+  "homepage": "https://github.com/SurfaceJS/workbench#readme",
   "license": "MIT",
-  "main": "index.js",
-  "name": "surface-workbench-app-server",
+  "main": "./build/index.js",
+  "name": "surface-workbench-server",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HitalloExiled/Surface-Workbench.git"
+    "url": "git+https://github.com/SurfaceJS/workbench.git"
   },
   "scripts": {
+    "build": "node ./node_modules/@surface/compiler",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.0.0"

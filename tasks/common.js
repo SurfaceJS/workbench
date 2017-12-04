@@ -1,28 +1,28 @@
-const FS   = require('fs');
-const Path = require('path');
-const Util = require('util');
+const fs   = require('fs');
+const path = require('path');
+const util = require('util');
 
-let exec = Util.promisify(require('child_process').exec);
+let exec = util.promisify(require('child_process').exec);
 
 /**
- * @param path    {string}
- * @param pattern {RegExp}
- * @param exclude {RegExp}
+ * @param targetPath {string}
+ * @param pattern    {RegExp}
+ * @param exclude    {RegExp}
  */
-module.exports.cleanup = function(path, pattern, exclude)
+module.exports.cleanup = function(targetPath, pattern, exclude)
 {
-    for (let source of FS.readdirSync(path).map(x => Path.join(path, x)))
+    for (let source of fs.readdirSync(targetPath).map(x => path.join(targetPath, x)))
     {
         if (exclude.test(source))
             continue;
             
-        if (FS.lstatSync(source).isDirectory())
+        if (fs.lstatSync(source).isDirectory())
         {
             module.exports.cleanup(source, pattern, exclude);
         }        
         else if (pattern.test(source))
         {
-            FS.unlinkSync(source);
+            fs.unlinkSync(source);
         }
     }
 }
@@ -51,7 +51,7 @@ module.exports.execute = async function (label, command)
  */
 module.exports.makeDir = function (path)
 {
-    if (FS.existsSync(path))
+    if (fs.existsSync(path))
         return;
 
     let slices = path.replace(/\\/g, '/').split('/');
@@ -61,8 +61,8 @@ module.exports.makeDir = function (path)
     {
         target += slice + '/';
 
-        if (!FS.existsSync(target))
-            FS.mkdirSync(target)
+        if (!fs.existsSync(target))
+            fs.mkdirSync(target)
     }
 }
 

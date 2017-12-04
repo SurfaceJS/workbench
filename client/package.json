@@ -1,28 +1,24 @@
 {
-  "name": "surface-workbench-app-client",
-  "version": "0.0.0",
-  "description": "basic client to development and testing",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/surface"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HitalloExiled/Surface-Workbench.git"
-  },
-  "author": "HitalloExiled",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HitalloExiled/Surface-Workbench/issues"
-  },
-  "homepage": "https://github.com/HitalloExiled/Surface-Workbench#readme",
-  "dependencies": {
-    "@surface/code-splitter-plugin": "0.0.8",
-    "@surface/compiler": "0.0.7",
-    "@surface/custom-element": "0.0.5",
-    "@surface/html-template-plugin": "0.0.6",
-    "@surface/lazy-loader": "0.0.3",
-    "tslib": "1.8.0"
-  }
+    "author": "HitalloExiled",
+    "bugs": {
+        "url": "https://github.com/SurfaceJS/workbench/issues"
+    },
+    "dependencies": {
+        "@types/node": "8.0.50",
+        "tslib": "1.8.0"
+    },
+    "description": "Basic client to development and testing.",
+    "homepage": "https://github.com/SurfaceJS/workbench#readme",
+    "license": "MIT",
+    "main": "./build/index.js",
+    "name": "surface-workbench-client",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SurfaceJS/workbench.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "./node_modules/.bin/surface"
+    },
+    "version": "0.0.0"
 }

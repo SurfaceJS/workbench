@@ -1,1 +1,1 @@
-unlink && install && relink && build
+ %~dp0\commands\unlink && %~dp0\commands\install && %~dp0\commands\relink && %~dp0\commands\build
