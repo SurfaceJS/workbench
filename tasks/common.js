@@ -1,8 +1,8 @@
-const fs   = require('fs');
-const path = require('path');
-const util = require('util');
+const fs   = require("fs");
+const path = require("path");
+const util = require("util");
 
-let exec = util.promisify(require('child_process').exec);
+let exec = util.promisify(require("child_process").exec);
 
 /**
  * @param targetPath {string}
@@ -54,12 +54,12 @@ module.exports.makeDir = function (path)
     if (fs.existsSync(path))
         return;
 
-    let slices = path.replace(/\\/g, '/').split('/');
+    let slices = path.replace(/\\/g, "/").split("/");
 
-    let target = '';
+    let target = "";
     for (let slice of slices)
     {
-        target += slice + '/';
+        target += slice + "/";
 
         if (!fs.existsSync(target))
             fs.mkdirSync(target)

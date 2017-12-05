@@ -1,8 +1,8 @@
-const path     = require('path');
-const common   = require('./common');
-const modules  = require('./modules');
-const paths    = require('./paths');
-const patterns = require('./patterns');
+const path     = require("path");
+const common   = require("./common");
+const modules  = require("./modules");
+const paths    = require("./paths");
+const patterns = require("./patterns");
 
 let commands = [];
 
@@ -15,4 +15,4 @@ for (let $module of modules)
     commands.push(common.execute(`Compiling ${$module.name}`, `tsc -p ${source}`));
 }
 
-Promise.all(commands).then(() => console.log('\nDone!'));
+Promise.all(commands).then(() => console.log("\nDone!"));
