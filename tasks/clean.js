@@ -1,8 +1,8 @@
-const path     = require('path');
-const common   = require('./common');
-const modules  = require('./modules');
-const paths    = require('./paths');
-const patterns = require('./patterns');
+const path     = require("path");
+const common   = require("./common");
+const modules  = require("./modules");
+const paths    = require("./paths");
+const patterns = require("./patterns");
 
 for (let $module of modules)
 {

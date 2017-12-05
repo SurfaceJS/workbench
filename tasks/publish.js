@@ -1,15 +1,15 @@
-const fs       = require('fs');
-const path     = require('path');
-const common   = require('./common');
-const modules  = require('./modules');
-const paths    = require('./paths');
-const patterns = require('./patterns');
+const fs       = require("fs");
+const path     = require("path");
+const common   = require("./common");
+const modules  = require("./modules");
+const paths    = require("./paths");
+const patterns = require("./patterns");
 
 async function run()
 {
-    let token = fs.readFileSync(path.normalize(`${process.env.USERPROFILE}/.npmrc`)).toString().replace('\n', '');
+    let token = fs.readFileSync(path.normalize(`${process.env.USERPROFILE}/.npmrc`)).toString().replace("\n", "");
 
-    let versionsFile = path.resolve(__dirname, './versions.json')
+    let versionsFile = path.resolve(__dirname, "./versions.json")
 
     let versions = { };
     
@@ -26,7 +26,7 @@ async function run()
     {
         let source = path.normalize(path.join(paths.modules, $module.name));
 
-        fs.writeFileSync(path.resolve(source, 'package.json'), JSON.stringify($module, null, 4));
+        fs.writeFileSync(path.resolve(source, "package.json"), JSON.stringify($module, null, 4));
 
         common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
         await common.execute(`Compiling ${source}`, `tsc -p ${source} --noEmit false --declaration true`);
@@ -76,8 +76,8 @@ async function run()
 
     function isUpdated($module)
     {
-        let [targetMajor, targetMinor, targetRevision] = $module.version.split('.').map(x => Number.parseInt(x));
-        let [storedMajor, storedMinor, storedRevision]  = versions[$module.name].split('.').map(x => Number.parseInt(x));
+        let [targetMajor, targetMinor, targetRevision] = $module.version.split(".").map(x => Number.parseInt(x));
+        let [storedMajor, storedMinor, storedRevision]  = versions[$module.name].split(".").map(x => Number.parseInt(x));
 
         return (targetMajor > storedMajor)
             || (targetMajor == storedMajor && targetMinor  > storedMinor)
@@ -86,11 +86,11 @@ async function run()
 
     function updateVersion($module)
     {
-        let [major, minor, revision] = $module.version.split('.').map(x => Number.parseInt(x));
+        let [major, minor, revision] = $module.version.split(".").map(x => Number.parseInt(x));
     
         revision++;
     
-        $module.version = [major, minor, revision].join('.');
+        $module.version = [major, minor, revision].join(".");
     }
 }
 
