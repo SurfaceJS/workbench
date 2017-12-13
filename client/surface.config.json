@@ -2,24 +2,30 @@
     "context":  "source",
     "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
-    "output":   "../server/wwwroot",
-    "plugins":
+    "output":   "../../server/wwwroot",
+    "codeSplitter":
+    {
+        "entries":      ["views"],
+        "useRealPaths": false,
+        "output":       "app/lazy-loader.ts"
+    },
+    "htmlTemplate":
+    {
+        "filename": "[name]/index.html",
+        "template": "template.html"
+    },
+    "simblingPriority":
     [
         {
-            "name": "html-template",
-            "options":
-            {
-                "filename": "[name]/index.html",
-                "template": "template.html"
-            }
+            "from":    ".js",
+            "to":      ".ts",
+            "include": ["../node_modules/@surface", "../../modules/source/@surface"],
+            "exclude": ["../node_modules/@surface/lazy-loader", "../../modules/source/@surface/lazy-loader"]
         },
         {
-            "name": "code-splitter",
-            "options":
-            {
-                "entries":      ["views"],
-                "useRealPaths": true
-            }
+            "from":    ".ts",
+            "to":      ".js",
+            "include": ["../node_modules/@surface/lazy-loader", "../../modules/source/@surface/lazy-loader"]
         }
     ]
 }
