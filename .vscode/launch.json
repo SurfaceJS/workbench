@@ -18,8 +18,8 @@
             "request":     "launch",
             "name":        "Launch Server",
             "program":     "${workspaceRoot}\\server\\source\\index.js",
-            "cwd":         "${workspaceRoot}\\server\\source",
-            "runtimeArgs": ["--preserve-symlinks"]
+            "cwd":         "${workspaceRoot}\\server\\source"//,
+            //"runtimeArgs": ["--preserve-symlinks"]
         },
         {
             "type":        "node",

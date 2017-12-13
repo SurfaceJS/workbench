@@ -1,5 +1,6 @@
 import template from "./index.html";
-import style    from "./index.scss";
+//import style    from "./index.scss";
+import { load } from "./lazy-loader";
 
 import { CustomElement } from "@surface/custom-element";
 import { element }       from "@surface/custom-element/decorators";
@@ -7,7 +8,7 @@ import { Router }        from "@surface/router";
 import { ViewManager }   from "@surface/view-manager";
 import { ViewHost }      from "@surface/view-host";
 
-@element("app-root", template, style)
+@element("app-root", template)//, style)
 export class App extends CustomElement
 {
     private _viewHost:    ViewHost;
@@ -25,7 +26,9 @@ export class App extends CustomElement
         this._homeLink    = super.attach("#home-link");
         this._loginLink   = super.attach("#login-link");
 
-        this._viewManager = ViewManager.configure(this._viewHost, new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true));
+        const router = new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true);
+
+        this._viewManager = ViewManager.configure(this._viewHost, router, load);
         this._viewManager.routeTo(window.location.pathname + window.location.search);
 
         this._contactLink.onclick = () => this._viewManager.routeTo("/contact");
