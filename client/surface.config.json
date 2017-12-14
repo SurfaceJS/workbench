@@ -5,16 +5,16 @@
     "output":   "../../server/wwwroot",
     "codeSplitter":
     {
-        "entries":      ["views"],
-        "useRealPaths": false,
-        "output":       "app/lazy-loader.ts"
+        "entries":          ["views"],
+        "output":           "@surface/lazy-loader",
+        "useAbsolutePaths": true
     },
     "htmlTemplate":
     {
         "filename": "[name]/index.html",
         "template": "template.html"
     },
-    "simblingPriority":
+    "simblingResolve":
     [
         {
             "from":    ".js",
