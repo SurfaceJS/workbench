@@ -1,6 +1,5 @@
 import template from "./index.html";
 //import style    from "./index.scss";
-import { load } from "./lazy-loader";
 
 import { CustomElement } from "@surface/custom-element";
 import { element }       from "@surface/custom-element/decorators";
@@ -28,7 +27,7 @@ export class App extends CustomElement
 
         const router = new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true);
 
-        this._viewManager = ViewManager.configure(this._viewHost, router, load);
+        this._viewManager = ViewManager.configure(this._viewHost, router);
         this._viewManager.routeTo(window.location.pathname + window.location.search);
 
         this._contactLink.onclick = () => this._viewManager.routeTo("/contact");

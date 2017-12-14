@@ -9,8 +9,8 @@ WebHost.configure(configuration)
     .useMvc
     (
         new Router()
-            .mapRoute("default", "{controller}/{action=index}/{id?}", true)
             .mapRoute("api", "api/{controller}/{action=index}/{id?}")
+            .mapRoute("default", "{controller}/{action=index}/{id?}", true)
     )
     .useFallBack("/app")
     .run();
