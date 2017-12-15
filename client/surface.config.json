@@ -3,12 +3,6 @@
     "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
     "output":   "../../server/wwwroot",
-    "codeSplitter":
-    {
-        "entries":          ["views"],
-        "output":           "@surface/lazy-loader",
-        "useAbsolutePaths": true
-    },
     "htmlTemplate":
     {
         "filename": "[name]/index.html",
