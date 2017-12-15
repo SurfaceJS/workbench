@@ -44,7 +44,7 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node ./node_modules/@surface/code-splitter/index.js -c source -e views -o app/lazy-loader/index.ts"],
+            "args":           ["/c", "node ./node_modules/@surface/code-splitter/index.js -c source -e views -o app/lazy-loader.ts"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\client"
