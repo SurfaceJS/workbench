@@ -5,10 +5,21 @@
         {
             "type":        "node",
             "request":     "launch",
-            "name":        "Launch compiler",
+            "name":        "Launch Compiler",
             "program":     "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
             "args":        ["-c", "client"],
             "cwd":         "${workspaceRoot}",
+            "protocol":    "inspector"//,
+            //"runtimeArgs": ["--preserve-symlinks"]
+
+        },
+        {
+            "type":        "node",
+            "request":     "launch",
+            "name":        "Launch Code Splitter",
+            "program":     "${workspaceRoot}\\client\\node_modules\\@surface\\code-splitter\\index",
+            "args":        ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
+            "cwd":         "${workspaceRoot}\\client",
             "protocol":    "inspector"//,
             //"runtimeArgs": ["--preserve-symlinks"]
 

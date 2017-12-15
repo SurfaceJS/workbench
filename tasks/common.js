@@ -5,11 +5,11 @@ const util = require("util");
 let exec = util.promisify(require("child_process").exec);
 
 /**
- * @param targetPath {string}
- * @param pattern    {RegExp}
- * @param exclude    {RegExp}
+ * @param {string} targetPath
+ * @param {RegExp} pattern
+ * @param {RegExp} exclude
  */
-module.exports.cleanup = function(targetPath, pattern, exclude)
+module.exports.cleanup = function cleanup(targetPath, pattern, exclude)
 {
     for (let source of fs.readdirSync(targetPath).map(x => path.join(targetPath, x)))
     {
@@ -28,10 +28,10 @@ module.exports.cleanup = function(targetPath, pattern, exclude)
 }
 
 /**
- * @param label   {string}
- * @param command {string}
+ * @param {string} label
+ * @param {string} command
  */
-module.exports.execute = async function (label, command)
+module.exports.execute = async function execute(label, command)
 {
     try
     {
@@ -47,26 +47,42 @@ module.exports.execute = async function (label, command)
 }
 
 /**
- * @param path {string}
+ * @param {string}        targetPath
+ * @param {string|number} mode
  */
-module.exports.makeDir = function (path)
+module.exports.makePath = function makePath(targetPath, mode)
 {
-    if (fs.existsSync(path))
-        return;
-
-    let slices = path.replace(/\\/g, "/").split("/");
-
-    let target = "";
-    for (let slice of slices)
+    if (fs.existsSync(targetPath))
     {
-        target += slice + "/";
+        targetPath = fs.lstatSync(targetPath).isSymbolicLink() ? fs.readlinkSync(targetPath) : targetPath;
 
-        if (!fs.existsSync(target))
-            fs.mkdirSync(target)
+        if (!fs.lstatSync(targetPath).isDirectory())
+        {
+            throw new Error(`${targetPath} exist and isn't an directory.`);
+        }
+
+        return;
+    }
+
+    const parentDir = path.dirname(targetPath.toString());
+    // tslint:disable-next-line:no-magic-numbers
+    mode = parseInt("0777", 8) & (~process.umask());
+
+    if(fs.existsSync(parentDir))
+    {
+        makePath(parentDir, mode);
+        return fs.mkdirSync(targetPath, mode);
+    }
+    else
+    {
+        return fs.mkdirSync(targetPath, mode);
     }
 }
 
-module.exports.objectToDictionary = function(source)
+/**
+ * @param {Object} source 
+ */
+module.exports.objectToDictionary = function objectToDictionary(source)
 {
     let result = [];
 

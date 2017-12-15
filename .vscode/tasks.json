@@ -31,7 +31,20 @@
             "isBuildCommand": true,
             "command":        "cmd",
             "isShellCommand": true,
-            "args":           ["/c", "node --preserve-symlinks ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
+            "options":
+            {
+                "cwd": "${workspaceRoot}\\client"
+            },
+            "showOutput":   "always",
+            "isBackground": false
+        },
+        {
+            "taskName":       "code-split",
+            "isBuildCommand": true,
+            "command":        "cmd",
+            "isShellCommand": true,
+            "args":           ["/c", "node ./node_modules/@surface/code-splitter/index.js -c source -e views -o app/lazy-loader/index.ts"],
             "options":
             {
                 "cwd": "${workspaceRoot}\\client"

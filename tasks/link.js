@@ -35,7 +35,7 @@ async function link()
             let source = path.normalize(path.join(paths.modules, dependence.key));
             let target = path.normalize(path.join(paths.modules, $module.name, "node_modules"));
 
-            common.makeDir(path.join(target, "@surface"));
+            common.makePath(path.join(target, "@surface"));
 
             target = path.normalize(path.join(target, dependence.key));
 
@@ -48,8 +48,7 @@ async function link()
     {
         let nodeModules = path.resolve(target.path, "../");
 
-        if (!fs.existsSync(nodeModules))
-            fs.mkdirSync(nodeModules);
+        common.makePath(nodeModules);
 
         if (!fs.existsSync(target.path))
             await common.execute(`Linking @surface on ${target.name}:`, `mklink /J ${target.path} ${path.join(paths.modules, "@surface")}`);
