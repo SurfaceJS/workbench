@@ -68,7 +68,7 @@ module.exports.makePath = function makePath(targetPath, mode)
     // tslint:disable-next-line:no-magic-numbers
     mode = parseInt("0777", 8) & (~process.umask());
 
-    if(fs.existsSync(parentDir))
+    if(!fs.existsSync(parentDir))
     {
         makePath(parentDir, mode);
         return fs.mkdirSync(targetPath, mode);
@@ -80,7 +80,8 @@ module.exports.makePath = function makePath(targetPath, mode)
 }
 
 /**
- * @param {Object} source 
+ * @param {Object} source
+ * @returns {Array<{ key: string, value: Object }>}
  */
 module.exports.objectToDictionary = function objectToDictionary(source)
 {
