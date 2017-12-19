@@ -19,7 +19,8 @@
         "sourceMap":                      true,
         "target":                         "esnext",
         "traceResolution":                false,
-        "typeRoots":                      ["../node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "../node_modules/@surface/compiler/@types" */]
+        "typeRoots":                      ["node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "node_modules/@surface/compiler/@types" */]
     },
-    "include": ["."]
+    "include": ["source"],
+    "exclude": ["node_modules/@surface", "node_modules/@surface/**/node_modules/@surface"]
 }
