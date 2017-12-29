@@ -2,24 +2,18 @@
     "context":  "source",
     "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
-    "output":   "../../server/wwwroot",
+    "tsconfig": "tsconfig.json",
+    "tslint":   "../tslint.json",
+    "output":   "../server/wwwroot",
     "htmlTemplate":
     {
         "filename": "[name]/index.html",
         "template": "template.html"
     },
     "simblingResolve":
-    [
-        {
-            "from":    ".js",
-            "to":      ".ts",
-            "include": ["../node_modules/@surface", "../../modules/source/@surface"],
-            "exclude": ["../node_modules/@surface/lazy-loader", "../../modules/source/@surface/lazy-loader"]
-        },
-        {
-            "from":    ".ts",
-            "to":      ".js",
-            "include": ["../node_modules/@surface/lazy-loader", "../../modules/source/@surface/lazy-loader"]
-        }
-    ]
+    {
+        "from":    ".js",
+        "to":      ".ts",
+        "include": ["node_modules/@surface", "../modules/source/@surface"]
+    }
 }
