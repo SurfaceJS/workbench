@@ -3,7 +3,7 @@
     {
         "allowSyntheticDefaultImports":   true,
         "alwaysStrict":                   true,
-        "baseUrl":                        ".",
+        "baseUrl":                        "source",
         "emitDecoratorMetadata":          true,
         "experimentalDecorators":         true,
         "importHelpers":                  true,

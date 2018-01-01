@@ -9,6 +9,6 @@ export class Home extends View
     public constructor()
     {
         super();
-        this.$name = "Home";
+        this.name = "Home";
     }
 }

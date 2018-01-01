@@ -1,6 +1,8 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "workbench.iconTheme": "vscode-icons",
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "editor.roundedSelection": false,
     "files.exclude":
@@ -12,7 +14,7 @@
         "**/.vs":                     true,
         "**/.DS_Store":               true,
         "**/CVS":                     true,
-        "**/node_modules":            true,
+        "**/node_modules":            false,
         "**/package-lock.json":       true,
         "modules/source/**/*.js":     true,
         "modules/source/**/*.js.map": true,
