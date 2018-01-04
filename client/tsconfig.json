@@ -8,6 +8,7 @@
         "experimentalDecorators":         true,
         "importHelpers":                  true,
         "lib":                            ["dom", "esnext"],
+        "noEmit":                         true,
         "noEmitOnError":                  true,
         "noImplicitReturns":              true,
         "noImplicitThis":                 true,
