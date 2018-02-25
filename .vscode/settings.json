@@ -16,9 +16,9 @@
         "**/CVS":                     true,
         "**/node_modules":            false,
         "**/package-lock.json":       true,
-        "modules/source/**/*.js":     true,
+        "modules/source/**/*.js":     false,
         "modules/source/**/*.js.map": true,
-        "server/source/**/*.js":      true,
+        "server/source/**/*.js":      false,
         "server/source/**/*.js.map":  true
     }
 }

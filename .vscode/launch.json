@@ -85,6 +85,18 @@
             "name":    "Attach to Chrome",
             "port":    9222,
             "webRoot": "${workspaceRoot}\\server\\wwwroot"
-        }
+        },
+        {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Tests",
+            "program":  "${workspaceRoot}\\modules\\tests\\node_modules\\bin\\_mocha",
+            "cwd":      "${workspaceRoot}\\tasks\\",
+            "args":
+            [
+                "build\\index.js"
+            ],
+            "console": "integratedTerminal"
+        },
     ]
 }

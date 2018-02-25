@@ -1,113 +1,77 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format    
-    "version": "0.1.0",
+    "version": "2.0.0",
     "tasks":
     [
         {
-            "taskName":       "build",
+            "label":          "build",
             "command":        "tsc",
-            "showOutput":     "always",
-            "isShellCommand": true,
-            "isBackground":   false,
-            "problemMatcher": "$tsc",
-            "options":
+            "presentation":   { "reveal": "silent" },
+            "type":           "shell",
+            "isBackground":   true,
+            "problemMatcher": ["$tsc"],
+            "options":        { "cwd": "${fileDirname}" }
+        },
+        {
+            "label":          "build-all",
+            "command":        "cmd /c node ./tasks/build",
+            "type":           "shell",            
+            "isBackground":   true,
+            "problemMatcher": ["$tsc"],
+            "group":
             {
-                "cwd": "${fileDirname}"
+                "kind": "build",
+                "isDefault": true
             }
         },
         {
-            "taskName":       "build-all",
-            "command":        "cmd",
-            "args":           ["/c", "node ./tasks/build"],
-            "showOutput":     "always",
-            "isBuildCommand": true,
-            "isShellCommand": true,
-            "isBackground":   true
+            "label":          "client[build]",
+            "command":        "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "type":           "shell",
+            "isBackground":   true,
+            "options":        { "cwd": "${workspaceRoot}\\client" },
+            "problemMatcher": []
         },
         {
-            "taskName":       "client[build]",
-            "command":        "cmd",
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
-            "showOutput":     "always",
-            "isShellCommand": true,
+            "label":          "client[watch]",
+            "command":        "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
+            "type":           "shell",
             "isBackground":   true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\client"
-            }
+            "options":        { "cwd": "${workspaceRoot}\\client" },
+            "problemMatcher": []
         },
         {
-            "taskName":       "client[watch]",
-            "command":        "cmd",
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
-            "showOutput":     "always",
-            "isShellCommand": true,
+            "label":          "code-split",
+            "command":        "cmd /c node ./node_modules/@surface/code-splitter/index.js -c source -e views -o app/lazy-loader.ts",
+            "type":           "shell",
             "isBackground":   true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\client"
-            }
+            "options":        { "cwd": "${workspaceRoot}\\client" },
+            "problemMatcher": []
         },
         {
-            "taskName":       "code-split",
-            "command":        "cmd",
-            "args":           ["/c", "node ./node_modules/@surface/code-splitter/index.js -c source -e views -o app/lazy-loader.ts"],
-            "showOutput":     "always",
+            "label":          "test[build]",
+            "command":        "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "type":           "shell",
             "isBackground":   true,
-            "isShellCommand": true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\client"
-            }
+            "options":        { "cwd": "${workspaceRoot}\\modules\\tests" },
+            "problemMatcher": []
         },
         {
-            "taskName":       "server[build]",
-            "command":        "cmd",
-            "args":           ["/c", "tsc"],
-            "showOutput":     "always",
+            "label":          "test[run]",
+            "command":        "npm run test",
+            "type":           "shell",
             "isBackground":   true,
-            "isShellCommand": true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\server\\source"
-            },
+            "options":        { "cwd": "${workspaceRoot}\\modules\\tests" },
+            "problemMatcher": []
         },
         {
-            "taskName":       "server[watch]",
-            "command":        "cmd",
-            "args":           ["/c", "tsc -w"],
-            "showOutput":     "always",
+            "label":          "test[watch]",
+            "command":        "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
+            "type":           "shell",
             "isBackground":   true,
-            "isShellCommand": true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\server\\source"
-            }
+            "options":        { "cwd": "${workspaceRoot}\\modules\\tests" },
+            "problemMatcher": []
         },
-        {
-            "taskName":       "tests[build]",
-            "command":        "cmd",
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild"],
-            "showOutput":     "always",
-            "isShellCommand": true,
-            "isBackground":   true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\modules\\tests"
-            }
-        },
-        {
-            "taskName":       "tests[watch]",
-            "command":        "cmd",
-            "args":           ["/c", "node ./node_modules/@surface/compiler/index.js -t rebuild -w true"],
-            "showOutput":     "always",
-            "isBackground":   true,
-            "isShellCommand": true,
-            "options":
-            {
-                "cwd": "${workspaceRoot}\\modules\\tests"
-            }
-        }        
     ]
 }
