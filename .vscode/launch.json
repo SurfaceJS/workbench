@@ -35,15 +35,6 @@
         {
             "type":        "node",
             "request":     "launch",
-            "name":        "Launch Tests",
-            "program":     "${workspaceRoot}\\modules\\tests\\build\\index.js",
-            "cwd":         "${workspaceRoot}\\modules\\tests\\build",
-            //"preLaunchTask": "tests[build]"
-            "runtimeArgs": ["--preserve-symlinks"]
-        },
-        {
-            "type":        "node",
-            "request":     "launch",
             "name":        "Launch Build All",
             "program":     "${workspaceRoot}\\tasks\\build",
             "cwd":         "${workspaceRoot}\\client"
@@ -90,13 +81,25 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Tests",
-            "program":  "${workspaceRoot}\\modules\\tests\\node_modules\\bin\\_mocha",
-            "cwd":      "${workspaceRoot}\\tasks\\",
+            "program":  "${workspaceRoot}\\modules\\tests\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":      "${workspaceRoot}\\modules\\tests",
             "args":
             [
-                "build\\index.js"
+                "-u", "tdd",
+                "--timeout", "999999",
+                "--colors",
+                "build"
             ],
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "sourceMapPathOverrides":
+            {
+                "webpack:///.\\~\\*": "${workspaceRoot}\\modules\\tests\\node_modules\\*",
+                "webpack:///.\\*":    "${workspaceRoot}\\modules\\tests\\source\\*",
+                "webpack:///*":       "*"
+            },
+            "sourceMaps":  true,
+            "outFiles":    ["${workspaceRoot}\\modules\\tests\\build"],
+            "runtimeArgs": ["--nolazy"]
         },
     ]
 }
