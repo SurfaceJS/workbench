@@ -7,7 +7,7 @@
         {
             "label":          "build",
             "command":        "tsc",
-            "presentation":   { "reveal": "silent" },
+            "presentation":   { "reveal": "never" },
             "type":           "shell",
             "isBackground":   true,
             "problemMatcher": ["$tsc"],
