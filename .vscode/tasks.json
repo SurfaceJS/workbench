@@ -58,6 +58,14 @@
             "problemMatcher": []
         },
         {
+            "label":          "test[cover]",
+            "command":        "npm run cover -s",
+            "type":           "shell",
+            "isBackground":   true,
+            "options":        { "cwd": "${workspaceRoot}\\modules\\tests" },
+            "problemMatcher": []
+        },
+        {
             "label":          "test[run]",
             "command":        "npm run test -s",
             "type":           "shell",
