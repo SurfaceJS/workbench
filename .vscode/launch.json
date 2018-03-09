@@ -3,13 +3,14 @@
     "configurations":
     [
         {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Compiler",
-            "program":     "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\index",
-            "args":        ["-c", "client"],
-            "cwd":         "${workspaceFolder}",
-            "protocol":    "inspector"
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Compiler",
+            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\index",
+            "args":     ["-c", "client"],
+            "cwd":      "${workspaceFolder}",
+            "protocol": "inspector",
+            "outFiles": ["${workspaceFolder}/**/*.js"],
         },
         {
             "type":     "node",
@@ -18,15 +19,17 @@
             "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\code-splitter\\index",
             "args":     ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
             "cwd":      "${workspaceFolder}\\client",
-            "protocol": "inspector"
+            "protocol": "inspector",
+            "outFiles": ["${workspaceFolder}/**/*.js"],
 
         },
         {
-            "type":    "node",
-            "request": "launch",
-            "name":    "Launch Server",
-            "program": "${workspaceFolder}\\server\\source\\index.js",
-            "cwd":     "${workspaceFolder}\\server\\source"
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Server",
+            "program":  "${workspaceFolder}\\server\\source\\index.js",
+            "cwd":      "${workspaceFolder}\\server\\source",
+            "outFiles": ["${workspaceFolder}/**/*.js"],
         },
         {
             "type":    "node",
@@ -94,7 +97,7 @@
                 "webpack:///*":       "*"
             },
             "sourceMaps":  true,
-            "outFiles":    ["${workspaceFolder}\\modules\\tests\\build"],
+            "outFiles":    ["${workspaceFolder}/**/*.js"],
             "runtimeArgs": ["--nolazy"]
         },
     ]
