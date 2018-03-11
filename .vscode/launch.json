@@ -80,8 +80,8 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Tests",
-            "program":  "${workspaceFolder}\\modules\\tests\\node_modules\\mocha\\bin\\_mocha",
-            "cwd":      "${workspaceFolder}\\modules\\tests",
+            "program":  "${workspaceFolder}\\modules\\test-runner\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":      "${workspaceFolder}\\modules\\test-runner",
             "args":
             [
                 "-u", "tdd",
@@ -92,12 +92,12 @@
             "console": "integratedTerminal",
             "sourceMapPathOverrides":
             {
-                "webpack:///.\\~\\*": "${workspaceFolder}\\modules\\tests\\node_modules\\*",
-                "webpack:///.\\*":    "${workspaceFolder}\\modules\\tests\\source\\*",
+                "webpack:///.\\~\\*": "${workspaceFolder}\\modules\\test-runner\\node_modules\\*",
+                "webpack:///.\\*":    "${workspaceFolder}\\modules\\test-runner\\source\\*",
                 "webpack:///*":       "*"
             },
             "sourceMaps":  true,
-            "outFiles":    ["${workspaceFolder}\\modules\\tests\\**\\*.js"],
+            "outFiles":    ["${workspaceFolder}\\modules\\test-runner\\**\\*.js"],
             "runtimeArgs": ["--nolazy"]
         },
     ]

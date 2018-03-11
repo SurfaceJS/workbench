@@ -68,17 +68,17 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules\\tests"
+                "cwd": "${workspaceRoot}\\modules\\test-runner"
             },
             "problemMatcher": []
         },
-        {
+        { 
             "label": "test[cover]",
             "command": "npm run cover -s",
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules\\tests"
+                "cwd": "${workspaceRoot}\\modules\\test-runner"
             },
             "problemMatcher": []
         },
@@ -88,7 +88,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules\\tests"
+                "cwd": "${workspaceRoot}\\modules\\test-runner"
             },
             "problemMatcher": []
         },
@@ -98,7 +98,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules\\tests"
+                "cwd": "${workspaceRoot}\\modules\\test-runner"
             },
             "problemMatcher": []
         }
