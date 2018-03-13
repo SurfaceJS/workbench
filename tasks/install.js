@@ -9,9 +9,11 @@ let commands = [];
 
 for (let $module of modules)
 {
-    let source = path.normalize(path.join(paths.modules, $module.name));
+    const source = path.normalize(path.join(paths.modules, $module.name));
 
-    let dependencies = require(path.join(source, "package.json")).dependencies || {};
+    const package = require(path.join(source, "package.json"));
+
+    let dependencies = { ...package.dependencies, ...package.devDependencies };
 
     let targets = Object.keys(dependencies)
         .filter(x => !x.startsWith("@surface/") || fullInstall)
@@ -24,9 +26,11 @@ for (let $module of modules)
 
 for (let targetPath of [paths.client, paths.server, paths.tests])
 {
-    let source = path.join(targetPath, "../");
+    const source = path.join(targetPath, "../");
 
-    let dependencies = require(path.join(source, "package.json")).dependencies || { };
+    const package = require(path.join(source, "package.json"));
+
+    let dependencies = { ...package.dependencies, ...package.devDependencies };
 
     let targets = Object.keys(dependencies)
         .filter(x => !x.startsWith("@surface/") || fullInstall)

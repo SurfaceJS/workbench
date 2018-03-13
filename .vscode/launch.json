@@ -3,73 +3,63 @@
     "configurations":
     [
         {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Compiler",
-            "program":     "${workspaceRoot}\\client\\node_modules\\@surface\\compiler\\index",
-            "args":        ["-c", "client"],
-            "cwd":         "${workspaceRoot}",
-            "protocol":    "inspector"//,
-            //"runtimeArgs": ["--preserve-symlinks"]
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Compiler",
+            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\index",
+            "args":     ["-c", "client"],
+            "cwd":      "${workspaceFolder}",
+            "protocol": "inspector",
+            "outFiles": ["${workspaceFolder}\\**\\*.js"],
+        },
+        {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Code Splitter",
+            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\code-splitter\\index",
+            "args":     ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
+            "cwd":      "${workspaceFolder}\\client",
+            "protocol": "inspector",
+            "outFiles": ["${workspaceFolder}\\client\\**\\*.js"],
 
         },
         {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Code Splitter",
-            "program":     "${workspaceRoot}\\client\\node_modules\\@surface\\code-splitter\\index",
-            "args":        ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
-            "cwd":         "${workspaceRoot}\\client",
-            "protocol":    "inspector"//,
-            //"runtimeArgs": ["--preserve-symlinks"]
-
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Server",
+            "program":  "${workspaceFolder}\\server\\source\\index.js",
+            "cwd":      "${workspaceFolder}\\server\\source",
+            "outFiles": ["${workspaceFolder}\\server\\source\\**\\*.js"],
         },
         {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Server",
-            "program":     "${workspaceRoot}\\server\\source\\index.js",
-            "cwd":         "${workspaceRoot}\\server\\source"//,
-            //"runtimeArgs": ["--preserve-symlinks"]
-        },
-        {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Tests",
-            "program":     "${workspaceRoot}\\modules\\tests\\build\\index.js",
-            "cwd":         "${workspaceRoot}\\modules\\tests\\build",
-            //"preLaunchTask": "tests[build]"
-            "runtimeArgs": ["--preserve-symlinks"]
-        },
-        {
-            "type":        "node",
-            "request":     "launch",
-            "name":        "Launch Build All",
-            "program":     "${workspaceRoot}\\tasks\\build",
-            "cwd":         "${workspaceRoot}\\client"
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Build All",
+            "program": "${workspaceFolder}\\tasks\\build",
+            "cwd":     "${workspaceFolder}\\client"
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Linking",
-            "program":  "${workspaceRoot}\\tasks\\link",
+            "program":  "${workspaceFolder}\\tasks\\link",
             "args":     ["r"],
-            "cwd":      "${workspaceRoot}\\tasks\\"
+            "cwd":      "${workspaceFolder}\\tasks\\"
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Publish",
-            "program":  "${workspaceRoot}\\tasks\\publish",
-            "cwd":      "${workspaceRoot}\\tasks\\",
+            "program":  "${workspaceFolder}\\tasks\\publish",
+            "cwd":      "${workspaceFolder}\\tasks\\",
             "console":  "integratedTerminal"
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Install",
-            "program":  "${workspaceRoot}\\tasks\\install",
-            "cwd":      "${workspaceRoot}\\tasks\\",
+            "program":  "${workspaceFolder}\\tasks\\install",
+            "cwd":      "${workspaceFolder}\\tasks\\",
             "console":  "integratedTerminal"
         },
         {
@@ -77,14 +67,38 @@
             "request": "launch",
             "name":    "Launch Chrome against localhost",
             "url":     "http://localhost:1337",
-            "webRoot": "${workspaceRoot}\\server\\wwwroot"
+            "webRoot": "${workspaceFolder}\\server\\wwwroot"
         },
         {
             "type":    "chrome",
             "request": "attach",
             "name":    "Attach to Chrome",
             "port":    9222,
-            "webRoot": "${workspaceRoot}\\server\\wwwroot"
-        }
+            "webRoot": "${workspaceFolder}\\server\\wwwroot"
+        },
+        {
+            "type":     "node",
+            "request":  "launch",
+            "name":     "Launch Tests",
+            "program":  "${workspaceFolder}\\modules\\test-runner\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":      "${workspaceFolder}\\modules\\test-runner",
+            "args":
+            [
+                "-u", "tdd",
+                "--timeout", "999999",
+                "--colors",
+                "build"
+            ],
+            "console": "integratedTerminal",
+            "sourceMapPathOverrides":
+            {
+                "webpack:///.\\~\\*": "${workspaceFolder}\\modules\\test-runner\\node_modules\\*",
+                "webpack:///.\\*":    "${workspaceFolder}\\modules\\test-runner\\source\\*",
+                "webpack:///*":       "*"
+            },
+            "sourceMaps":  true,
+            "outFiles":    ["${workspaceFolder}\\modules\\test-runner\\**\\*.js"],
+            "runtimeArgs": ["--nolazy"]
+        },
     ]
 }
