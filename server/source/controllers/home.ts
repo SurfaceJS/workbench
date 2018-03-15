@@ -1,6 +1,7 @@
+import ActionResult  from "@surface/web-host/action-result";
+import Controller    from "@surface/web-host/controller";
+
 import { ObjectLiteral } from "@surface/types";
-import { ActionResult }  from "@surface/web-host/action-result";
-import { Controller }    from "@surface/web-host/controller";
 
 export class Home extends Controller
 {
