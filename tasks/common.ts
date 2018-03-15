@@ -1,25 +1,22 @@
-const fs   = require("fs");
-const path = require("path");
-const util = require("util");
+import fs   from "fs";
+import path from "path";
+import util from "util";
 
 let exec = util.promisify(require("child_process").exec);
 
-/**
- * @param {string} targetPath
- * @param {RegExp} pattern
- * @param {RegExp} exclude
- */
-module.exports.cleanup = function cleanup(targetPath, pattern, exclude)
+export function cleanup(targetPath: string, pattern: RegExp, exclude: RegExp): void
 {
     for (let source of fs.readdirSync(targetPath).map(x => path.join(targetPath, x)))
     {
         if (exclude.test(source))
+        {
             continue;
-            
+        }
+
         if (fs.lstatSync(source).isDirectory())
         {
             module.exports.cleanup(source, pattern, exclude);
-        }        
+        }
         else if (pattern.test(source))
         {
             fs.unlinkSync(source);
@@ -27,30 +24,25 @@ module.exports.cleanup = function cleanup(targetPath, pattern, exclude)
     }
 }
 
-/**
- * @param {string} label
- * @param {string} command
- */
-module.exports.execute = async function execute(label, command)
+export async function execute(label: string, command: string): Promise<void>
 {
     try
     {
         const { stdout, stderr } = await exec(command);
         console.log(label, stdout);
+
         if (stderr)
+        {
             console.log(stderr, stderr);
+        }
     }
-    catch(err)
+    catch (err)
     {
-        console.log(err.message)
+        console.log(err.message);
     }
 }
 
-/**
- * @param {string}        targetPath
- * @param {string|number} mode
- */
-module.exports.makePath = function makePath(targetPath, mode)
+export function makePath(targetPath: string, mode?: string|number): void
 {
     if (fs.existsSync(targetPath))
     {
@@ -66,9 +58,9 @@ module.exports.makePath = function makePath(targetPath, mode)
 
     const parentDir = path.dirname(targetPath.toString());
     // tslint:disable-next-line:no-magic-numbers
-    mode = parseInt("0777", 8) & (~process.umask());
+    mode = mode || parseInt("0777", 8) & (~process.umask());
 
-    if(!fs.existsSync(parentDir))
+    if (!fs.existsSync(parentDir))
     {
         makePath(parentDir, mode);
         return fs.mkdirSync(targetPath, mode);
@@ -83,12 +75,13 @@ module.exports.makePath = function makePath(targetPath, mode)
  * @param {Object} source
  * @returns {Array<{ key: string, value: Object }>}
  */
-module.exports.objectToDictionary = function objectToDictionary(source)
+export function objectToDictionary(source: Object): Array<{ key: string, value: Object }>
 {
     let result = [];
 
-    for (let key in source)
-        result.push({ key: key, value: source[key] })
+    for (let key in source) {
+        result.push({ key: key, value: source[key] });
+    }
 
-    return result
+    return result;
 }

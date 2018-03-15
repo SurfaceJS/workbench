@@ -1,1 +1,1 @@
- %~dp0\commands\relink && %~dp0\commands\install && %~dp0\commands\relink && %~dp0\commands\build
+ tsc -p %~dp0\tasks && %~dp0\commands\relink && %~dp0\commands\install && %~dp0\commands\relink && %~dp0\commands\build
