@@ -7,20 +7,16 @@
     "editor.roundedSelection": false,
     "files.exclude":
     {
-        "**/*.config":                      true,
-        "**/.git":                          true,
-        "**/.hg":                           true,
-        "**/.svn":                          true,
-        "**/.vs":                           true,
-        "**/.DS_Store":                     true,
-        "**/CVS":                           true,
-        "**/node_modules":                  false,
-        "**/package-lock.json":             true,
-        "modules/source/**/*.js":           true,
-        "modules/source/**/*.js.map":       true,
-        "modules/tests/source/**/*.js":     true,
-        "modules/tests/source/**/*.js.map": true,
-        "server/source/**/*.js":            true,
-        "server/source/**/*.js.map":        true
+        "**/*.config":          true,
+        "**/.git":              true,
+        "**/.hg":               true,
+        "**/.svn":              true,
+        "**/.vs":               true,
+        "**/.DS_Store":         true,
+        "**/CVS":               true,
+        "**/node_modules":      false,
+        "**/package-lock.json": true,
+        "**/*.js":              true,
+        "**/*.js.map":          true,
     }
 }
