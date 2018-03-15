@@ -63,5 +63,3 @@ build/
 *.js
 *.js.map
 *.orig
-!/tasks/**/*.js
-

@@ -64,7 +64,7 @@
         },
         {
             "label": "test[build]",
-            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "command": "driveup & cmd /c node ../source/@surface/compiler/index.js -t rebuild",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -94,7 +94,7 @@
         },
         {
             "label": "test[watch]",
-            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
+            "command": "driveup & cmd /c node ../source/@surface/compiler/index.js -t rebuild -w true",
             "type": "shell",
             "isBackground": true,
             "options": {

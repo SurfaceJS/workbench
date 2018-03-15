@@ -1,27 +1,9 @@
-{ 
+{
+    "extends": "../modules/tsconfig.json", 
     "compilerOptions":
     {
-        "allowSyntheticDefaultImports":   true,
-        "alwaysStrict":                   true,
-        "baseUrl":                        "source",
-        "emitDecoratorMetadata":          true,
-        "experimentalDecorators":         true,
-        "importHelpers":                  true,
-        "lib":                            ["dom", "esnext"],
-        "noEmit":                         true,
-        "noEmitOnError":                  true,
-        "noImplicitReturns":              true,
-        "noImplicitThis":                 true,
-        "noUnusedLocals":                 true,
-        "module":                         "esnext",
-        "moduleResolution":               "node",
-        "strictNullChecks":               true,
-        "suppressImplicitAnyIndexErrors": true,
-        "sourceMap":                      true,
-        "target":                         "esnext",
-        "traceResolution":                false,
-        "typeRoots":                      ["node_modules/@surface/custom-element/@types" /* Just for linking. For packages use "node_modules/@surface/compiler/@types" */]
-    },
-    "include": ["source"],
-    "exclude": ["node_modules/@surface", "node_modules/@surface/**/node_modules/@surface"]
+        "lib":    ["dom", "esnext"],
+        "noEmit": true,
+        "types":  ["file-extensions", "shady-css"]
+    }
 }

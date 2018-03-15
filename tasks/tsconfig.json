@@ -1,0 +1,10 @@
+{
+    "extends": "../modules/tsconfig.json",
+    "compilerOptions":
+    {
+        "importHelpers": false,
+        "module":        "commonjs",
+        "noEmitHelpers": false,
+        "types":         ["node"],
+    }
+}
