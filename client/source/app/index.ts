@@ -4,7 +4,7 @@ import { load } from "./module-loader";
 
 import CustomElement from "@surface/custom-element";
 import { element }   from "@surface/custom-element/decorators";
-import { Router }    from "@surface/router";
+import Router        from "@surface/router";
 import ViewHost      from "@surface/view-host";
 import ViewManager   from "@surface/view-manager";
 
