@@ -1,9 +1,8 @@
+import fs          from "fs";
+import path        from "path";
 import * as common from "./common";
 import modules     from "./modules";
 import paths       from "./paths";
-
-import fs      from "fs";
-import path    from "path";
 
 let action = process.argv[2];
 

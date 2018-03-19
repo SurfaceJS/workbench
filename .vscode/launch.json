@@ -77,28 +77,27 @@
             "webRoot": "${workspaceFolder}\\server\\wwwroot"
         },
         {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Tests",
-            "program":  "${workspaceFolder}\\modules\\test-runner\\node_modules\\mocha\\bin\\_mocha",
-            "cwd":      "${workspaceFolder}\\modules\\test-runner",
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Tests",
+            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":     "${workspaceFolder}\\modules",
             "args":
             [
                 "-u", "tdd",
                 "--timeout", "999999",
                 "--colors",
-                "build"
+                "source/@surface/*/tests/*.spec.js"
             ],
-            "console": "integratedTerminal",
-            "sourceMapPathOverrides":
-            {
-                "webpack:///.\\~\\*": "${workspaceFolder}\\modules\\test-runner\\node_modules\\*",
-                "webpack:///.\\*":    "${workspaceFolder}\\modules\\test-runner\\source\\*",
-                "webpack:///*":       "*"
-            },
-            "sourceMaps":  true,
-            "outFiles":    ["${workspaceFolder}\\modules\\test-runner\\**\\*.js"],
+            "console":    "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles":
+            [
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
+            ],
             "runtimeArgs": ["--nolazy"]
-        },
+        }
     ]
 }

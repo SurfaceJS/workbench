@@ -3,6 +3,7 @@
     "compilerOptions":
     {
         "lib":    ["dom", "esnext"],
+        "module": "esnext",
         "noEmit": true,
         "types":  ["file-extensions", "shady-css"]
     }

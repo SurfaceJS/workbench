@@ -1,10 +1,9 @@
+import fs          from "fs";
+import path        from "path";
 import * as common from "./common";
 import modules     from "./modules";
 import paths       from "./paths";
 import patterns    from "./patterns";
-
-import fs   from "fs";
-import path from "path";
 
 type Package =
 {

@@ -1,8 +1,7 @@
+import path        from "path";
 import * as common from "./common";
 import modules     from "./modules";
 import paths       from "./paths";
-
-import path from "path";
 
 const fullInstall = !!process.argv[2];
 
@@ -27,7 +26,7 @@ for (let $module of modules)
     }
 }
 
-for (let targetPath of [paths.client, paths.server, paths.testRunner, paths.typeRoot])
+for (let targetPath of [paths.client, paths.server])
 {
     const $package = require(targetPath.package);
 
