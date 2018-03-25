@@ -85,7 +85,7 @@
             "args":
             [
                 "-u", "tdd",
-                "--timeout", "999999",
+                "--timeout", "9999999",
                 "--colors",
                 "source/@surface/*/tests/*.spec.js"
             ],

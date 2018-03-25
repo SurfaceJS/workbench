@@ -6,6 +6,6 @@
 <a id="contact-link" exp="5 % 2: {{ 5 % 2 }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElemen ? this.parentElement.id : "no-id" }}]</a>
 <a id="contact-link" exp="-(0b10) + 0xf: {{ -(0b10) + 0xf }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElemen ? this.parentElement.id : "no-id" }}]</a>
 <a id="contact-link" exp="/test/.test('test'): {{ /test/.test('test') }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElemen ? this.parentElement.id : "no-id" }}]</a>
-<a id="contact-link" exp="Now: {{ Date.now() }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElemen ? this.parentElement.id : "no-id" }}]</a>
+<a id="contact-link" exp="Now: {{ window.Date.now() }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElemen ? this.parentElement.id : "no-id" }}]</a>
 
 <surface-view-host></surface-view-host>

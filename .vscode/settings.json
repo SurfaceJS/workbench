@@ -13,7 +13,7 @@
         "**/.gitignore":        true,
         "**/.gitmodules":       true,
         "**/.hg":               true,
-        "**/.nycrc":            true,
+        //"**/.nycrc":            true,
         "**/.nyc_output":       true,
         "**/.svn":              true,
         "**/.vs":               true,
