@@ -76,6 +76,30 @@
             "port":    9222,
             "webRoot": "${workspaceFolder}\\server\\wwwroot"
         },
+        ,
+        {
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Test",
+            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":     "${fileDirname}",
+            "args":
+            [
+                "-u", "tdd",
+                "--timeout", "9999999",
+                "--colors",
+                "${fileBasenameNoExtension}.js"
+            ],
+            "console":    "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles":
+            [
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
+            ],
+            "runtimeArgs": ["--nolazy"]
+        }
         {
             "type":    "node",
             "request": "launch",
