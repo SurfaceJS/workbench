@@ -16,7 +16,7 @@ export class App extends CustomElement
     public constructor()
     {
         super();
-        this.viewHost    = super.get("surface-view-host");
+        this.viewHost = super.get("surface-view-host");
 
         const router = new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true);
 

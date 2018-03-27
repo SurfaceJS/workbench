@@ -18,7 +18,7 @@
         "**/.svn":              true,
         "**/.vs":               true,
         "**/.DS_Store":         true,
-        "**/coverage":          true,
+        //"**/coverage":          true,
         "**/node_modules":      true,
         "**/package.json":      false,
         "**/package-lock.json": true,

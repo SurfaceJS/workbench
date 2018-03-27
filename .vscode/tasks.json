@@ -57,7 +57,7 @@
         },
         {
             "label": "client:build",
-            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild -e production",
             "type": "shell",
             "isBackground": true,
             "options": {
