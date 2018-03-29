@@ -1,13 +1,13 @@
 import path        from "path";
 import * as common from "./common";
-import modules     from "./modules";
+import packages    from "./packages";
 import paths       from "./paths";
 import patterns    from "./patterns";
 
-for (let $module of modules)
+for (let $package of packages)
 {
-    let source = path.normalize(path.join(paths.modules.source, $module.name));
-    console.log(`Cleaning ${$module.name}`);
+    let source = path.normalize(path.join(paths.modules.source, $package.name));
+    console.log(`Cleaning ${$package.name}`);
     common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
 }
 

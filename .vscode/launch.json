@@ -65,18 +65,13 @@
         {
             "type":    "chrome",
             "request": "launch",
-            "name":    "Launch Chrome against localhost",
-            "url":     "http://localhost:1337",
-            "webRoot": "${workspaceFolder}\\server\\wwwroot"
+            "name":    "Launch Chrome",
+            "url":     "http://localhost:1337",            
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${workspaceFolder}/client/source/*",
+                "webpack:///*":   "*",
+            }
         },
-        {
-            "type":    "chrome",
-            "request": "attach",
-            "name":    "Attach to Chrome",
-            "port":    9222,
-            "webRoot": "${workspaceFolder}\\server\\wwwroot"
-        },
-        ,
         {
             "type":    "node",
             "request": "launch",
@@ -99,7 +94,7 @@
                 "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
             ],
             "runtimeArgs": ["--nolazy"]
-        }
+        },
         {
             "type":    "node",
             "request": "launch",

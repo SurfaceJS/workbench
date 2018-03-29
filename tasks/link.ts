@@ -1,7 +1,7 @@
 import fs          from "fs";
 import path        from "path";
 import * as common from "./common";
-import modules     from "./modules";
+import packages    from "./packages";
 import paths       from "./paths";
 
 let action = process.argv[2];
@@ -27,12 +27,12 @@ else if (action == "r" || action == "relink")
 
 async function link()
 {
-    for (let $module of modules)
+    for (let $package of packages)
     {
-        for (let dependence of common.objectToDictionary($module.dependencies).filter(x => x.key.startsWith("@surface/")))
+        for (let dependence of common.objectToDictionary({ ...$package.dependencies, ...$package.devDependencies }).filter(x => x.key.startsWith("@surface/")))
         {
             let source = path.normalize(path.join(paths.modules.source, dependence.key));
-            let target = path.normalize(path.join(paths.modules.source, $module.name, "node_modules"));
+            let target = path.normalize(path.join(paths.modules.source, $package.name, "node_modules"));
 
             common.makePath(path.join(target, "@surface"));
 
@@ -40,7 +40,7 @@ async function link()
 
             if (!fs.existsSync(target))
             {
-                await common.execute(`Linking ${$module.name} dependence[${dependence.key}]:`, `mklink /J ${target} ${source}`);
+                await common.execute(`Linking ${$package.name} dependence[${dependence.key}]:`, `mklink /J ${target} ${source}`);
             }
         }
     }
@@ -62,13 +62,13 @@ async function link()
 
 async function unlink()
 {
-    for (let $module of modules)
+    for (let $package of packages)
     {
-        let targetFolder = path.normalize(path.join(paths.modules.source, $module.name, "node_modules", "@surface"));
+        let targetFolder = path.normalize(path.join(paths.modules.source, $package.name, "node_modules", "@surface"));
 
         if (fs.existsSync(targetFolder))
         {
-            await common.execute(`Removing @surface on ${$module.name}:`, `rmdir /s /q ${targetFolder}`);
+            await common.execute(`Removing @surface on ${$package.name}:`, `rmdir /s /q ${targetFolder}`);
         }
     }
 

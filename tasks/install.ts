@@ -1,13 +1,13 @@
 import path        from "path";
 import * as common from "./common";
-import modules     from "./modules";
+import packages    from "./packages";
 import paths       from "./paths";
 
 const fullInstall = !!process.argv[2];
 
 let commands = [];
 
-for (let $module of modules)
+for (let $module of packages)
 {
     const source = path.normalize(path.join(paths.modules.source, $module.name));
 
