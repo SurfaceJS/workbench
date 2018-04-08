@@ -22,7 +22,7 @@ for (let $module of packages)
 
     if (targets)
     {
-        commands.push(common.execute(`${$module.name} dependencies installed.`, `cd ${source} && npm install ${targets} --save-exact`));
+        commands.push(common.execute(`Installing ${$module.name} dependencies.`, `cd ${source} && npm install ${targets} --save-exact`));
     }
 }
 
@@ -39,7 +39,7 @@ for (let targetPath of [paths.client, paths.server])
 
     if (targets)
     {
-        commands.push(common.execute(`${path.parse(path.resolve(targetPath.root, "../")).name} dependencies installed.`, `cd ${targetPath.root} && npm install ${targets} --save-exact`));
+        commands.push(common.execute(`Installing ${path.parse(path.resolve(targetPath.root, "../")).name} dependencies.`, `cd ${targetPath.root} && npm install ${targets} --save-exact`));
     }
 }
 

@@ -1,5 +1,5 @@
 // Available variables which can be used inside of strings.
-// ${workspaceRoot}: the root folder of the team
+// ${workspaceFolder}: the root folder of the team
 // ${file}: the current opened file
 // ${fileBasename}: the current opened file's basename
 // ${fileBasenameNoExtension}: the current opened file's basename without extension
@@ -17,6 +17,21 @@
             "command": "tsc",
             "presentation": {
                 "reveal": "never"
+            },
+            "type": "shell",
+            "isBackground": true,
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        },
+        { 
+            "label": "cover-test",            
+            "command": "tsc && node ${workspaceFolder}/tasks/cover-test.js ${fileBasenameNoExtension}",
+            "presentation": {
+                "reveal": "always"
             },
             "type": "shell",
             "isBackground": true,

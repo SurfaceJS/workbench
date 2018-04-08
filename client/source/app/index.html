@@ -15,7 +15,7 @@
 
 <div>
     <label>Output: {{ host.find('#input').value }}</label>
-    <input type="text" id="output" value="{{ host.find('#input').value }}" data-value="{{ host.find('#input').value }}" />
+    <input type="text" id="output" value="[[ host.find('#input').value ]]" data-value="{{ host.find('#input').value }}" />
 </div>
 
 <surface-view-host></surface-view-host>
