@@ -31,11 +31,15 @@ export async function execute(label: string, command: string): Promise<void>
     {
         console.log(label);
         const { stdout, stderr } = await exec(command);
-        console.log(stdout);
+
+        if (stdout)
+        {
+            console.log(stdout);
+        }
 
         if (stderr)
         {
-            console.log(stderr, stderr);
+            console.log(stderr);
         }
     }
     catch (err)
