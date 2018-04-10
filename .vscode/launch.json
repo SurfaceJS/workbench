@@ -65,40 +65,58 @@
         {
             "type":    "chrome",
             "request": "launch",
-            "name":    "Launch Chrome against localhost",
-            "url":     "http://localhost:1337",
-            "webRoot": "${workspaceFolder}\\server\\wwwroot"
+            "name":    "Launch Chrome",
+            "url":     "http://localhost:1337",            
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${workspaceFolder}/client/source/*",
+                "webpack:///*":   "*",
+            }
         },
         {
-            "type":    "chrome",
-            "request": "attach",
-            "name":    "Attach to Chrome",
-            "port":    9222,
-            "webRoot": "${workspaceFolder}\\server\\wwwroot"
-        },
-        {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Tests",
-            "program":  "${workspaceFolder}\\modules\\test-runner\\node_modules\\mocha\\bin\\_mocha",
-            "cwd":      "${workspaceFolder}\\modules\\test-runner",
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Test",
+            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":     "${fileDirname}",
             "args":
             [
                 "-u", "tdd",
-                "--timeout", "999999",
+                "--timeout", "9999999",
                 "--colors",
-                "build"
+                "${fileBasenameNoExtension}.js"
             ],
-            "console": "integratedTerminal",
-            "sourceMapPathOverrides":
-            {
-                "webpack:///.\\~\\*": "${workspaceFolder}\\modules\\test-runner\\node_modules\\*",
-                "webpack:///.\\*":    "${workspaceFolder}\\modules\\test-runner\\source\\*",
-                "webpack:///*":       "*"
-            },
-            "sourceMaps":  true,
-            "outFiles":    ["${workspaceFolder}\\modules\\test-runner\\**\\*.js"],
+            "console":    "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles":
+            [
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
+            ],
             "runtimeArgs": ["--nolazy"]
         },
+        {
+            "type":    "node",
+            "request": "launch",
+            "name":    "Launch Tests",
+            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
+            "cwd":     "${workspaceFolder}\\modules",
+            "args":
+            [
+                "-u", "tdd",
+                "--timeout", "9999999",
+                "--colors",
+                "source/@surface/*/tests/*.spec.js"
+            ],
+            "console":    "integratedTerminal",
+            "sourceMaps": true,
+            "outFiles":
+            [
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
+                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
+            ],
+            "runtimeArgs": ["--nolazy"]
+        }
     ]
 }

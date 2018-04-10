@@ -1,14 +1,13 @@
+import path        from "path";
 import * as common from "./common";
-import modules     from "./modules";
+import packages    from "./packages";
 import paths       from "./paths";
-
-import path from "path";
 
 const fullInstall = !!process.argv[2];
 
 let commands = [];
 
-for (let $module of modules)
+for (let $module of packages)
 {
     const source = path.normalize(path.join(paths.modules.source, $module.name));
 
@@ -23,11 +22,11 @@ for (let $module of modules)
 
     if (targets)
     {
-        commands.push(common.execute(`${$module.name} dependencies installed.`, `cd ${source} && npm install ${targets} --save-exact`));
+        commands.push(common.execute(`Installing ${$module.name} dependencies.`, `cd ${source} && npm install ${targets} --save-exact`));
     }
 }
 
-for (let targetPath of [paths.client, paths.server, paths.testRunner, paths.typeRoot])
+for (let targetPath of [paths.client, paths.server])
 {
     const $package = require(targetPath.package);
 
@@ -40,7 +39,7 @@ for (let targetPath of [paths.client, paths.server, paths.testRunner, paths.type
 
     if (targets)
     {
-        commands.push(common.execute(`${path.parse(path.resolve(targetPath.root, "../")).name} dependencies installed.`, `cd ${targetPath.root} && npm install ${targets} --save-exact`));
+        commands.push(common.execute(`Installing ${path.parse(path.resolve(targetPath.root, "../")).name} dependencies.`, `cd ${targetPath.root} && npm install ${targets} --save-exact`));
     }
 }
 

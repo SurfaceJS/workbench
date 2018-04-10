@@ -1,8 +1,9 @@
-import fs   from "fs";
-import path from "path";
-import util from "util";
+import child_process from "child_process";
+import fs            from "fs";
+import path          from "path";
+import util          from "util";
 
-let exec = util.promisify(require("child_process").exec);
+let exec = util.promisify(child_process.exec);
 
 export function cleanup(targetPath: string, pattern: RegExp, exclude: RegExp): void
 {
@@ -28,12 +29,17 @@ export async function execute(label: string, command: string): Promise<void>
 {
     try
     {
+        console.log(label);
         const { stdout, stderr } = await exec(command);
-        console.log(label, stdout);
+
+        if (stdout)
+        {
+            console.log(stdout);
+        }
 
         if (stderr)
         {
-            console.log(stderr, stderr);
+            console.log(stderr);
         }
     }
     catch (err)

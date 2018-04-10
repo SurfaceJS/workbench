@@ -1,19 +1,18 @@
+import path        from "path";
 import * as common from "./common";
-import modules     from "./modules";
+import packages    from "./packages";
 import paths       from "./paths";
 import patterns    from "./patterns";
-
-import path from "path";
 
 let commands = [];
 
 commands.push(common.execute(`Compiling server`, `tsc -p ${paths.server.root}`));
 
-for (let $module of modules)
+for (let $package of packages)
 {
-    let source = path.normalize(path.join(paths.modules.source, $module.name));
+    let source = path.normalize(path.join(paths.modules.source, $package.name));
     common.cleanup(source, patterns.clean.include, patterns.clean.exclude);
-    commands.push(common.execute(`Compiling ${$module.name}`, `tsc -p ${source}`));
+    commands.push(common.execute(`Compiling ${$package.name}`, `tsc -p ${source}`));
 }
 
 Promise.all(commands).then(() => console.log("\nDone!"));
