@@ -1,1 +1,1 @@
-node %~dp0/../tasks/link.js relink
+node %~dp0../tasks/link.js relink

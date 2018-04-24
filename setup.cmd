@@ -1,1 +1,1 @@
- cd %~dp0\modules && npm i && tsc -p %~dp0\tasks && %~dp0\commands\unlink && %~dp0\commands\install && %~dp0\commands\link && %~dp0\commands\build
+cd %~dp0modules && npm i && tsc -p %~dp0tasks && %~dp0commands\unlink && %~dp0commands\install && %~dp0commands\link && %~dp0commands\build && cd %~dp0
