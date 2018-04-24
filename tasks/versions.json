@@ -6,5 +6,5 @@
     "@surface/html-template-plugin": "0.0.6",
     "@surface/code-splitter-plugin": "0.0.8",
     "@surface/lazy-loader": "0.0.3",
-    "@surface/types": "0.0.0"
+    "@surface/core": "0.0.0"
 }
