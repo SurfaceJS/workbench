@@ -1,13 +1,66 @@
 <require path="@surface/menu" />
 <require path="@surface/view-host" />
 
-<a id="home-link"    href="javascript:void(0);">Home</a>
-<a id="login-link"   href="javascript:void(0);">Login</a>
-<a id="contact-link" href="javascript:void(0);">Contact</a>
 <surface-menu>
-    <surface-menu-item url="/">Home</surface-menu-item>
-    <surface-menu-item url="/contact">Login</surface-menu-item>
-    <surface-menu-item url="/login">Contact</surface-menu-item>
+    <surface-menu-item name="Areas">
+        <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+        <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+        <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+        <surface-menu-item name="Sub Areas 1">
+            <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+            <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+            <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+            <surface-menu-item name="Sub Areas 2">
+                <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                <surface-menu-item name="Sub Areas 3">
+                    <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                    <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                    <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                    <surface-menu-item name="Sub Areas 4">
+                        <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                        <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                        <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                        <surface-menu-item name="Sub Areas 5">
+                            <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                            <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                            <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                        </surface-menu-item>
+                    </surface-menu-item>
+                </surface-menu-item>
+            </surface-menu-item>
+        </surface-menu-item>
+    </surface-menu-item>
+    <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+    <surface-menu-item name="Areas - 2">
+        <surface-menu-item name="Sub Areas 1">
+            <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+            <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+            <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+            <surface-menu-item name="Sub Areas 2">
+                <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                <surface-menu-item name="Sub Areas 3">
+                    <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                    <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                    <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                    <surface-menu-item name="Sub Areas 4">
+                        <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                        <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                        <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                        <surface-menu-item name="Sub Areas 5">
+                            <surface-menu-item on-click="{{host.routeTo('/')}}" name="Home"></surface-menu-item>
+                            <surface-menu-item on-click="{{host.routeTo('/login')}}" name="Login"></surface-menu-item>
+                            <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
+                        </surface-menu-item>
+                    </surface-menu-item>
+                </surface-menu-item>
+            </surface-menu-item>
+        </surface-menu-item>
+    </surface-menu-item>
+    <surface-menu-item on-click="{{host.routeTo('/contact')}}" name="Contact"></surface-menu-item>
 </surface-menu>
 
 <surface-view-host></surface-view-host>
