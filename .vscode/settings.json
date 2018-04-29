@@ -11,7 +11,7 @@
         "**/*.config":          true,
         "**/.git":              true,
         "**/.github":           true,
-        "**/.gitignore":        true,
+        //"**/.gitignore":        true,
         "**/.gitmodules":       true,
         "**/.hg":               true,
         //"**/.nycrc":            true,

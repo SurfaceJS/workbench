@@ -29,7 +29,7 @@
         },
         { 
             "label": "cover-test",            
-            "command": "tsc && node ${workspaceFolder}/tasks/cover-test.js ${fileBasenameNoExtension}",
+            "command": "tsc && node ${workspaceFolder}/tasks/cover-test.js ${file}",
             "presentation": {
                 "reveal": "always"
             },

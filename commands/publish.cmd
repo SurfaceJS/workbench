@@ -1,1 +1,1 @@
-node %~dp0/../tasks/publish
+node %~dp0../tasks/publish

@@ -1,1 +1,1 @@
-node %~dp0/../tasks/link unlink && node %~dp0/../tasks/install && node %~dp0/../tasks/link link
+node %~dp0../tasks/link unlink && node %~dp0../tasks/install && node %~dp0../tasks/link link
