@@ -18,7 +18,7 @@ export class App extends CustomElement
         super();
         this.viewHost = super.find("surface-view-host", true);
 
-        const router = new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true);
+        const router = new Router().mapRoute("default", "{view=stack-layout}/{action=index}/{id?}", true);
 
         this.viewManager = ViewManager.configure(this.viewHost, router, load);
         this.viewManager.routeTo(window.location.pathname + window.location.search);
