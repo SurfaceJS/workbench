@@ -14,8 +14,8 @@ export async function load(path: string): Promise<Object>
             return import(/* webpackChunkName: "views/home" */ "../views/home");
         case "views/login":
             return import(/* webpackChunkName: "views/login" */ "../views/login");
-        case "views/stack-layout":
-            return import(/* webpackChunkName: "views/stack-layout" */ "../views/stack-layout");
+        case "views/stack-panel":
+            return import(/* webpackChunkName: "views/stack-panel" */ "../views/stack-panel");
         default:
             return Promise.reject("path not found");
     }
