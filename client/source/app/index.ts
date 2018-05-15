@@ -16,7 +16,7 @@ export class App extends CustomElement
     public constructor()
     {
         super();
-        this.viewHost = super.find("surface-view-host", true);
+        this.viewHost = super.shadowQuery<ViewHost>("surface-view-host")!;
 
         const router = new Router().mapRoute("default", "{view=stack-panel}/{action=index}/{id?}", true);
 
