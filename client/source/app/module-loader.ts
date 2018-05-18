@@ -14,6 +14,8 @@ export async function load(path: string): Promise<Object>
             return import(/* webpackChunkName: "views/home" */ "../views/home");
         case "views/login":
             return import(/* webpackChunkName: "views/login" */ "../views/login");
+        case "views/menu":
+            return import(/* webpackChunkName: "views/menu" */ "../views/menu");
         case "views/stack-panel":
             return import(/* webpackChunkName: "views/stack-panel" */ "../views/stack-panel");
         default:

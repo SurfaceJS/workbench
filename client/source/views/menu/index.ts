@@ -2,12 +2,12 @@ import { element } from "@surface/custom-element/decorators";
 import View        from "@surface/view";
 import template    from "./index.html";
 
-@element("stack-panel-view", template)
-export default class StackPanel extends View
+@element("menu-view", template)
+export default class Menu extends View
 {
     public constructor()
     {
         super();
-        this.name = "Stack Panel";
+        this.name = "Menu";
     }
 }
