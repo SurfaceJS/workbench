@@ -27,6 +27,8 @@ export default class Tasks
                 console.log(`@surface linked to ${symlink}`);
             }
         }
+
+        console.log("Linking done!");
     }
 
     public static unlink(): void
@@ -41,6 +43,8 @@ export default class Tasks
                 console.log(`@surface unlinked from ${surface}`);
             }
         }
+
+        console.log("Unlinking done!");
     }
 
     public static relink(): void
@@ -74,7 +78,7 @@ export default class Tasks
 
         Tasks.link();
 
-        console.log("Done!");
+        console.log("Installing done!");
     }
 
     public static setup()
