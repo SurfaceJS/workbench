@@ -1,1 +1,1 @@
-cd %~dp0modules && npm i && tsc -p %~dp0tasks && %~dp0commands\unlink && %~dp0commands\install && %~dp0commands\link && %~dp0commands\build && cd %~dp0
+npm i -g typescript tslint mocha nyc driveup && cd %~dp0modules && npm run task:setup && cd .. && tsc -p ./tasks && node ./tasks/cli setup
