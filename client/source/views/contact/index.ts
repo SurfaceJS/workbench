@@ -8,6 +8,6 @@ export default class Contact extends View
     public constructor()
     {
         super();
-        this.name = "Contact";
+        this.viewName = "Contact";
     }
 }

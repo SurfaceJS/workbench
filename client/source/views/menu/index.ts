@@ -8,6 +8,6 @@ export default class Menu extends View
     public constructor()
     {
         super();
-        this.name = "Menu";
+        this.viewName = "Menu";
     }
 }

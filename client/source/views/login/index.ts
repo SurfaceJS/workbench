@@ -8,6 +8,6 @@ export default class Login extends View
     public constructor()
     {
         super();
-        this.name = "Login";
+        this.viewName = "Login";
     }
 }

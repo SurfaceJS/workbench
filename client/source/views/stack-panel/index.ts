@@ -8,6 +8,6 @@ export default class StackPanel extends View
     public constructor()
     {
         super();
-        this.name = "Stack Panel";
+        this.viewName = "Stack Panel";
     }
 }

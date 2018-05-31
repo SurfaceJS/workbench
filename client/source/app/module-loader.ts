@@ -10,6 +10,8 @@ export async function load(path: string): Promise<Object>
     {
         case "views/contact":
             return import(/* webpackChunkName: "views/contact" */ "../views/contact");
+        case "views/data-table":
+            return import(/* webpackChunkName: "views/data-table" */ "../views/data-table");
         case "views/home":
             return import(/* webpackChunkName: "views/home" */ "../views/home");
         case "views/login":

@@ -1,0 +1,19 @@
+<require path="@surface/components/data-table" />
+<require path="@surface/components/data-header" />
+<require path="@surface/components/data-template" />
+
+<surface-data-table datasource="{{host.datasource}}">
+    <surface-data-header field="id"></surface-data-header>
+    <surface-data-header field="name"></surface-data-header>
+    <surface-data-header field="email"></surface-data-header>
+    <surface-data-header field="country"></surface-data-header>
+</surface-data-table>
+
+<surface-data-table datasource="{{host.datasource}}">
+    <surface-data-template title="id" sortable="true" filterable="false">
+        <template><input type="checkbox" />{{host.data.id}}</template>
+    </surface-data-template>
+    <surface-data-template title="name" field="name"></surface-data-template>
+    <surface-data-template title="email" field="email"></surface-data-template>
+    <surface-data-template title="country" field="country"></surface-data-template>
+</surface-data-table>
