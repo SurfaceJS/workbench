@@ -28,8 +28,8 @@
             }
         },
         { 
-            "label": "cover-test",            
-            "command": "tsc && node ${workspaceFolder}/tasks/cover-test.js ${file}",
+            "label": "cover",            
+            "command": "tsc && node ${workspaceFolder}\\modules\\tasks\\cli cover ${file}",
             "presentation": {
                 "reveal": "always"
             },
@@ -101,8 +101,8 @@
             "problemMatcher": []
         },        
         { 
-            "label": "tests:cover",
-            "command": "npm run tests:cover -s",
+            "label": "test:cover",
+            "command": "npm run test:cover -s",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -111,8 +111,8 @@
             "problemMatcher": []
         },
         {
-            "label": "tests:run",
-            "command": "npm run tests:run -s",
+            "label": "test:run",
+            "command": "npm run test:run -s",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -121,8 +121,8 @@
             "problemMatcher": []
         },
         {
-            "label": "tests:build",
-            "command": "npm run tests:build",
+            "label": "test:build",
+            "command": "npm run test:build",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -131,8 +131,8 @@
             "problemMatcher": []
         },
         {
-            "label": "tests:watch",
-            "command": "npm run tests:watch",
+            "label": "test:watch",
+            "command": "npm run test:watch",
             "type": "shell",
             "isBackground": true,
             "options": {
