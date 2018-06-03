@@ -1,19 +1,22 @@
 <require path="@surface/components/data-table" />
-<require path="@surface/components/data-header" />
 <require path="@surface/components/data-template" />
+<require path="@surface/components/stack-panel" />
+
 
 <surface-data-table datasource="{{host.datasource}}">
-    <surface-data-header field="id"></surface-data-header>
-    <surface-data-header field="name"></surface-data-header>
-    <surface-data-header field="email"></surface-data-header>
-    <surface-data-header field="country"></surface-data-header>
+    <template>
+        <surface-data-template header="Id" field="id">
+            <input type="checkbox" /><span>{{data.id}}</span>
+        </surface-data-template>
+        <surface-data-template header="Name"    field="name"></surface-data-template>
+        <surface-data-template header="Email"   field="email"></surface-data-template>
+        <surface-data-template header="Country" field="country.name" group-by="true">
+            <surface-stack-panel orientation="horizontal" distribuition="justify">
+                {{data.country.name}}&nbsp;&nbsp;<b>{{data.country.initials}}</b>
+            </surface-stack-panel>
+        </surface-data-template>
+        <surface-data-template header="Active" aggregation="count" field="active" type="checkbox"></surface-data-template>
+    </template>
 </surface-data-table>
 
-<surface-data-table datasource="{{host.datasource}}">
-    <surface-data-template title="id" sortable="true" filterable="false">
-        <template><input type="checkbox" />{{host.data.id}}</template>
-    </surface-data-template>
-    <surface-data-template title="name" field="name"></surface-data-template>
-    <surface-data-template title="email" field="email"></surface-data-template>
-    <surface-data-template title="country" field="country"></surface-data-template>
-</surface-data-table>
+<input type="button" on-click="{{host.changeData()}}" value="Change values"/>

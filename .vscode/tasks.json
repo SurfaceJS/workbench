@@ -20,9 +20,6 @@
             },
             "type": "shell",
             "isBackground": true,
-            "problemMatcher": [
-                "$tsc"
-            ],
             "options": {
                 "cwd": "${fileDirname}"
             }
@@ -58,8 +55,8 @@
             }
         },
         {
-            "label": "build:all",
-            "command": "cmd /c node ./tasks/build",
+            "label": "task:build",
+            "command": "npm run task:build",
             "type": "shell",
             "isBackground": true,
             "problemMatcher": [
@@ -68,6 +65,9 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}\\modules"
             }
         },
         {
@@ -76,7 +76,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\client"
+                "cwd": "${workspaceFolder}\\client"
             },
             "problemMatcher": []
         },
@@ -86,7 +86,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\client"
+                "cwd": "${workspaceFolder}\\client"
             },
             "problemMatcher": []
         },
@@ -96,7 +96,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\client"
+                "cwd": "${workspaceFolder}\\client"
             },
             "problemMatcher": []
         },        
@@ -106,7 +106,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules"
+                "cwd": "${workspaceFolder}\\modules"
             },
             "problemMatcher": []
         },
@@ -116,7 +116,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules"
+                "cwd": "${workspaceFolder}\\modules"
             },
             "problemMatcher": []
         },
@@ -126,7 +126,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules"
+                "cwd": "${workspaceFolder}\\modules"
             },
             "problemMatcher": []
         },
@@ -136,7 +136,7 @@
             "type": "shell",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceRoot}\\modules"
+                "cwd": "${workspaceFolder}\\modules"
             },
             "problemMatcher": []
         }
