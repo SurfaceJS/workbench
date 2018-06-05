@@ -1,5 +1,6 @@
 import { FieldsOf } from "@surface/core";
 import { element }  from "@surface/custom-element/decorators";
+import Enumerable   from "@surface/enumerable";
 import View         from "@surface/view";
 import template     from "./index.html";
 
@@ -173,5 +174,15 @@ export default class DataTable extends View
         this.datasource[0].active = false;
         this.datasource[0].country.name     = "Argentina";
         this.datasource[0].country.initials = "arg";
+    }
+
+    public max(field: string): string
+    {
+        return Enumerable.from(this.datasource).max(x => x[field]).toString();
+    }
+
+    public average(field: string): string
+    {
+        return Enumerable.from(this.datasource).average(x => x[field]).toString();
     }
 }

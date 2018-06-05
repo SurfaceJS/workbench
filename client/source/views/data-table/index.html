@@ -1,21 +1,35 @@
 <require path="@surface/components/data-table" />
-<require path="@surface/components/data-template" />
 <require path="@surface/components/stack-panel" />
 
+<style>
+    surface-data-footer-group surface-data-cell
+    {
+        border-top: solid black 2px;
+    }
+</style>
 
-<surface-data-table datasource="{{host.datasource}}">
+<surface-data-table datasource="[[host.datasource]]" host="[[host]]">
     <template>
-        <surface-data-template header="Id" field="id">
+        <data-template header="Id" field="id">
             <input type="checkbox" /><span>{{data.id}}</span>
-        </surface-data-template>
-        <surface-data-template header="Name"    field="name"></surface-data-template>
-        <surface-data-template header="Email"   field="email"></surface-data-template>
-        <surface-data-template header="Country" field="country.name" group-by="true">
+        </data-template>
+        <data-template header="Name"    field="name"></data-template>
+        <data-template header="Email"   field="email"></data-template>
+        <data-template header="Country" field="country.name" group-by="true">
             <surface-stack-panel orientation="horizontal" distribuition="justify">
                 {{data.country.name}}&nbsp;&nbsp;<b>{{data.country.initials}}</b>
             </surface-stack-panel>
-        </surface-data-template>
-        <surface-data-template header="Active" aggregation="count" field="active" type="checkbox"></surface-data-template>
+        </data-template>
+        <data-template header="Active" aggregation="count" field="active" type="checkbox"></data-template>
+        <footer-template>
+            <data-template>
+                <span>{{host.average("id")}}</span>
+            </data-template>
+            <data-template>Name</data-template>
+            <data-template>Email</data-template>
+            <data-template>Country</data-template>
+            <data-template>Active</data-template>
+        </footer-template>
     </template>
 </surface-data-table>
 
