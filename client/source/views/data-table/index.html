@@ -1,5 +1,6 @@
 <require path="@surface/components/data-table" />
 <require path="@surface/components/stack-panel" />
+<require path="@surface/components/switch" />
 
 <style>
     surface-data-footer-group surface-data-cell
@@ -12,16 +13,27 @@
     <surface-data-table datasource="[[host.datasource]]">
         <template>
             <data-template header="Id" field="id">
-                <input type="checkbox" /><span>{{data.id}}</span>
+                <input type="checkbox" />
+                <span>{{row.data.id}}</span>
             </data-template>
             <data-template header="Name"    field="name"></data-template>
             <data-template header="Email"   field="email"></data-template>
             <data-template header="Country" field="country.name" group-by="true">
                 <surface-stack-panel orientation="horizontal" distribuition="justify">
-                    {{data.country.name}}&nbsp;&nbsp;<b>{{data.country.initials}}</b>
+                    {{row.data.country.name}}&nbsp;&nbsp;<b>{{row.data.country.initials}}</b>
                 </surface-stack-panel>
             </data-template>
-            <data-template header="Active" aggregation="count" field="active" type="checkbox"></data-template>
+            <data-template header="Active" aggregation="count" field="active" type="checkbox">
+                <surface-switch value="{{row.editMode}}">
+                    <template when="true">
+                        <input type="checkbox" checked="{{row.data.active}}" />
+                    </template>
+                    <template when="false">
+                        <span>{{row.data.active}}</span>
+                    </template>
+                </surface-switch>
+            </data-template>
+            <data-template header="Action" edit="true" delete="true"></data-template>
             <footer-template>
                 <data-template>
                     <span>{{host.average("id")}}</span>
@@ -30,9 +42,19 @@
                 <data-template>Email</data-template>
                 <data-template>Country</data-template>
                 <data-template>Active</data-template>
+                <data-template></data-template>
             </footer-template>
         </template>
     </surface-data-table>
 </div>
 
 <input type="button" on-click="{{host.changeData()}}" value="Change values"/>
+
+<surface-switch value="{{host.state}}">
+    <template when="true">
+        <span style="color: blue">ON</span>
+    </template>
+    <template when="false">
+        <span style="color: red"><u>OFF</u></span>
+    </template>
+</surface-switch>

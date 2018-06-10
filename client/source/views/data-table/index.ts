@@ -122,6 +122,17 @@ export default class DataTable extends View
         this._datasource = value;
     }
 
+    private _state: boolean = false;
+    public get state(): boolean
+    {
+        return this._state;
+    }
+
+    public set state(value: boolean)
+    {
+        this._state = value;
+    }
+
     public constructor()
     {
         super();
@@ -174,6 +185,8 @@ export default class DataTable extends View
         this.datasource[0].active = false;
         this.datasource[0].country.name     = "Argentina";
         this.datasource[0].country.initials = "arg";
+
+        this.state = !this.state;
     }
 
     public max(field: string): string

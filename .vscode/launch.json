@@ -46,13 +46,17 @@
             "program":  "${workspaceFolder}\\tasks\\cli",
             "args":     ["relink"],
             "cwd":      "${workspaceFolder}\\tasks"
-        },        
+        },
         {
-            "type":    "chrome",
-            "request": "launch",
-            "name":    "Launch Chrome",
-            "url":     "http://localhost:1337",            
-            "sourceMapPathOverrides": {
+            "type":       "chrome",
+            "request":    "launch",
+            "name":       "Launch Chrome",
+            "url":        "http://localhost:1337",
+            "webRoot":    "${workspaceFolder}\\server\\wwwroot",
+            "sourceMaps": true,
+            //"trace":      "verbose",
+            "sourceMapPathOverrides":
+            {
                 "webpack:///./*": "${workspaceFolder}/client/source/*",
                 "webpack:///*":   "*",
             }
