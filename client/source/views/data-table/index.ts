@@ -182,7 +182,7 @@ export default class DataTable extends View
     {
         this.datasource[0].name   = "foo-bar";
         this.datasource[0].email  = "foo-bar@gmail";
-        this.datasource[0].active = false;
+        this.datasource[0].active = !this.datasource[0].active;
         this.datasource[0].country.name     = "Argentina";
         this.datasource[0].country.initials = "arg";
 

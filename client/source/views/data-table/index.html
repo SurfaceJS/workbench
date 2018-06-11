@@ -3,9 +3,18 @@
 <require path="@surface/components/switch" />
 
 <style>
+    div
+    {
+        width: 50%;
+    }
+    surface-data-cell
+    {
+        padding-left:  5px;
+        padding-right: 5px;
+    }
     surface-data-footer-group surface-data-cell
     {
-        border-top: solid black 2px;
+        border-top: solid red 2px;
     }
 </style>
 
@@ -36,7 +45,7 @@
             <data-template header="Action" edit="true" delete="true"></data-template>
             <footer-template>
                 <data-template>
-                    <span>{{host.average("id")}}</span>
+                    <span>{{host.max("id")}}</span>
                 </data-template>
                 <data-template>Name</data-template>
                 <data-template>Email</data-template>
