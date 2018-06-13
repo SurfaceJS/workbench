@@ -3,30 +3,35 @@
 <require path="@surface/components/switch" />
 
 <style>
-    div
+    surface-data-table
     {
         width: 50%;
+        border-collapse:separate; 
+        border-spacing: 2px 2px;
     }
     surface-data-cell
     {
-        padding-left:  5px;
-        padding-right: 5px;
+        width: 150px;
+        border-collapse: separate;
+    }
+    surface-data-row-group surface-data-cell
+    {
+        /*border:    solid gray 1px;*/
     }
     surface-data-footer-group surface-data-cell
     {
-        border-top: solid red 2px;
+        /*border:     solid gray 1px; */
+        /*border-top: solid red 2px; */
+        /*border-collapse: separate; */
     }
 </style>
 
 <div>
     <surface-data-table datasource="[[host.datasource]]">
         <template>
-            <data-template header="Id" field="id">
-                <input type="checkbox" />
-                <span>{{row.data.id}}</span>
-            </data-template>
-            <data-template header="Name"    field="name"></data-template>
-            <data-template header="Email"   field="email"></data-template>
+            <data-template header="Id" field="id" style="width: 50px;"></data-template>
+            <data-template header="Name"    field="name"  editable="true"></data-template>
+            <data-template header="Email"   field="email" editable="true"></data-template>
             <data-template header="Country" field="country.name" group-by="true">
                 <surface-stack-panel orientation="horizontal" distribuition="justify">
                     {{row.data.country.name}}&nbsp;&nbsp;<b>{{row.data.country.initials}}</b>
@@ -42,16 +47,16 @@
                     </template>
                 </surface-switch>
             </data-template>
-            <data-template header="Action" edit="true" delete="true"></data-template>
+            <data-template header="Action" edit="true" delete="true" type="string"></data-template>
             <footer-template>
-                <data-template>
+                <data-template style="margin-top: 100px;">
                     <span>{{host.max("id")}}</span>
                 </data-template>
-                <data-template>Name</data-template>
-                <data-template>Email</data-template>
-                <data-template>Country</data-template>
-                <data-template>Active</data-template>
-                <data-template></data-template>
+                <data-template style="margin-top: 100px;"><span>Name</span></data-template>
+                <data-template style="margin-top: 100px;"><span>Email</span></data-template>
+                <data-template style="margin-top: 100px;"><span>Country</span></data-template>
+                <data-template style="margin-top: 100px;"><span>Active</span></data-template>
+                <data-template style="margin-top: 100px;"></data-template>
             </footer-template>
         </template>
     </surface-data-table>
