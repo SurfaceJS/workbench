@@ -1,13 +1,23 @@
+<require path="@surface/components/container" />
 <require path="@surface/components/data-table" />
 <require path="@surface/components/stack-panel" />
 <require path="@surface/components/switch" />
 
 <style>
+    /*
+    surface-container
+    {
+        border: solid 1px;
+    }
+    */
+
     surface-data-table
     {
-        width: 50%;
-        border-collapse:separate; 
+        margin-left: 100px;
+        margin-right: 100px;
+        border-collapse:separate;
         border-spacing: 2px 2px;
+        box-sizing:     content-box;
     }
     surface-data-cell
     {
@@ -26,49 +36,52 @@
     }
 </style>
 
-<div>
-    <surface-data-table datasource="[[host.datasource]]">
-        <template>
-            <data-template header="Id" field="id" style="width: 50px;"></data-template>
-            <data-template header="Name"    field="name"  editable="true"></data-template>
-            <data-template header="Email"   field="email" editable="true"></data-template>
-            <data-template header="Country" field="country.name" group-by="true">
-                <surface-stack-panel orientation="horizontal" distribuition="justify">
-                    {{row.data.country.name}}&nbsp;&nbsp;<b>{{row.data.country.initials}}</b>
-                </surface-stack-panel>
-            </data-template>
-            <data-template header="Active" aggregation="count" field="active" type="checkbox">
-                <surface-switch value="{{row.editMode}}">
-                    <template when="true">
-                        <input type="checkbox" checked="{{row.data.active}}" />
-                    </template>
-                    <template when="false">
-                        <span>{{row.data.active}}</span>
-                    </template>
-                </surface-switch>
-            </data-template>
-            <data-template header="Action" edit="true" delete="true" type="string"></data-template>
-            <footer-template>
-                <data-template style="margin-top: 100px;">
-                    <span>{{host.max("id")}}</span>
+<surface-container style="width: 100%;">
+    <surface-container horizontal-align="center">
+        <surface-data-table datasource="[[host.datasource]]">
+            <template>
+                <data-template header="Id" field="id" style="width: 50px;"></data-template>
+                <data-template header="Name"    field="name"  editable="true"></data-template>
+                <data-template header="Email"   field="email" editable="true"></data-template>
+                <data-template header="Country" field="country.name" group-by="true">
+                    <surface-stack-panel orientation="horizontal" distribuition="justify">
+                        {{row.data.country.name}}&nbsp;&nbsp;<b>{{row.data.country.initials}}</b>
+                    </surface-stack-panel>
                 </data-template>
-                <data-template style="margin-top: 100px;"><span>Name</span></data-template>
-                <data-template style="margin-top: 100px;"><span>Email</span></data-template>
-                <data-template style="margin-top: 100px;"><span>Country</span></data-template>
-                <data-template style="margin-top: 100px;"><span>Active</span></data-template>
-                <data-template style="margin-top: 100px;"></data-template>
-            </footer-template>
-        </template>
-    </surface-data-table>
-</div>
-
-<input type="button" on-click="{{host.changeData()}}" value="Change values"/>
-
-<surface-switch value="{{host.state}}">
-    <template when="true">
-        <span style="color: blue">ON</span>
-    </template>
-    <template when="false">
-        <span style="color: red"><u>OFF</u></span>
-    </template>
-</surface-switch>
+                <data-template header="Active" aggregation="count" field="active" type="checkbox" style="width: 60px;">
+                    <surface-switch value="{{row.editMode}}">
+                        <template when="true">
+                            <input type="checkbox" checked="{{row.data.active}}" />
+                        </template>
+                        <template when="false">
+                            <span>{{row.data.active}}</span>
+                        </template>
+                    </surface-switch>
+                </data-template>
+                <data-template header="Action" edit="true" delete="true" type="string" style="width: 80px;"></data-template>
+                <footer-template>
+                    <data-template style="margin-top: 100px;">
+                        <span>{{host.max("id")}}</span>
+                    </data-template>
+                    <data-template style="margin: 100px auto auto auto;"><span>Name</span></data-template>
+                    <data-template style="margin: 100px auto auto auto;"><span>Email</span></data-template>
+                    <data-template style="margin: 100px auto auto auto;"><span>Country</span></data-template>
+                    <data-template style="margin: 100px auto auto auto;"><span>Active</span></data-template>
+                    <data-template style="margin: 100px auto auto auto;"></data-template>
+                </footer-template>
+            </template>
+        </surface-data-table>
+        <surface-container style="margin-right: 100px;">
+            <input type="button" on-click="{{host.changeData()}}" value="Change values" horizontal-align="right"/>
+            
+            <surface-switch value="{{host.state}}" horizontal-align="right">
+                <template when="true">
+                    <span style="color: blue">ON</span>
+                </template>
+                <template when="false">
+                    <span style="color: red"><u>OFF</u></span>
+                </template>
+            </surface-switch>
+        </surface-container>
+    </surface-container>
+</surface-container>
