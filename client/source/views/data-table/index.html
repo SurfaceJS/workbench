@@ -4,84 +4,70 @@
 <require path="@surface/components/switch" />
 
 <style>
-    /*
-    surface-container
+    fieldset
     {
-        border: solid 1px;
+        display: flex;
     }
-    */
 
     surface-data-table
     {
-        margin-left: 100px;
-        margin-right: 100px;
-        border-collapse:separate;
-        border-spacing: 2px 2px;
-        box-sizing:     content-box;
-    }
-    surface-data-cell
-    {
-        width: 150px;
         border-collapse: separate;
-    }
-    surface-data-row-group surface-data-cell
-    {
-        /*border:    solid gray 1px;*/
-    }
-    surface-data-footer-group surface-data-cell
-    {
-        /*border:     solid gray 1px; */
-        /*border-top: solid red 2px; */
-        /*border-collapse: separate; */
+        border-spacing:  2px 2px;
+        box-sizing:      content-box;
+        margin-left:     100px;
+        margin-right:    100px;
     }
 </style>
 
 <surface-container style="width: 100%;">
-    <surface-container horizontal-align="center">
+    <fieldset horizontal-align="center">
+        <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
             <template>
-                <data-template header="Id" field="id" style="width: 50px;"></data-template>
-                <data-template header="Name"    field="name"  editable="true"></data-template>
-                <data-template header="Email"   field="email" editable="true"></data-template>
-                <data-template header="Country" field="country.name" group-by="true">
-                    <surface-stack-panel orientation="horizontal" distribuition="justify">
-                        {{row.data.country.name}}&nbsp;&nbsp;<b>{{row.data.country.initials}}</b>
-                    </surface-stack-panel>
-                </data-template>
-                <data-template header="Active" aggregation="count" field="active" type="checkbox" style="width: 60px;">
-                    <surface-switch value="{{row.editMode}}">
-                        <template when="true">
-                            <input type="checkbox" checked="{{row.data.active}}" />
-                        </template>
-                        <template when="false">
-                            <span>{{row.data.active}}</span>
-                        </template>
-                    </surface-switch>
-                </data-template>
-                <data-template header="Action" edit="true" delete="true" type="string" style="width: 80px;"></data-template>
-                <footer-template>
-                    <data-template style="margin-top: 100px;">
-                        <span>{{host.max("id")}}</span>
-                    </data-template>
-                    <data-template style="margin: 100px auto auto auto;"><span>Name</span></data-template>
-                    <data-template style="margin: 100px auto auto auto;"><span>Email</span></data-template>
-                    <data-template style="margin: 100px auto auto auto;"><span>Country</span></data-template>
-                    <data-template style="margin: 100px auto auto auto;"><span>Active</span></data-template>
-                    <data-template style="margin: 100px auto auto auto;"></data-template>
-                </footer-template>
+                <data-template header="Id"       field="id"></data-template>
+                <data-template header="Name"     field="name"></data-template>
+                <data-template header="Email"    field="email"></data-template>
+                <data-template header="Country"  field="country.name"></data-template>
+                <data-template header="Initials" field="country.initials"></data-template>
+                <data-template header="Active"   field="active"></data-template>
             </template>
         </surface-data-table>
-        <surface-container style="margin-right: 100px;">
-            <input type="button" on-click="{{host.changeData()}}" value="Change values" horizontal-align="right"/>
-            
-            <surface-switch value="{{host.state}}" horizontal-align="right">
-                <template when="true">
-                    <span style="color: blue">ON</span>
+    </fieldset>
+    <fieldset horizontal-align="center">
+            <legend>With Actions</legend>
+            <surface-data-table datasource="[[host.datasource]]">
+                <template>
+                    <data-template header="Id"       field="id"               editable="false"></data-template>
+                    <data-template header="Name"     field="name"             editable="true"></data-template>
+                    <data-template header="Email"    field="email"            editable="true"></data-template>
+                    <data-template header="Country"  field="country.name"     editable="true"></data-template>
+                    <data-template header="Initials" field="country.initials" editable="true"></data-template>
+                    <data-template header="Active"   field="active"           editable="true"></data-template>
+                    <data-template edit="true" delete="true"></data-template>
                 </template>
-                <template when="false">
-                    <span style="color: red"><u>OFF</u></span>
+            </surface-data-table>
+        </fieldset>
+    <fieldset horizontal-align="center">
+            <legend>Custom Header</legend>
+            <surface-data-table datasource="[[host.datasource]]">
+                <surface-data-header-group>
+                    <surface-data-row>
+                        <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                        <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                        <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                        <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                        <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                        <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                    </surface-data-row>
+                </surface-data-header-group>
+                <template>
+                    <data-template field="id"></data-template>
+                    <data-template field="name"></data-template>
+                    <data-template field="email"></data-template>
+                    <data-template field="country.name"></data-template>
+                    <data-template field="country.initials"></data-template>
+                    <data-template field="active"></data-template>
                 </template>
-            </surface-switch>
-        </surface-container>
-    </surface-container>
+            </surface-data-table>
+        </fieldset>
 </surface-container>
