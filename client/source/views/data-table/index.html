@@ -7,6 +7,7 @@
     fieldset
     {
         display: flex;
+        width:   calc(100% - 28px);
     }
 
     surface-data-table
@@ -34,6 +35,19 @@
         </surface-data-table>
     </fieldset>
     <fieldset horizontal-align="center">
+        <legend>Simple</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <template>
+                <data-template header="Id"       field="id"               footer="heading"></data-template>
+                <data-template header="Name"     field="name"             footer="heading"></data-template>
+                <data-template header="Email"    field="email"            footer="heading"></data-template>
+                <data-template header="Country"  field="country.name"     footer="heading"></data-template>
+                <data-template header="Initials" field="country.initials" footer="heading"></data-template>
+                <data-template header="Active"   field="active"           footer="heading"></data-template>
+            </template>
+        </surface-data-table>
+    </fieldset>
+    <fieldset horizontal-align="center">
             <legend>With Actions</legend>
             <surface-data-table datasource="[[host.datasource]]">
                 <template>
@@ -48,26 +62,92 @@
             </surface-data-table>
         </fieldset>
     <fieldset horizontal-align="center">
-            <legend>Custom Header</legend>
-            <surface-data-table datasource="[[host.datasource]]">
-                <surface-data-header-group>
-                    <surface-data-row>
-                        <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
-                        <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
-                        <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
-                        <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
-                        <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
-                        <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
-                    </surface-data-row>
-                </surface-data-header-group>
-                <template>
-                    <data-template field="id"></data-template>
-                    <data-template field="name"></data-template>
-                    <data-template field="email"></data-template>
-                    <data-template field="country.name"></data-template>
-                    <data-template field="country.initials"></data-template>
-                    <data-template field="active"></data-template>
-                </template>
-            </surface-data-table>
-        </fieldset>
+        <legend>Custom Header</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <surface-data-header-group>
+                <surface-data-row>
+                    <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                </surface-data-row>
+            </surface-data-header-group>
+            <template>
+                <data-template field="id"></data-template>
+                <data-template field="name"></data-template>
+                <data-template field="email"></data-template>
+                <data-template field="country.name"></data-template>
+                <data-template field="country.initials"></data-template>
+                <data-template field="active"></data-template>
+            </template>
+        </surface-data-table>
+    </fieldset>
+    <fieldset horizontal-align="center">
+        <legend>Custom Footer</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <surface-data-header-group>
+                <surface-data-row>
+                    <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                </surface-data-row>
+            </surface-data-header-group>
+            <surface-data-footer-group>
+                <surface-data-row>
+                    <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                </surface-data-row>
+            </surface-data-footer-group>
+            <template>
+                <data-template field="id"></data-template>
+                <data-template field="name"></data-template>
+                <data-template field="email"></data-template>
+                <data-template field="country.name"></data-template>
+                <data-template field="country.initials"></data-template>
+                <data-template field="active"></data-template>
+            </template>
+        </surface-data-table>
+    </fieldset>
+    <fieldset horizontal-align="center">
+        <legend>Template and custom</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <surface-data-header-group>
+                <surface-data-row>
+                    <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                </surface-data-row>
+            </surface-data-header-group>            
+            <surface-data-footer-group id="footer">
+                <surface-data-row>
+                    <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Email</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Country</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
+                    <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
+                </surface-data-row>
+            </surface-data-footer-group>
+            <template>
+                <data-template header="Id"       field="id"               footer="heading"></data-template>
+                <data-template header="Name"     field="name"             footer="heading"></data-template>
+                <data-template header="Email"    field="email"            footer="heading"></data-template>
+                <data-template header="Country"  field="country.name"     footer="heading"></data-template>
+                <data-template header="Initials" field="country.initials" footer="heading"></data-template>
+                <data-template header="Active"   field="active"           footer="heading"></data-template>
+            </template>
+        </surface-data-table>
+    </fieldset>
 </surface-container>
