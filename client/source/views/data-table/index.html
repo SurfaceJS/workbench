@@ -3,29 +3,31 @@
 <require path="@surface/components/stack-panel" />
 <require path="@surface/components/switch" />
 
-<style>
-    fieldset
-    {
-        display: flex;
-        width:   calc(100% - 28px);
-    }
-
-    surface-data-table
-    {
-        border-collapse: separate;
-        border-spacing:  2px 2px;
-        box-sizing:      content-box;
-        margin-left:     100px;
-        margin-right:    100px;
-    }
-</style>
-
 <surface-container style="width: 100%;">
+    <fieldset horizontal-align="center">
+        <legend>Manual</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <surface-data-row>
+                <surface-data-cell>Column 1</surface-data-cell>
+                <surface-data-cell>Column 2</surface-data-cell>
+                <surface-data-cell>Column 3</surface-data-cell>
+                <surface-data-cell>Column 4</surface-data-cell>
+                <surface-data-cell>Column 5</surface-data-cell>
+            </surface-data-row>
+            <surface-data-row>
+                <surface-data-cell>Column 1</surface-data-cell>
+                <surface-data-cell>Column 2</surface-data-cell>
+                <surface-data-cell>Column 3</surface-data-cell>
+                <surface-data-cell>Column 4</surface-data-cell>
+                <surface-data-cell>Column 5</surface-data-cell>
+            </surface-data-row>
+        </surface-data-table>
+    </fieldset>
     <fieldset horizontal-align="center">
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
             <template>
-                <data-template header="Id"       field="id"></data-template>
+                <data-template style="width: 50px;" header="Id"       field="id"></data-template>
                 <data-template header="Name"     field="name"></data-template>
                 <data-template header="Email"    field="email"></data-template>
                 <data-template header="Country"  field="country.name"></data-template>
@@ -51,20 +53,20 @@
             <legend>With Actions</legend>
             <surface-data-table datasource="[[host.datasource]]">
                 <template>
-                    <data-template header="Id"       field="id"               editable="false"></data-template>
-                    <data-template header="Name"     field="name"             editable="true"></data-template>
-                    <data-template header="Email"    field="email"            editable="true"></data-template>
-                    <data-template header="Country"  field="country.name"     editable="true"></data-template>
-                    <data-template header="Initials" field="country.initials" editable="true"></data-template>
-                    <data-template header="Active"   field="active"           editable="true"></data-template>
-                    <data-template edit="true" delete="true"></data-template>
+                    <data-template style="width: 50px;"                                          header="Id"       field="id"               editable="false"></data-template>
+                    <data-template style="width: calc((100% - 260px) * 0.5);"                    header="Name"     field="name"             editable="true"></data-template>
+                    <data-template style="width: calc((100% - 260px) * 0.35);"                   header="Email"    field="email"            editable="true"></data-template>
+                    <data-template style="width: calc((100% - 260px) * 0.15); min-width: 100px;" header="Country"  field="country.name"     editable="true"></data-template>
+                    <data-template style="width: 50px;"                                          header="Initials" field="country.initials" editable="true"></data-template>
+                    <data-template style="width: 50px;"                                          header="Active"   field="active"           editable="true"></data-template>
+                    <data-template style="width: 110px;" edit="true" delete="true"></data-template>
                 </template>
             </surface-data-table>
         </fieldset>
     <fieldset horizontal-align="center">
         <legend>Custom Header</legend>
         <surface-data-table datasource="[[host.datasource]]">
-            <surface-data-header-group>
+            <surface-data-header>
                 <surface-data-row>
                     <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
@@ -73,7 +75,7 @@
                     <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
                 </surface-data-row>
-            </surface-data-header-group>
+            </surface-data-header>
             <template>
                 <data-template field="id"></data-template>
                 <data-template field="name"></data-template>
@@ -87,7 +89,7 @@
     <fieldset horizontal-align="center">
         <legend>Custom Footer</legend>
         <surface-data-table datasource="[[host.datasource]]">
-            <surface-data-header-group>
+            <surface-data-header>
                 <surface-data-row>
                     <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
@@ -96,8 +98,8 @@
                     <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
                 </surface-data-row>
-            </surface-data-header-group>
-            <surface-data-footer-group>
+            </surface-data-header>
+            <surface-data-footer>
                 <surface-data-row>
                     <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
@@ -106,7 +108,7 @@
                     <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
                 </surface-data-row>
-            </surface-data-footer-group>
+            </surface-data-footer>
             <template>
                 <data-template field="id"></data-template>
                 <data-template field="name"></data-template>
@@ -120,7 +122,7 @@
     <fieldset horizontal-align="center">
         <legend>Template and custom</legend>
         <surface-data-table datasource="[[host.datasource]]">
-            <surface-data-header-group>
+            <surface-data-header>
                 <surface-data-row>
                     <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
@@ -129,8 +131,8 @@
                     <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
                 </surface-data-row>
-            </surface-data-header-group>            
-            <surface-data-footer-group id="footer">
+            </surface-data-header>            
+            <surface-data-footer id="footer">
                 <surface-data-row>
                     <surface-data-cell><span horizontal-align="center"><u>Id</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Name</u></span></surface-data-cell>
@@ -139,7 +141,7 @@
                     <surface-data-cell><span horizontal-align="center"><u>Initials</u></span></surface-data-cell>
                     <surface-data-cell><span horizontal-align="center"><u>Active</u></span></surface-data-cell>
                 </surface-data-row>
-            </surface-data-footer-group>
+            </surface-data-footer>
             <template>
                 <data-template header="Id"       field="id"               footer="heading"></data-template>
                 <data-template header="Name"     field="name"             footer="heading"></data-template>

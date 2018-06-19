@@ -3,6 +3,7 @@ import { element }  from "@surface/custom-element/decorators";
 import Enumerable   from "@surface/enumerable";
 import View         from "@surface/view";
 import template     from "./index.html";
+import style        from "./index.scss";
 
 class People
 {
@@ -108,7 +109,7 @@ class Country
     }
 }
 
-@element("data-table-view", template)
+@element("data-table-view", template, style)
 export default class DataTable extends View
 {
     private _datasource: Array<People> = [];
