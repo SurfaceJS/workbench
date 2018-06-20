@@ -138,7 +138,7 @@ export default class DataTable extends View
     {
         super();
         this.viewName   = "Data table";
-        this.datasource =
+        const datasource =
         [
             new People
             ({
@@ -177,6 +177,12 @@ export default class DataTable extends View
                 active: true
             }),
         ];
+
+        this.datasource = datasource
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource);
     }
 
     public changeData(): void

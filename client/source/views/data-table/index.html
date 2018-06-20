@@ -50,19 +50,19 @@
         </surface-data-table>
     </fieldset>
     <fieldset horizontal-align="center">
-            <legend>With Actions</legend>
-            <surface-data-table datasource="[[host.datasource]]">
-                <template>
-                    <data-template style="width: 50px;"                                          header="Id"       field="id"               editable="false"></data-template>
-                    <data-template style="width: calc((100% - 260px) * 0.5);"                    header="Name"     field="name"             editable="true"></data-template>
-                    <data-template style="width: calc((100% - 260px) * 0.35);"                   header="Email"    field="email"            editable="true"></data-template>
-                    <data-template style="width: calc((100% - 260px) * 0.15); min-width: 100px;" header="Country"  field="country.name"     editable="true"></data-template>
-                    <data-template style="width: 50px;"                                          header="Initials" field="country.initials" editable="true"></data-template>
-                    <data-template style="width: 50px;"                                          header="Active"   field="active"           editable="true"></data-template>
-                    <data-template style="width: 110px;" edit="true" delete="true"></data-template>
-                </template>
-            </surface-data-table>
-        </fieldset>
+        <legend>With Actions</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <template>
+                <data-template style="width: 50px;"                                          header="Id"       field="id"               editable="false"></data-template>
+                <data-template style="width: calc((100% - 280px) * 0.5);"                    header="Name"     field="name"             editable="true"></data-template>
+                <data-template style="width: calc((100% - 280px) * 0.25);"                   header="Email"    field="email"            editable="true"></data-template>
+                <data-template style="width: calc((100% - 280px) * 0.25);" header="Country"  field="country.name"     editable="true"></data-template>
+                <data-template style="width: 60px;"                                          header="Initials" field="country.initials" editable="true"></data-template>
+                <data-template style="width: 60px;"                                          header="Active"   field="active"           editable="true"></data-template>
+                <data-template style="width: 110px;" edit="true" delete="true"></data-template>
+            </template>
+        </surface-data-table>
+    </fieldset>
     <fieldset horizontal-align="center">
         <legend>Custom Header</legend>
         <surface-data-table datasource="[[host.datasource]]">
