@@ -22,14 +22,11 @@ export class App extends CustomElement
 
         this.viewManager = ViewManager.configure(this.viewHost, router, load);
 
-        console.log(`Start routing${window.location.pathname + window.location.search}`);
         this.routeTo(window.location.pathname + window.location.search);
-        console.log(`End routing${window.location.pathname + window.location.search}`);
     }
 
     public async routeTo(route: string): Promise<void>
     {
         await this.viewManager.routeTo(route);
-        console.log(`routed to${route}`);
     }
 }
