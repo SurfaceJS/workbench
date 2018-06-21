@@ -182,6 +182,14 @@ export default class DataTable extends View
             .concat(datasource)
             .concat(datasource)
             .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
+            .concat(datasource)
             .concat(datasource);
     }
 
