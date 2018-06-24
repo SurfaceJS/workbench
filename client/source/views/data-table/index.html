@@ -27,12 +27,12 @@
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
             <template>
-                <data-template style="width: 50px;" header="Id"       field="id"></data-template>
-                <data-template header="Name"     field="name"></data-template>
-                <data-template header="Email"    field="email"></data-template>
-                <data-template header="Country"  field="country.name"></data-template>
-                <data-template header="Initials" field="country.initials"></data-template>
-                <data-template header="Active"   field="active"></data-template>
+                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
+                <column-definition                      header="Name"     field="name"></column-definition>
+                <column-definition                      header="Email"    field="email"></column-definition>
+                <column-definition                      header="Country"  field="country.name"></column-definition>
+                <column-definition                      header="Initials" field="country.initials"></column-definition>
+                <column-definition                      header="Active"   field="active"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
@@ -40,12 +40,12 @@
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
             <template>
-                <data-template header="Id"       field="id"               footer="heading"></data-template>
-                <data-template header="Name"     field="name"             footer="heading"></data-template>
-                <data-template header="Email"    field="email"            footer="heading"></data-template>
-                <data-template header="Country"  field="country.name"     footer="heading"></data-template>
-                <data-template header="Initials" field="country.initials" footer="heading"></data-template>
-                <data-template header="Active"   field="active"           footer="heading"></data-template>
+                <column-definition header="Id"       field="id"               footer="heading"></column-definition>
+                <column-definition header="Name"     field="name"             footer="heading"></column-definition>
+                <column-definition header="Email"    field="email"            footer="heading"></column-definition>
+                <column-definition header="Country"  field="country.name"     footer="heading"></column-definition>
+                <column-definition header="Initials" field="country.initials" footer="heading"></column-definition>
+                <column-definition header="Active"   field="active"           footer="heading"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
@@ -53,13 +53,13 @@
         <legend>With Actions</legend>
         <surface-data-table datasource="[[host.datasource]]">
             <template>
-                <data-template style="width: 50px;"                                          header="Id"       field="id"               editable="false"></data-template>
-                <data-template style="width: calc((100% - 280px) * 0.5);"                    header="Name"     field="name"             editable="true"></data-template>
-                <data-template style="width: calc((100% - 280px) * 0.25);"                   header="Email"    field="email"            editable="true"></data-template>
-                <data-template style="width: calc((100% - 280px) * 0.25);" header="Country"  field="country.name"     editable="true"></data-template>
-                <data-template style="width: 60px;"                                          header="Initials" field="country.initials" editable="true"></data-template>
-                <data-template style="width: 60px;"                                          header="Active"   field="active"           editable="true"></data-template>
-                <data-template style="width: 110px;" edit="true" delete="true"></data-template>
+                <column-definition style="width: 50px;"                                          header="Id"       field="id"               editable="false"></column-definition>
+                <column-definition style="width: calc((100% - 280px) * 0.5);"                    header="Name"     field="name"             editable="true"></column-definition>
+                <column-definition style="width: calc((100% - 280px) * 0.25);"                   header="Email"    field="email"            editable="true"></column-definition>
+                <column-definition style="width: calc((100% - 280px) * 0.25);" header="Country"  field="country.name"     editable="true"></column-definition>
+                <column-definition style="width: 60px;"                                          header="Initials" field="country.initials" editable="true"></column-definition>
+                <column-definition style="width: 60px;"                                          header="Active"   field="active"           editable="true"></column-definition>
+                <column-definition style="width: 110px;" action-edit="true" action-delete="true"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
@@ -77,12 +77,12 @@
                 </surface-data-row>
             </surface-data-header>
             <template>
-                <data-template field="id"></data-template>
-                <data-template field="name"></data-template>
-                <data-template field="email"></data-template>
-                <data-template field="country.name"></data-template>
-                <data-template field="country.initials"></data-template>
-                <data-template field="active"></data-template>
+                <column-definition field="id"></column-definition>
+                <column-definition field="name"></column-definition>
+                <column-definition field="email"></column-definition>
+                <column-definition field="country.name"></column-definition>
+                <column-definition field="country.initials"></column-definition>
+                <column-definition field="active"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
@@ -110,12 +110,12 @@
                 </surface-data-row>
             </surface-data-footer>
             <template>
-                <data-template field="id"></data-template>
-                <data-template field="name"></data-template>
-                <data-template field="email"></data-template>
-                <data-template field="country.name"></data-template>
-                <data-template field="country.initials"></data-template>
-                <data-template field="active"></data-template>
+                <column-definition field="id"></column-definition>
+                <column-definition field="name"></column-definition>
+                <column-definition field="email"></column-definition>
+                <column-definition field="country.name"></column-definition>
+                <column-definition field="country.initials"></column-definition>
+                <column-definition field="active"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
@@ -143,12 +143,12 @@
                 </surface-data-row>
             </surface-data-footer>
             <template>
-                <data-template header="Id"       field="id"               footer="heading"></data-template>
-                <data-template header="Name"     field="name"             footer="heading"></data-template>
-                <data-template header="Email"    field="email"            footer="heading"></data-template>
-                <data-template header="Country"  field="country.name"     footer="heading"></data-template>
-                <data-template header="Initials" field="country.initials" footer="heading"></data-template>
-                <data-template header="Active"   field="active"           footer="heading"></data-template>
+                <column-definition header="Id"       field="id"               footer="heading"></column-definition>
+                <column-definition header="Name"     field="name"             footer="heading"></column-definition>
+                <column-definition header="Email"    field="email"            footer="heading"></column-definition>
+                <column-definition header="Country"  field="country.name"     footer="heading"></column-definition>
+                <column-definition header="Initials" field="country.initials" footer="heading"></column-definition>
+                <column-definition header="Active"   field="active"           footer="heading"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
