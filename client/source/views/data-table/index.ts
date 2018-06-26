@@ -112,13 +112,13 @@ class Country
 @element("data-table-view", template, style)
 export default class DataTable extends View
 {
-    private _datasource: Array<People> = [];
-    public get datasource(): Array<People>
+    private _datasource: Array<Object> = [];
+    public get datasource(): Array<Object>
     {
         return this._datasource;
     }
 
-    public set datasource(value: Array<People>)
+    public set datasource(value: Array<Object>)
     {
         this._datasource = value;
     }
@@ -145,11 +145,11 @@ export default class DataTable extends View
                 id:    1,
                 name:  "foo",
                 email: "foo@mail.com",
-                country: new Country
-                ({
+                country:
+                {
                     name:     "Brazil",
                     initials: "bra"
-                }),
+                } as Country,
                 active: true
             }),
             new People
@@ -157,11 +157,11 @@ export default class DataTable extends View
                 id:    2,
                 name:  "bar",
                 email: "bar@mail.com",
-                country: new Country
-                ({
+                country:
+                {
                     name:     "United States",
                     initials: "usa"
-                }),
+                } as Country,
                 active: false
             }),
             new People
@@ -169,11 +169,11 @@ export default class DataTable extends View
                 id:    3,
                 name:  "baz",
                 email: "baz@mail.com",
-                country: new Country
-                ({
+                country:
+                {
                     name:     "England",
                     initials: "eng"
-                }),
+                } as Country,
                 active: true
             }),
         ];
@@ -228,11 +228,11 @@ export default class DataTable extends View
 
     public changeData(): void
     {
-        this.datasource[0].name   = "foo-bar";
-        this.datasource[0].email  = "foo-bar@gmail";
-        this.datasource[0].active = !this.datasource[0].active;
-        this.datasource[0].country.name     = "Argentina";
-        this.datasource[0].country.initials = "arg";
+        this.datasource[0]["name"]   = "foo-bar";
+        this.datasource[0]["email"]  = "foo-bar@gmail";
+        this.datasource[0]["active"] = !this.datasource[0]["active"];
+        this.datasource[0]["country"]["name"]     = "Argentina";
+        this.datasource[0]["country"]["initials"] = "arg";
 
         this.state = !this.state;
     }
