@@ -137,93 +137,52 @@ export default class DataTable extends View
     public constructor()
     {
         super();
-        this.viewName   = "Data table";
-        const datasource =
-        [
-            new People
-            ({
-                id:    1,
-                name:  "foo",
-                email: "foo@mail.com",
-                country:
-                {
-                    name:     "Brazil",
-                    initials: "bra"
-                } as Country,
-                active: true
-            }),
-            new People
-            ({
-                id:    2,
-                name:  "bar",
-                email: "bar@mail.com",
-                country:
-                {
-                    name:     "United States",
-                    initials: "usa"
-                } as Country,
-                active: false
-            }),
-            new People
-            ({
-                id:    3,
-                name:  "baz",
-                email: "baz@mail.com",
-                country:
-                {
-                    name:     "England",
-                    initials: "eng"
-                } as Country,
-                active: true
-            }),
-        ];
+        this.viewName = "Data table";
 
-        this.datasource = datasource
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource)
-            .concat(datasource);
+        for (let index = 0; index < 100; index += 3)
+        {
+            const datasource =
+            [
+                new People
+                ({
+                    id:    index + 1,
+                    name:  "foo",
+                    email: "foo@mail.com",
+                    country:
+                    {
+                        name:     "Brazil",
+                        initials: "bra"
+                    } as Country,
+                    active: true
+                }),
+                new People
+                ({
+                    id:    index + 2,
+                    name:  "bar",
+                    email: "bar@mail.com",
+                    country:
+                    {
+                        name:     "United States",
+                        initials: "usa"
+                    } as Country,
+                    active: false
+                }),
+                new People
+                ({
+                    id:    index + 3,
+                    name:  "baz",
+                    email: "baz@mail.com",
+                    country:
+                    {
+                        name:     "England",
+                        initials: "eng"
+                    } as Country,
+                    active: true
+                }),
+            ];
+
+            this.datasource = this.datasource.concat(datasource);
+        }
     }
 
     public changeData(): void
