@@ -4,6 +4,7 @@
 <require path="@surface/components/switch" />
 
 <surface-container style="width: 100%;">
+    <!--
     <fieldset horizontal-align="center">
         <legend>Manual</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -23,6 +24,7 @@
             </surface-data-row>
         </surface-data-table>
     </fieldset>
+    -->
     <fieldset horizontal-align="center">
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -32,10 +34,11 @@
                 <column-definition                      header="Email"    field="email"></column-definition>
                 <column-definition                      header="Country"  field="country.name"></column-definition>
                 <column-definition                      header="Initials" field="country.initials"></column-definition>
-                <column-definition                      header="Active"   field="active"></column-definition>
+                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
+    <!--
     <fieldset horizontal-align="center">
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -49,6 +52,7 @@
             </template>
         </surface-data-table>
     </fieldset>
+    -->
     <fieldset horizontal-align="center">
         <legend>With Actions</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -58,11 +62,12 @@
                 <column-definition style="width: calc((100% - 280px) * 0.25);"                   header="Email"    field="email"            editable="true"></column-definition>
                 <column-definition style="width: calc((100% - 280px) * 0.25);" header="Country"  field="country.name"                       editable="true"></column-definition>
                 <column-definition style="width: 60px;"                                          header="Initials" field="country.initials" editable="true"></column-definition>
-                <column-definition style="width: 60px;"                                          header="Active"   field="active"           editable="true"></column-definition>
+                <column-definition style="width: 60px;"                                          header="Active"   field="active"           editable="true" field-type="boolean"></column-definition>
                 <column-definition style="width: 120px;" edit-buttom="true" delete-buttom="true"></column-definition>
             </template>
         </surface-data-table>
     </fieldset>
+    <!--
     <fieldset horizontal-align="center">
         <legend>Custom Header</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -152,4 +157,5 @@
             </template>
         </surface-data-table>
     </fieldset>
+    -->
 </surface-container>
