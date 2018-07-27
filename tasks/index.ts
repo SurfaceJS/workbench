@@ -3,28 +3,43 @@ import path        from "path";
 import * as common from "../modules/tasks/common";
 import packages    from "./common/packages";
 
-const paths =
+const projects =
 [
-    path.resolve(__dirname, "../client"),
-    path.resolve(__dirname, "../server")
+    { name: "client", path: path.resolve(__dirname, "../client") },
+    { name: "server", path: path.resolve(__dirname, "../server") }
 ];
 
 export default class Tasks
 {
+    public static async build(): Promise<void>
+    {
+        const commands: Array<Promise<void>> = [];
+
+        for (const project of projects.filter(x => x.name != "client"))
+        {
+            commands.push(common.execute(`Building ${project.name}`, `tsc -p ${project.path}`));
+        }
+
+        await Promise.all(commands);
+
+        console.log("Building done!");
+    }
+
     public static link(): void
     {
-        for (const targetPath of paths)
+        for (const project of projects)
         {
-            const nodeModules = path.join(targetPath, "node_modules");
+            const nodeModules = path.join(project.path, "node_modules");
             const original    = path.resolve(__dirname, "../modules/source/@surface");
             const symlink     = path.join(nodeModules, "@surface");
 
             if (!fs.existsSync(symlink))
             {
                 common.makePath(nodeModules);
-                fs.symlinkSync(original, symlink);
+                //fs.symlinkSync(original, symlink);
 
-                console.log(`@surface linked to ${symlink}`);
+                //console.log(`@surface linked to ${symlink}`);
+                common.execute(`@surface linked to ${symlink}`, `mklink /J ${symlink} ${original}`);
             }
         }
 
@@ -33,9 +48,9 @@ export default class Tasks
 
     public static unlink(): void
     {
-        for (const targetPath of paths)
+        for (const project of projects)
         {
-            const surface = path.join(targetPath, "node_modules", "@surface");
+            const surface = path.join(project.path, "node_modules", "@surface");
 
             if (fs.existsSync(surface))
             {
@@ -81,8 +96,9 @@ export default class Tasks
         console.log("Installing done!");
     }
 
-    public static setup()
+    public static async setup()
     {
-        Tasks.install("false");
+        await Tasks.install("false");
+        await Tasks.build();
     }
 }
