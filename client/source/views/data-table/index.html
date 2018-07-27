@@ -24,7 +24,6 @@
             </surface-data-row>
         </surface-data-table>
     </fieldset>
-    -->
     <fieldset horizontal-align="center">
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -38,7 +37,6 @@
             </template>
         </surface-data-table>
     </fieldset>
-    <!--
     <fieldset horizontal-align="center">
         <legend>Simple</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -52,7 +50,6 @@
             </template>
         </surface-data-table>
     </fieldset>
-    -->
     <fieldset horizontal-align="center">
         <legend>With Actions</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -67,7 +64,6 @@
             </template>
         </surface-data-table>
     </fieldset>
-    <!--
     <fieldset horizontal-align="center">
         <legend>Custom Header</legend>
         <surface-data-table datasource="[[host.datasource]]">
@@ -158,4 +154,18 @@
         </surface-data-table>
     </fieldset>
     -->
+    <fieldset horizontal-align="center">
+        <legend>Server Side</legend>
+        <surface-data-table>
+            <surface-data-provider url="/user/getUsers"></surface-data-provider>
+            <template>
+                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
+                <column-definition                      header="Name"     field="name"></column-definition>
+                <column-definition                      header="Email"    field="email"></column-definition>
+                <column-definition                      header="Country"  field="country.name"></column-definition>
+                <column-definition                      header="Initials" field="country.initials"></column-definition>
+                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
+            </template>
+        </surface-data-table>
+    </fieldset>
 </surface-container>
