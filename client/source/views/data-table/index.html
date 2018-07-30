@@ -1,5 +1,6 @@
 <require path="@surface/components/container" />
 <require path="@surface/components/data-table" />
+<require path="@surface/components/data-table/data-provider" />
 <require path="@surface/components/stack-panel" />
 <require path="@surface/components/switch" />
 
@@ -157,7 +158,7 @@
     <fieldset horizontal-align="center">
         <legend>Server Side</legend>
         <surface-data-table>
-            <surface-data-provider url="/user/getUsers"></surface-data-provider>
+            <surface-data-provider read-url="/user/read" page-size="10"></surface-data-provider>
             <template>
                 <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
                 <column-definition                      header="Name"     field="name"></column-definition>
