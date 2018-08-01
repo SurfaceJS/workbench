@@ -4,7 +4,7 @@
     "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
     "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "typescript.experimental.syntaxFolding": true,
+    "typescript.tsdk": "modules/source/@surface/compiler/node_modules/typescript/lib",
     "editor.roundedSelection": false,
     "files.exclude":
     {
