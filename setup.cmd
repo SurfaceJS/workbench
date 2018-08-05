@@ -1,1 +1,1 @@
-npm i -g typescript tslint mocha nyc driveup && cd %~dp0modules && npm run task:setup && cd .. && tsc -p ./tasks && node ./tasks/cli setup
+npm i -g typescript tslint mocha nyc driveup && cd .\modules && npm i && tsc -p ./tasks && npm run task:setup && cd ..\ && tsc -p ./tasks && node ./tasks/cli setup
