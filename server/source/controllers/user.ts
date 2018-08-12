@@ -67,11 +67,11 @@ export class User extends Controller
 
         if (inbound.order.direction == "asc")
         {
-            sequence = sequence.orderBy(x => x[inbound.order.field]);
+            sequence = sequence.orderBy(x => x[inbound.order.field as keyof typeof x]);
         }
         else
         {
-            sequence = sequence.orderByDescending(x => x[inbound.order.field]);
+            sequence = sequence.orderByDescending(x => x[inbound.order.field as keyof typeof x]);
         }
 
         data = sequence
