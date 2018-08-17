@@ -1,4 +1,4 @@
-import { FieldsOf } from "@surface/core";
+import { FieldsOf, KeysOfType } from "@surface/core";
 import { element }  from "@surface/custom-element/decorators";
 import Enumerable   from "@surface/enumerable";
 import View         from "@surface/view";
@@ -112,13 +112,13 @@ class Country
 @element("data-table-view", template, style)
 export default class DataTable extends View
 {
-    private _datasource: Array<Object> = [];
-    public get datasource(): Array<Object>
+    private _datasource: Array<People> = [];
+    public get datasource(): Array<People>
     {
         return this._datasource;
     }
 
-    public set datasource(value: Array<Object>)
+    public set datasource(value: Array<People>)
     {
         this._datasource = value;
     }
@@ -187,21 +187,21 @@ export default class DataTable extends View
 
     public changeData(): void
     {
-        this.datasource[0]["name"]   = "foo-bar";
-        this.datasource[0]["email"]  = "foo-bar@gmail";
-        this.datasource[0]["active"] = !this.datasource[0]["active"];
-        this.datasource[0]["country"]["name"]     = "Argentina";
-        this.datasource[0]["country"]["initials"] = "arg";
+        this.datasource[0].name             = "foo-bar";
+        this.datasource[0].email            = "foo-bar@gmail";
+        this.datasource[0].active           = !this.datasource[0]["active"];
+        this.datasource[0].country.name     = "Argentina";
+        this.datasource[0].country.initials = "arg";
 
         this.state = !this.state;
     }
 
-    public max(field: string): string
+    public max(field: KeysOfType<People, number>): string
     {
         return Enumerable.from(this.datasource).max(x => x[field]).toString();
     }
 
-    public average(field: string): string
+    public average(field: KeysOfType<People, number>): string
     {
         return Enumerable.from(this.datasource).average(x => x[field]).toString();
     }
