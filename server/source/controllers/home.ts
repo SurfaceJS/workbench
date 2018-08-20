@@ -6,7 +6,7 @@ export class Home extends Controller
 {
     public index(inbound?: ObjectLiteral): ActionResult
     {
-        if (this.httpContext.request.method == "GET")
+        if (super.httpContext.request.method == "GET")
         {
             return super.view();
         }
@@ -18,7 +18,7 @@ export class Home extends Controller
 
     public edit(inbound?: ObjectLiteral): ActionResult
     {
-        if (this.httpContext.request.method == "GET")
+        if (super.httpContext.request.method == "GET")
         {
             return super.view("edit");
         }
