@@ -79,6 +79,6 @@ export class User extends Controller
             .take(inbound.pageSize)
             .toArray();
 
-        return super.json(data);
+        return super.json({ data, total: sequence.count() });
     }
 }

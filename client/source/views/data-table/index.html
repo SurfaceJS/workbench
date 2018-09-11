@@ -156,6 +156,19 @@
     </fieldset>
     -->
     <fieldset horizontal-align="center">
+        <legend>Client Side</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <template>
+                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
+                <column-definition                      header="Name"     field="name"></column-definition>
+                <column-definition                      header="Email"    field="email"></column-definition>
+                <column-definition                      header="Country"  field="country.name"></column-definition>
+                <column-definition                      header="Initials" field="country.initials"></column-definition>
+                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
+            </template>
+        </surface-data-table>
+    </fieldset>
+    <fieldset horizontal-align="center">
         <legend>Server Side</legend>
         <surface-data-table>
             <surface-data-provider read-url="/user/read" page-size="10"></surface-data-provider>
