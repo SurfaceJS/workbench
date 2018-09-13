@@ -4,4 +4,8 @@
 [<a on-click="{{host.routeTo('menu')}}" href="javascript:void(0)">Menu</a>]
 [<a on-click="{{host.routeTo('stack-panel')}}" href="javascript:void(0)">Stack Panel</a>]
 
+<input type="text" id="one" />
+<input type="text" id="two"   value="{{host.shadowQuery('#one').value}}"/>
+<input type="text" id="three" value="[[host.shadowQuery('#two').value]]"/>
+
 <surface-view-host style="overflow: auto;" ></surface-view-host>

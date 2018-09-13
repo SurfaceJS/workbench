@@ -1,6 +1,7 @@
-import Enumareble        from "@surface/enumerable";
-import ActionResult      from "@surface/web-host/action-result";
-import Controller        from "@surface/web-host/controller";
+import { Func1 }    from "@surface/core";
+import Enumareble   from "@surface/enumerable";
+import ActionResult from "@surface/web-host/action-result";
+import Controller   from "@surface/web-host/controller";
 
 type DataTableInbound =
 {
@@ -65,14 +66,13 @@ export class User extends Controller
 
         let sequence = Enumareble.from(data);
 
-        if (inbound.order.direction == "asc")
-        {
-            sequence = sequence.orderBy(x => x[inbound.order.field as keyof typeof x]);
-        }
-        else
-        {
-            sequence = sequence.orderByDescending(x => x[inbound.order.field as keyof typeof x]);
-        }
+        const predicate = inbound.order.field.includes(".") ?
+            Function("x", `return x.${inbound.order.field}`) as Func1<object, object[keyof object]> :
+            (element: object) => element[inbound.order.field as keyof object];
+
+        sequence = inbound.order.direction == "asc" ?
+            sequence.orderBy(predicate)
+                : sequence.orderByDescending(predicate);
 
         data = sequence
             .skip((inbound.page - 1) * inbound.pageSize)
