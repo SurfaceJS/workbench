@@ -139,7 +139,7 @@ export default class DataTable extends View
         super();
         this.viewName = "Data table";
 
-        for (let index = 0; index < 100; index += 3)
+        for (let index = 0; index < 20; index += 3)
         {
             const datasource =
             [
@@ -204,5 +204,10 @@ export default class DataTable extends View
     public average(field: KeysOfType<People, number>): string
     {
         return Enumerable.from(this.datasource).average(x => x[field]).toString();
+    }
+
+    public printDatasource(): void
+    {
+        console.log(this.datasource);
     }
 }

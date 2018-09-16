@@ -5,6 +5,38 @@
 <require path="@surface/components/switch" />
 
 <surface-container style="width: 100%;">
+    <fieldset horizontal-align="center">
+        <legend>Client Side</legend>
+        <surface-data-table datasource="[[host.datasource]]">
+            <template>
+                <column-definition style="width: 50px;" header="Id"       field="id" editable="false"></column-definition>
+                <column-definition                      header="Name"     field="name"></column-definition>
+                <column-definition                      header="Email"    field="email"></column-definition>
+                <column-definition                      header="Country"  field="country.name"></column-definition>
+                <column-definition                      header="Initials" field="country.initials"></column-definition>
+                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
+                <column-definition style="width: 120px;" edit-buttom="true" delete-buttom="true"></column-definition>
+            </template>
+        </surface-data-table>
+        <input type="button" on-click="{{ host.printDatasource() }}" value="Print Datasource" />
+        <input type="button" on-click="{{ host.changeData() }}"      value="Change Data" />
+    </fieldset>
+    <fieldset horizontal-align="center">
+        <legend>Server Side</legend>
+        <surface-data-table>
+            <surface-data-provider read-url="/user/read" page-size="10"></surface-data-provider>
+            <template>
+                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
+                <column-definition                      header="Name"     field="name"></column-definition>
+                <column-definition                      header="Email"    field="email"></column-definition>
+                <column-definition                      header="Country"  field="country.name"></column-definition>
+                <column-definition                      header="Initials" field="country.initials"></column-definition>
+                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
+                <column-definition style="width: 120px;" edit-buttom="true" delete-buttom="true"></column-definition>
+            </template>
+        </surface-data-table>
+    </fieldset>
+    
     <!--
     <fieldset horizontal-align="center">
         <legend>Manual</legend>
@@ -155,31 +187,4 @@
         </surface-data-table>
     </fieldset>
     -->
-    <fieldset horizontal-align="center">
-        <legend>Client Side</legend>
-        <surface-data-table datasource="[[host.datasource]]">
-            <template>
-                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
-                <column-definition                      header="Name"     field="name"></column-definition>
-                <column-definition                      header="Email"    field="email"></column-definition>
-                <column-definition                      header="Country"  field="country.name"></column-definition>
-                <column-definition                      header="Initials" field="country.initials"></column-definition>
-                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
-            </template>
-        </surface-data-table>
-    </fieldset>
-    <fieldset horizontal-align="center">
-        <legend>Server Side</legend>
-        <surface-data-table>
-            <surface-data-provider read-url="/user/read" page-size="10"></surface-data-provider>
-            <template>
-                <column-definition style="width: 50px;" header="Id"       field="id"></column-definition>
-                <column-definition                      header="Name"     field="name"></column-definition>
-                <column-definition                      header="Email"    field="email"></column-definition>
-                <column-definition                      header="Country"  field="country.name"></column-definition>
-                <column-definition                      header="Initials" field="country.initials"></column-definition>
-                <column-definition                      header="Active"   field="active" field-type="boolean"></column-definition>
-            </template>
-        </surface-data-table>
-    </fieldset>
 </surface-container>
