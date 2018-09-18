@@ -139,7 +139,7 @@ export default class DataTable extends View
         super();
         this.viewName = "Data table";
 
-        for (let index = 0; index < 20; index += 3)
+        for (let index = 0; index < 33; index += 3)
         {
             const datasource =
             [
