@@ -19,7 +19,7 @@
                 "reveal": "never"
             },
             "type": "shell",
-            "isBackground": true,
+            "isBackground": false,
             "options": {
                 "cwd": "${fileDirname}"
             },
@@ -27,7 +27,7 @@
         },
         { 
             "label": "cover",            
-            "command": "tsc && node ${workspaceFolder}\\modules\\tasks\\cli cover ${file}",
+            "command": "tsc; node ${workspaceFolder}\\modules\\tasks\\cli cover ${file}",
             "presentation": {
                 "reveal": "always"
             },
@@ -42,7 +42,7 @@
         },
         {
             "label": "test",
-            "command": "tsc && mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "command": "tsc; mocha --ui tdd ${fileBasenameNoExtension}.js",
             "presentation": {
                 "reveal": "always"
             },
@@ -73,7 +73,7 @@
         },
         {
             "label": "client:build",
-            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "command": "driveup; node ./node_modules/@surface/compiler/index.js -t rebuild",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -83,7 +83,7 @@
         },
         {
             "label": "client:watch",
-            "command": "driveup & cmd /c node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -93,7 +93,7 @@
         },
         {
             "label": "code-split",
-            "command": "cmd /c node ./node_modules/@surface/code-splitter/cli.js -c source -e views -o app/module-loader.ts",
+            "command": "node ./node_modules/@surface/code-splitter/cli.js -c source -e views -o app/module-loader.ts",
             "type": "shell",
             "isBackground": true,
             "options": {
