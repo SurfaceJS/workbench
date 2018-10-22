@@ -1,22 +1,12 @@
+import { Criteria } from "@surface/components/data-table/interfaces/data-provider";
 import { Func1 }    from "@surface/core";
 import Enumareble   from "@surface/enumerable";
 import ActionResult from "@surface/web-host/action-result";
 import Controller   from "@surface/web-host/controller";
 
-type DataTableInbound =
-{
-    page:     number;
-    pageSize: number;
-    order:
-    {
-        field:     string,
-        direction: "asc"|"desc"
-    }
-};
-
 export class User extends Controller
 {
-    public read(inbound?: DataTableInbound): ActionResult
+    public read(inbound?: Criteria): ActionResult
     {
         if (!inbound)
         {
@@ -66,17 +56,20 @@ export class User extends Controller
 
         let sequence = Enumareble.from(data);
 
-        const predicate = inbound.order.field.includes(".") ?
-            Function("x", `return x.${inbound.order.field}`) as Func1<object, object[keyof object]> :
-            (element: object) => element[inbound.order.field as keyof object];
+        if (inbound.sorting.length > 0)
+        {
+            const predicate = inbound.sorting[0].field.includes(".") ?
+                Function("x", `return x.${inbound.sorting[0].field}`) as Func1<object, object[keyof object]> :
+                (element: object) => element[inbound.sorting[0].field as keyof object];
 
-        sequence = inbound.order.direction == "asc" ?
-            sequence.orderBy(predicate)
-                : sequence.orderByDescending(predicate);
+            sequence = inbound.sorting[0].direction == "asc" ?
+                sequence.orderBy(predicate)
+                    : sequence.orderByDescending(predicate);
+        }
 
         data = sequence
-            .skip((inbound.page - 1) * inbound.pageSize)
-            .take(inbound.pageSize)
+            .skip(inbound.skip)
+            .take(inbound.take)
             .toArray();
 
         return super.json({ data, total: sequence.count() });
