@@ -4,7 +4,7 @@
  * Requires the module of the specified path.
  * @param path Path to the module.
  */
-export async function load(path: string): Promise<Object>
+export async function load(path: string): Promise<object>
 {
     switch (path)
     {

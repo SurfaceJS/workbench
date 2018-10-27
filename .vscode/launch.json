@@ -53,13 +53,7 @@
             "name":       "Launch Chrome",
             "url":        "http://localhost:1337",
             "webRoot":    "${workspaceFolder}\\server\\wwwroot",
-            "sourceMaps": true,
-            //"trace":      "verbose",
-            "sourceMapPathOverrides":
-            {
-                "webpack:///./*": "${workspaceFolder}/client/source/*",
-                "webpack:///*":   "*",
-            }
+            "sourceMaps": true
         },
         {
             "type":    "node",
