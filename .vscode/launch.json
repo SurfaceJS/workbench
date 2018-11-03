@@ -53,6 +53,11 @@
             "name":       "Launch Chrome",
             "url":        "http://localhost:1337",
             "webRoot":    "${workspaceFolder}\\server\\wwwroot",
+            "sourceMapPathOverrides":
+            {
+                "webpack:///./*": "${webRoot}/*",
+                "webpack:///*":   "*",
+            },
             "sourceMaps": true
         },
         {
@@ -68,13 +73,8 @@
                 "--colors",
                 "${fileBasenameNoExtension}.js"
             ],
-            "sourceMaps": true,
-            "outFiles":
-            [
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
-            ],
+            "protocol": "inspector",
+            "sourceMaps": true,            
             "runtimeArgs": ["--nolazy"]
         },
         {

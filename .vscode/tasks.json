@@ -72,8 +72,14 @@
             }
         },
         {
+            "label": "task:relink",
+            "command": "npm run task:relink",
+            "type": "shell",
+            "isBackground": true
+        },
+        {
             "label": "client:build",
-            "command": "driveup; node ./node_modules/@surface/compiler/index.js -t rebuild",
+            "command": "driveup; node ./node_modules/@surface/compiler/index.js -e production -t rebuild",
             "type": "shell",
             "isBackground": true,
             "options": {
