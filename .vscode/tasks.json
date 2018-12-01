@@ -16,7 +16,7 @@
             "label": "ts:build",
             "command": "tsc",
             "presentation": {
-                "reveal": "never"
+                "reveal": "always"
             },
             "type": "shell",
             "isBackground": false,
