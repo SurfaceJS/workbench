@@ -19,7 +19,7 @@
         "**/.vs":               true,
         "**/.DS_Store":         true,
         "**/coverage":          true,
-        "**/node_modules":      true,
+        //"**/node_modules":      true,
         "**/package.json":      false,
         "**/package-lock.json": true,
         "**/tslint.json":       false,

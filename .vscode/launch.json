@@ -6,7 +6,7 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Compiler",
-            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\index",
+            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\cli",
             "args":     ["-c", "client"],
             "cwd":      "${workspaceFolder}",
             "protocol": "inspector",

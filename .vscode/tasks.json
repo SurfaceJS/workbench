@@ -14,7 +14,7 @@
     [
         {
             "label": "ts:build",
-            "command": "tsc",
+            "command": "tsc; tslint --project .",
             "presentation": {
                 "reveal": "always"
             },
@@ -79,7 +79,7 @@
         },
         {
             "label": "client:build",
-            "command": "driveup; node ./node_modules/@surface/compiler/index.js -e production -t rebuild",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
             "type": "shell",
             "isBackground": true,
             "options": {
@@ -89,7 +89,7 @@
         },
         {
             "label": "client:watch",
-            "command": "driveup; node ./node_modules/@surface/compiler/index.js -t rebuild -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -t rebuild -w true",
             "type": "shell",
             "isBackground": true,
             "options": {
