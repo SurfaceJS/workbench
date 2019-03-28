@@ -30,5 +30,42 @@
         "**/*.js":              { "when": "$(basename).ts" },
         "**/*.d.ts":            { "when": "$(basename).js" },
         "**/*.js.map":          true,
+    },
+    "highlight.maxMatches": 500,
+    "highlight.regexes":
+    {
+        "(<)(/?)(\\w+-(-|\\w)+)":
+        {
+            "decorations":
+            [
+                { "color": "" },
+                { "color": "" },
+                { "color": "#9688de" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(\\[\\[)(.+?)(\\]\\])":
+        {
+            "decorations":
+            [
+                { "color": "lightgray" },
+                { "color": "violet" },
+                { "color": "lightgray" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(\\{\\{)(.+?)(\\}\\})":
+        {
+            "decorations":
+            [
+                { "color": "lightgray" },
+                { "color": "violet" },
+                { "color": "lightgray" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
     }
 }

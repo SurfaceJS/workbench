@@ -13,6 +13,17 @@ export class App extends CustomElement
     private viewHost:    ViewHost;
     private viewManager: ViewManager;
 
+    private _data: string = "";
+    public get data(): string
+    {
+        return this._data;
+    }
+
+    public set data(value: string)
+    {
+        this._data = value;
+    }
+
     public constructor()
     {
         super();

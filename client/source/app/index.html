@@ -1,14 +1,15 @@
 <surface-import from="@surface/view-host" />
 
-[<a on-click="{{host.routeTo('data-table')}}"  href="javascript:void(0)">Data Table</a>]
-[<a on-click="{{host.routeTo('icon')}}"        href="javascript:void(0)">Icon</a>]
-[<a on-click="{{host.routeTo('menu')}}"        href="javascript:void(0)">Menu</a>]
-[<a on-click="{{host.routeTo('modal')}}"       href="javascript:void(0)">Modal</a>]
-[<a on-click="{{host.routeTo('list')}}"        href="javascript:void(0)">List</a>]
-[<a on-click="{{host.routeTo('stack-panel')}}" href="javascript:void(0)">Stack Panel</a>]
+[<a on-click="{{ host.routeTo('data-table') }}"  href="javascript:void(0)">Data Table</a>]
+[<a on-click="{{ host.routeTo('icon') }}"        href="javascript:void(0)">Icon</a>]
+[<a on-click="{{ host.routeTo('menu') }}"        href="javascript:void(0)">Menu</a>]
+[<a on-click="{{ host.routeTo('modal') }}"       href="javascript:void(0)">Modal</a>]
+[<a on-click="{{ host.routeTo('list') }}"        href="javascript:void(0)">List</a>]
+[<a on-click="{{ host.routeTo('stack-panel') }}" href="javascript:void(0)">Stack Panel</a>]
 
-<input type="text" id="one" />
-<input type="text" id="two"   value="{{host.shadowQuery('#one').value}}"/>
-<input type="text" id="three" value="[[host.shadowQuery('#two').value]]"/>
+<input type="text" id="one"   value="{{ host.data }}" />
+<input type="text" id="two"   value="{{ host.data }}"/>
+<input type="text" id="three" value="{{ host.shadowQuery('#two').value }}"/>
+<input type="text" id="four"  value="[[ host.shadowQuery('#three').value ]]"/>
 
 <surface-view-host style="overflow: auto;" ></surface-view-host>

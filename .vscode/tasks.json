@@ -13,139 +13,162 @@
     "tasks":
     [
         {
-            "label": "ts:build",
-            "command": "tsc; tslint --project .",
-            "presentation": {
-                "reveal": "always"
-            },
-            "type": "shell",
+            "command":      "tsc; tslint --project fileDirname",
             "isBackground": false,
-            "options": {
+            "label":        "ts:build",
+            "options":
+            {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": "$tsc"
+            "presentation":
+            {
+                "reveal": "always"
+            },
+            "problemMatcher":
+            {
+                "base":         "$tsc",
+                "fileLocation": ["relative", "${fileDirname}"]
+            },
+            "type": "shell",
         },
         { 
-            "label": "cover",            
-            "command": "tsc; node ${workspaceFolder}\\modules\\tasks\\cli cover ${file}",
-            "presentation": {
+            "command":      "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
+            "isBackground": true,
+            "label":        "cover",
+            "presentation":
+            {
                 "reveal": "always"
             },
-            "type": "shell",
-            "isBackground": true,
-            "problemMatcher": [
+            "problemMatcher":
+            [
                 "$tsc"
             ],
-            "options": {
+            "options":
+            {
                 "cwd": "${fileDirname}"
-            }
+            },
+            "type": "shell",
         },
         {
-            "label": "test",
-            "command": "tsc; mocha --ui tdd ${fileBasenameNoExtension}.js",
-            "presentation": {
+            "command":      "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "isBackground": true,
+            "label":        "test",
+            "options":
+            {
+                "cwd": "${fileDirname}"
+            },
+            "presentation":
+            {
                 "reveal": "always"
             },
+            "problemMatcher":
+            {
+                "base":         "$tsc",
+                "fileLocation": ["relative", "${fileDirname}"]
+            },
             "type": "shell",
+        },
+        {
+            "command":      "npm run task:build",
             "isBackground": true,
-            "problemMatcher": [
+            "label":        "task:build",
+            "problemMatcher":
+            [
                 "$tsc"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            }
-        },
-        {
-            "label": "task:build",
-            "command": "npm run task:build",
-            "type": "shell",
-            "isBackground": true,
-            "problemMatcher": [
-                "$tsc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "group":
+            {
+                "isDefault": true,
+                "kind":      "build",
             },
-            "options": {
-                "cwd": "${workspaceFolder}\\modules"
-            }
-        },
-        {
-            "label": "task:relink",
-            "command": "npm run task:relink",
-            "type": "shell",
-            "isBackground": true
-        },
-        {
-            "label": "client:build",
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
-            "type": "shell",
-            "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\client"
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
             },
-            "problemMatcher": []
+            "type": "shell",
         },
         {
-            "label": "client:watch",
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -t rebuild -w true",
-            "type": "shell",
+            "command":      "npm run task:relink",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\client"
-            },
-            "problemMatcher": []
+            "label":        "task:relink",
+            "type":         "shell",
         },
         {
-            "label": "code-split",
-            "command": "node ./node_modules/@surface/code-splitter/cli.js -c source -e views -o app/module-loader.ts",
-            "type": "shell",
+            "label":       "client:build",
+            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\client"
+            "options":
+            {
+                "cwd": "${workspaceFolder}/client"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "type":           "shell",
+        },
+        {
+            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t rebuild -w true",
+            "isBackground": true,
+            "label":        "client:watch",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type":           "shell",
+        },
+        {
+            "command":      "node ./node_modules/@surface/code-splitter/cli.js -c source -e views -o app/module-loader.ts",
+            "isBackground": true,
+            "label":        "code-split",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type":           "shell",
         },        
         { 
-            "label": "test:cover",
-            "command": "npm run test:cover -s",
-            "type": "shell",
+            "command":      "npm run test:cover -s",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\modules"
+            "label":        "test:cover",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "type":           "shell",
         },
         {
-            "label": "test:run",
-            "command": "npm run test:run -s",
-            "type": "shell",
+            "command":      "npm run test:run -s",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\modules"
+            "label":        "test:run",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "type": "shell",
         },
         {
-            "label": "test:build",
-            "command": "npm run test:build",
-            "type": "shell",
+            "command":      "npm run test:build",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\modules"
+            "label":        "test:build",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "type": "shell",
         },
         {
-            "label": "test:watch",
-            "command": "npm run test:watch",
-            "type": "shell",
+            "command":     "npm run test:watch",
             "isBackground": true,
-            "options": {
-                "cwd": "${workspaceFolder}\\modules"
+            "label":        "test:watch",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
             },
-            "problemMatcher": []
+            "problemMatcher": [],
+            "type":         "shell",
         }
     ]
 }

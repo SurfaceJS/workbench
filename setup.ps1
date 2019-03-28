@@ -1,4 +1,5 @@
-$Location = (Get-Location).Path;
+
+$Location = $PSScriptRoot;
 npm i -g typescript tslint mocha nyc driveup;
 Set-Location '.\modules';
 npm i;

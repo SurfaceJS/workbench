@@ -6,53 +6,53 @@
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Compiler",
-            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\compiler\\cli",
+            "program":  "${workspaceFolder}/client/node_modules/@surface/compiler/cli",
             "args":     ["-c", "client"],
             "cwd":      "${workspaceFolder}",
             "protocol": "inspector",
-            "outFiles": ["${workspaceFolder}\\**\\*.js"],
+            "outFiles": ["${workspaceFolder}/**/*.js"],
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Code Splitter",
-            "program":  "${workspaceFolder}\\client\\node_modules\\@surface\\code-splitter\\index",
+            "program":  "${workspaceFolder}/client/node_modules/@surface/code-splitter/index",
             "args":     ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
-            "cwd":      "${workspaceFolder}\\client",
+            "cwd":      "${workspaceFolder}/client",
             "protocol": "inspector",
-            "outFiles": ["${workspaceFolder}\\client\\**\\*.js"],
+            "outFiles": ["${workspaceFolder}/client/**/*.js"],
 
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Server",
-            "program":  "${workspaceFolder}\\server\\source\\index.js",
-            "cwd":      "${workspaceFolder}\\server\\source",
-            "outFiles": ["${workspaceFolder}\\server\\source\\**\\*.js"],
+            "program":  "${workspaceFolder}/server/source/index.js",
+            "cwd":      "${workspaceFolder}/server/source",
+            "outFiles": ["${workspaceFolder}/server/source/**/*.js"],
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Modules Tasks Cli",
-            "program":  "${workspaceFolder}\\modules\\tasks\\cli",
+            "program":  "${workspaceFolder}/modules/tasks/cli",
             "args":     ["relink"],
-            "cwd":      "${workspaceFolder}\\modules\\tasks"
+            "cwd":      "${workspaceFolder}/modules/tasks"
         },
         {
             "type":     "node",
             "request":  "launch",
             "name":     "Launch Workbench Tasks Cli",
-            "program":  "${workspaceFolder}\\tasks\\cli",
+            "program":  "${workspaceFolder}/tasks/cli",
             "args":     ["relink"],
-            "cwd":      "${workspaceFolder}\\tasks"
+            "cwd":      "${workspaceFolder}/tasks"
         },
         {
             "type":       "chrome",
             "request":    "launch",
             "name":       "Launch Chrome",
             "url":        "http://localhost:1337",
-            "webRoot":    "${workspaceFolder}\\server\\wwwroot",
+            "webRoot":    "${workspaceFolder}/server/wwwroot",
             "sourceMapPathOverrides":
             {
                 "webpack:///./*": "${webRoot}/*",
@@ -64,7 +64,7 @@
             "type":    "node",
             "request": "launch",
             "name":    "Launch Test",
-            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
+            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "cwd":     "${fileDirname}",
             "args":
             [
@@ -75,14 +75,20 @@
             ],
             "protocol": "inspector",
             "sourceMaps": true,            
-            "runtimeArgs": ["--nolazy"]
+            "runtimeArgs": ["--nolazy"],
+            "outFiles":
+            [
+                "${workspaceFolder}/modules/source/@surface/*/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
+            ],
         },
         {
             "type":    "node",
             "request": "launch",
             "name":    "Launch Tests",
-            "program": "${workspaceFolder}\\modules\\node_modules\\mocha\\bin\\_mocha",
-            "cwd":     "${workspaceFolder}\\modules",
+            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "cwd":     "${workspaceFolder}/modules",
             "args":
             [
                 "-u", "tdd",
@@ -94,9 +100,9 @@
             "sourceMaps": true,
             "outFiles":
             [
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\*.js",
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\internal\\*.js",
-                "${workspaceFolder}\\modules\\source\\@surface\\*\\tests\\*.js"
+                "${workspaceFolder}/modules/source/@surface/*/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
             ],
             "runtimeArgs": ["--nolazy"]
         }
