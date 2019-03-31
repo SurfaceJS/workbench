@@ -7,9 +7,9 @@
 [<a on-click="{{ host.routeTo('list') }}"        href="javascript:void(0)">List</a>]
 [<a on-click="{{ host.routeTo('stack-panel') }}" href="javascript:void(0)">Stack Panel</a>]
 
-<input type="text" id="one"   value="{{ host.data }}" />
-<input type="text" id="two"   value="{{ host.data }}"/>
-<input type="text" id="three" value="{{ host.shadowQuery('#two').value }}"/>
-<input type="text" id="four"  value="[[ host.shadowQuery('#three').value ]]"/>
+<input id="one"   type="text" value="{{ host.data }}" />
+<input id="two"   type="text" value="{{ host.data }}" />
+<input id="three" type="text" value="{{ host.references.two.value }}" />
+<input id="four"  type="text" value="[[ host.references.three.value ]]" />
 
-<surface-view-host style="overflow: auto;" ></surface-view-host>
+<surface-view-host id="viewHost" style="overflow: auto;" ></surface-view-host>

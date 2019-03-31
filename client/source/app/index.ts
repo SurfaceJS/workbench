@@ -10,7 +10,6 @@ import { load }      from "./module-loader";
 @element("app-root", template, style)
 export class App extends CustomElement
 {
-    private viewHost:    ViewHost;
     private viewManager: ViewManager;
 
     private _data: string = "";
@@ -27,11 +26,10 @@ export class App extends CustomElement
     public constructor()
     {
         super();
-        this.viewHost = super.shadowQuery<ViewHost>("surface-view-host")!;
 
         const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
 
-        this.viewManager = ViewManager.configure(this.viewHost, router, load);
+        this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
 
         this.routeTo(window.location.pathname + window.location.search);
     }

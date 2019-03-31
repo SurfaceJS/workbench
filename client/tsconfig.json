@@ -5,7 +5,7 @@
         "lib":    ["dom", "esnext"],
         "module": "esnext",
         "noEmit": true,
-        "types":  ["file-extensions", "shady-css"],
+        "types":  ["file-extensions"],
     },
     "exclude": ["node_modules"]
 }
