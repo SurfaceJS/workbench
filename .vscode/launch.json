@@ -2,6 +2,7 @@
     "version": "0.2.0",
     "configurations":
     [
+        
         {
             "type":     "node",
             "request":  "launch",
@@ -52,12 +53,7 @@
             "request":    "launch",
             "name":       "Launch Chrome",
             "url":        "http://localhost:1337",
-            "webRoot":    "${workspaceFolder}/server/wwwroot",
-            "sourceMapPathOverrides":
-            {
-                "webpack:///./*": "${webRoot}/*",
-                "webpack:///*":   "*",
-            },
+            "webRoot":    "${workspaceFolder}/client/source",
             "sourceMaps": true
         },
         {

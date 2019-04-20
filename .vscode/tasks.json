@@ -105,7 +105,7 @@
             "type":           "shell",
         },
         {
-            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t rebuild -w true",
+            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
             "isBackground": true,
             "label":        "client:watch",
             "options":

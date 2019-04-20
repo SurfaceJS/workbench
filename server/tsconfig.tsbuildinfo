@@ -1,0 +1,1774 @@
+{
+  "program": {
+    "fileInfos": {
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88",
+        "signature": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d",
+        "signature": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4",
+        "signature": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe",
+        "signature": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "f:/projects/surface/workbench/server/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/router/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/collection/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts": {
+        "version": "994d6fc583c68886fdc8caa06d8202fe822915cbc94602d7ffa6ff225a8addfb",
+        "signature": "994d6fc583c68886fdc8caa06d8202fe822915cbc94602d7ffa6ff225a8addfb"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts": {
+        "version": "26809c28e9f6eb34898578ff8a4b8e44fb181bc0deefe6cf7584a8408ca95b90",
+        "signature": "26809c28e9f6eb34898578ff8a4b8e44fb181bc0deefe6cf7584a8408ca95b90"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts": {
+        "version": "5d107d7fa61c26d8a7581b3fbe6a4c2ddacc920303c7652ac0572acf0557dbac",
+        "signature": "5d107d7fa61c26d8a7581b3fbe6a4c2ddacc920303c7652ac0572acf0557dbac"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts": {
+        "version": "6508aeeab10fd841f17dffd91565c79cce92ad358bf96bd8859cc4eb7d8d80b3",
+        "signature": "6508aeeab10fd841f17dffd91565c79cce92ad358bf96bd8859cc4eb7d8d80b3"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/comparer.ts": {
+        "version": "75f40b533b04f489e2b3df5d7ac0b56dcd5193937b2273942c34576f0d6f4191"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/enumerable-sorter.ts": {
+        "version": "78a99e2a893ddd32442172d832c86f8e70303ac34c7e00ae511a3797f26a27d5"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/generic.ts": {
+        "version": "efe5565c3d467701029969c3632a82a307e0aec92b34728552def355a2f613d3"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/object.ts": {
+        "version": "319689119b9639448f7c8464778e5440d063564db2fa19f3aecf65c1c4602f42"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts": {
+        "version": "6b8f84804973252c7fdc0b1a3c880ab0216551fc1bcf4434ca95b8b440243d57"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/group.ts": {
+        "version": "8b01a9baf994007d9a791c832fe1b1a8390459211f7c445d23a856d8d75e7f3b"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/lookup.ts": {
+        "version": "dfb2b458320d28bb903837be235f80803ca4ae41ce4130b9f094ce00d855f8f3"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/set.ts": {
+        "version": "71c145e5b24cc069885185a3008af73e5206834bcb561131a39a38673f1863cd"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts": {
+        "version": "52f5322a96e14d32b9d97e44887f244c57625993e100a130a74b33ec36e86614"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/collection/key-value-pair.ts": {
+        "version": "4828b4515dcf10542006adee0db6548c309887e4cbd0e3cf3879cdf7fee18e43"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/collection/dictionary.ts": {
+        "version": "74f39933b7678a1105cb6455668c0f3d82a282eda2e78982b9f3082d2096a5a1"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/core/errors/argument-out-of-range-error.ts": {
+        "version": "69cfa19b4a8363bd0ea769f60f6af423ea4deb3336566f4046feb5063ca05f0c"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/collection/list.ts": {
+        "version": "dbb963ac771f1409373a4e67e1c2526f71a24d136f3e5c4687c97b515c5176e4"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts": {
+        "version": "023cee19805e352fd897c26f85e93644dd47cb00a65fa778cad16b72b9ac52fc",
+        "signature": "023cee19805e352fd897c26f85e93644dd47cb00a65fa778cad16b72b9ac52fc"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/router/internal/route.ts": {
+        "version": "36d10cb98b6c2570a818782ddf295110376c146c4f5f2a14f5872726b7a3c6df"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/router/index.ts": {
+        "version": "69e2ae2ac89629c49bd1a957715a12a9034745fe6145cf0ecb116e929a7dd7fe"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/configuration.ts": {
+        "version": "da6192bfefe2ad5f50c93eea67406273d56580c147a60f56a4c1e29ddd824a61"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts": {
+        "version": "af1db33597ed8330f5817ab2e696ce0512193b718b05ab5e6f8184796188fe22"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts": {
+        "version": "2700f252fdeba6965feaaac993e8e6491a64a486adf6ae5a310335a4a07adbf1"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts": {
+        "version": "87ad1bf18d121c131273c7fcc420d4946ac6ee7c9b168ec1a0de7aad201a464a"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts": {
+        "version": "1cb3d200fdf29b7bd466cd58970cd7249a5e4affa02ed928ff13809a0802d276"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/fallback-request-handler.ts": {
+        "version": "938c4896ad51b90dd08441977284b16432cae14b8efd7888b2cca30056e819d1"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/interfaces/startup.d.ts": {
+        "version": "5eb0787ae647b2fe9d893eab5802612d7a412538f4d5c5b3bfae6d192adde1b4",
+        "signature": "5eb0787ae647b2fe9d893eab5802612d7a412538f4d5c5b3bfae6d192adde1b4"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/reflect-metadata/index.d.ts": {
+        "version": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90",
+        "signature": "8d6d51a5118d000ed3bfe6e1dd1335bebfff3fef23cd2af2f84a24d30f90cc90"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts": {
+        "version": "e30ab969b612eaeeffffd1a074752017d6ba66a21095e757da72a14f939c610a"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/field-info.ts": {
+        "version": "3b1e7384119f6a6e029f14b1f1ab898ca4f6c4aab3b7a6c997782fcda43760c5"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/parameter-info.ts": {
+        "version": "736de7604d3ad79bcad55a8745a6530a3783f638c807afe3ff48ace414f6e125"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/method-info.ts": {
+        "version": "9bc05c568810d5ddcd2b9a90bd464c4d7793e4e1b10ac3fdd28b94691a8720b3"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/property-info.ts": {
+        "version": "580f54b58836cea738bcf6f7c7861dcc542ba764edfa38d78fa693a87b1ab728"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts": {
+        "version": "aeac2e8dff68932307dfc435e4340224afbdc494b79b64452ab68ea81dc52ae8"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts": {
+        "version": "a000ff50704f9421d73a5804de203927aa2dd73d703f85a67e5a38499c1fc649"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/json-result.ts": {
+        "version": "a2c9bc3f8437921a9bade73a09e25f8a0878d41ade3cfd25fb6005a2deb446ba"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/view-result.ts": {
+        "version": "2a07768955701608d1a2fa291d4ccf99da0784ee92cf34c338dc7cd6f2b33fd0"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts": {
+        "version": "debe807e2a25ebe301d4ce762dc00907cbae6275f4ae280fb659e06af391b59f"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/mvc-request-handler.ts": {
+        "version": "6393105d2cca558aa01f0a9c405fa25ac3e480325ea2e1adcb02500291206cd4"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/static-request-handler.ts": {
+        "version": "46427c6ccbb68cbfe0c2aaee26090ca24252f4d0d42bcd8dcc41f0720f582985"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/index.ts": {
+        "version": "367198112fedab5a1f5f3c9f3ebcf40c7239ee09062652553a59eee2ed2951ff"
+      },
+      "f:/projects/surface/workbench/server/source/index.ts": {
+        "version": "2b89641bd3ed0ef2b788459ba4579bdc882bc947ae32f69941864cb26fb48c65",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "f:/projects/surface/workbench/server/source/controllers/home.ts": {
+        "version": "b787e59567bbca71b43d18b07f67319d66c2b8f81ff27fe0f82454abc02ab5a6",
+        "signature": "f320b9148a21907a27f1d73715cb6a64b0238dd298f2e28cc6c7ae0cb3d1cbf6"
+      },
+      "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts": {
+        "version": "ad1b0b656510b34aa925c9480178a153690b6a9d88cfaf2eccddccaef376e93b",
+        "signature": "ad1b0b656510b34aa925c9480178a153690b6a9d88cfaf2eccddccaef376e93b"
+      },
+      "f:/projects/surface/workbench/server/source/controllers/user.ts": {
+        "version": "92946834b91ad96ac776d0b0e0a5dc06945f8d6b89d971df865f608e4f7e98ff",
+        "signature": "a19465fc3ab4f5918e87a80079592e437256bac6425db34493f5d058a5266076"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts": {
+        "version": "bb1712d53ccdcdb6e98e5099ff6a978bc66f41e4234f6727dba5bfdbe9201d4e",
+        "signature": "bb1712d53ccdcdb6e98e5099ff6a978bc66f41e4234f6727dba5bfdbe9201d4e"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts": {
+        "version": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f",
+        "signature": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
+        "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts": {
+        "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
+        "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts": {
+        "version": "7c423c885c9f352a92cb955b411d51677fa1837201d487b8cc8d9fc2c78b2669",
+        "signature": "7c423c885c9f352a92cb955b411d51677fa1837201d487b8cc8d9fc2c78b2669"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts": {
+        "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
+        "signature": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts": {
+        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
+        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts": {
+        "version": "872ff1e7d7dfff615254f283650846520436b1afc4486cec569c8f6d5ed784b0",
+        "signature": "872ff1e7d7dfff615254f283650846520436b1afc4486cec569c8f6d5ed784b0"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts": {
+        "version": "beedf72ae8a4176d262e464b70544021a8cd765e21f58325eae5d132a3eb359d",
+        "signature": "beedf72ae8a4176d262e464b70544021a8cd765e21f58325eae5d132a3eb359d"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts": {
+        "version": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a",
+        "signature": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts": {
+        "version": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa",
+        "signature": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts": {
+        "version": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb",
+        "signature": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts": {
+        "version": "dbe39c84ad40acd4b4259bc035aa5870ab08bcab899d2f7089c7922a434cf02d",
+        "signature": "dbe39c84ad40acd4b4259bc035aa5870ab08bcab899d2f7089c7922a434cf02d"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts": {
+        "version": "61af0c7f7be9887d42de91222b0d758fa9912027c2dbda957b749bcd43427b54",
+        "signature": "61af0c7f7be9887d42de91222b0d758fa9912027c2dbda957b749bcd43427b54"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts": {
+        "version": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07",
+        "signature": "28fdca6c7a3d5dd62c738461051ef345b50d167efab39dceb2fcc9a079db1b07"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts": {
+        "version": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74",
+        "signature": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts": {
+        "version": "7f71142177d3c98370b31751e3d320c9743ed28eee215acb88d8e0d2a31e321e",
+        "signature": "7f71142177d3c98370b31751e3d320c9743ed28eee215acb88d8e0d2a31e321e"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts": {
+        "version": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50",
+        "signature": "cc5fac2b9e45a6670b96fd32cb42c97e0d4a7b2ee12c87963c6fe0f55fa84f50"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts": {
+        "version": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486",
+        "signature": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts": {
+        "version": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36",
+        "signature": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f",
+        "signature": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts": {
+        "version": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1",
+        "signature": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts": {
+        "version": "80c4d0b88eb9712f6cd30a672a8288f978afc8df652b4fdb434236b7836766ff",
+        "signature": "80c4d0b88eb9712f6cd30a672a8288f978afc8df652b4fdb434236b7836766ff"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts": {
+        "version": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c",
+        "signature": "94cf93922adcc9cb4acf11d8d71641af728de919a50ae55d8e83159afea1a42c"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts": {
+        "version": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157",
+        "signature": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts": {
+        "version": "8eb33193516c1805512396183374f3cfe7e0b1b87ec31f210259ea8d9cc13d44",
+        "signature": "8eb33193516c1805512396183374f3cfe7e0b1b87ec31f210259ea8d9cc13d44"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
+        "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts": {
+        "version": "c61e008d7f29f532b933b25e57620e3b11f9cf76d88e35f2d3a4e0aaac1d5d9e",
+        "signature": "c61e008d7f29f532b933b25e57620e3b11f9cf76d88e35f2d3a4e0aaac1d5d9e"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts": {
+        "version": "b8553c42868db5dd58a51b0a7f02afb4c99e3b0bd98ea4d2da8140cf978dc46c",
+        "signature": "b8553c42868db5dd58a51b0a7f02afb4c99e3b0bd98ea4d2da8140cf978dc46c"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts": {
+        "version": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2",
+        "signature": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts": {
+        "version": "45dd52f3123d2189b981f92410c9d5d0ba1b4c257f2f98fdf983c48ec3132ab8",
+        "signature": "45dd52f3123d2189b981f92410c9d5d0ba1b4c257f2f98fdf983c48ec3132ab8"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts": {
+        "version": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded",
+        "signature": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts": {
+        "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
+        "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "0a7a6d65b520ba55bfe2db2b1a81cf53d4f937d314f107e1be543458273d5afd",
+        "signature": "0a7a6d65b520ba55bfe2db2b1a81cf53d4f937d314f107e1be543458273d5afd"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts": {
+        "version": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9",
+        "signature": "f91189e04264b0e41ee96ff96661c3871e739b90156df2f2288da7a81019dcd9"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
+        "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
+      },
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
+      }
+    },
+    "options": {
+      "allowSyntheticDefaultImports": true,
+      "alwaysStrict": true,
+      "declaration": false,
+      "emitDecoratorMetadata": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "forceConsistentCasingInFileNames": false,
+      "importHelpers": true,
+      "incremental": true,
+      "lib": [
+        "lib.es2015.d.ts",
+        "lib.es2016.d.ts",
+        "lib.es2017.d.ts"
+      ],
+      "module": 1,
+      "moduleResolution": 2,
+      "noEmitHelpers": true,
+      "noEmitOnError": true,
+      "noImplicitAny": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "pretty": true,
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "strict": true,
+      "target": 7,
+      "types": [
+        "node"
+      ],
+      "typeRoots": [
+        "F:/Projects/Surface/workbench/modules/@types",
+        "F:/Projects/Surface/workbench/modules/node_modules/@types"
+      ],
+      "project": "F:\\Projects\\Surface\\workbench\\server",
+      "configFilePath": "F:/Projects/Surface/workbench/server/tsconfig.json"
+    },
+    "referencedMap": {
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/collection/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/comparer.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/enumerable-sorter.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/generic.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/object.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/common/generic.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/common/object.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/group.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/lookup.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/group.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/set.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/comparer.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/enumerable-sorter.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/lookup.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/set.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/collection/key-value-pair.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/collection/dictionary.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/collection/key-value-pair.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/errors/argument-out-of-range-error.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/collection/list.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/errors/argument-out-of-range-error.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/internal/route.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/index.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/collection/dictionary.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/collection/list.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/internal/route.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/configuration.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/fallback-request-handler.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/interfaces/startup.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/reflect-metadata/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/field-info.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/parameter-info.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/method-info.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/method-info.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/parameter-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/property-info.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/field-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/reflect-metadata/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/field-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/method-info.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/property-info.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/json-result.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/view-result.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/json-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/view-result.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/mvc-request-handler.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/static-request-handler.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/index.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/collection/list.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/router/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/configuration.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/fallback-request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/interfaces/startup.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/mvc-request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/static-request-handler.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/source/index.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/router/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/configuration.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/source/controllers/home.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/source/controllers/user.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/collection/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/core/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/interfaces/startup.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/tslib/tslib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/reflect-metadata/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/source/controllers/home.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts"
+      ],
+      "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/server/source/controllers/user.ts": [
+        "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+        "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "c:/users/rafael.franca/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "f:/projects/surface/workbench/server/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/router/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/collection/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/index.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/comparer.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/group.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/interfaces/lookup.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/comparer.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/enumerable-sorter.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/generic.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/common/object.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/hashcode.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/group.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/lookup.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/internal/set.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/enumerable/index.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/collection/key-value-pair.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/collection/dictionary.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/core/errors/argument-out-of-range-error.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/collection/list.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/router/interfaces/route-data.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/router/internal/route.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/router/index.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/configuration.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/http-context.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/request-handler.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/status-code.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/variables.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/fallback-request-handler.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/interfaces/startup.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/tslib/tslib.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/node_modules/reflect-metadata/index.d.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/member-info.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/field-info.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/parameter-info.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/method-info.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/property-info.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/reflection/type.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/action-result.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/json-result.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/view-result.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/controller.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/mvc-request-handler.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/static-request-handler.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/web-host/index.ts",
+      "f:/projects/surface/workbench/server/source/index.ts",
+      "f:/projects/surface/workbench/server/source/controllers/home.ts",
+      "f:/projects/surface/workbench/modules/source/@surface/components/data-table/interfaces/data-provider.d.ts",
+      "f:/projects/surface/workbench/server/source/controllers/user.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts"
+    ]
+  },
+  "version": "3.4.1"
+}

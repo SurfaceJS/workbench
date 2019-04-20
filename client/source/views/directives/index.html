@@ -1,0 +1,36 @@
+<surface-import from="@surface/components/stack-panel" />
+<surface-import from="../../components/dummy-parent" />
+<surface-import from="../../components/dummy-child" />
+
+<surface-stack-panel>
+    <dummy-parent>
+        <template directive="if" expression="true">
+            <span>Inside template</span>
+            <dummy-child value="1"></dummy-child>
+        </template>
+        <span><b>Outside Template:</b> {{ host.tagName }}</span>
+    </dummy-parent>
+    <span>{{ host.viewName }}</span>
+    <template directive="if" expression="host.visible">
+        Im visible (:
+    </template>
+    <template directive="else">
+        Im not visible :(
+    </template>    
+    
+    <button on-click="{{ host.toogle() }}">Toggle visibility</button>
+    <button on-click="{{ host.increment() }}">Increment</button>
+    <button on-click="{{ host.decrement() }}">Decrement</button>
+    <button on-click="{{ host.multiply() }}">Multiply</button>
+    <input value="{{ host.tagName }}" />
+    <template directive="foreach" expression="host.items" scope="foo">
+        <span>Id: {{ foo.item }}</span>
+        &nbsp;
+        <template directive="if" expression="foo.item % 2 == 0">
+            Even
+        </template>
+        <template directive="elseif" expression="foo.item % 2 == 1">
+            Odd
+        </template>
+    </template>
+</surface-stack-panel>
