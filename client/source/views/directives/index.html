@@ -4,33 +4,29 @@
 
 <surface-stack-panel>
     <dummy-parent>
-        <template directive="if" expression="true">
+        <template #if="true">
             <span>Inside template</span>
             <dummy-child value="1"></dummy-child>
         </template>
         <span><b>Outside Template:</b> {{ host.tagName }}</span>
     </dummy-parent>
     <span>{{ host.viewName }}</span>
-    <template directive="if" expression="host.visible">
-        Im visible (:
+    <template #if="host.visible">
+        <span style="color: green">I'm ON :)</span>
     </template>
-    <template directive="else">
-        Im not visible :(
+    <template #else>
+        <span style="color: red">I'm OFF :(</span>
     </template>    
-    
     <button on-click="{{ host.toogle() }}">Toggle visibility</button>
     <button on-click="{{ host.increment() }}">Increment</button>
     <button on-click="{{ host.decrement() }}">Decrement</button>
     <button on-click="{{ host.multiply() }}">Multiply</button>
-    <input value="{{ host.tagName }}" />
-    <template directive="foreach" expression="host.items" scope="foo">
-        <span>Id: {{ foo.item }}</span>
-        &nbsp;
-        <template directive="if" expression="foo.item % 2 == 0">
-            Even
+    <template #if="host.visible" #for="item of host.items">
+        <template #if="item % 2 == 0">
+            <span>Id: {{ item }}</span>&nbsp;Even
         </template>
-        <template directive="elseif" expression="foo.item % 2 == 1">
-            Odd
+        <template #else-if="item % 2 == 1">
+            <span>Id: {{ item }}</span>&nbsp;Odd
         </template>
     </template>
 </surface-stack-panel>
