@@ -3,10 +3,11 @@
 <surface-import from="../../components/dummy-child" />
 
 <surface-stack-panel>
+    <input id="field" />
     <dummy-parent>
-        <template #if="true">
+        <template slot="value" #slot-scope="foo">
             <span>Inside template</span>
-            <dummy-child value="1"></dummy-child>
+            <dummy-child value="{{ host.references.field.value }}"></dummy-child>
         </template>
         <span><b>Outside Template:</b> {{ host.tagName }}</span>
     </dummy-parent>

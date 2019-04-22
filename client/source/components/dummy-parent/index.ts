@@ -16,4 +16,9 @@ export default class DummyParent extends CustomElement
     {
         this._value = value;
     }
+
+    public constructor()
+    {
+        super({ mode: "open" });
+    }
 }

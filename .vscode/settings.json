@@ -43,7 +43,7 @@
     "sync.quietSync":                                            false,
     "sync.removeExtensions":                                     true,
     "sync.syncExtensions":                                       true,
-    "typescript.tsdk":                                           "client/node_modules/typescript/lib",
+    "typescript.tsdk":                                           "modules/source/@surface/compiler/node_modules/typescript/lib",
     "workbench.iconTheme":                                       "vscode-icons",
     "highlight.maxMatches":                                      500,
     "highlight.regexes":
