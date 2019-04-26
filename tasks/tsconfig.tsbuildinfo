@@ -940,6 +940,11 @@
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "f:/projects/surface/workbench/tasks/types.d.ts": [
+        "f:/projects/surface/workbench/modules/tasks/types.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "f:/projects/surface/workbench/modules/tasks/interfaces/package.d.ts": [
         "f:/projects/surface/workbench/modules/tasks/types.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
@@ -948,215 +953,11 @@
       "f:/projects/surface/workbench/tasks/common/packages.ts": [
         "f:/projects/surface/workbench/modules/tasks/interfaces/package.d.ts"
       ],
-      "f:/projects/surface/workbench/tasks/types.d.ts": [
-        "f:/projects/surface/workbench/modules/tasks/types.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts": [
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "f:/projects/surface/workbench/modules/node_modules/@types/node/assert.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1203,19 +1004,218 @@
         "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts": [
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/perf_hooks.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/async_hooks.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/buffer.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/cluster.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/child_process.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/console.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/constants.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/crypto.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/https.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http2.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/tls.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dgram.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/dns.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/tty.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/http.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/net.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/domain.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/worker_threads.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/zlib.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/repl.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/readline.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/fs.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/stream.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/inspector.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/events.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/module.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/os.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/path.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/process.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/punycode.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/url.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/querystring.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/string_decoder.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/timers.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/trace_events.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts": [
         "f:/projects/surface/workbench/modules/node_modules/@types/node/globals.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
         "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts": [
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/base.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts",
-        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/globals.d.ts",
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts": [
         "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/vm.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "f:/projects/surface/workbench/modules/node_modules/@types/node/v8.d.ts": [
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/util.d.ts",
+        "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1304,5 +1304,5 @@
       "f:/projects/surface/workbench/modules/node_modules/@types/node/ts3.2/index.d.ts"
     ]
   },
-  "version": "3.4.1"
+  "version": "3.4.4"
 }

@@ -5,11 +5,23 @@
 <surface-stack-panel>
     <input id="field" />
     <dummy-parent>
-        <template slot="value" #slot-scope="foo">
-            <span>Inside template</span>
+        <span><b>Outside Template:</b>{{ this.nodeName }}</span>
+        <template slot="items">
+            <template #if="host.visible">
+                Tag Name: {{ host.tagName }}
+                <br>
+                Bind: {{ host.references.field.value }}
+            </template>
+            <span>Scoped item: {{ item }}</span>
+        </template>
+        <div slot="value">
+            <span><b>Inside template</b></span>
+            <dummy-child value="{{ host.references.field.value }}"></dummy-child>
+        </div>
+        <template slot="value">
+            <span><b>Inside template (Should be visible?)</b></span>
             <dummy-child value="{{ host.references.field.value }}"></dummy-child>
         </template>
-        <span><b>Outside Template:</b> {{ host.tagName }}</span>
     </dummy-parent>
     <span>{{ host.viewName }}</span>
     <template #if="host.visible">

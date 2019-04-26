@@ -5,20 +5,6 @@ import template      from "./index.html";
 @element("dummy-parent", template)
 export default class DummyParent extends CustomElement
 {
-    private _value: string = "Scoped Value";
-
-    public get value(): string
-    {
-        return this._value;
-    }
-
-    public set value(value: string)
-    {
-        this._value = value;
-    }
-
-    public constructor()
-    {
-        super({ mode: "open" });
-    }
+    protected items: Array<number> = [1, 3, 5, 7, 9];
+    protected value: string        = "Scoped Value";
 }

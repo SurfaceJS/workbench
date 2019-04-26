@@ -1,2 +1,15 @@
-<slot name="value" scope="{{ host }}"></slot>
-<slot></slot>
+<surface-stack-panel>
+    <slot></slot>
+    <template #for="item of host.items">
+        --------------------
+        <span><b>Some Header</b></span>
+        <template #slot="items">
+            <span>Some Default</span>
+        </template>
+        <span><b>Some Footer</b></span>
+        --------------------
+        <br>
+    </template>
+    <template #for="item of host.items" #slot="items"></template>
+    <slot name="value"></slot>
+</surface-stack-panel>
