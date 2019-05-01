@@ -1,15 +1,18 @@
 <surface-stack-panel>
+    <input type="button" on-click="{{ host.increment() }}" value="Increment" />
     <slot></slot>
-    <template #for="item of host.items">
+    <!-- <template #for="item of host.items">
         --------------------
         <span><b>Some Header</b></span>
-        <template #slot="items">
+        <template #injector="items">
             <span>Some Default</span>
         </template>
         <span><b>Some Footer</b></span>
         --------------------
         <br>
-    </template>
-    <template #for="item of host.items" #slot="items"></template>
+    </template> -->
     <slot name="value"></slot>
+</surface-stack-panel>
+<surface-stack-panel>
+    <template #for="item of host.items" #content="items" #scope="{ item }"></template>
 </surface-stack-panel>

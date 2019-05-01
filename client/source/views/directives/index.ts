@@ -18,7 +18,9 @@ export default class DirectivesView extends View
 
     public toogle(): void
     {
+        console.time();
         this.visible = !this.visible;
+        console.timeEnd();
     }
 
     public increment(): void

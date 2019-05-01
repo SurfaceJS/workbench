@@ -10,7 +10,7 @@ import { load }      from "./module-loader";
 @element("app-root", template, style)
 export class App extends CustomElement
 {
-    private viewManager: ViewManager;
+    private viewManager!: ViewManager;
 
     private _data: string = "";
     public get data(): string
@@ -27,11 +27,14 @@ export class App extends CustomElement
     {
         super();
 
-        const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
+        this.onAfterBind = () =>
+        {
+            const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
 
-        this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
+            this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
 
-        this.routeTo(window.location.pathname + window.location.search);
+            this.routeTo(window.location.pathname + window.location.search);
+        };
     }
 
     public async routeTo(route: string): Promise<void>
