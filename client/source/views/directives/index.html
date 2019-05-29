@@ -1,0 +1,73 @@
+<surface-import from="@surface/components/stack-panel" />
+<surface-import from="../../components/dummy-parent" />
+<surface-import from="../../components/dummy-child" />
+
+<surface-stack-panel>
+    <input id="field" />
+    <h1>Scope aliased</h1>
+    <dummy-parent>
+        <span><b>Outside Template:</b>{{ this.nodeName }}</span>
+        <template #if="host.visible">
+            Tag Name: {{ host.tagName }}
+            <br>
+        </template>
+        <template content="items" scope="foo">                
+            Bind: {{ host.references.field.value }}
+            <template #if="host.visible">
+                <span><b>Header</b></span>
+                <template #if="foo.item % 2 == 0">
+                    <span>Id: {{ foo.item }}</span>&nbsp;Even
+                </template>
+                <template #else-if="foo.item % 2 == 1">
+                    <span>Id: {{ foo.item }}</span>&nbsp;Odd
+                </template>
+                <span><b>Footer</b></span>
+            </template>
+        </template>
+        <div slot="value">
+            <span><b>Inside template</b></span>
+            <dummy-child value="{{ host.references.field.value }}"></dummy-child>
+        </div>
+        <template slot="value">
+            <span><b>Inside template (Should be visible?)</b></span>
+            <dummy-child value="{{ host.references.field.value }}"></dummy-child>
+        </template>
+    </dummy-parent>
+    <h1>Scope destructured</h1>
+    <dummy-parent>
+        <template content="items" scope="{ item: element }">
+            <template #if="host.visible">
+                <span><b>Header</b></span>
+                <template #if="element % 2 == 0">
+                    <span>Id: {{ element }}</span>&nbsp;Even
+                </template>
+                <template #else-if="element % 2 == 1">
+                    <span>Id: {{ element }}</span>&nbsp;Odd
+                </template>
+                <span><b>Footer</b></span>
+            </template>
+        </template>
+    </dummy-parent>
+    <h1>Destructured Iterable</h1>
+    <template #for="[key, value] of Object.entries({ foo: 1, bar: 2 })">
+        <span><b>{{ key }}:</b>&nbsp;{{ value }}</span>
+    </template>
+    <button on-click="{{ host.toogle() }}">Toggle visibility</button>
+    <template #if="host.visible">
+        <span style="color: green">I'm ON :)</span>
+    </template>
+    <template #else>
+        <span style="color: red">I'm OFF :(</span>
+    </template>
+    <button on-click="{{ host.increment() }}">Increment</button>
+    <button on-click="{{ host.decrement() }}">Decrement</button>
+    <button on-click="{{ host.multiply() }}">Multiply</button>
+    <template #if="host.visible" #for="item of host.items">
+        <template #if="item % 2 == 0">
+            <span>Id: {{ item }}</span>&nbsp;Even
+        </template>
+        <template #else-if="item % 2 == 1">
+            <span>Id: {{ item }}</span>&nbsp;Odd
+        </template>
+    </template>
+</surface-stack-panel>

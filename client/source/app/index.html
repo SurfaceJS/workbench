@@ -1,21 +1,16 @@
-<require path="@surface/view-host" />
+<surface-import from="@surface/view-host" />
 
-<a id="home-link"    exp="1 > 2 ? 1 : 2: {{ 1 > 2 ? 1 : 2 }}" href="javascript:void(0);" on-click="{{ host.routeTo('/') }}">Home [{{ this.parentElement.id }}]</a>
-<a id="login-link"   exp="1 + 1: {{ 1 + 1 }}" href="javascript:void(0);" on-click="{{ host.routeTo('/login') }}">Login [{{ this.parentElement.id }}]</a>
-<a id="contact-link" exp="!true: {{ !true }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElement.tagName == "A" ? this.parentElement.tagName : "???" }}]</a>
-<a id="contact-link" exp="5 % 2: {{ 5 % 2 }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElement ? this.parentElement.id : "no-id" }}]</a>
-<a id="contact-link" exp="-(0b10) + 0xf: {{ -(0b10) + 0xf }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElement ? this.parentElement.id : "no-id" }}]</a>
-<a id="contact-link" exp="/test/.test('test'): {{ /test/.test('test') }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElement ? this.parentElement.id : "no-id" }}]</a>
-<a id="contact-link" exp="Now: {{ window.Date.now() }}" href="javascript:void(0);" on-click="{{ host.routeTo('/contact') }}">Contact [{{ this.parentElement ? this.parentElement.id : "no-id" }}]</a>
+[<a on-click="{{ host.routeTo('data-table') }}"  href="javascript:void(0)">Data Table</a>]
+[<a on-click="{{ host.routeTo('directives') }}"  href="javascript:void(0)">Directives</a>]
+[<a on-click="{{ host.routeTo('icon') }}"        href="javascript:void(0)">Icon</a>]
+[<a on-click="{{ host.routeTo('list') }}"        href="javascript:void(0)">List</a>]
+[<a on-click="{{ host.routeTo('menu') }}"        href="javascript:void(0)">Menu</a>]
+[<a on-click="{{ host.routeTo('modal') }}"       href="javascript:void(0)">Modal</a>]
+[<a on-click="{{ host.routeTo('stack-panel') }}" href="javascript:void(0)">Stack Panel</a>]
 
-<div>
-    <label>Input</label>
-    <input type="text" id="input" />
-</div>
+<input id="one"   type="text" value="{{ host.data }}" />
+<input id="two"   type="text" value="{{ host.data }}" />
+<input id="three" type="text" value="{{ host.references.two.value }}" />
+<input id="four"  type="text" value="[[ host.references.three.value ]]" />
 
-<div>
-    <label>Output: {{ host.find('#input').value }}</label>
-    <input type="text" id="output" value="[[ host.find('#input').value ]]" data-value="{{ host.find('#input').value }}" />
-</div>
-
-<surface-view-host></surface-view-host>
+<surface-view-host id="viewHost" style="overflow: auto;" ></surface-view-host>

@@ -1,1 +1,1 @@
-npm i -g typescript tslint mocha nyc driveup && cd %~dp0modules && npm run task:setup && cd .. && tsc -p ./tasks && node ./tasks/cli setup
+powershell -NonInteractive -ExecutionPolicy Unrestricted -command "&{ .\setup.ps1 }"

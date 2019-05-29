@@ -10,22 +10,35 @@ import { load }      from "./module-loader";
 @element("app-root", template, style)
 export class App extends CustomElement
 {
-    private readonly viewHost:    ViewHost;
-    private readonly viewManager: ViewManager;
+    private viewManager!: ViewManager;
+
+    private _data: string = "";
+    public get data(): string
+    {
+        return this._data;
+    }
+
+    public set data(value: string)
+    {
+        this._data = value;
+    }
 
     public constructor()
     {
         super();
-        this.viewHost = super.find("surface-view-host");
 
-        const router = new Router().mapRoute("default", "{view=home}/{action=index}/{id?}", true);
+        this.onAfterBind = () =>
+        {
+            const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
 
-        this.viewManager = ViewManager.configure(this.viewHost, router, load);
-        this.viewManager.routeTo(window.location.pathname + window.location.search);
+            this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
+
+            this.routeTo(window.location.pathname + window.location.search);
+        };
     }
 
-    public routeTo(route: string): void
+    public async routeTo(route: string): Promise<void>
     {
-        this.viewManager.routeTo(route);
+        await this.viewManager.routeTo(route);
     }
 }

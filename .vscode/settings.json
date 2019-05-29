@@ -1,10 +1,5 @@
-// Place your settings in this file to overwrite default and user settings.
 {
-    "workbench.iconTheme": "vscode-icons",
-    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "typescript.experimental.syntaxFolding": true,
+    "breadcrumbs.enabled":     true,
     "editor.roundedSelection": false,
     "files.exclude":
     {
@@ -20,7 +15,7 @@
         "**/.vs":               true,
         "**/.DS_Store":         true,
         "**/coverage":          true,
-        //"**/node_modules":      true,
+        "**/node_modules":      true,
         "**/package.json":      false,
         "**/package-lock.json": true,
         "**/tslint.json":       false,
@@ -31,5 +26,71 @@
         "**/*.js":              { "when": "$(basename).ts" },
         "**/*.d.ts":            { "when": "$(basename).js" },
         "**/*.js.map":          true,
+    },
+    "files.associations":
+    {
+        "*.config": "xml",
+        "*.resx":   "xml"
+    },
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions":     true,
+    "javascript.implicitProjectConfig.checkJs":                  true,
+    "javascript.preferences.quoteStyle":                         "double",
+    "sync.autoDownload":                                         false,
+    "sync.autoUpload":                                           false,
+    "sync.forceDownload":                                        false,
+    "sync.gist":                                                 "1296ff92e87dad728b76adfd5b8d0c62",
+    "sync.quietSync":                                            false,
+    "sync.removeExtensions":                                     true,
+    "sync.syncExtensions":                                       true,
+    "typescript.tsdk":                                           "modules/source/@surface/compiler/node_modules/typescript/lib",
+    "workbench.iconTheme":                                       "vscode-icons",
+    "highlight.maxMatches":                                      500,
+    "highlight.regexes":
+    {
+        "(#(?:for|if|else-if) *= *\")([^\"]*)(\")":
+        {
+            "decorations":
+            [
+                { "color": "" },
+                { "color": "violet" },
+                { "color": "" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(<)(/?)(\\w+-(-|\\w)+)":
+        {
+            "decorations":
+            [
+                { "color": "" },
+                { "color": "" },
+                { "color": "#9688de" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(\\[\\[)(.+?)(\\]\\])":
+        {
+            "decorations":
+            [
+                { "color": "lightgray" },
+                { "color": "violet" },
+                { "color": "lightgray" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(\\{\\{)(.+?)(\\}\\})":
+        {
+            "decorations":
+            [
+                { "color": "lightgray" },
+                { "color": "violet" },
+                { "color": "lightgray" },
+            ],
+            "filterFileRegex":      ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
     }
 }
