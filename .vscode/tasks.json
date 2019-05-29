@@ -114,17 +114,6 @@
             },
             "problemMatcher": [],
             "type":           "shell",
-        },
-        {
-            "command":      "node ./node_modules/@surface/code-splitter/cli.js -c source -e views -o app/module-loader.ts",
-            "isBackground": true,
-            "label":        "code-split",
-            "options":
-            {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type":           "shell",
         },        
         { 
             "command":      "npm run test:cover -s",

@@ -16,17 +16,6 @@
         {
             "type":     "node",
             "request":  "launch",
-            "name":     "Launch Code Splitter",
-            "program":  "${workspaceFolder}/client/node_modules/@surface/code-splitter/index",
-            "args":     ["-c", "source", "-e", "views", "-o", "app/lazy-loader/index.ts"],
-            "cwd":      "${workspaceFolder}/client",
-            "protocol": "inspector",
-            "outFiles": ["${workspaceFolder}/client/**/*.js"],
-
-        },
-        {
-            "type":     "node",
-            "request":  "launch",
             "name":     "Launch Server",
             "program":  "${workspaceFolder}/server/source/index.js",
             "cwd":      "${workspaceFolder}/server/source",
