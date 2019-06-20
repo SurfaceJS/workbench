@@ -27,14 +27,11 @@ export class App extends CustomElement
     {
         super();
 
-        this.onAfterBind = () =>
-        {
-            const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
+        const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
 
-            this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
+        this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
 
-            this.routeTo(window.location.pathname + window.location.search);
-        };
+        this.routeTo(window.location.pathname + window.location.search);
     }
 
     public async routeTo(route: string): Promise<void>
