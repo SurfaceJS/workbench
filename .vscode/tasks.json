@@ -13,9 +13,50 @@
     "tasks":
     [
         {
+            "label":       "Client Project - Build",
+            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
+            "isBackground": true,
+            "options":
+            {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type":           "shell",
+        },
+        {
+            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
+            "isBackground": true,
+            "label":        "Client Project - Watch",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type":           "shell",
+        },
+        {
+            "command":      "npm run task:build",
+            "isBackground": true,
+            "label":        "Compile Modules",
+            "problemMatcher":
+            [
+                "$tsc"
+            ],
+            "group":
+            {
+                "isDefault": true,
+                "kind":      "build",
+            },
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "type": "shell",
+        },   
+        {
             "command":      "tsc",
             "isBackground": false,
-            "label":        "ts:build",
+            "label":        "Compile File",
             "options":
             {
                 "cwd": "${fileDirname}"
@@ -32,9 +73,20 @@
             "type": "shell",
         },
         { 
+            "command":      "npm run cover -s",
+            "isBackground": true,
+            "label":        "Cover Modules",
+            "options":
+            {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "problemMatcher": [],
+            "type":           "shell",
+        },
+        { 
             "command":      "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
             "isBackground": true,
-            "label":        "cover",
+            "label":        "Cover File",
             "presentation":
             {
                 "reveal": "always"
@@ -52,7 +104,7 @@
         {
             "command":      "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
             "isBackground": true,
-            "label":        "test",
+            "label":        "Test File",
             "options":
             {
                 "cwd": "${fileDirname}"
@@ -69,67 +121,9 @@
             "type": "shell",
         },
         {
-            "command":      "npm run task:build",
+            "command":      "npm run test -s",
             "isBackground": true,
-            "label":        "task:build",
-            "problemMatcher":
-            [
-                "$tsc"
-            ],
-            "group":
-            {
-                "isDefault": true,
-                "kind":      "build",
-            },
-            "options":
-            {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "type": "shell",
-        },
-        {
-            "command":      "npm run task:relink",
-            "isBackground": true,
-            "label":        "task:relink",
-            "type":         "shell",
-        },
-        {
-            "label":       "client:build",
-            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
-            "isBackground": true,
-            "options":
-            {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type":           "shell",
-        },
-        {
-            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
-            "isBackground": true,
-            "label":        "client:watch",
-            "options":
-            {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type":           "shell",
-        },        
-        { 
-            "command":      "npm run test:cover -s",
-            "isBackground": true,
-            "label":        "test:cover",
-            "options":
-            {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "problemMatcher": [],
-            "type":           "shell",
-        },
-        {
-            "command":      "npm run test:run -s",
-            "isBackground": true,
-            "label":        "test:run",
+            "label":        "Test Modules",
             "options":
             {
                 "cwd": "${workspaceFolder}/modules"
@@ -137,27 +131,5 @@
             "problemMatcher": [],
             "type": "shell",
         },
-        {
-            "command":      "npm run test:build",
-            "isBackground": true,
-            "label":        "test:build",
-            "options":
-            {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "problemMatcher": [],
-            "type": "shell",
-        },
-        {
-            "command":     "npm run test:watch",
-            "isBackground": true,
-            "label":        "test:watch",
-            "options":
-            {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "problemMatcher": [],
-            "type":         "shell",
-        }
     ]
 }
