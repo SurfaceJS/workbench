@@ -11,7 +11,7 @@
             Tag Name: {{ host.tagName }}
             <br>
         </template>
-        <template content="items" scope="foo">
+        <template #inject:items="foo">
             Bind: {{ host.references.field.value }}
             <template #if="host.visible">
                 <span><b>Header</b></span>
@@ -35,7 +35,7 @@
     </dummy-parent>
     <h1>Scope destructured</h1>
     <dummy-parent>
-        <template content="items" scope="{ item: element }">
+        <template #inject:items="{ item: element }">
             <template #if="host.visible">
                 <span><b>Header</b></span>
                 <template #if="element % 2 == 0">
@@ -49,7 +49,7 @@
         </template>
     </dummy-parent>
     <h1>Destructured Iterable</h1>
-    <template #for="[key, value] of Object.entries({ foo: 1, bar: 2 })">
+    <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
         <span><b>{{ key }}:</b>&nbsp;{{ value }}</span>
     </template>
     <button on-click="{{ host.toogle() }}">Toggle visibility</button>
@@ -62,7 +62,7 @@
     <button on-click="{{ host.increment() }}">Increment</button>
     <button on-click="{{ host.decrement() }}">Decrement</button>
     <button on-click="{{ host.multiply() }}">Multiply</button>
-    <template #if="host.visible" #for="item of host.items">
+    <template #if="host.visible" #for="const item of host.items">
         <template #if="item % 2 == 0">
             <span>Id: {{ item }}</span>&nbsp;Even
         </template>

@@ -39,76 +39,76 @@
         "**/tslint.json":       false
     },
     "highlight.maxMatches": 500,
-    "highlight.regexes":
-    {
-        "(\\[\\[)(.+?)(\\]\\])":
-        {
-            "decorations":
-            [
-                {
-                    "color": "lightgray"
-                },
-                {
-                    "color": "violet"
-                },
-                {
-                    "color": "lightgray"
-                }
-            ],
-            "filterFileRegex": ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(\\{\\{)(.+?)(\\}\\})":
-        {
-            "decorations":
-            [
-                {
-                    "color": "lightgray"
-                },
-                {
-                    "color": "violet"
-                },
-                {
-                    "color": "lightgray"
-                }
-            ],
-            "filterFileRegex": ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(#(?:for|if|else-if) *= *\")([^\"]*)(\")":
-        {
-            "decorations":
-            [
-                {
-                    "color": ""
-                },
-                {
-                    "color": "violet"
-                },
-                {
-                    "color": ""
-                }
-            ],
-            "filterFileRegex": ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(<)(/?)(\\w+-(-|\\w)+)":
-        {
-            "decorations": [
-                {
-                    "color": ""
-                },
-                {
-                    "color": ""
-                },
-                {
-                    "color": "#9688de"
-                }
-            ],
-            "filterFileRegex": ".*\\.html",
-            "highlight.regexFlags": "gm"
-        }
-    },
+    // "highlight.regexes":
+    // {
+    //     "(\\[\\[)(.+?)(\\]\\])":
+    //     {
+    //         "decorations":
+    //         [
+    //             {
+    //                 "color": "lightgray"
+    //             },
+    //             {
+    //                 "color": "violet"
+    //             },
+    //             {
+    //                 "color": "lightgray"
+    //             }
+    //         ],
+    //         "filterFileRegex": ".*\\.html",
+    //         "highlight.regexFlags": "gm"
+    //     },
+    //     "(\\{\\{)(.+?)(\\}\\})":
+    //     {
+    //         "decorations":
+    //         [
+    //             {
+    //                 "color": "lightgray"
+    //             },
+    //             {
+    //                 "color": "violet"
+    //             },
+    //             {
+    //                 "color": "lightgray"
+    //             }
+    //         ],
+    //         "filterFileRegex": ".*\\.html",
+    //         "highlight.regexFlags": "gm"
+    //     },
+    //     "(#(?:for|if|else-if) *= *\")([^\"]*)(\")":
+    //     {
+    //         "decorations":
+    //         [
+    //             {
+    //                 "color": ""
+    //             },
+    //             {
+    //                 "color": "violet"
+    //             },
+    //             {
+    //                 "color": ""
+    //             }
+    //         ],
+    //         "filterFileRegex": ".*\\.html",
+    //         "highlight.regexFlags": "gm"
+    //     },
+    //     "(<)(/?)(\\w+-(-|\\w)+)":
+    //     {
+    //         "decorations": [
+    //             {
+    //                 "color": ""
+    //             },
+    //             {
+    //                 "color": ""
+    //             },
+    //             {
+    //                 "color": "#9688de"
+    //             }
+    //         ],
+    //         "filterFileRegex": ".*\\.html",
+    //         "highlight.regexFlags": "gm"
+    //     }
+    // },
     "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
     "javascript.format.placeOpenBraceOnNewLineForFunctions":     true,
     "javascript.implicitProjectConfig.checkJs":                  true,
