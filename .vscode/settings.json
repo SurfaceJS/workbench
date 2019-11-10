@@ -1,36 +1,113 @@
 {
     "breadcrumbs.enabled":     true,
     "editor.roundedSelection": false,
-    "files.exclude":
-    {
-        "**/*.config":          true,
-        "**/.git":              true,
-        "**/.github":           true,
-        "**/.gitignore":        true,
-        "**/.gitmodules":       true,
-        "**/.hg":               true,
-        "**/.nycrc":            true,
-        "**/.nyc_output":       true,
-        "**/.svn":              true,
-        "**/.vs":               true,
-        "**/.DS_Store":         true,
-        "**/coverage":          true,
-        "**/node_modules":      true,
-        "**/package.json":      false,
-        "**/package-lock.json": true,
-        "**/tslint.json":       false,
-        "**/tsconfig*.json":    false,
-        "**/CVS":               true,
-        "**/LICENSE":           true,
-        "**/README.md":         true,
-        "**/*.js":              { "when": "$(basename).ts" },
-        "**/*.d.ts":            { "when": "$(basename).js" },
-        "**/*.js.map":          true,
-    },
     "files.associations":
     {
         "*.config": "xml",
         "*.resx":   "xml"
+    },
+    "files.exclude":
+    {
+        "**/.DS_Store":   true,
+        "**/.git":        true,
+        "**/.github":     true,
+        "**/.gitignore":  true,
+        "**/.gitmodules": true,
+        "**/.hg":         true,
+        "**/.nyc_output": true,
+        "**/.nycrc":      true,
+        "**/.svn":        true,
+        "**/.vs":         true,
+        "**/*.config":    true,
+        "**/*.d.ts":
+        {
+            "when": "$(basename).js"
+        },
+        "**/*.js":
+        {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map":          true,
+        "**/coverage":          true,
+        "**/CVS":               true,
+        "**/LICENSE":           true,
+        "**/node_modules":      true,
+        "**/package-lock.json": true,
+        "**/package.json":      false,
+        "**/README.md":         true,
+        "**/tsconfig*.json":    false,
+        "**/tslint.json":       false
+    },
+    "highlight.maxMatches": 500,
+    "highlight.regexes":
+    {
+        "(\\[\\[)(.+?)(\\]\\])":
+        {
+            "decorations":
+            [
+                {
+                    "color": "lightgray"
+                },
+                {
+                    "color": "violet"
+                },
+                {
+                    "color": "lightgray"
+                }
+            ],
+            "filterFileRegex": ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(\\{\\{)(.+?)(\\}\\})":
+        {
+            "decorations":
+            [
+                {
+                    "color": "lightgray"
+                },
+                {
+                    "color": "violet"
+                },
+                {
+                    "color": "lightgray"
+                }
+            ],
+            "filterFileRegex": ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(#(?:for|if|else-if) *= *\")([^\"]*)(\")":
+        {
+            "decorations":
+            [
+                {
+                    "color": ""
+                },
+                {
+                    "color": "violet"
+                },
+                {
+                    "color": ""
+                }
+            ],
+            "filterFileRegex": ".*\\.html",
+            "highlight.regexFlags": "gm"
+        },
+        "(<)(/?)(\\w+-(-|\\w)+)":
+        {
+            "decorations": [
+                {
+                    "color": ""
+                },
+                {
+                    "color": ""
+                },
+                {
+                    "color": "#9688de"
+                }
+            ],
+            "filterFileRegex": ".*\\.html",
+            "highlight.regexFlags": "gm"
+        }
     },
     "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
     "javascript.format.placeOpenBraceOnNewLineForFunctions":     true,
@@ -40,57 +117,14 @@
     "sync.autoUpload":                                           false,
     "sync.forceDownload":                                        false,
     "sync.gist":                                                 "1296ff92e87dad728b76adfd5b8d0c62",
-    "sync.quietSync":                                            false,
+    "sync.quietSync": false,
     "sync.removeExtensions":                                     true,
     "sync.syncExtensions":                                       true,
     "typescript.tsdk":                                           "modules/source/@surface/compiler/node_modules/typescript/lib",
-    "workbench.iconTheme":                                       "vscode-icons",
-    "highlight.maxMatches":                                      500,
-    "highlight.regexes":
-    {
-        "(#(?:for|if|else-if) *= *\")([^\"]*)(\")":
-        {
-            "decorations":
-            [
-                { "color": "" },
-                { "color": "violet" },
-                { "color": "" },
-            ],
-            "filterFileRegex":      ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(<)(/?)(\\w+-(-|\\w)+)":
-        {
-            "decorations":
-            [
-                { "color": "" },
-                { "color": "" },
-                { "color": "#9688de" },
-            ],
-            "filterFileRegex":      ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(\\[\\[)(.+?)(\\]\\])":
-        {
-            "decorations":
-            [
-                { "color": "lightgray" },
-                { "color": "violet" },
-                { "color": "lightgray" },
-            ],
-            "filterFileRegex":      ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-        "(\\{\\{)(.+?)(\\}\\})":
-        {
-            "decorations":
-            [
-                { "color": "lightgray" },
-                { "color": "violet" },
-                { "color": "lightgray" },
-            ],
-            "filterFileRegex":      ".*\\.html",
-            "highlight.regexFlags": "gm"
-        },
-    }
+    "vsicons.associations.folders":
+    [
+        { "extensions": ["internal"], "icon": "private" },
+        { "extensions": ["tasks"],    "icon": "tools" },
+    ],
+    "workbench.iconTheme": "vscode-icons"
 }

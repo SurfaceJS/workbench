@@ -5,10 +5,11 @@ import template    from "./index.html";
 @element("directives-view", template)
 export default class DirectivesView extends View
 {
-    private lastId: number        = 0;
-    public items:   Array<number> = [];
+    private lastId: number = 0;
 
     public visible = true;
+
+    public items: Array<number> = [];
 
     public constructor()
     {
