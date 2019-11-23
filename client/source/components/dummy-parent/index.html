@@ -1,5 +1,6 @@
 <surface-stack-panel>
     <input type="button" on-click="{{ host.increment() }}" value="Increment" />
+    <input type="button" on-click="{{ host.random() }}"    value="Random" />
     <slot></slot>
     <!-- <template #for="const item of host.items">
         --------------------
@@ -15,4 +16,5 @@
 </surface-stack-panel>
 <surface-stack-panel>
     <template #for="const item of host.items" #injector:items="{ item }"></template>
+    <template #injector:reactive="{ items: host.items }"></template>
 </surface-stack-panel>

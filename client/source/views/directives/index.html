@@ -4,6 +4,37 @@
 
 <surface-stack-panel>
     <input id="field" />
+    <h1>Destructured Iterable</h1>
+    <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
+        <span><b>{{ key }}:</b>&nbsp;{{ value }}</span>
+    </template>
+    <button on-click="{{ host.toogle() }}">Toggle visibility</button>
+    <template #if="host.visible">
+        <span style="color: green">I'm ON :)</span>
+    </template>
+    <template #else>
+        <span style="color: red">I'm OFF :(</span>
+    </template>
+    <button on-click="{{ host.increment() }}">Increment</button>
+    <button on-click="{{ host.decrement() }}">Decrement</button>
+    <button on-click="{{ host.multiply() }}">Multiply</button>
+    <template #if="host.visible" #for="const item of host.items">
+        <span>{{ item }}</span>
+        <template #if="item % 2 == 0">
+            <span>Id: {{ item }}</span>&nbsp;Even
+        </template>
+        <template #else-if="item % 2 == 1">
+            <span>Id: {{ item }}</span>&nbsp;Odd
+        </template>
+        <!-- <template #if="host.visible" #for="const item1 of host.items">
+            <template #if="item1 % 2 == 0">
+                <span>Id: {{ item1 }}</span>&nbsp;Even
+            </template>
+            <template #else-if="item1 % 2 == 1">
+                <span>Id: {{ item1 }}</span>&nbsp;Odd
+            </template>
+        </template> -->
+    </template>
     <h1>Scope aliased</h1>
     <dummy-parent>
         <span><b>Outside Template:</b>{{ this.nodeName }}</span>
@@ -11,7 +42,7 @@
             Tag Name: {{ host.tagName }}
             <br>
         </template>
-        <template #inject:items="foo">
+        <!-- <template #inject:items="foo">
             Bind: {{ host.references.field.value }}
             <template #if="host.visible">
                 <span><b>Header</b></span>
@@ -23,6 +54,20 @@
                 </template>
                 <span><b>Footer</b></span>
             </template>
+        </template> -->
+        <template #inject:reactive="{ items }" #for="const item in items">
+            Bind: {{ host.references.field.value }}
+            <template #if="host.visible">
+                <span><b>Header</b></span>
+                <template #if="items[item] % 2 == 0">
+                    <span>Id: {{ items[item] }}</span>&nbsp;Even
+                </template>
+                <template #else-if="items[item] % 2 == 1">
+                    <span>Id: {{ items[item] }}</span>&nbsp;Odd
+                </template>
+                <span><b>Footer</b></span>
+            </template>
+            <dummy-child value="{{ host.references.field.value }}"></dummy-child>
         </template>
         <div slot="value">
             <span><b>Inside template</b></span>
@@ -48,26 +93,4 @@
             </template>
         </template>
     </dummy-parent>
-    <h1>Destructured Iterable</h1>
-    <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
-        <span><b>{{ key }}:</b>&nbsp;{{ value }}</span>
-    </template>
-    <button on-click="{{ host.toogle() }}">Toggle visibility</button>
-    <template #if="host.visible">
-        <span style="color: green">I'm ON :)</span>
-    </template>
-    <template #else>
-        <span style="color: red">I'm OFF :(</span>
-    </template>
-    <button on-click="{{ host.increment() }}">Increment</button>
-    <button on-click="{{ host.decrement() }}">Decrement</button>
-    <button on-click="{{ host.multiply() }}">Multiply</button>
-    <template #if="host.visible" #for="const item of host.items">
-        <template #if="item % 2 == 0">
-            <span>Id: {{ item }}</span>&nbsp;Even
-        </template>
-        <template #else-if="item % 2 == 1">
-            <span>Id: {{ item }}</span>&nbsp;Odd
-        </template>
-    </template>
 </surface-stack-panel>

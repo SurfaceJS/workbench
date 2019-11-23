@@ -14,9 +14,23 @@ export default class DummyParent extends CustomElement
     {
         const items: Array<number> = [];
 
-        for (let i = 0; i <= 1000; i++)
+        for (let i = 0; i <= 100; i++)
         {
             items.push(i);
+        }
+
+        console.time();
+        this.items = items;//[...this.items, ...items];
+        console.timeEnd();
+    }
+
+    protected random(): void
+    {
+        const items: Array<number> = [];
+
+        for (let i = 0; i <= 100; i++)
+        {
+            items.push(Math.trunc(Math.random() * i));
         }
 
         console.time();
