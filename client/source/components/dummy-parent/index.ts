@@ -14,7 +14,7 @@ export default class DummyParent extends CustomElement
     {
         const items: Array<number> = [];
 
-        for (let i = 0; i <= 100; i++)
+        for (let i = 0; i <= 1000; i++)
         {
             items.push(i);
         }
@@ -28,7 +28,7 @@ export default class DummyParent extends CustomElement
     {
         const items: Array<number> = [];
 
-        for (let i = 0; i <= 100; i++)
+        for (let i = 0; i <= 1000; i++)
         {
             items.push(Math.trunc(Math.random() * i));
         }

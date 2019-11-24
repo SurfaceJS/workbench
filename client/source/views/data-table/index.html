@@ -18,8 +18,8 @@
                 <column-definition style="width: 120px;" edit-buttom="true" delete-buttom="true"></column-definition>
             </template>
         </surface-data-table>
-        <input type="button" on-click="{{ host.printDatasource() }}" value="Print Datasource" />
-        <input type="button" on-click="{{ host.changeData() }}"      value="Change Data" />
+        <input type="button" on:click="{{ host.printDatasource() }}" value="Print Datasource" />
+        <input type="button" on:click="{{ host.changeData() }}"      value="Change Data" />
     </fieldset>
     <fieldset horizontal-align="center">
         <legend>Server Side</legend>

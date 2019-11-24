@@ -1,6 +1,6 @@
 <surface-stack-panel>
-    <input type="button" on-click="{{ host.increment() }}" value="Increment" />
-    <input type="button" on-click="{{ host.random() }}"    value="Random" />
+    <input type="button" on:click="host.increment()" value="Increment" />
+    <input type="button" on:click="host.random()"    value="Random" />
     <slot></slot>
     <!-- <template #for="const item of host.items">
         --------------------
