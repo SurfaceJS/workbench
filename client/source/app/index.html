@@ -10,7 +10,7 @@
 
 <input id="one"   type="text" ::value="host.data" />
 <input id="two"   type="text" ::value="host.data" />
-<input id="three" type="text" :value="{host}.references.two.value" />
-<input id="four"  type="text" value="\\{{ host }\\}.references.three.value" />
+<input id="three" type="text" :value="host.references.two.value" />
+<input id="four"  on:click="() => alert('clicked!!!')"  type="text" value="{host.references.three.value}" readonly />
 
-<surface-view-host id="viewHost" style="overflow: auto;" ></surface-view-host>
+<surface-view-host id="viewHost"></surface-view-host>

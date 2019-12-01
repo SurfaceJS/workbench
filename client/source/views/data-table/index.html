@@ -7,7 +7,7 @@
 <surface-container style="width: 100%;">
     <fieldset horizontal-align="center">
         <legend>Client Side</legend>
-        <surface-data-table datasource="[[ host.datasource ]]">
+        <surface-data-table ::datasource="host.datasource">
             <template>
                 <column-definition style="width: 50px;" header="Id"       field="id" editable="false" sortable="false"></column-definition>
                 <column-definition                      header="Name"     field="name"></column-definition>
@@ -18,8 +18,8 @@
                 <column-definition style="width: 120px;" edit-buttom="true" delete-buttom="true"></column-definition>
             </template>
         </surface-data-table>
-        <input type="button" on:click="{{ host.printDatasource() }}" value="Print Datasource" />
-        <input type="button" on:click="{{ host.changeData() }}"      value="Change Data" />
+        <input type="button" on:click="host.printDatasource()" value="Print Datasource" />
+        <input type="button" on:click="host.changeData()"      value="Change Data" />
     </fieldset>
     <fieldset horizontal-align="center">
         <legend>Server Side</legend>
