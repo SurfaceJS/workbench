@@ -4,8 +4,8 @@
     "url": "https://github.com/SurfaceJS/workbench/issues"
   },
   "dependencies": {
-    "@types/node": "10.3.2",
-    "tslib": "1.9.2"
+    "@types/node": "13.1.4",
+    "tslib": "1.10.0"
   },
   "description": "Basic server to development and testing.",
   "homepage": "https://github.com/SurfaceJS/workbench#readme",
