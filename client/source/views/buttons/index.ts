@@ -2,12 +2,12 @@ import { element } from "@surface/custom-element/decorators";
 import View        from "@surface/view";
 import template    from "./index.html";
 
-@element("icon-view", template)
-export default class Icon extends View
+@element("buttons-view", template)
+export default class Buttons extends View
 {
     public constructor()
     {
         super();
-        this.viewName = "Icon";
+        this.viewName = "Buttons";
     }
 }

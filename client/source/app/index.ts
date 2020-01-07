@@ -4,7 +4,7 @@ import Router        from "@surface/router";
 import ViewHost      from "@surface/view-host";
 import ViewManager   from "@surface/view-manager";
 import template      from "./index.html";
-import style         from "./index.scss";
+import style         from "./index.scss?raw";
 import { load }      from "./module-loader";
 
 @element("app-root", template, style)

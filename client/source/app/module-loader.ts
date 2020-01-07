@@ -8,6 +8,8 @@ export async function load(path: string): Promise<object>
 {
     switch (path)
     {
+        case "views/buttons":
+            return import(/* webpackChunkName: "views/buttons" */ "../views/buttons");
         case "views/contact":
             return import(/* webpackChunkName: "views/contact" */ "../views/contact");
         case "views/data-table":

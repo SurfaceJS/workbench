@@ -14,7 +14,7 @@
     [
         {
             "label":       "Client Project - Build",
-            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
+            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -t rebuild",
             "isBackground": true,
             "options":
             {
