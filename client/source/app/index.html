@@ -22,10 +22,6 @@
         <a on:click="host.routeTo('stack-panel')" href="javascript:void(0)">Stack Panel</a>
     </smd-navigation-drawer>
     <smd-content>
-        <input id="one"   type="text" ::value="host.data" />
-        <input id="two"   type="text" ::value="host.data" />
-        <input id="three" type="text" :value="host.references.two.value" />
-        <input id="four" on:click="() => alert('clicked!!!')"  type="text" value="{host.references.three.value}" readonly />
         <surface-view-host id="viewHost"></surface-view-host>
     </smd-content>
     <smd-footer></smd-footer>
