@@ -1,17 +1,17 @@
-#import "@surface/components/app"
-#import "@surface/components/app/aside"
-#import "@surface/components/app/footer"
-#import "@surface/components/app/header"
-#import "@surface/components/app/main"
-#import "@surface/components/app/toogle"
+#import "@surface/material-design/app"
+#import "@surface/material-design/app-bar"
+#import "@surface/material-design/app-toogle"
+#import "@surface/material-design/content"
+#import "@surface/material-design/footer"
+#import "@surface/material-design/navigation-drawer"
 #import "@surface/view-host"
 
-<surface-app>
-    <surface-app-header>
-        <surface-app-toogle></surface-app-toogle>
+<smd-app>
+    <smd-app-bar>
+        <smd-app-toogle></smd-app-toogle>
         <h1>Surface</h1>
-    </surface-app-header>
-    <surface-app-aside style="display: flex; flex-direction: column;">
+    </smd-app-bar>
+    <smd-navigation-drawer style="display: flex; flex-direction: column;">
         <a on:click="host.routeTo('buttons')"     href="javascript:void(0)">Buttons</a>
         <a on:click="host.routeTo('data-table')"  href="javascript:void(0)">Data Table</a>
         <a on:click="host.routeTo('directives')"  href="javascript:void(0)">Directives</a>
@@ -20,13 +20,13 @@
         <a on:click="host.routeTo('menu')"        href="javascript:void(0)">Menu</a>
         <a on:click="host.routeTo('modal')"       href="javascript:void(0)">Modal</a>
         <a on:click="host.routeTo('stack-panel')" href="javascript:void(0)">Stack Panel</a>
-    </surface-app-aside>
-    <surface-app-main>
+    </smd-navigation-drawer>
+    <smd-content>
         <input id="one"   type="text" ::value="host.data" />
         <input id="two"   type="text" ::value="host.data" />
         <input id="three" type="text" :value="host.references.two.value" />
         <input id="four" on:click="() => alert('clicked!!!')"  type="text" value="{host.references.three.value}" readonly />
         <surface-view-host id="viewHost"></surface-view-host>
-    </surface-app-main>
-    <surface-app-footer></surface-app-footer>
-</surface-app>
+    </smd-content>
+    <smd-footer></smd-footer>
+</smd-app>
