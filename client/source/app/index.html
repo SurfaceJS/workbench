@@ -10,16 +10,10 @@
     <smd-app-bar>
         <smd-app-toogle></smd-app-toogle>
         <h1>Surface</h1>
+        <input type="checkbox" ::checked="host.dark" />
     </smd-app-bar>
-    <smd-navigation-drawer style="display: flex; flex-direction: column;">
-        <a on:click="host.routeTo('buttons')"     href="javascript:void(0)">Buttons</a>
-        <a on:click="host.routeTo('data-table')"  href="javascript:void(0)">Data Table</a>
-        <a on:click="host.routeTo('directives')"  href="javascript:void(0)">Directives</a>
-        <a on:click="host.routeTo('icon')"        href="javascript:void(0)">Icon</a>
-        <a on:click="host.routeTo('list')"        href="javascript:void(0)">List</a>
-        <a on:click="host.routeTo('menu')"        href="javascript:void(0)">Menu</a>
-        <a on:click="host.routeTo('modal')"       href="javascript:void(0)">Modal</a>
-        <a on:click="host.routeTo('stack-panel')" href="javascript:void(0)">Stack Panel</a>
+    <smd-navigation-drawer>
+        <smd-button on:click="host.routeTo('buttons')" block>Buttons</smd-button>
     </smd-navigation-drawer>
     <smd-content>
         <surface-view-host id="viewHost"></surface-view-host>
