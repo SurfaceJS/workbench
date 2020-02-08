@@ -1,6 +1,7 @@
 {
-    "breadcrumbs.enabled":     true,
-    "editor.roundedSelection": false,
+    "breadcrumbs.enabled":                 true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.roundedSelection":             false,
     "files.associations":
     {
         "*.config": "xml",

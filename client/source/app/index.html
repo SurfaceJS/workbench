@@ -8,15 +8,16 @@
 
 <smd-app>
     <smd-app-bar>
-        <smd-app-toogle></smd-app-toogle>
-        <h1>Surface</h1>
+        <smd-app-toogle color="white"></smd-app-toogle>
+        <h1 style="color: var(--smd--text); font-family: Roboto;">Surface</h1>
         <input type="checkbox" ::checked="host.dark" />
     </smd-app-bar>
     <smd-navigation-drawer>
-        <smd-button on:click="host.routeTo('buttons')" block>Buttons</smd-button>
+        <smd-button text on:click="host.routeTo('colors')" block>Colors</smd-button>
+        <smd-button text on:click="host.routeTo('buttons')" block>Buttons</smd-button>
     </smd-navigation-drawer>
     <smd-content>
         <surface-view-host id="viewHost"></surface-view-host>
     </smd-content>
-    <smd-footer></smd-footer>
+    <smd-footer><p style="color: var(--smd--text);">&copy; 2020 surfacejs.com<p></smd-footer>
 </smd-app>

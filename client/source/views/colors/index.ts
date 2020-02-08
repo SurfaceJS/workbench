@@ -1,0 +1,103 @@
+import { hexToHsv } from "@surface/color";
+import { element }  from "@surface/custom-element/decorators";
+import View         from "@surface/view";
+import template     from "./index.html";
+import style        from "./index.scss";
+
+@element("colors-view", template, style)
+export default class Colors extends View
+{
+    private readonly cssVariables = document.head.querySelector<HTMLStyleElement>("#smd-css-variables")!;
+
+    protected readonly colors =
+    [
+        "primary",
+        "secondary",
+        "text",
+        "background",
+        "accent",
+        "error",
+        "info",
+        "success",
+        "warning",
+    ];
+
+    protected readonly materialColors =
+    [
+        "red",
+        "pink",
+        "purple",
+        "deep-purple",
+        "indigo",
+        "blue",
+        "light-blue",
+        "cyan",
+        "teal",
+        "green",
+        "light-green",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+        "deep-orange",
+        "brown",
+        "blue-grey",
+        "grey",
+        "black",
+        "white"
+    ];
+
+    protected readonly weights =
+    [
+        "50",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "900",
+        "A100",
+        "A200",
+        "A400",
+        "A700",
+    ];
+
+    public constructor()
+    {
+        super();
+        this.viewName = "Colors";
+    }
+
+    protected isDark(variable: string): boolean
+    {
+        // tslint:disable-next-line:no-any
+        const color = ((this.cssVariables.sheet as CSSStyleSheet).cssRules[0] as any).styleMap.getAll(variable)?.[0]?.[0]?.trim() ?? "#000000";
+
+        const hsv = hexToHsv(color);
+
+        return hsv.v < 0.5;
+    }
+
+    protected getCssVariable(theme: string, name: string, weight?: string): string
+    {
+        return "--smd--" + this.getName(theme, name, weight);
+    }
+
+    protected getClass(theme: string, name: string, weight?: string): Record<string, boolean>
+    {
+        return { "color-swatch": true, dark: this.isDark(this.getCssVariable(theme, name, weight)) };
+    }
+
+    protected getName(theme: string, name: string, weight?: string): string
+    {
+        return [theme, name, weight].filter(x => !!x).join("--");
+    }
+
+    protected getStyle(theme: string, name: string, weight?: string): Record<string, string>
+    {
+        return { "background-color": `var(${this.getCssVariable(theme, name, weight)})` };
+    }
+}

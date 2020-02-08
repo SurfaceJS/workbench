@@ -1,22 +1,19 @@
-import CustomElement from "@surface/custom-element";
-import { element }   from "@surface/custom-element/decorators";
-import ColorBucket   from "@surface/material-design/color-bucket";
-import ThemeHandler  from "@surface/material-design/theme-handler";
-import Router        from "@surface/router";
-import ViewHost      from "@surface/view-host";
-import ViewManager   from "@surface/view-manager";
-import template      from "./index.html";
-import style         from "./index.scss?raw";
-import { load }      from "./module-loader";
+import CustomElement  from "@surface/custom-element";
+import { element }    from "@surface/custom-element/decorators";
+import MaterialDesign   from "@surface/material-design";
+// import materialColors from "@surface/material-design/material-colors";
+import Router         from "@surface/router";
+import ViewHost       from "@surface/view-host";
+import ViewManager    from "@surface/view-manager";
+import template       from "./index.html";
+import style          from "./index.scss?raw";
+import { load }       from "./module-loader";
 
-ColorBucket.use({ light: { secondary: "lime", text: "white" }, dark: { secondary: "orange", text: "gray" } });
-ColorBucket.initialize();
+// SmdComponent.useTheme({ primary: materialColors.indigo, secondary: materialColors.blue, text: materialColors.black });
 
 @element("app-root", template, style)
 export class App extends CustomElement
 {
-    private readonly _themehadler = new ThemeHandler();
-
     private viewManager!: ViewManager;
 
     private _dark: boolean = false;
@@ -29,7 +26,7 @@ export class App extends CustomElement
     {
         this._dark = value;
 
-        this._themehadler.toogle();
+        value ? MaterialDesign.useDark() : MaterialDesign.useLight();
     }
 
     public data: string = "";

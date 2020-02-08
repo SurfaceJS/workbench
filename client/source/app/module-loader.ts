@@ -12,6 +12,8 @@ export async function load(path: string): Promise<object>
             return import(/* webpackChunkName: "views/buttons" */ "../views/buttons");
         case "views/contact":
             return import(/* webpackChunkName: "views/contact" */ "../views/contact");
+        case "views/colors":
+            return import(/* webpackChunkName: "views/colors" */ "../views/colors");
         case "views/data-table":
             return import(/* webpackChunkName: "views/data-table" */ "../views/data-table");
         case "views/directives":
