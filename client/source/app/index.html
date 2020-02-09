@@ -10,7 +10,7 @@
     <smd-app-bar>
         <smd-app-toogle color="white"></smd-app-toogle>
         <h1 style="color: var(--smd--text); font-family: Roboto;">Surface</h1>
-        <input type="checkbox" ::checked="host.dark" />
+        <div style="color: var(--smd--text); font-family: Roboto; margin-left: auto; margin-right: 20px;">Dark<input style="margin-left: 10px;" type="checkbox" ::checked="host.dark" /></div>
     </smd-app-bar>
     <smd-navigation-drawer>
         <smd-button text on:click="host.routeTo('colors')" block>Colors</smd-button>
