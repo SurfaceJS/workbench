@@ -1,5 +1,3 @@
-// File generated automatically. Don't change.
-
 /**
  * Requires the module of the specified path.
  * @param path Path to the module.
@@ -32,6 +30,8 @@ export async function load(path: string): Promise<object>
             return import(/* webpackChunkName: "views/modal" */ "../views/modal");
         case "views/stack-panel":
             return import(/* webpackChunkName: "views/stack-panel" */ "../views/stack-panel");
+        case "views/switches":
+            return import(/* webpackChunkName: "views/switches" */ "../views/switches");
         default:
             return Promise.reject("path not found");
     }

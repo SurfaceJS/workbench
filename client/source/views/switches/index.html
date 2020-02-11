@@ -1,0 +1,25 @@
+#import "@surface/material-design/switch"
+
+<link rel="stylesheet" href="./index.scss?file">
+<h1>Enabled</h1>
+<hr/>
+<h1>Light</h1>
+<span>
+    <smd-switch light></smd-switch>
+    <smd-switch light inset></smd-switch>
+    <smd-switch light label="with label" text-color="black"></smd-switch>
+</span>
+<h1>Dark</h1>
+<span style="background-color: gray; --smd--text-color: white">
+    <smd-switch dark></smd-switch>
+    <smd-switch dark inset></smd-switch>
+    <smd-switch dark label="with label"></smd-switch>
+</span>
+<h1>Disabled</h1>
+<hr/>
+<span>
+    <smd-switch disabled></smd-switch>
+    <smd-switch disabled value></smd-switch>
+    <smd-switch disabled inset></smd-switch>
+    <smd-switch disabled inset value></smd-switch>
+</span>
