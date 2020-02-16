@@ -1,23 +1,45 @@
 <link rel="stylesheet" href="./index.scss?file">
 <h1>Enabled</h1>
-<hr/>
-<h1>Light</h1>
 <span>
-    <smd-switch light></smd-switch>
-    <smd-switch light inset></smd-switch>
-    <smd-switch light label="with label" text-color="black"></smd-switch>
-</span>
-<h1>Dark</h1>
-<span style="background-color: gray; --smd--text-color: white">
-    <smd-switch dark></smd-switch>
-    <smd-switch dark inset></smd-switch>
-    <smd-switch dark label="with label"></smd-switch>
+    <smd-switch></smd-switch>
+    <smd-switch label="label"></smd-switch>
+    <smd-switch inset></smd-switch>
+    <smd-switch inset label="label"></smd-switch>
+    <smd-switch value></smd-switch>
+    <smd-switch value label="label"></smd-switch>
+    <smd-switch value inset></smd-switch>
+    <smd-switch value inset label="label"></smd-switch>
 </span>
 <h1>Disabled</h1>
-<hr/>
 <span>
     <smd-switch disabled></smd-switch>
-    <smd-switch disabled value></smd-switch>
     <smd-switch disabled inset></smd-switch>
-    <smd-switch disabled inset value></smd-switch>
+    <smd-switch label="label" disabled></smd-switch>
+    <smd-switch label="label" disabled inset></smd-switch>
+    <smd-switch value disabled></smd-switch>
+    <smd-switch value disabled inset></smd-switch>
+    <smd-switch value label="label" disabled></smd-switch>
+    <smd-switch value label="label" disabled inset ></smd-switch>
+</span>
+<h1>Light</h1>
+<span style="background-color: var(--smd-light-background); --smd--text-color: white">
+    <smd-switch light></smd-switch>
+    <smd-switch light label="label"></smd-switch>
+    <smd-switch light inset></smd-switch>
+    <smd-switch light inset label="label"></smd-switch>
+    <smd-switch light value></smd-switch>
+    <smd-switch light value label="label"></smd-switch>
+    <smd-switch light value inset></smd-switch>
+    <smd-switch light value inset label="label"></smd-switch>
+</span>
+<h1>Dark</h1>
+<span style="background-color: var(--smd-dark-background); --smd--text-color: white">
+    <smd-switch dark></smd-switch>
+    <smd-switch dark label="label"></smd-switch>
+    <smd-switch dark inset></smd-switch>
+    <smd-switch dark inset label="label"></smd-switch>
+    <smd-switch dark value></smd-switch>
+    <smd-switch dark value label="label"></smd-switch>
+    <smd-switch dark value inset></smd-switch>
+    <smd-switch dark value inset label="label"></smd-switch>
 </span>

@@ -3,7 +3,6 @@ import "./components";
 import CustomElement  from "@surface/custom-element";
 import { element }    from "@surface/custom-element/decorators";
 import MaterialDesign from "@surface/material-design";
-// import materialColors from "@surface/material-design/material-colors";
 import Router         from "@surface/router";
 import ViewHost       from "@surface/view-host";
 import ViewManager    from "@surface/view-manager";
@@ -11,7 +10,7 @@ import template       from "./index.html";
 import style          from "./index.scss?raw";
 import { load }       from "./module-loader";
 
-// SmdComponent.useTheme({ primary: materialColors.indigo, secondary: materialColors.blue, text: materialColors.black });
+// MaterialDesign.useTheme({ text: "#00000099", error: "#ff000099" });
 
 @element("app-root", template, style)
 export class App extends CustomElement
@@ -29,6 +28,7 @@ export class App extends CustomElement
         this._dark = value;
 
         value ? MaterialDesign.useDark() : MaterialDesign.useLight();
+        value ? document.body.classList.add("dark") : document.body.classList.remove("dark");
     }
 
     public data: string = "";

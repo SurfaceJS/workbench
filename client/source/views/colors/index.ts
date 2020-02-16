@@ -1,8 +1,8 @@
-import { hexToHsv } from "@surface/color";
-import { element }  from "@surface/custom-element/decorators";
-import View         from "@surface/view";
-import template     from "./index.html";
-import style        from "./index.scss";
+import { hexToHsva } from "@surface/color";
+import { element }   from "@surface/custom-element/decorators";
+import View          from "@surface/view";
+import template      from "./index.html";
+import style         from "./index.scss";
 
 @element("colors-view", template, style)
 export default class Colors extends View
@@ -76,7 +76,7 @@ export default class Colors extends View
         // tslint:disable-next-line:no-any
         const color = ((this.cssVariables.sheet as CSSStyleSheet).cssRules[0] as any).styleMap.getAll(variable)?.[0]?.[0]?.trim() ?? "#000000";
 
-        const hsv = hexToHsv(color);
+        const hsv = hexToHsva(color);
 
         return hsv.v < 0.5;
     }

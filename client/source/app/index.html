@@ -1,9 +1,9 @@
 <smd-app>
     <smd-app-bar>
         <smd-app-toogle color="white"></smd-app-toogle>
-        <h1 style="color: var(--smd-text);">Surface</h1>
+        <h1 style="color: white;">Surface</h1>
         <div style="margin-left: auto; margin-right: 20px;">
-            <smd-switch inset label="Dark" ::value="host.dark"></smd-switch>
+            <smd-switch inset label="Dark" ::value="host.dark" color="white" text-color="dark:text"></smd-switch>
         </div>
     </smd-app-bar>
     <smd-navigation-drawer>
@@ -15,5 +15,5 @@
     <smd-content>
         <surface-view-host id="viewHost"></surface-view-host>
     </smd-content>
-    <smd-footer><p style="color: var(--smd-text);">&copy; 2020 https://github.com/SurfaceJS<p></smd-footer>
+    <smd-footer><p style="color: white;">&copy; 2020 https://github.com/SurfaceJS<p></smd-footer>
 </smd-app>
