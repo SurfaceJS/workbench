@@ -1,3 +1,5 @@
+import "./components";
+
 import { element } from "@surface/custom-element/decorators";
 import View        from "@surface/view";
 import template    from "./index.html";

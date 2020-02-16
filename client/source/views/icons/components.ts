@@ -1,0 +1,1 @@
+import "@surface/components/icon";

@@ -1,13 +1,15 @@
+import "@surface/material-design/components/icon";
+
 import { element } from "@surface/custom-element/decorators";
 import View        from "@surface/view";
 import template    from "./index.html";
 
-@element("contact-view", template)
-export default class Contact extends View
+@element("icons-view", template)
+export default class Icons extends View
 {
     public constructor()
     {
         super();
-        this.viewName = "Contact";
+        this.viewName = "Icons";
     }
 }

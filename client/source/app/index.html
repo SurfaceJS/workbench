@@ -1,16 +1,7 @@
-#import "@surface/material-design/app"
-#import "@surface/material-design/app-bar"
-#import "@surface/material-design/app-toogle"
-#import "@surface/material-design/content"
-#import "@surface/material-design/footer"
-#import "@surface/material-design/navigation-drawer"
-#import "@surface/material-design/switch"
-#import "@surface/view-host"
-
 <smd-app>
     <smd-app-bar>
         <smd-app-toogle color="white"></smd-app-toogle>
-        <h1 style="color: var(--smd--text);">Surface</h1>
+        <h1 style="color: var(--smd-text);">Surface</h1>
         <div style="margin-left: auto; margin-right: 20px;">
             <smd-switch inset label="Dark" ::value="host.dark"></smd-switch>
         </div>
@@ -18,10 +9,11 @@
     <smd-navigation-drawer>
         <smd-button text on:click="host.routeTo('colors')" block>Colors</smd-button>
         <smd-button text on:click="host.routeTo('buttons')" block>Buttons</smd-button>
+        <smd-button text on:click="host.routeTo('icons')" block>Icons</smd-button>
         <smd-button text on:click="host.routeTo('switches')" block>Switches</smd-button>
     </smd-navigation-drawer>
     <smd-content>
         <surface-view-host id="viewHost"></surface-view-host>
     </smd-content>
-    <smd-footer><p style="color: var(--smd--text);">&copy; 2020 https://github.com/SurfaceJS<p></smd-footer>
+    <smd-footer><p style="color: var(--smd-text);">&copy; 2020 https://github.com/SurfaceJS<p></smd-footer>
 </smd-app>

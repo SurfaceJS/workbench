@@ -83,7 +83,7 @@ export default class Colors extends View
 
     protected getCssVariable(theme: string, name: string, weight?: string): string
     {
-        return "--smd--" + this.getName(theme, name, weight);
+        return "--smd-" + this.getName(theme, name, weight);
     }
 
     protected getClass(theme: string, name: string, weight?: string): Record<string, boolean>
@@ -93,7 +93,7 @@ export default class Colors extends View
 
     protected getName(theme: string, name: string, weight?: string): string
     {
-        return [theme, name, weight].filter(x => !!x).join("--");
+        return [theme, name, weight].filter(x => !!x).join("-");
     }
 
     protected getStyle(theme: string, name: string, weight?: string): Record<string, string>

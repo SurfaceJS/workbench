@@ -1,6 +1,8 @@
+import "./components";
+
 import CustomElement  from "@surface/custom-element";
 import { element }    from "@surface/custom-element/decorators";
-import MaterialDesign   from "@surface/material-design";
+import MaterialDesign from "@surface/material-design";
 // import materialColors from "@surface/material-design/material-colors";
 import Router         from "@surface/router";
 import ViewHost       from "@surface/view-host";
