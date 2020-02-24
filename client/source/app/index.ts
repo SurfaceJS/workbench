@@ -28,7 +28,6 @@ export class App extends CustomElement
         this._dark = value;
 
         value ? MaterialDesign.useDark() : MaterialDesign.useLight();
-        value ? document.body.classList.add("dark") : document.body.classList.remove("dark");
     }
 
     public data: string = "";
