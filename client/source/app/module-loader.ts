@@ -14,6 +14,8 @@ export async function load(path: string): Promise<object>
             return import(/* webpackChunkName: "views/icons" */ "../views/icons");
         case "views/switches":
             return import(/* webpackChunkName: "views/switches" */ "../views/switches");
+        case "views/text-fields":
+            return import(/* webpackChunkName: "views/text-fields" */ "../views/text-fields");
         default:
             return Promise.reject("path not found");
     }
