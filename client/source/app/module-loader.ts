@@ -1,5 +1,3 @@
-// File generated automatically. Don't change.
-
 /**
  * Requires the module of the specified path.
  * @param path Path to the module.
