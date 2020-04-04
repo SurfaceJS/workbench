@@ -1,20 +1,33 @@
-<input type="button" on:click="host.increment()" value="Increment" />
-<input type="button" on:click="host.random()"    value="Random" />
-<slot style="display: flex; flex-direction: column;"></slot>
-<!-- <template #for="const item of host.items">
-    --------------------
-    <span><b>Some Header</b></span>
-    <template #inject:items="items">
-        <span>Some Default</span>
-    </template>
-    <span><b>Some Footer</b></span>
-    --------------------
-    <br>
-</template> -->
-<slot style="display: flex; flex-direction: column;" name="value"></slot>
-<div style="display: flex; flex-direction: column;">
-    <h1>injector:items</h1>
-    <template #for="const item of host.items" #injector:items="{ item }"></template>
-    <h1>injector:reactive</h1>
-    <template #injector:reactive="{ items: host.items }"></template>
+<div class="stack">
+    <div class="stack">
+        <input type="button" #on:click="host.increment()" value="Increment" />
+        <input type="button" #on:click="host.random()"    value="Random" />
+        <slot></slot>
+        <!-- <template #for="const item of host.items">
+            --------------------
+            <span><b>Some Header</b></span>
+            <template #inject:items="items">
+                <span>Some Default</span>
+            </template>
+            <span><b>Some Footer</b></span>
+            --------------------
+            <br>
+        </template> -->
+        <slot name="value"></slot>
+    </div>
+    <div class="stack">
+        <!-- <dummy-child>
+            <template #inject:child>
+                <template #injector:parent></template>
+            </template>
+        </dummy-child> -->
+        <!-- <template #for="const key of [1, 2, 3]" #injector:[key]>
+            <h1>Injector Placeholder: {key}</h1>
+        </template> -->
+        <!-- <span #for="const item of host.items" #injector:items="{ item }">Default {item}</span> -->
+        <template #injector:reactive="{ items: host.items }">
+            <span #for="const item of host.items">Placeholder {item}</span>
+        </template>
+        <!-- <span #injector:a>Placeholder</span> -->
+    </div>
 </div>

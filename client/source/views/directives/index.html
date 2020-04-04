@@ -1,49 +1,30 @@
-    <button on:click="host.increment()">Increment</button>
-    <button on:click="host.decrement()">Decrement</button>
-    <button on:click="host.multiply()">Multiply</button>
-    <input id="field" />
+<div style="display: flex; flex-direction: column;" >
+    <button #on:click="host.toogle()" class="{host.visible ? 'visible' : ''}">Toggle visibility</button>
+    <!-- <span #if="host.visible" style="color: green">I'm ON :)</span>
+    <span #else style="color: red">I'm OFF :(</span> -->
+    <!-- <input id="field" />
     <h1>Destructured Iterable</h1>
     <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
         <span><b>{key}:</b>&nbsp;{value}</span>
     </template>
-    <button on:click="host.toogle()">Toggle visibility</button>
-    <template #if="host.visible">
-        <span style="color: green">I'm ON :)</span>
+    <button #on:click="host.increment()">Increment</button>
+    <button #on:click="host.decrement()">Decrement</button>
+    <button #on:click="host.multiply()">Multiply</button>
+    <template #if="host.visible" #for="const item of host.items">
+        <span>{ item }</span>
+        <template #if="item % 2 == 0">
+            <span>Id: {item}</span>&nbsp;Even
+        </template>
+        <template #else-if="item % 2 == 1">
+            <span>Id: {item}</span>&nbsp;Odd
+        </template>
     </template>
-    <template #else>
-        <span style="color: red">I'm OFF :(</span>
-    </template>
-    <div style="display: flex; flex-direction: column;">
-        <div #if="host.visible" #for="const item of host.items">
-            <span>{ item }</span>
-            <span #if="item % 2 == 0">
-                Id: {item}&nbsp;Even
-            </span>
-            <span #else-if="item % 2 == 1">
-                Id: {item}&nbsp;Odd
-            </span>
-        </div>
-    </div>
     <h1>Scope aliased</h1>
     <dummy-parent>
         <span><b>Outside Template:</b>{this.nodeName}</span>
         <template #if="host.visible">
             Tag Name: {host.tagName}
             <br>
-        </template>
-        <span>inject items</span>
-        <template #inject:items="foo">
-            Bind: { host.references.field.value }
-            <template #if="host.visible">
-                <span><b>Header</b></span>
-                <template #if="foo.item % 2 == 0">
-                    <span>Id: {foo.item}</span>&nbsp;Even
-                </template>
-                <template #else-if="foo.item % 2 == 1">
-                    <span>Id: {foo.item}</span>&nbsp;Odd
-                </template>
-                <span><b>Footer</b></span>
-            </template>
         </template>
         <span>inject reactive</span>
         <template #inject:reactive="{ items }">
@@ -61,6 +42,7 @@
                     <dummy-child :value="host.references.field.value"></dummy-child>
                 </template>
             </template>
+        </template>
         <div slot="value">
             <span><b>Inside template</b></span>
             <dummy-child :value="host.references.field.value"></dummy-child>
@@ -70,11 +52,10 @@
             <dummy-child ::value="host.references.field.value"></dummy-child>
         </template>
     </dummy-parent>
-    <h1>Scope destructured</h1>
+    <h1>Scope destructured</h1> -->
     <dummy-parent>
-        #inject:items
-        <template #inject:items="{ item: element }">
-            <template #if="host.visible">
+        <template #if="host.visible" #inject:reactive="{ items }">
+            <template #for="const element of items">
                 <span><b>Header</b></span>
                 <template #if="element % 2 == 0">
                     <span>Id: {element}</span>&nbsp;Even
@@ -83,6 +64,11 @@
                     <span>Id: {element}</span>&nbsp;Odd
                 </template>
                 <span><b>Footer</b></span>
+            </template>
         </template>
+        <template #for="const key of [1, 2, 3]">
+            <span #if="host.visible && key == 2" #show="foo"> 2">Key: {key}</span>
         </template>
+        <!-- <span #if="host.visible" #inject:a>Injected</span> -->
     </dummy-parent>
+</div>
