@@ -1,12 +1,11 @@
 import "@surface/view-host";
 
-import CustomElement from "@surface/custom-element";
-import { element }   from "@surface/custom-element/decorators";
-import Router        from "@surface/router";
-import ViewManager   from "@surface/view-manager";
-import template      from "./index.html";
-import style         from "./index.scss";
-import { load }      from "./module-loader";
+import CustomElement, { element } from "@surface/custom-element";
+import Router                     from "@surface/router";
+import ViewManager                from "@surface/view-manager";
+import template                   from "./index.html";
+import style                      from "./index.scss";
+import { load }                   from "./module-loader";
 
 @element("app-root", template, style)
 export class App extends CustomElement

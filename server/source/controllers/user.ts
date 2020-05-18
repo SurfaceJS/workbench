@@ -1,8 +1,7 @@
 import { Criteria }                 from "@surface/components/data-table/interfaces/data-provider";
 import { Func1 }                    from "@surface/core";
 import Enumareble                   from "@surface/enumerable";
-import ActionResult from "@surface/web-host/action-result";
-import Controller   from "@surface/web-host/controller";
+import { ActionResult, Controller } from "@surface/web-host";
 
 export class User extends Controller
 {
