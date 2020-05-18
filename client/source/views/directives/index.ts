@@ -1,15 +1,21 @@
+import "@surface/components/stack-panel";
+import "../../components/dummy-child";
+import "../../components/dummy-parent";
+
 import { element } from "@surface/custom-element/decorators";
 import View        from "@surface/view";
 import template    from "./index.html";
+import style       from "./index.scss";
 
-@element("directives-view", template)
+@element("directives-view", template, style)
 export default class DirectivesView extends View
 {
     private lastId: number = 0;
 
-    public visible = true;
+    protected text:    string  = "";
+    protected visible: boolean = true;
 
-    public items: Array<number> = [];
+    protected items: Array<number> = [];
 
     public constructor()
     {

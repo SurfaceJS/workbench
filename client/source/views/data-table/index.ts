@@ -1,213 +1,145 @@
-import { FieldsOf, KeysOfType } from "@surface/core";
-import { element }  from "@surface/custom-element/decorators";
-import Enumerable   from "@surface/enumerable";
-import View         from "@surface/view";
-import template     from "./index.html";
-import style        from "./index.scss";
+import { element } from "@surface/custom-element/decorators";
+import View        from "@surface/view";
+import template    from "./index.html";
+// import ParallelWorker from '@surface/custom-element/internal/parallel-worker';
 
-class People
+function _random(max: number)
 {
-    private _id: number = 0;
-    public get id(): number
-    {
-        return this._id;
-    }
-
-    public set id(value: number)
-    {
-        this._id = value;
-    }
-
-    private _name: string = "";
-    public get name(): string
-    {
-        return this._name;
-    }
-
-    public set name(value: string)
-    {
-        this._name = value;
-    }
-
-    private _email: Object = "";
-    public get email(): Object
-    {
-        return this._email;
-    }
-
-    public set email(value: Object)
-    {
-        this._email = value;
-    }
-
-    private _country = new Country();
-    public get country(): Country
-    {
-        return this._country;
-    }
-
-    public set country(value: Country)
-    {
-        this._country = value;
-    }
-
-    private _active: boolean = false;
-    public get active(): boolean
-    {
-        return this._active;
-    }
-
-    public set active(value: boolean)
-    {
-        this._active = value;
-    }
-
-    public constructor(people?: FieldsOf<People>)
-    {
-        if (people)
-        {
-            this.active  = people.active;
-            this.country = people.country;
-            this.email   = people.email;
-            this.id      = people.id;
-            this.name    = people.name;
-        }
-    }
+    return Math.round(Math.random() * 1000) % max;
 }
 
-class Country
-{
-    private _name: string = "";
-    public get name(): string
-    {
-        return this._name;
-    }
-
-    public set name(value: string)
-    {
-        this._name = value;
-    }
-
-    private _initials: string = "";
-    public get initials(): string
-    {
-        return this._initials;
-    }
-
-    public set initials(value: string)
-    {
-        this._initials = value;
-    }
-
-    public constructor(country?: FieldsOf<Country>)
-    {
-        if (country)
-        {
-            this.name     = country.name;
-            this.initials = country.initials;
-        }
-    }
-}
-
-@element("data-table-view", template, style)
+@element("data-table-view", template)
 export default class DataTable extends View
 {
-    private _datasource: Array<People> = [];
-    public get datasource(): Array<People>
-    {
-        return this._datasource;
-    }
+    private started: number = 0;
+    protected message: string = "";
 
-    public set datasource(value: Array<People>)
-    {
-        this._datasource = value;
-    }
-
-    private _state: boolean = false;
-    public get state(): boolean
-    {
-        return this._state;
-    }
-
-    public set state(value: boolean)
-    {
-        this._state = value;
-    }
+    protected currentId                                  = 0;
+    protected data: Array<{ id: number, label: string }> = [];
+    protected selected: number|null = null;
 
     public constructor()
     {
         super();
-        this.viewName = "Data table";
+        this.viewName = "Data Table";
+    }
 
-        for (let index = 0; index < 33; index += 3)
+    private start(): void
+    {
+        this.started = performance.now();
+    }
+
+    private stop(): void
+    {
+        window.setTimeout(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        // ParallelWorker.done().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+    }
+
+    public buildData(count = 1000)
+    {
+        let adjectives = ["pretty", "large", "big", "small", "tall", "short", "long", "handsome", "plain", "quaint", "clean", "elegant", "easy", "angry", "crazy", "helpful", "mushy", "odd", "unsightly", "adorable", "important", "inexpensive", "cheap", "expensive", "fancy"];
+        let colours    = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
+        let nouns      = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
+        let data       = [];
+
+        for (let i = 0; i < count; i++)
         {
-            const datasource =
-            [
-                new People
-                ({
-                    id:    index + 1,
-                    name:  "foo",
-                    email: "foo@mail.com",
-                    country:
-                    {
-                        name:     "Brazil",
-                        initials: "bra"
-                    } as Country,
-                    active: true
-                }),
-                new People
-                ({
-                    id:    index + 2,
-                    name:  "bar",
-                    email: "bar@mail.com",
-                    country:
-                    {
-                        name:     "United States",
-                        initials: "usa"
-                    } as Country,
-                    active: false
-                }),
-                new People
-                ({
-                    id:    index + 3,
-                    name:  "baz",
-                    email: "baz@mail.com",
-                    country:
-                    {
-                        name:     "England",
-                        initials: "eng"
-                    } as Country,
-                    active: true
-                }),
-            ];
+            data.push({id: this.currentId++, label: adjectives[_random(adjectives.length)] + " " + colours[_random(colours.length)] + " " + nouns[_random(nouns.length)] });
+        }
 
-            this.datasource = this.datasource.concat(datasource);
+        return data;
+    }
+
+    public updateData()
+    {
+        for (let i = 0; i < this.data.length; i += 10)
+        {
+            this.data[i].label += " !!!";
         }
     }
 
-    public changeData(): void
+    public delete(id: number)
     {
-        this.datasource[0].name             = "foo-bar";
-        this.datasource[0].email            = "foo-bar@gmail";
-        this.datasource[0].active           = !this.datasource[0]["active"];
-        this.datasource[0].country.name     = "Argentina";
-        this.datasource[0].country.initials = "arg";
-
-        this.state = !this.state;
+        const idx = this.data.findIndex(x => x.id == id);
+        this.data = this.data.slice(0, idx).concat(this.data.slice(idx + 1));
     }
 
-    public max(field: KeysOfType<People, number>): string
+    public run()
     {
-        return Enumerable.from(this.datasource).max(x => x[field]).toString();
+        const data = this.buildData();
+        this.selected = null;
+
+        this.start();
+
+        this.data = data;
+
+        this.stop();
     }
 
-    public average(field: KeysOfType<People, number>): string
+    public add()
     {
-        return Enumerable.from(this.datasource).average(x => x[field]).toString();
+        const data = this.data.concat(this.buildData(1000));
+
+        this.start();
+
+        this.data = data;
+
+        this.stop();
     }
 
-    public printDatasource(): void
+    public update()
     {
-        console.log(this.datasource);
+        this.start();
+
+        this.updateData();
+
+        this.stop();
+    }
+
+    public select(id: number)
+    {
+        this.selected = id;
+    }
+
+    public runLots()
+    {
+        const data    = this.buildData(10000);
+        this.selected = null;
+
+        this.start();
+
+        this.data = data;
+
+        this.stop();
+    }
+
+    public clear()
+    {
+        this.start();
+
+        this.data = [];
+        this.selected = null;
+
+        this.stop();
+    }
+
+    public swapRows()
+    {
+        if (this.data.length > 998)
+        {
+            const newData = [...this.data];
+
+            let d1   = newData[1];
+            let d998 = newData[998];
+
+            newData[998] = d1;
+            newData[1]   = d998;
+
+            this.start();
+
+            this.data = newData;
+
+            this.stop();
+        }
     }
 }

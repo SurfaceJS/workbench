@@ -13,123 +13,113 @@
     "tasks":
     [
         {
-            "label":       "Client Project - Build",
-            "command":     "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
+            "label": "Client Project - Build",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
             "isBackground": true,
-            "options":
-            {
+            "options": {
                 "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
-            "type":           "shell",
+            "type": "shell"
         },
         {
-            "command":      "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
             "isBackground": true,
-            "label":        "Client Project - Watch",
-            "options":
-            {
+            "label": "Client Project - Watch",
+            "options": {
                 "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
-            "type":           "shell",
+            "type": "shell"
         },
         {
-            "command":      "npm run task:build",
+            "command": "npm run task:build",
             "isBackground": true,
-            "label":        "Compile Modules",
-            "problemMatcher":
-            [
+            "label": "Compile Modules",
+            "problemMatcher": [
                 "$tsc"
             ],
-            "group":
-            {
-                "isDefault": true,
-                "kind":      "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
             },
-            "options":
-            {
+            "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
-            "type": "shell",
+            "type": "shell"
         },
         {
-            "command":      "tsc",
+            "command": "tsc",
             "isBackground": false,
-            "label":        "TS Compile File",
-            "options":
-            {
+            "label": "TS Compile File",
+            "options": {
                 "cwd": "${fileDirname}"
             },
-            "presentation":
-            {
+            "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher":
-            {
-                "base":         "$tsc",
-                "fileLocation": ["relative", "${fileDirname}"]
+            "problemMatcher": {
+                "base": "$tsc",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ]
             },
-            "type": "shell",
+            "type": "shell"
         },
         {
-            "command":      "npm run cover -s",
+            "command": "npm run cover -s",
             "isBackground": true,
-            "label":        "Cover Modules",
-            "options":
-            {
+            "label": "Cover Modules",
+            "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
             "problemMatcher": [],
-            "type":           "shell",
+            "type": "shell"
         },
         {
-            "command":      "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
+            "command": "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
             "isBackground": true,
-            "label":        "Cover File",
-            "presentation":
-            {
+            "label": "Cover File",
+            "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher":
-            [
+            "problemMatcher": [
                 "$tsc"
             ],
-            "options":
-            {
+            "options": {
                 "cwd": "${fileDirname}"
             },
-            "type": "shell",
+            "type": "shell"
         },
         {
-            "command":      "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "command": "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
             "isBackground": true,
-            "label":        "Test File",
-            "options":
-            {
+            "label": "Test File",
+            "options": {
                 "cwd": "${fileDirname}"
             },
-            "presentation":
-            {
+            "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher":
-            {
-                "base":         "$tsc",
-                "fileLocation": ["relative", "${fileDirname}"]
+            "problemMatcher": {
+                "base": "$tsc",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ]
             },
-            "type": "shell",
+            "type": "shell"
         },
         {
-            "command":      "npm run test -s",
+            "command": "npm run test -s",
             "isBackground": true,
-            "label":        "Test Modules",
-            "options":
-            {
+            "label": "Test Modules",
+            "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
             "problemMatcher": [],
-            "type": "shell",
-        },
+            "type": "shell"
+        }
     ]
 }

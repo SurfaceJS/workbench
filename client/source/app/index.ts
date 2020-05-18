@@ -1,7 +1,8 @@
+import "@surface/view-host";
+
 import CustomElement from "@surface/custom-element";
 import { element }   from "@surface/custom-element/decorators";
 import Router        from "@surface/router";
-import ViewHost      from "@surface/view-host";
 import ViewManager   from "@surface/view-manager";
 import template      from "./index.html";
 import style         from "./index.scss";
@@ -29,7 +30,7 @@ export class App extends CustomElement
 
         const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
 
-        this.viewManager = ViewManager.configure(super.references.viewHost as ViewHost, router, load);
+        this.viewManager = ViewManager.configure(super.references.viewHost as import("@surface/view-host").default, router, load);
 
         this.routeTo(window.location.pathname + window.location.search);
     }
