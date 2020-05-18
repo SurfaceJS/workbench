@@ -12,9 +12,10 @@ export default class DirectivesView extends View
 {
     private lastId: number = 0;
 
-    public visible = true;
+    protected text:    string  = "";
+    protected visible: boolean = true;
 
-    public items: Array<number> = [];
+    protected items: Array<number> = [];
 
     public constructor()
     {

@@ -1,15 +1,18 @@
 <div style="display: flex; flex-direction: column;" >
-    <button #on:click="host.toogle()" class="{host.visible ? 'visible' : ''}">Toggle visibility</button>
-    <!-- <span #if="host.visible" style="color: green">I'm ON :)</span>
-    <span #else style="color: red">I'm OFF :(</span> -->
-    <!-- <input id="field" />
+    <span #if="host.visible" style="color: green">I'm ON :)</span>
+    <span #else style="color: red">I'm OFF :(</span>
+    <button #on:click="host.++toogle">Toggle visibility</button>
+    <input id="field" ::value="host.text" />
+    <input type="checkbox" ::checked="host.visible" />
+    <span>{host.text.length}</span>
+    <!--
     <h1>Destructured Iterable</h1>
     <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
         <span><b>{key}:</b>&nbsp;{value}</span>
     </template>
-    <button #on:click="host.increment()">Increment</button>
-    <button #on:click="host.decrement()">Decrement</button>
-    <button #on:click="host.multiply()">Multiply</button>
+    <button #on:click="host.increment">Increment</button>
+    <button #on:click="host.decrement">Decrement</button>
+    <button #on:click="host.multiply">Multiply</button>
     <template #if="host.visible" #for="const item of host.items">
         <span>{ item }</span>
         <template #if="item % 2 == 0">
@@ -19,40 +22,55 @@
             <span>Id: {item}</span>&nbsp;Odd
         </template>
     </template>
-    <h1>Scope aliased</h1>
+    <h1>Scope aliased</h1> -->
     <dummy-parent>
-        <span><b>Outside Template:</b>{this.nodeName}</span>
+        <!-- <span><b>Outside Template:</b>{this.nodeName}</span>
         <template #if="host.visible">
             Tag Name: {host.tagName}
             <br>
         </template>
-        <span>inject reactive</span>
+        <span>inject reactive</span> -->
         <template #inject:reactive="{ items }">
-            <template #for="const item in items">
-                Bind: { host.references.field.value }
+            <template #for="const item of items">
+                Bind:{this.nodeName} { host.references.field.value }
+                <span>{this.nodeName}</span>
                 <template #if="host.visible">
                     <span><b>Header</b></span>
-                    <template #if="items[item] % 2 == 0">
-                        <span>Id: { items[item] }</span>&nbsp;Even
+                    <template #if="item % 2 == 0">
+                        <span>Id: { item }</span>&nbsp;Even
                     </template>
-                    <template #else-if="items[item] % 2 == 1">
-                        <span>Id: { items[item] }</span>&nbsp;Odd
+                    <template #else-if="item % 2 == 1">
+                        <span>Id: { item }</span>&nbsp;Odd
                     </template>
                     <span><b>Footer</b></span>
                     <dummy-child :value="host.references.field.value"></dummy-child>
                 </template>
             </template>
         </template>
-        <div slot="value">
+        <!-- <template #inject:items="{ item }">
+            Bind:{this.nodeName} { host.references.field.value }
+            <template #if="host.visible">
+                <span><b>Header</b></span>
+                <template #if="item % 2 == 0">
+                    <span>Id: { item }</span>&nbsp;Even
+                </template>
+                <template #else-if="item % 2 == 1">
+                    <span>Id: { item }</span>&nbsp;Odd
+                </template>
+                <span><b>Footer</b></span>
+                <dummy-child :value="host.references.field.value"></dummy-child>
+            </template>
+        </!-->
+        <!-- <div slot="value">
             <span><b>Inside template</b></span>
             <dummy-child :value="host.references.field.value"></dummy-child>
         </div>
         <template slot="value">
             <span><b>Inside template (Should be visible?)</b></span>
             <dummy-child ::value="host.references.field.value"></dummy-child>
-        </template>
+        </template> -->
     </dummy-parent>
-    <h1>Scope destructured</h1> -->
+    <!-- <h1>Scope destructured</h1>
     <dummy-parent>
         <template #if="host.visible" #inject:reactive="{ items }">
             <template #for="const element of items">
@@ -66,9 +84,5 @@
                 <span><b>Footer</b></span>
             </template>
         </template>
-        <template #for="const key of [1, 2, 3]">
-            <span #if="host.visible && key == 2" #show="foo"> 2">Key: {key}</span>
-        </template>
-        <!-- <span #if="host.visible" #inject:a>Injected</span> -->
-    </dummy-parent>
+    </dummy-parent> -->
 </div>

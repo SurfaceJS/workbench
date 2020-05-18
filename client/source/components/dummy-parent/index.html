@@ -1,7 +1,7 @@
 <div class="stack">
     <div class="stack">
-        <input type="button" #on:click="host.increment()" value="Increment" />
-        <input type="button" #on:click="host.random()"    value="Random" />
+        <input type="button" #on:click="host.increment" value="Increment" />
+        <input type="button" #on:click="host.random"    value="Random" />
         <slot></slot>
         <!-- <template #for="const item of host.items">
             --------------------
@@ -24,8 +24,8 @@
         <!-- <template #for="const key of [1, 2, 3]" #injector:[key]>
             <h1>Injector Placeholder: {key}</h1>
         </template> -->
-        <!-- <span #for="const item of host.items" #injector:items="{ item }">Default {item}</span> -->
-        <template #injector:reactive="{ items: host.items }">
+        <!-- <span #for="const item of host.items" #injector:items="({ item })">Default {item}</span> -->
+        <template #injector:reactive="({ items: host.items })">
             <span #for="const item of host.items">Placeholder {item}</span>
         </template>
         <!-- <span #injector:a>Placeholder</span> -->
