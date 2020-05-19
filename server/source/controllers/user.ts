@@ -71,6 +71,6 @@ export class User extends Controller
             .take(inbound.take)
             .toArray();
 
-        return super.json({ data, total: sequence.count() });
+        return this.json({ data, total: sequence.count() });
     }
 }
