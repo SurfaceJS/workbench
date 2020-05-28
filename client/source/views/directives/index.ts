@@ -2,7 +2,7 @@ import "@surface/components/stack-panel";
 import "../../components/dummy-child";
 import "../../components/dummy-parent";
 
-import { element } from "@surface/custom-element/decorators";
+import { element } from "@surface/custom-element";
 import View        from "@surface/view";
 import template    from "./index.html";
 import style       from "./index.scss";

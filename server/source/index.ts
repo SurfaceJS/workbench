@@ -1,6 +1,5 @@
-import Router        from "@surface/router";
-import WebHost       from "@surface/web-host";
-import Configuration from "@surface/web-host/configuration";
+import Router                     from "@surface/router";
+import WebHost, { Configuration } from "@surface/web-host";
 
 const configuration = new Configuration(__dirname, require("../server.config.json"));
 

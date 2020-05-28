@@ -1,7 +1,7 @@
 <div style="display: flex; flex-direction: column;" >
     <span #if="host.visible" style="color: green">I'm ON :)</span>
     <span #else style="color: red">I'm OFF :(</span>
-    <button #on:click="host.++toogle">Toggle visibility</button>
+    <button #on:click="host.toogle">Toggle visibility</button>
     <input id="field" ::value="host.text" />
     <input type="checkbox" ::checked="host.visible" />
     <span>{host.text.length}</span>

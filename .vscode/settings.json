@@ -38,7 +38,6 @@
         "**/tsconfig*.json":    false,
         "**/tslint.json":       false
     },
-    "highlight.maxMatches": 500,
     "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
     "javascript.format.placeOpenBraceOnNewLineForFunctions":     true,
     "javascript.implicitProjectConfig.checkJs":                  true,
