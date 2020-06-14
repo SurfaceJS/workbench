@@ -1,3 +1,12 @@
 {
-    "extends": "../modules/tasks/tsconfig.json"
+    "compilerOptions": {
+        "types": [
+            "node"
+        ]
+    },
+    "extends": "../modules/tasks/tsconfig.json",
+    "files": [
+        "cli.ts",
+        "index.ts"
+    ]
 }

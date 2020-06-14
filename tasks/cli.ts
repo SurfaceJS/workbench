@@ -1,5 +1,5 @@
 import Tasks         from ".";
-import { MethodsOf } from "./types";
+import { MethodsOf } from "../modules/source/@surface/core";
 
 const [action, parameter] = process.argv.slice(2) as [MethodsOf<typeof Tasks>, string];
 

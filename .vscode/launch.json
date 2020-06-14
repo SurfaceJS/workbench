@@ -2,7 +2,6 @@
     "version": "0.2.0",
     "configurations":
     [
-        
         {
             "type":     "node",
             "request":  "launch",
@@ -46,10 +45,34 @@
             "sourceMaps": true
         },
         {
+            "type":        "node",
+            "request":     "launch",
+            "name":        "Debug File",
+            "program":     "${fileDirname}/${fileBasenameNoExtension}.js",
+            "cwd":         "${fileDirname}",
+            "protocol":    "inspector",
+            "sourceMaps":  true,
+            "runtimeArgs": ["--nolazy"],
+        },
+        {
+            "type":        "node",
+            "request":     "launch",
+            "name":        "Debug Task Cli",
+            "program":     "${workspaceFolder}/modules/tasks/cli",
+            "cwd":         "${fileDirname}",
+            // "args":        ["relink"],
+            "args":        ["publish", "https://registry.npmjs.org", "-t", "123", "-i", "@surface/custom-element"],
+            // "args":        ["sync", "${workspaceFolder}/modules/source/@surface"],
+            // "args":        ["sync", "${workspaceFolder}/modules/source/@surface", "-t", "*.*.*-alpha.0", "-i", "@surface/core", "-e", "@surface/test-suite"],
+            "protocol":    "inspector",
+            "sourceMaps":  true,
+            "runtimeArgs": ["--nolazy"],
+        },
+        {
             "type":    "node",
             "request": "launch",
-            "name":    "Launch Test",
-            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "name":    "Debug Test",
+            "program": "${workspaceFolder}/modules/tasks/node_modules/mocha/bin/_mocha",
             "cwd":     "${fileDirname}",
             "args":
             [
@@ -59,7 +82,7 @@
                 "${fileBasenameNoExtension}.js"
             ],
             "protocol": "inspector",
-            "sourceMaps": true,            
+            "sourceMaps": true,
             "runtimeArgs": ["--nolazy"],
             "outFiles":
             [
@@ -72,7 +95,7 @@
             "type":    "node",
             "request": "launch",
             "name":    "Launch Tests",
-            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "program": "${workspaceFolder}/modules/tasks/node_modules/mocha/bin/_mocha",
             "cwd":     "${workspaceFolder}/modules",
             "args":
             [

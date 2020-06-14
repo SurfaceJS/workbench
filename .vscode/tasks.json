@@ -1,21 +1,24 @@
-// Available variables which can be used inside of strings.
-// ${workspaceFolder}: the root folder of the team
-// ${file}: the current opened file
-// ${fileBasename}: the current opened file's basename
-// ${fileBasenameNoExtension}: the current opened file's basename without extension
-// ${fileDirname}: the current opened file's dirname
-// ${fileExtname}: the current opened file's extension
-// ${cwd}: the current working directory of the spawned process
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks":
-    [
+    "inputs": [
         {
-            "label": "Client Project - Build",
+            "default":     "default",
+            "description": "Strategy type for dependency sync",
+            "id":          "strategy-type",
+            "options":     ["default", "force-version", "force-dependent-updates", "ignore-depentends"],
+            "type":        "pickString",
+        },
+        {
+            "default":     "*.*.*",
+            "description": "Version for dependency sync",
+            "id":          "sync-version",
+            "type":        "promptString"
+        }
+    ],
+    "tasks": [
+        {
             "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
             "isBackground": true,
+            "label": "Client Project - Build",
             "options": {
                 "cwd": "${workspaceFolder}/client"
             },
@@ -34,23 +37,23 @@
         },
         {
             "command": "npm run task:build",
+            "group": {
+                "isDefault": true,
+                "kind": "build"
+            },
             "isBackground": true,
             "label": "Compile Modules",
+            "options": {
+                "cwd": "${workspaceFolder}/modules/tasks"
+            },
             "problemMatcher": [
                 "$tsc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
             "type": "shell"
         },
         {
             "command": "tsc",
-            "isBackground": false,
+            "isBackground": true,
             "label": "TS Compile File",
             "options": {
                 "cwd": "${fileDirname}"
@@ -81,19 +84,47 @@
             "command": "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
             "isBackground": true,
             "label": "Cover File",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
             "presentation": {
                 "reveal": "always"
             },
             "problemMatcher": [
                 "$tsc"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
+            "type": "shell"
+        },
+        {
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org -t ${env:NPM_AUTH_TOKEN}",
+            "isBackground": true,
+            "label": "Publish to NPM - DEV",
+            "presentation": {
+                "reveal": "always"
+            },
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "command": "node ${workspaceFolder}/modules/tasks/cli sync ${workspaceFolder}/modules/source/@surface -s ${input:strategy-type}",
+            "isBackground": true,
+            "label": "Sync Dependencies",
+            "presentation": {
+                "reveal": "always"
             },
             "type": "shell"
         },
         {
-            "command": "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "command": "node ${workspaceFolder}/modules/tasks/cli sync ${workspaceFolder}/modules/source/@surface -s ${input:strategy-type} -t ${input:sync-version}",
+            "isBackground": true,
+            "label": "Sync Dependencies version",
+            "presentation": {
+                "reveal": "always"
+            },
+            "type": "shell"
+        },
+        {
+            "command": "tsc; node ${workspaceFolder}/modules/tasks/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
             "isBackground": true,
             "label": "Test File",
             "options": {
@@ -121,5 +152,6 @@
             "problemMatcher": [],
             "type": "shell"
         }
-    ]
+    ],
+    "version": "2.0.0"
 }

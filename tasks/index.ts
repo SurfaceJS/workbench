@@ -1,7 +1,14 @@
-import fs          from "fs";
-import path        from "path";
-import * as common from "../modules/tasks/common";
-import packages    from "./common/packages";
+import chalk from "chalk";
+import fs    from "fs";
+import path  from "path";
+import
+{
+    createPath,
+    execute,
+    paths,
+    removePath,
+    timestamp
+} from "../modules/tasks/internal/common";
 
 const projects =
 [
@@ -17,36 +24,33 @@ export default class Tasks
 
         for (const project of projects.filter(x => x.name != "client"))
         {
-            commands.push(common.execute(`Building ${project.name}`, `tsc -p ${project.path}`));
+            commands.push(execute(`${timestamp()} Building ${chalk.bold.blue(project.name)}`, `tsc -p ${project.path}`));
         }
 
         await Promise.all(commands);
 
-        console.log("Building workbench done!");
+        console.log(`${timestamp()} ${chalk.bold.green("Building workbench done!")}`);
     }
 
-    public static link(): void
+    public static async link(): Promise<void>
     {
         for (const project of projects)
         {
             const nodeModules = path.join(project.path, "node_modules");
-            const original    = path.resolve(__dirname, "../modules/source/@surface");
             const symlink     = path.join(nodeModules, "@surface");
 
             if (!fs.existsSync(symlink))
             {
-                common.makePath(nodeModules);
-                //fs.symlinkSync(original, symlink);
+                createPath(nodeModules);
 
-                //console.log(`@surface linked to ${symlink}`);
-                common.execute(`@surface linked to ${symlink}`, `mklink /J ${symlink} ${original}`);
+                await execute(`${timestamp()} @surface linked to ${chalk.bold.blue(symlink)}`, `mklink /J ${symlink} ${paths.source.surface}`);
             }
         }
 
-        console.log("Linking done!");
+        console.log(`${timestamp()} ${chalk.bold.green("Linking done!")}`);
     }
 
-    public static unlink(): void
+    public static async unlink(): Promise<void>
     {
         for (const project of projects)
         {
@@ -54,51 +58,25 @@ export default class Tasks
 
             if (fs.existsSync(surface))
             {
-                common.deletePath(surface);
-                console.log(`@surface unlinked from ${surface}`);
+                removePath(surface);
+                console.log(`${timestamp()} @surface unlinked from ${chalk.bold.blue(surface)}`);
             }
         }
 
-        console.log("Unlinking done!");
+        console.log(`${timestamp()} ${chalk.bold.green("Unlinking done!")}`);
+
+        await Promise.resolve();
     }
 
-    public static relink(): void
+    public static async relink(): Promise<void>
     {
-        Tasks.unlink();
-        Tasks.link();
-    }
-
-    public static async install(full: "true"|"false"): Promise<void>
-    {
-        Tasks.unlink();
-
-        const commands: Array<Promise<void>> = [];
-
-        for (const $package of packages)
-        {
-            const dependencies = { ...$package.dependencies, ...$package.devDependencies };
-
-            const targets = Object.keys(dependencies)
-                .filter(x => !x.startsWith("@surface/") || full == "true")
-                .map(key => `${key}@${dependencies[key]!.replace(/^(\^|\~)/, "")}`)
-                .join(" ");
-
-            if (targets)
-            {
-                commands.push(common.execute(`Installing ${$package.name} dependencies.`, `cd ${$package.path} && npm install ${targets} --save-exact`));
-            }
-        }
-
-        await Promise.all(commands);
-
-        Tasks.link();
-
-        console.log("Installing done!");
+        await Tasks.unlink();
+        await Tasks.link();
     }
 
     public static async setup()
     {
-        await Tasks.install("false");
+        await Tasks.relink();
         await Tasks.build();
     }
 }

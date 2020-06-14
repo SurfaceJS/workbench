@@ -1,10 +1,15 @@
 
-$Location = $PSScriptRoot;
+# Globals
 npm i -g typescript tslint mocha nyc driveup python3;
-Set-Location '.\modules';
+
+# Modules
+Set-Location "$PSScriptRoot/modules/tasks";
 npm i;
-tsc -p './tasks';
-node './tasks/cli' 'setup';
-Set-Location $Location;
-tsc -p './tasks';
-node './tasks/cli' 'setup';
+tsc;
+node cli setup;
+
+# Workbench
+Set-Location "$PSScriptRoot/tasks";
+npm i;
+tsc;
+node cli setup;
