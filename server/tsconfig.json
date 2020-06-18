@@ -1,8 +1,12 @@
 {
-    "extends": "../modules/tsconfig.json",
-    "compilerOptions":
-    {
+    "compilerOptions": {
         "module": "commonjs",
-        "types":  ["node"]
-    }
+        "types": [
+            "node"
+        ]
+    },
+    "extends": "../modules/tsconfig.json",
+    "include": [
+        "./source"
+    ]
 }
