@@ -1,14 +1,14 @@
+// tslint:disable: no-import-side-effect
 import "@surface/components/stack-panel";
 import "../../components/dummy-child";
 import "../../components/dummy-parent";
 
-import { element } from "@surface/custom-element";
-import View        from "@surface/view";
+import CustomElement, { element } from "@surface/custom-element";
 import template    from "./index.html";
 import style       from "./index.scss";
 
 @element("directives-view", template, style)
-export default class DirectivesView extends View
+export default class DirectivesView extends CustomElement
 {
     private lastId: number = 0;
 
@@ -16,12 +16,6 @@ export default class DirectivesView extends View
     protected visible: boolean = true;
 
     protected items: Array<number> = [];
-
-    public constructor()
-    {
-        super();
-        this.viewName = "Directives";
-    }
 
     public toogle(): void
     {

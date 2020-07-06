@@ -1,10 +1,10 @@
-[<a #on:click="host.routeTo('data-table')"  href="javascript:void(0)">Data Table</a>]
-[<a #on:click="host.routeTo('directives')"  href="javascript:void(0)">Directives</a>]
-[<a #on:click="host.routeTo('icon')"        href="javascript:void(0)">Icon</a>]
-[<a #on:click="host.routeTo('list')"        href="javascript:void(0)">List</a>]
-[<a #on:click="host.routeTo('menu')"        href="javascript:void(0)">Menu</a>]
-[<a #on:click="host.routeTo('modal')"       href="javascript:void(0)">Modal</a>]
-[<a #on:click="host.routeTo('stack-panel')" href="javascript:void(0)">Stack Panel</a>]
+[<a #to="'/data-table'">Data Table</a>]
+[<a #to="'/directives'">Directives</a>]
+[<a #to="'/icon'">Icon</a>]
+[<a #to="'/list'">List</a>]
+[<a #to="'/menu'">Menu</a>]
+[<a #to="'/modal'">Modal</a>]
+[<a #to="'/stack-panel'">Stack Panel</a>]
 
 <input id="one"   type="text" ::value="host.data" />
 <input id="two"   type="text" ::value="host.data" />
