@@ -55,8 +55,8 @@
     "typescript.tsdk":                                           "modules/source/@surface/compiler/node_modules/typescript/lib",
     "vsicons.associations.folders":
     [
-        { "extensions": ["internal"], "icon": "private" },
-        { "extensions": ["tasks"],    "icon": "tools" },
+        { "extensions": ["internal"], "icon": "private", "format": "svg" },
+        { "extensions": ["tasks"],    "icon": "tools",   "format": "svg" },
     ],
     "workbench.iconTheme": "vscode-icons"
 }
