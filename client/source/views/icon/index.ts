@@ -1,18 +1,11 @@
-import { element } from "@surface/custom-element";
-import View        from "@surface/view";
-import template    from "./index.html";
+import CustomElement, { element } from "@surface/custom-element";
+import template                   from "./index.html";
 
 @element("icon-view", template)
-export default class Icon extends View
+export default class Icon extends CustomElement
 {
     protected static get observedAttributes(): Array<string>
     {
         return ["name"];
-    }
-
-    public constructor()
-    {
-        super();
-        this.viewName = "Icon";
     }
 }

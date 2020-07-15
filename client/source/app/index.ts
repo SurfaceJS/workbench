@@ -1,17 +1,12 @@
-import "@surface/view-host";
-
 import CustomElement, { element } from "@surface/custom-element";
-import Router                     from "@surface/router";
-import ViewManager                from "@surface/view-manager";
+import ViewRouter                 from "@surface/view-router";
 import template                   from "./index.html";
 import style                      from "./index.scss";
-import { load }                   from "./module-loader";
+import routes                     from "./routes";
 
 @element("app-root", template, style)
 export class App extends CustomElement
 {
-    private viewManager!: ViewManager;
-
     private _data: string = "";
     public get data(): string
     {
@@ -27,15 +22,6 @@ export class App extends CustomElement
     {
         super();
 
-        const router = new Router().mapRoute("default", "{view=data-table}/{action=index}/{id?}", true);
-
-        this.viewManager = ViewManager.configure(super.references.viewHost as import("@surface/view-host").default, router, load);
-
-        this.routeTo(window.location.pathname + window.location.search);
-    }
-
-    public async routeTo(route: string): Promise<void>
-    {
-        await this.viewManager.routeTo(route);
+        ViewRouter.registerDirective(new ViewRouter(routes));
     }
 }
