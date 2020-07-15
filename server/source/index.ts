@@ -11,5 +11,5 @@ WebHost.configure(configuration)
             .map("api/{controller}/{action=index}/{id?}")
             .map("{controller}/{action=index}/{id?}")
     )
-    .useFallBack("/app")
+    .useFallBack("/")
     .run();

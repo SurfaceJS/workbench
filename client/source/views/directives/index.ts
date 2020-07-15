@@ -1,5 +1,4 @@
 // tslint:disable: no-import-side-effect
-import "@surface/components/stack-panel";
 import "../../components/dummy-child";
 import "../../components/dummy-parent";
 

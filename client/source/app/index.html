@@ -6,9 +6,7 @@
 [<a #to="'/modal'">Modal</a>]
 [<a #to="'/stack-panel'">Stack Panel</a>]
 
-<input id="one"   type="text" ::value="host.data" />
-<input id="two"   type="text" ::value="host.data" />
-<input id="three" type="text" :value="host.references.two.value" />
-<input id="four" #on:click="() => alert('clicked!!!')"  type="text" value="{host.references.three.value}" readonly />
+<input id="one" type="text" ::value="host.data" />
+<input id="two" type="text" ::value="host.data" />
 
-<surface-view-host id="viewHost"></surface-view-host>
+<router-slot></router-slot>
