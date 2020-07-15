@@ -1,28 +1,17 @@
 {
     "inputs": [
         {
-            "default": "default",
+            "default":     "default",
             "description": "Strategy type for dependency sync",
-            "id": "strategy-type",
-            "options": [
-                "default",
-                "force-version",
-                "force-dependent-updates",
-                "ignore-depentends"
-            ],
-            "type": "pickString"
+            "id":          "strategy-type",
+            "options":     ["default", "force-version", "force-dependent-updates", "ignore-depentends"],
+            "type":        "pickString",
         },
         {
-            "default": "*.*.*",
+            "default":     "*.*.*",
             "description": "Version for dependency sync",
-            "id": "sync-version",
-            "type": "promptString"
-        },
-        {
-            "default": "@surface/core",
-            "description": "Modules",
-            "id": "modules",
-            "type": "promptString"
+            "id":          "sync-version",
+            "type":        "promptString"
         }
     ],
     "tasks": [
@@ -47,7 +36,7 @@
             "type": "shell"
         },
         {
-            "command": "node cli clean; node cli build;",
+            "command": "npm run task:build",
             "group": {
                 "isDefault": true,
                 "kind": "build"
@@ -55,12 +44,11 @@
             "isBackground": true,
             "label": "Compile Modules",
             "options": {
-                "cwd": "${workspaceFolder}/modules/tasks/"
+                "cwd": "${workspaceFolder}/modules/tasks"
             },
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": [],
+            "problemMatcher": [
+                "$tsc"
+            ],
             "type": "shell"
         },
         {
@@ -83,7 +71,7 @@
             "type": "shell"
         },
         {
-            "command": "nyc mocha --ui tdd source/@surface/*/tests/**/*.spec.js",
+            "command": "npm run cover -s",
             "isBackground": true,
             "label": "Cover Modules",
             "options": {
@@ -108,24 +96,14 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli install -m ${input:modules}",
-            "isBackground": true,
-            "label": "Install Modules",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
             "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org -t ${env:NPM_AUTH_TOKEN}",
             "isBackground": true,
             "label": "Publish to NPM - DEV",
             "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher": [],
-            "type": "shell"
+            "type": "shell",
+            "problemMatcher": []
         },
         {
             "command": "node ${workspaceFolder}/modules/tasks/cli sync ${workspaceFolder}/modules/source/@surface -s ${input:strategy-type}",
@@ -134,7 +112,6 @@
             "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher": [],
             "type": "shell"
         },
         {
@@ -144,7 +121,6 @@
             "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher": [],
             "type": "shell"
         },
         {

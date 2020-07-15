@@ -1,11 +1,11 @@
+import { Criteria }                 from "@surface/components/data-table/interfaces/data-provider";
 import { Func1 }                    from "@surface/core";
 import Enumareble                   from "@surface/enumerable";
 import { ActionResult, Controller } from "@surface/web-host";
 
 export class User extends Controller
 {
-    // tslint:disable-next-line: no-any
-    public read(inbound?: any): ActionResult
+    public read(inbound?: Criteria): ActionResult
     {
         if (!inbound)
         {

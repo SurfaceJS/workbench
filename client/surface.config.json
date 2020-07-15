@@ -1,6 +1,6 @@
 {
     "context":  "source",
-    "entry":    "index.ts",
+    "entry":    "app/index.ts",
     "filename": "[name]/[hash].js",
     "tsconfig": "tsconfig.json",
     "tslint":   "../tslint.json",

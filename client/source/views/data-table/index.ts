@@ -1,5 +1,6 @@
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.html";
+import { element } from "@surface/custom-element";
+import View        from "@surface/view";
+import template    from "./index.html";
 // import ParallelWorker from '@surface/custom-element/internal/parallel-worker';
 
 function _random(max: number)
@@ -8,7 +9,7 @@ function _random(max: number)
 }
 
 @element("data-table-view", template)
-export default class DataTable extends CustomElement
+export default class DataTable extends View
 {
     private started: number = 0;
     protected message: string = "";
@@ -16,6 +17,12 @@ export default class DataTable extends CustomElement
     protected currentId                                  = 0;
     protected data: Array<{ id: number, label: string }> = [];
     protected selected: number|null = null;
+
+    public constructor()
+    {
+        super();
+        this.viewName = "Data Table";
+    }
 
     private start(): void
     {

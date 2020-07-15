@@ -25,7 +25,7 @@
             <h1>Injector Placeholder: {key}</h1>
         </template> -->
         <!-- <span #for="const item of host.items" #injector:items="({ item })">Default {item}</span> -->
-        <template #placeholder:reactive="({ items: host.items })">
+        <template #injector:reactive="({ items: host.items })">
             <span #for="const item of host.items">Placeholder {item}</span>
         </template>
         <!-- <span #injector:a>Placeholder</span> -->

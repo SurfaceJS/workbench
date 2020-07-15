@@ -30,9 +30,9 @@
             <br>
         </template>
         <span>inject reactive</span> -->
-        <template #injector:reactive="{ items }">
+        <template #inject:reactive="{ items }">
             <template #for="const item of items">
-                <!-- Bind:{this.nodeName} { host.references.field.value } -->
+                Bind:{this.nodeName} { host.references.field.value }
                 <span>{this.nodeName}</span>
                 <template #if="host.visible">
                     <span><b>Header</b></span>
@@ -43,6 +43,7 @@
                         <span>Id: { item }</span>&nbsp;Odd
                     </template>
                     <span><b>Footer</b></span>
+                    <dummy-child :value="host.references.field.value"></dummy-child>
                 </template>
             </template>
         </template>
