@@ -1,19 +1,19 @@
 {
-    "context":  "source",
-    "entry":    "index.ts",
+    "context":  ".",
+    "entry":    "./source/index.ts",
     "filename": "[name]/[hash].js",
-    "tsconfig": "tsconfig.json",
-    "tslint":   "../tslint.json",
     "output":   "../server/wwwroot",
+    "tsconfig": "./tsconfig.json",
+    "tslint":   "../tslint.json",
     "htmlTemplate":
     {
-        "filename": "[name]/index.html",
-        "template": "template.html"
+        "template": "./template.html",
+        "minify": false
     },
     "simblingResolve":
     {
         "from":    ".js",
         "to":      ".ts",
-        "include": ["node_modules/@surface", "../modules/source/@surface"]
+        "include": ["./node_modules/@surface", "../modules/source/@surface"]
     }
 }
