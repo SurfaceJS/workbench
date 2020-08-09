@@ -27,7 +27,7 @@
     ],
     "tasks": [
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js clean; node ./node_modules/@surface/compiler/cli.js build -m production",
             "isBackground": true,
             "label": "Client Project - Build",
             "options": {
@@ -37,7 +37,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build -w true",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {

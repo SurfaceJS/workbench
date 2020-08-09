@@ -1,19 +1,9 @@
 {
-    "context":  ".",
-    "entry":    "./source/index.ts",
-    "filename": "[name]/[hash].js",
-    "output":   "../server/wwwroot",
-    "tsconfig": "./tsconfig.json",
-    "tslint":   "../tslint.json",
-    "htmlTemplate":
-    {
-        "template": "./template.html",
-        "minify": false
-    },
-    "simblingResolve":
-    {
-        "from":    ".js",
-        "to":      ".ts",
-        "include": ["./node_modules/@surface", "../modules/source/@surface"]
-    }
+    "entry":        "./source/index.ts",
+    "filename":     "[name]/[hash].js",
+    "forceTs":      ["./node_modules/@surface", "../modules/source/@surface"],
+    "htmlTemplate": "./template.html",
+    "output":       "../server/wwwroot",
+    "tsconfig":     "./tsconfig.json",
+    "tslint":       "./tslint.json"
 }
