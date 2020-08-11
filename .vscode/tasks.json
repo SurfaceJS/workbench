@@ -37,7 +37,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build -w",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {

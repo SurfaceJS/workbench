@@ -4,20 +4,22 @@
         {
             "args":
             [
-                "build",
-                "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
-                "-e",  "./source/index.ts",                                  /* "-e|--entry"           */
-                "-f",  "[name]/[hash].js",                                   /* "-f|--filename"        */
-                "-ft", "./node_modules/@surface,../modules/source/@surface", /* "-ft|--force-ts"       */
-                "-l",  "verbose",                                            /* "-l|--log"             */
-                "-m",  "production",                                         /* "-m|--mode"            */
-                "-o",  "${workspaceFolder}/server/wwwroot",                  /* "-o|--output"          */
-                "-pp", "/",                                                  /* "-pp|--public-path"    */
-                "-t",  "${workspaceFolder}/client/template.html",            /* "-t|--html-template"   */
-                "-tc", "${workspaceFolder}/client/tsconfig.json",            /* "-tc|--tsconfig"       */
-                "-tl", "${workspaceFolder}/client/tslint.json",              /* "-tl|--tslint"         */
-                // "-wc", "${workspaceFolder}/client/webpack-config.js",        /* "-wc|--webpack-config" */
-                "-w",  "false",                                              /* "-w|--watch"           */
+                "clean",
+                "-p", "${workspaceFolder}/client"
+                // "build",
+                // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
+                // "-e",  "./source/index.ts",                                  /* "-e|--entry"           */
+                // "-el", "${workspaceFolder}/client/.eslintrc.json",           /* "-el|--eslintrc"       */
+                // "-f",  "[name]/[hash].js",                                   /* "-f|--filename"        */
+                // "-ft", "./node_modules/@surface,../modules/source/@surface", /* "-ft|--force-ts"       */
+                // "-l",  "minimal",                                            /* "-l|--log"             */
+                // "-m",  "production",                                         /* "-m|--mode"            */
+                // "-o",  "${workspaceFolder}/server/wwwroot",                  /* "-o|--output"          */
+                // "-pp", "/",                                                  /* "-pp|--public-path"    */
+                // "-t",  "${workspaceFolder}/client/template.html",            /* "-t|--html-template"   */
+                // "-tc", "${workspaceFolder}/client/tsconfig.json",            /* "-tc|--tsconfig"       */
+                // // "-wc", "${workspaceFolder}/client/webpack-config.js",     /* "-wc|--webpack-config" */
+                // "-w",  "false",                                              /* "-w|--watch"           */
             ],
             "cwd":      "${workspaceFolder}",
             "name":     "Launch Compiler",
