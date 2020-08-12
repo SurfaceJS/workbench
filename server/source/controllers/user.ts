@@ -2,9 +2,10 @@ import { Func1 }                    from "@surface/core";
 import Enumareble                   from "@surface/enumerable";
 import { ActionResult, Controller } from "@surface/web-host";
 
-export class User extends Controller
+export default class User extends Controller
 {
-    // tslint:disable-next-line: no-any
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     public read(inbound?: any): ActionResult
     {
         if (!inbound)
@@ -18,38 +19,38 @@ export class User extends Controller
             data = data.concat
             ([
                 {
-                    id:    index + 1,
-                    name:  "foo",
-                    email: "foo@mail.com",
+                    active:  true,
                     country:
                     {
+                        initials: "bra",
                         name:     "Brazil",
-                        initials: "bra"
                     },
-                    active: true
+                    email:   "foo@mail.com",
+                    id:      index + 1,
+                    name:    "foo",
                 },
                 {
-                    id:    index + 2,
-                    name:  "bar",
-                    email: "bar@mail.com",
+                    active:  false,
                     country:
                     {
+                        initials: "usa",
                         name:     "United States",
-                        initials: "usa"
                     },
-                    active: false
+                    email:   "bar@mail.com",
+                    id:      index + 2,
+                    name:    "bar",
                 },
                 {
-                    id:    index + 3,
-                    name:  "baz",
-                    email: "baz@mail.com",
+                    active:  true,
                     country:
                     {
+                        initials: "eng",
                         name:     "England",
-                        initials: "eng"
                     },
-                    active: true
-                }
+                    email:   "baz@mail.com",
+                    id:      index + 3,
+                    name:    "baz",
+                },
             ]);
         }
 
@@ -57,13 +58,14 @@ export class User extends Controller
 
         if (inbound.sorting.length > 0)
         {
-            const predicate = inbound.sorting[0].field.includes(".") ?
-                Function("x", `return x.${inbound.sorting[0].field}`) as Func1<object, object[keyof object]> :
-                (element: object) => element[inbound.sorting[0].field as keyof object];
+            const predicate = inbound.sorting[0].field.includes(".")
+                // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
+                ? Function("x", `return x.${inbound.sorting[0].field}`) as Func1<object, object[keyof object]>
+                : (element: object) => element[inbound.sorting[0].field as keyof object];
 
-            sequence = inbound.sorting[0].direction == "asc" ?
-                sequence.orderBy(predicate)
-                    : sequence.orderByDescending(predicate);
+            sequence = inbound.sorting[0].direction == "asc"
+                ? sequence.orderBy(predicate)
+                : sequence.orderByDescending(predicate);
         }
 
         data = sequence

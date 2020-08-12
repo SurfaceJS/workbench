@@ -1,24 +1,30 @@
 {
-  "author": "HitalloExiled",
-  "bugs": {
-    "url": "https://github.com/SurfaceJS/workbench/issues"
-  },
-  "dependencies": {
-    "@types/node": "14.0.1",
-    "tslib": "2.0.0"
-  },
-  "description": "Basic server to development and testing.",
-  "homepage": "https://github.com/SurfaceJS/workbench#readme",
-  "license": "MIT",
-  "main": "source/index.js",
-  "name": "surface-workbench-server",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SurfaceJS/workbench.git"
-  },
-  "scripts": {
-    "build": "node ./node_modules/@surface/compiler",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "0.0.0"
+    "author": "HitalloExiled",
+    "bugs": {
+        "url": "https://github.com/SurfaceJS/workbench/issues"
+    },
+    "dependencies": {
+        "@types/node": "14.0.1",
+        "@typescript-eslint/eslint-plugin": "3.9.0",
+        "@typescript-eslint/parser": "3.9.0",
+        "eslint": "7.6.0",
+        "eslint-plugin-import": "2.22.0",
+        "tslib": "2.0.0",
+        "typescript": "3.9.7"
+    },
+    "description": "Basic server to development and testing.",
+    "homepage": "https://github.com/SurfaceJS/workbench#readme",
+    "license": "MIT",
+    "main": "source/index.js",
+    "name": "server",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SurfaceJS/workbench.git"
+    },
+    "scripts": {
+        "build": "node ./node_modules/@surface/compiler",
+        "lint": "eslint . --ext .ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "0.0.0"
 }

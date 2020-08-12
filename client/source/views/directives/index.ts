@@ -1,5 +1,6 @@
-// tslint:disable: no-import-side-effect
+// eslint-disable-next-line import/no-unassigned-import
 import "../../components/dummy-child";
+// eslint-disable-next-line import/no-unassigned-import
 import "../../components/dummy-parent";
 
 import CustomElement, { element } from "@surface/custom-element";
@@ -14,7 +15,7 @@ export default class DirectivesView extends CustomElement
     protected text:    string  = "";
     protected visible: boolean = true;
 
-    protected items: Array<number> = [];
+    protected items: number[] = [];
 
     public toogle(): void
     {

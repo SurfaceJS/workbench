@@ -9,6 +9,9 @@ import
     removePath,
     timestamp
 } from "../modules/tasks/internal/common";
+import { IPackage } from "npm-registry-client";
+
+const root = path.resolve(__dirname, "..");
 
 const projects =
 [
@@ -30,6 +33,35 @@ export default class Tasks
         await Promise.all(commands);
 
         console.log(`${timestamp()} ${chalk.bold.green("Building workbench done!")}`);
+    }
+
+    public static async install(): Promise<void>
+    {
+        await Tasks.unlink();
+
+        const commands: Promise<void>[] = [];
+
+        for (const $package of projects.map(x => require(path.join(x.path, "package.json")) as IPackage))
+        {
+            const dependencies = { ...$package.dependencies ?? { }, ...$package.devDependencies ?? { } };
+
+            const targets = Object.keys(dependencies)
+                .filter(x => !x.startsWith("@surface/"))
+                .map(key => `${key}@${dependencies[key].replace(/^(\^|~)/, "")}`)
+                .join(" ");
+
+            if (targets)
+            {
+                // eslint-disable-next-line max-len
+                commands.push(execute(`${timestamp()} Installing ${chalk.bold.blue($package.name)} dependencies.`, `cd ${path.resolve(root, $package.name)} && npm install ${targets} --save-exact`));
+            }
+        }
+
+        await Promise.all(commands);
+
+        await Tasks.link();
+
+        console.log(`${timestamp()} ${chalk.bold.green("Installing done!")}`);
     }
 
     public static async link(): Promise<void>
@@ -76,7 +108,7 @@ export default class Tasks
 
     public static async setup()
     {
-        await Tasks.relink();
+        await Tasks.install();
         await Tasks.build();
     }
 }

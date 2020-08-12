@@ -148,7 +148,7 @@
             "type": "shell"
         },
         {
-            "command": "tsc; node ${workspaceFolder}/modules/tasks/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "command": "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
             "isBackground": true,
             "label": "Test File",
             "options": {
