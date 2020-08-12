@@ -1,6 +1,12 @@
 {
     "breadcrumbs.enabled":     true,
     "editor.roundedSelection": false,
+    "eslint.workingDirectories":
+    [
+        "client",
+        "modules",
+        "server",
+    ],
     "files.associations":
     {
         "*.config": "xml",
@@ -58,5 +64,5 @@
         { "extensions": ["internal"], "icon": "private", "format": "svg" },
         { "extensions": ["tasks"],    "icon": "tools",   "format": "svg" },
     ],
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
 }

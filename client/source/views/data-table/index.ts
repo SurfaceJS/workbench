@@ -1,8 +1,8 @@
+/* eslint-disable max-len */
 import CustomElement, { element } from "@surface/custom-element";
 import template                   from "./index.html";
-// import ParallelWorker from '@surface/custom-element/internal/parallel-worker';
 
-function _random(max: number)
+function _random(max: number): number
 {
     return Math.round(Math.random() * 1000) % max;
 }
@@ -11,11 +11,11 @@ function _random(max: number)
 export default class DataTable extends CustomElement
 {
     private started: number = 0;
-    protected message: string = "";
 
-    protected currentId                                  = 0;
-    protected data: Array<{ id: number, label: string }> = [];
-    protected selected: number|null = null;
+    protected message:   string                          = "";
+    protected currentId: number                          = 0;
+    protected data:      { id: number, label: string }[] = [];
+    protected selected:  number | null                   = null;
 
     private start(): void
     {
@@ -28,22 +28,26 @@ export default class DataTable extends CustomElement
         // ParallelWorker.done().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
     }
 
-    public buildData(count = 1000)
+    public buildData(count: number = 1000): { id: number, label: string }[]
     {
-        let adjectives = ["pretty", "large", "big", "small", "tall", "short", "long", "handsome", "plain", "quaint", "clean", "elegant", "easy", "angry", "crazy", "helpful", "mushy", "odd", "unsightly", "adorable", "important", "inexpensive", "cheap", "expensive", "fancy"];
-        let colours    = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
-        let nouns      = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
-        let data       = [];
+        const adjectives = ["pretty", "large", "big", "small", "tall", "short", "long", "handsome", "plain", "quaint", "clean", "elegant", "easy", "angry", "crazy", "helpful", "mushy", "odd", "unsightly", "adorable", "important", "inexpensive", "cheap", "expensive", "fancy"];
+        const colours    = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
+        const nouns      = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
+        const data       = [];
 
         for (let i = 0; i < count; i++)
         {
-            data.push({id: this.currentId++, label: adjectives[_random(adjectives.length)] + " " + colours[_random(colours.length)] + " " + nouns[_random(nouns.length)] });
+            data.push
+            ({
+                id:    this.currentId++,
+                label: `${adjectives[_random(adjectives.length)]} ${colours[_random(colours.length)]} ${nouns[_random(nouns.length)]}`,
+            });
         }
 
         return data;
     }
 
-    public updateData()
+    public updateData(): void
     {
         for (let i = 0; i < this.data.length; i += 10)
         {
@@ -51,13 +55,13 @@ export default class DataTable extends CustomElement
         }
     }
 
-    public delete(id: number)
+    public delete(id: number): void
     {
         const idx = this.data.findIndex(x => x.id == id);
         this.data = this.data.slice(0, idx).concat(this.data.slice(idx + 1));
     }
 
-    public run()
+    public run(): void
     {
         const data = this.buildData();
         this.selected = null;
@@ -69,7 +73,7 @@ export default class DataTable extends CustomElement
         this.stop();
     }
 
-    public add()
+    public add(): void
     {
         const data = this.data.concat(this.buildData(1000));
 
@@ -80,7 +84,7 @@ export default class DataTable extends CustomElement
         this.stop();
     }
 
-    public update()
+    public update(): void
     {
         this.start();
 
@@ -89,12 +93,12 @@ export default class DataTable extends CustomElement
         this.stop();
     }
 
-    public select(id: number)
+    public select(id: number): void
     {
         this.selected = id;
     }
 
-    public runLots()
+    public runLots(): void
     {
         const data    = this.buildData(10000);
         this.selected = null;
@@ -106,7 +110,7 @@ export default class DataTable extends CustomElement
         this.stop();
     }
 
-    public clear()
+    public clear(): void
     {
         this.start();
 
@@ -116,14 +120,14 @@ export default class DataTable extends CustomElement
         this.stop();
     }
 
-    public swapRows()
+    public swapRows(): void
     {
         if (this.data.length > 998)
         {
             const newData = [...this.data];
 
-            let d1   = newData[1];
-            let d998 = newData[998];
+            const d1   = newData[1];
+            const d998 = newData[998];
 
             newData[998] = d1;
             newData[1]   = d998;

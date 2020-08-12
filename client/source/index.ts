@@ -4,10 +4,10 @@ import routes     from "./routes";
 
 let app: App;
 
-const router = new ViewRouter("app-root", routes);
+const router = new ViewRouter(() => app, routes);
 
 ViewRouter.registerDirective(router);
 
 document.body.appendChild(app = new App());
 
-router.pushCurrentLocation();
+void router.pushCurrentLocation();
