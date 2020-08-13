@@ -1,29 +1,31 @@
-import chalk from "chalk";
-import fs    from "fs";
-import path  from "path";
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
+import fs           from "fs";
+import path         from "path";
+import chalk        from "chalk";
+import { IPackage } from "npm-registry-client";
 import
 {
     createPath,
     execute,
     paths,
     removePath,
-    timestamp
+    timestamp,
 } from "../modules/tasks/internal/common";
-import { IPackage } from "npm-registry-client";
 
 const root = path.resolve(__dirname, "..");
 
 const projects =
 [
     { name: "client", path: path.resolve(__dirname, "../client") },
-    { name: "server", path: path.resolve(__dirname, "../server") }
+    { name: "server", path: path.resolve(__dirname, "../server") },
 ];
 
 export default class Tasks
 {
     public static async build(): Promise<void>
     {
-        const commands: Array<Promise<void>> = [];
+        const commands: Promise<void>[] = [];
 
         for (const project of projects.filter(x => x.name != "client"))
         {
@@ -45,9 +47,9 @@ export default class Tasks
         {
             const dependencies = { ...$package.dependencies ?? { }, ...$package.devDependencies ?? { } };
 
-            const targets = Object.keys(dependencies)
-                .filter(x => !x.startsWith("@surface/"))
-                .map(key => `${key}@${dependencies[key].replace(/^(\^|~)/, "")}`)
+            const targets = Object.entries(dependencies)
+                .filter(([key, value]) => !key.startsWith("@surface/") && !value.startsWith("file:"))
+                .map(([key, value]) => `${key}@${value.replace(/^(\^|~)/, "")}`)
                 .join(" ");
 
             if (targets)
@@ -106,7 +108,7 @@ export default class Tasks
         await Tasks.link();
     }
 
-    public static async setup()
+    public static async setup(): Promise<void>
     {
         await Tasks.install();
         await Tasks.build();
