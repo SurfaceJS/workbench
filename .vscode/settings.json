@@ -6,6 +6,7 @@
         "client",
         "modules",
         "server",
+        "tasks"
     ],
     "files.associations":
     {
@@ -48,13 +49,6 @@
     "javascript.format.placeOpenBraceOnNewLineForFunctions":     true,
     "javascript.implicitProjectConfig.checkJs":                  true,
     "javascript.preferences.quoteStyle":                         "double",
-    "sync.autoDownload":                                         false,
-    "sync.autoUpload":                                           false,
-    "sync.forceDownload":                                        false,
-    "sync.gist":                                                 "1296ff92e87dad728b76adfd5b8d0c62",
-    "sync.quietSync":                                            false,
-    "sync.removeExtensions":                                     true,
-    "sync.syncExtensions":                                       true,
     "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
     "typescript.format.placeOpenBraceOnNewLineForFunctions":     true,
     "typescript.preferences.quoteStyle":                         "double",

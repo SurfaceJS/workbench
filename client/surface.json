@@ -3,7 +3,5 @@
     "filename":     "[name]/[hash].js",
     "forceTs":      ["./node_modules/@surface", "../modules/source/@surface"],
     "htmlTemplate": "./template.html",
-    "output":       "../server/wwwroot",
-    "tsconfig":     "./tsconfig.json",
-    "tslint":       "./tslint.json"
+    "output":       "../server/wwwroot"
 }
