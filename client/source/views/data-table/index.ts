@@ -12,9 +12,9 @@ export default class DataTable extends CustomElement
 {
     private started: number = 0;
 
-    protected message:   string                          = "";
     protected currentId: number                          = 0;
     protected data:      { id: number, label: string }[] = [];
+    protected message:   string                          = "";
     protected selected:  number | null                   = null;
 
     private start(): void

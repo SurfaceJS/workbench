@@ -45,19 +45,7 @@ export default class Tasks
 
         for (const $package of projects.map(x => require(path.join(x.path, "package.json")) as IPackage))
         {
-            const dependencies = { ...$package.dependencies ?? { }, ...$package.devDependencies ?? { } };
-
-            const targets = Object.entries(dependencies)
-                .filter(([key, value]) => !key.startsWith("@surface/") && !value.startsWith("file:"))
-                .map(([key, value]) => `${key}@${value.replace(/^(\^|~)/, "")}`)
-                .join(" ");
-
-            if (targets)
-            {
-                // eslint-disable-next-line max-len
-                commands.push(execute(`${timestamp()} Installing ${chalk.bold.blue($package.name)} dependencies.`, `cd ${path.resolve(root, $package.name)} && npm install ${targets} --save-exact`));
-            }
-        }
+            commands.push(execute(`${timestamp()} Installing ${chalk.bold.blue($package.name)} dependencies.`, `cd ${path.resolve(root, $package.name)} && npm install`));        }
 
         await Promise.all(commands);
 

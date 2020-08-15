@@ -37,7 +37,17 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build -w",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js serve -h",
+            "isBackground": true,
+            "label": "Client Project - Serve",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build -w -h",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {
