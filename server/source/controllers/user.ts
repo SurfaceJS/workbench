@@ -1,4 +1,4 @@
-import { Func1 }                    from "@surface/core";
+import { Delegate }                 from "@surface/core";
 import Enumareble                   from "@surface/enumerable";
 import { ActionResult, Controller } from "@surface/web-host";
 
@@ -60,7 +60,7 @@ export default class User extends Controller
         {
             const predicate = inbound.sorting[0].field.includes(".")
                 // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
-                ? Function("x", `return x.${inbound.sorting[0].field}`) as Func1<object, object[keyof object]>
+                ? Function("x", `return x.${inbound.sorting[0].field}`) as Delegate<[object], object[keyof object]>
                 : (element: object) => element[inbound.sorting[0].field as keyof object];
 
             sequence = inbound.sorting[0].direction == "asc"

@@ -14,6 +14,7 @@ import
 } from "../modules/tasks/internal/common";
 
 const root = path.resolve(__dirname, "..");
+const tsc  = path.resolve(__dirname, "../modules/node_modules/.bin/tsc");
 
 const projects =
 [
@@ -29,7 +30,7 @@ export default class Tasks
 
         for (const project of projects.filter(x => x.name != "client"))
         {
-            commands.push(execute(`${timestamp()} Building ${chalk.bold.blue(project.name)}`, `tsc -p ${project.path}`));
+            commands.push(execute(`${timestamp()} Building ${chalk.bold.blue(project.name)}`, `${tsc} -p ${project.path}`));
         }
 
         await Promise.all(commands);
