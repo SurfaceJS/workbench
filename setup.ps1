@@ -1,17 +1,18 @@
 
+# Variables
+$tsc = "$PSScriptRoot/modules/node_modules/.bin/tsc.ps1";
+
 # Globals
-npm i -g typescript mocha nyc driveup python3;
+npm i -g driveup python3;
 
 # Modules
-Set-Location "$PSScriptRoot/modules";
-npm i;
 Set-Location "$PSScriptRoot/modules/tasks";
 npm i;
-tsc;
+Invoke-Expression $tsc;
 node cli setup;
 
 # Workbench
 Set-Location "$PSScriptRoot/tasks";
 npm i;
-tsc;
+Invoke-Expression $tsc;
 node cli setup;

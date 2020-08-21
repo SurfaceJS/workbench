@@ -1,9 +1,31 @@
-import { MethodsOf } from "../modules/source/@surface/core";
-import Tasks         from ".";
+#!/usr/bin/env node
+import { Command } from "commander";
+import Tasks       from ".";
 
-const [action, parameter] = process.argv.slice(2) as [MethodsOf<typeof Tasks>, string];
+const program = new Command();
 
-const task = Tasks[action];
+program
+    .command("build")
+    .action(Tasks.build);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-void task(...(parameter || "").split(",") as Parameters<typeof task>);
+program
+    .command("install")
+    .action(Tasks.install);
+
+program
+    .command("link")
+    .action(Tasks.link);
+
+program
+    .command("relink")
+    .action(Tasks.relink);
+
+program
+    .command("setup")
+    .action(Tasks.setup);
+
+program
+    .command("unlink")
+    .action(Tasks.unlink);
+
+program.parse(process.argv);

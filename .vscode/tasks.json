@@ -74,7 +74,7 @@
             "type": "shell"
         },
         {
-            "command": "tsc",
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1",
             "isBackground": true,
             "label": "TS Compile File",
             "options": {
@@ -93,7 +93,7 @@
             "type": "shell"
         },
         {
-            "command": "nyc mocha --ui tdd source/@surface/*/tests/**/*.spec.js",
+            "command": "npm run cover",
             "isBackground": true,
             "label": "Cover Modules",
             "options": {
