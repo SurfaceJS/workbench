@@ -4,8 +4,9 @@
         {
             "args":
             [
-                "clean",
-                "-p", "${workspaceFolder}/client"
+                "build",
+                "-p", "./client",
+                // "--eslintrc", "./client/.eslintrc.json"
                 // "build",
                 // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
                 // "-e",  "./source/index.ts",                                  /* "-e|--entry"           */
@@ -23,12 +24,20 @@
             ],
             "cwd":      "${workspaceFolder}",
             "name":     "Launch Compiler",
+            "outFiles":
+            [
+                "${workspaceFolder}/client/node_modules/eslint/lib/linter/linter.js",
+                "${workspaceFolder}/client/node_modules/eslint/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/compiler/node_modules/fork-ts-checker-webpack-plugin/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js"
+            ],
             "program":  "${workspaceFolder}/modules/source/@surface/compiler/cli",
             "protocol": "inspector",
             "request":  "launch",
             "skipFiles":
             [
-                "<node_internals>/**"
+                "<node_internals>/**",
             ],
             "type": "node"
         },
@@ -122,11 +131,10 @@
             "name": "Debug Test",
             "outFiles":
             [
-                "${workspaceFolder}/modules/source/@surface/*/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js"
             ],
-            "program":  "${workspaceFolder}/modules/tasks/node_modules/mocha/bin/_mocha",
+            "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "protocol": "inspector",
             "request":  "launch",
             "runtimeArgs":
@@ -134,6 +142,11 @@
                 "--nolazy"
             ],
             "sourceMaps": true,
+            "skipFiles":
+            [
+                "${workspaceFolder}/modules/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ],
             "type": "node"
         },
         {
