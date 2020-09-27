@@ -22,12 +22,39 @@
             "default": "@surface/core",
             "description": "Modules",
             "id": "modules",
-            "type": "promptString"
+            "options": [
+                "@surface/collection",
+                "@surface/compiler",
+                "@surface/core",
+                "@surface/custom-element",
+                "@surface/dependency-injection",
+                "@surface/enumerable",
+                "@surface/expression",
+                "@surface/io",
+                "@surface/mock",
+                "@surface/reactive",
+                "@surface/reflection",
+                "@surface/router",
+                "@surface/test-suite",
+                "@surface/view-router",
+                "@surface/web-host",
+            ],
+            "type": "pickString"
         }
     ],
     "tasks": [
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -e production -t rebuild",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js clean; node ./node_modules/@surface/compiler/cli.js analyze",
+            "isBackground": true,
+            "label": "Client Project - Analyze",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js clean; node ./node_modules/@surface/compiler/cli.js build --mode production",
             "isBackground": true,
             "label": "Client Project - Build",
             "options": {
@@ -37,7 +64,17 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js -t build -w true",
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js serve --hot",
+            "isBackground": true,
+            "label": "Client Project - Serve",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build --watch --mode development",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {
@@ -80,6 +117,16 @@
                     "${fileDirname}"
                 ]
             },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/nyc ${workspaceFolder}/modules/node_modules/.bin/mocha --ui tdd source/${input:modules}/tests/**/*.spec.js",
+            "isBackground": true,
+            "label": "Cover Module",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "problemMatcher": [],
             "type": "shell"
         },
         {
