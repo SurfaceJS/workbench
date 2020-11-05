@@ -46,7 +46,8 @@
             "name": "Launch Server",
             "outFiles":
             [
-                "${workspaceFolder}/server/source/**/*.js"
+                "${workspaceFolder}/server/source/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js"
             ],
             "program": "${workspaceFolder}/server/source/index.js",
             "request": "launch",
@@ -92,18 +93,19 @@
             [
                 "--nolazy"
             ],
+            "skipFiles":
+            [
+                "<node_internals>/**",
+            ],
             "sourceMaps": true,
             "type":       "node"
         },
         {
             "args":
             [
-                "publish",
-                "https://registry.npmjs.org",
-                "-t",
-                "123",
-                "-i",
-                "@surface/custom-element"
+                "publish", "https://registry.npmjs.org",
+                "-t"     , "123",
+                "-d"     , "true"
             ],
             "cwd":      "${fileDirname}",
             "name":     "Debug Task Cli",
@@ -113,6 +115,10 @@
             "runtimeArgs":
             [
                 "--nolazy"
+            ],
+            "skipFiles":
+            [
+                "<node_internals>/**",
             ],
             "sourceMaps": true,
             "type":       "node"
@@ -132,7 +138,9 @@
             "outFiles":
             [
                 "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js"
+                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js",
+                "${workspaceFolder}/modules/tasks/internal/**/*.js",
+                "${workspaceFolder}/modules/tasks/tests/**/*.js",
             ],
             "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "protocol": "inspector",
@@ -145,6 +153,7 @@
             "skipFiles":
             [
                 "${workspaceFolder}/modules/node_modules/**/*.js",
+                "${workspaceFolder}/node_modules/**/*.js",
                 "<node_internals>/**/*.js"
             ],
             "type": "node"

@@ -1,18 +1,12 @@
-
-# Variables
-$tsc = "$PSScriptRoot/modules/node_modules/.bin/tsc.ps1";
-
 # Globals
-npm i -g driveup python3;
+npm i -g driveup;
 
 # Modules
-Set-Location "$PSScriptRoot/modules/tasks";
-npm i;
-Invoke-Expression $tsc;
-node cli setup;
+Set-Location "$PSScriptRoot/modules";
+npm ci;
+npm run build;
 
 # Workbench
-Set-Location "$PSScriptRoot/tasks";
-npm i;
-Invoke-Expression $tsc;
-node cli setup;
+Set-Location "$PSScriptRoot";
+npm ci;
+npm run build;
