@@ -4,26 +4,29 @@
         "url": "https://github.com/SurfaceJS/workbench/issues"
     },
     "dependencies": {
-        "tslib": "file:../modules/node_modules/tslib"
-    },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "file:../modules/node_modules/@typescript-eslint/eslint-plugin",
-        "@typescript-eslint/parser": "file:../modules/node_modules/@typescript-eslint/parser",
-        "eslint": "file:../modules/node_modules/eslint",
-        "eslint-plugin-import": "file:../modules/node_modules/eslint-plugin-import",
-        "typescript": "file:../modules/node_modules/typescript"
+        "@surface/compiler": "file:../modules/source/@surface/compiler",
+        "@surface/custom-element": "file:../modules/source/@surface/custom-element",
+        "@surface/view-router": "file:../modules/source/@surface/view-router",
+        "@surface/dependency-injection": "file:../modules/source/@surface/dependency-injection",
+        "tslib": "2.0.3"
     },
     "description": "Basic client to development and testing.",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "4.6.0",
+        "@typescript-eslint/parser": "4.6.0",
+        "eslint": "7.12.1",
+        "eslint-plugin-import": "2.22.1",
+        "typescript": "4.0.5"
+    },
     "homepage": "https://github.com/SurfaceJS/workbench#readme",
     "license": "MIT",
-    "main": "./build/index.js",
     "name": "client",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SurfaceJS/workbench.git"
     },
     "scripts": {
-        "build": "./node_modules/.bin/surface",
+        "build": "./node_modules/.bin/sc",
         "lint": "eslint . --ext .ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

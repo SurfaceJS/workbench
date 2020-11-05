@@ -1,6 +1,6 @@
 {
     "entry":        "./source/index.ts",
-    "filename":     "[name]/[hash].js",
+    "filename":     "[name]/[fullhash].js",
     "forceTs":      ["./node_modules/@surface", "../modules/source/@surface"],
     "htmlTemplate": "./template.html",
     "output":       "../server/wwwroot"

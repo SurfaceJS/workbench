@@ -1,18 +1,21 @@
 <div style="display: flex; flex-direction: column;" >
     <span #if="host.visible" style="color: green">I'm ON :)</span>
     <span #else style="color: red">I'm OFF :(</span>
-    <button #on:click="host.toogle">Toggle visibility</button>
+    <button @click="host.toogle">Toggle visibility</button>
     <input id="field" ::value="host.text" />
     <input type="checkbox" ::checked="host.visible" />
     <span>{host.text.length}</span>
+    <dummy-child></dummy-child>
+    <dummy-child1></dummy-child1>
+    <dummy-child2></dummy-child2>
     <!--
     <h1>Destructured Iterable</h1>
     <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
         <span><b>{key}:</b>&nbsp;{value}</span>
     </template>
-    <button #on:click="host.increment">Increment</button>
-    <button #on:click="host.decrement">Decrement</button>
-    <button #on:click="host.multiply">Multiply</button>
+    <button @click="host.increment">Increment</button>
+    <button @click="host.decrement">Decrement</button>
+    <button @click="host.multiply">Multiply</button>
     <template #if="host.visible" #for="const item of host.items">
         <span>{ item }</span>
         <template #if="item % 2 == 0">
@@ -30,9 +33,8 @@
             <br>
         </template>
         <span>inject reactive</span> -->
-        <template #inject:reactive="{ items }">
+        <!-- <template #inject:reactive="{ items }">
             <template #for="const item of items">
-                <!-- Bind:{this.nodeName} { host.references.field.value } -->
                 <span>{this.nodeName}</span>
                 <template #if="host.visible">
                     <span><b>Header</b></span>
@@ -45,9 +47,9 @@
                     <span><b>Footer</b></span>
                 </template>
             </template>
-        </template>
-        <!-- <template #inject:items="{ item }">
-            Bind:{this.nodeName} { host.references.field.value }
+        </template> -->
+        <template #inject:items="{ item }">
+            Bind:{this.nodeName}
             <template #if="host.visible">
                 <span><b>Header</b></span>
                 <template #if="item % 2 == 0">
@@ -57,9 +59,9 @@
                     <span>Id: { item }</span>&nbsp;Odd
                 </template>
                 <span><b>Footer</b></span>
-                <dummy-child :value="host.references.field.value"></dummy-child>
+                <dummy-child :value="item"></dummy-child>
             </template>
-        </!-->
+        </template>
         <!-- <div slot="value">
             <span><b>Inside template</b></span>
             <dummy-child :value="host.references.field.value"></dummy-child>
