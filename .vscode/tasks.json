@@ -23,6 +23,7 @@
             "description": "Modules",
             "id": "modules",
             "options": [
+                "@surface/cli",
                 "@surface/collection",
                 "@surface/compiler",
                 "@surface/core",
@@ -48,27 +49,36 @@
             "isBackground": true,
             "label": "Client Project - Analyze",
             "options": {
-                "cwd": "${workspaceFolder}/client"
+                "cwd": "${workspaceFolder}/client",
+                "env": {
+                    "SURFACE_ENVIRONMENT": "development"
+                }
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js clean; node ./node_modules/@surface/compiler/cli.js build --mode production",
+            "command": "driveup; node ${workspaceFolder}/modules/source/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode production",
             "isBackground": true,
             "label": "Client Project - Build",
             "options": {
-                "cwd": "${workspaceFolder}/client"
+                "cwd": "${workspaceFolder}/client",
+                "env": {
+                    "SURFACE_ENVIRONMENT": "development"
+                }
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js serve --hot",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot",
             "isBackground": true,
             "label": "Client Project - Serve",
             "options": {
-                "cwd": "${workspaceFolder}/client"
+                "cwd": "${workspaceFolder}/client",
+                // "env": {
+                //     "SURFACE_ENVIRONMENT": "development"
+                // }
             },
             "problemMatcher": [],
             "type": "shell"
@@ -78,7 +88,10 @@
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {
-                "cwd": "${workspaceFolder}/client"
+                "cwd": "${workspaceFolder}/client",
+                "env": {
+                    "SURFACE_ENVIRONMENT": "development"
+                }
             },
             "problemMatcher": [],
             "type": "shell"
@@ -95,20 +108,19 @@
                 "cwd": "${workspaceFolder}/modules/tasks/"
             },
             "presentation": {
-                "reveal": "always"
+                "reveal": "silent"
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
             "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1",
-            "isBackground": true,
             "label": "TS Compile File",
             "options": {
                 "cwd": "${fileDirname}"
             },
             "presentation": {
-                "reveal": "always"
+                "reveal": "silent"
             },
             "problemMatcher": {
                 "base": "$tsc",
@@ -117,16 +129,6 @@
                     "${fileDirname}"
                 ]
             },
-            "type": "shell"
-        },
-        {
-            "command": "${workspaceFolder}/modules/node_modules/.bin/nyc ${workspaceFolder}/modules/node_modules/.bin/mocha --ui tdd source/${input:modules}/tests/**/*.spec.js",
-            "isBackground": true,
-            "label": "Cover Module",
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "problemMatcher": [],
             "type": "shell"
         },
         {
@@ -155,39 +157,9 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli install -m ${input:modules}",
-            "isBackground": true,
-            "label": "Install Modules",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org -t ${env:NPM_AUTH_TOKEN}",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org -t ${env:NPM_AUTH_TOKEN} -c development",
             "isBackground": true,
             "label": "Publish to NPM - DEV",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "node ${workspaceFolder}/modules/tasks/cli sync ${workspaceFolder}/modules/source/@surface -s ${input:strategy-type}",
-            "isBackground": true,
-            "label": "Sync Dependencies",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "node ${workspaceFolder}/modules/tasks/cli sync ${workspaceFolder}/modules/source/@surface -s ${input:strategy-type} -t ${input:sync-version}",
-            "isBackground": true,
-            "label": "Sync Dependencies version",
             "presentation": {
                 "reveal": "always"
             },
