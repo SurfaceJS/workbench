@@ -1,11 +1,3 @@
 {
-    "extends": "../modules/.eslintrc.json",
-    "parserOptions": {
-        "ecmaVersion": 11,
-        "project": "./tsconfig.json",
-        "sourceType": "module"
-    },
-    "rules": {
-        "import/dynamic-import-chunkname": "warn"
-    }
+    "extends": "../modules/.eslintrc.json"
 }

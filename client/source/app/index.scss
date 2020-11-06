@@ -1,12 +1,7 @@
 :host
 {
-    surface-menu
+    router-outlet
     {
-        flex-wrap: wrap;
-        width: 100%;
-        surface-menu-item
-        {
-            width: 200px;
-        }
+        display: inline-flex;
     }
 }

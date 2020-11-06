@@ -12,9 +12,6 @@
         "node_modules"
     ],
     "extends": "../modules/tsconfig.json",
-    "files": [
-        "./node_modules/@surface/compiler/environment.d.ts"
-    ],
     "include": [
         "./source"
     ]

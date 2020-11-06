@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.html";
+import CustomElement, { element, whenDone } from "@surface/custom-element";
+import template                             from "./index.html";
 
 function _random(max: number): number
 {
@@ -24,8 +24,7 @@ export default class DataTable extends CustomElement
 
     private stop(): void
     {
-        window.setTimeout(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
-        // ParallelWorker.done().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        void whenDone().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]
