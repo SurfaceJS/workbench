@@ -1,11 +1,10 @@
-// eslint-disable-next-line import/no-unassigned-import
+/* eslint-disable import/no-unassigned-import */
 import "../../components/dummy-child";
-// eslint-disable-next-line import/no-unassigned-import
 import "../../components/dummy-parent";
 
 import CustomElement, { element } from "@surface/custom-element";
-import template    from "./index.html";
-import style       from "./index.scss";
+import template                   from "./index.html";
+import style                      from "./index.scss";
 
 @element("directives-view", template, style)
 export default class DirectivesView extends CustomElement
@@ -19,9 +18,7 @@ export default class DirectivesView extends CustomElement
 
     public toogle(): void
     {
-        console.time();
         this.visible = !this.visible;
-        console.timeEnd();
     }
 
     public increment(): void

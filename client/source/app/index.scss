@@ -1,5 +1,10 @@
 :host
 {
+    box-sizing:     border-box;
+    display:        inline-flex;
+    flex-direction: column;
+    flex:           0 0 auto;
+    position:       relative;
     router-outlet
     {
         display: inline-flex;

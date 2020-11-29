@@ -7,36 +7,23 @@ export default class DummyParent extends CustomElement
 {
     protected current: number = 0;
 
-    protected items: number[] = [];
-    protected value: string        = "Scoped Value";
+    protected items: number[] = [1, 2, 3];
+    protected value: string   = "Scoped Value";
 
     protected increment(): void
     {
-        const items: number[] = [];
-
-        for (let i = 0; i <= 1000; i++)
-        {
-            items.push(i);
-        }
-
-        console.time();
-        // [...this.items, ...items];
-        this.items = items;
-        console.timeEnd();
+        this.items = this.items.map(x => x + 3);
     }
 
     protected random(): void
     {
         const items: number[] = [];
 
-        for (let i = 0; i <= 100; i++)
+        for (let i = 0; i < this.items.length; i++)
         {
-            items.push(Math.trunc(Math.random() * i));
+            items.push(Math.trunc(Math.random() * 2 + i));
         }
 
-        console.time();
-        // [...this.items, ...items];
         this.items = items;
-        console.timeEnd();
     }
 }

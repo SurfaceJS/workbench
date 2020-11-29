@@ -6,8 +6,6 @@
     <input type="checkbox" ::checked="host.visible" />
     <span>{host.text.length}</span>
     <dummy-child></dummy-child>
-    <dummy-child1></dummy-child1>
-    <dummy-child2></dummy-child2>
     <!--
     <h1>Destructured Iterable</h1>
     <template #for="const [key, value] of Object.entries({ foo: 1, bar: 2 })">
@@ -49,7 +47,7 @@
             </template>
         </template> -->
         <template #inject:items="{ item }">
-            Bind:{this.nodeName}
+            Bind: {this.nodeName}
             <template #if="host.visible">
                 <span><b>Header</b></span>
                 <template #if="item % 2 == 0">
@@ -59,7 +57,7 @@
                     <span>Id: { item }</span>&nbsp;Odd
                 </template>
                 <span><b>Footer</b></span>
-                <dummy-child :value="item"></dummy-child>
+                <dummy-child :value="host.text"></dummy-child>
             </template>
         </template>
         <!-- <div slot="value">

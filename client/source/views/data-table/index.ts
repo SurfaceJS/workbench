@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
-import CustomElement, { element, whenDone } from "@surface/custom-element";
-import template                             from "./index.html";
+import CustomElement, { element, scheduler } from "@surface/custom-element";
+import template                              from "./index.html";
 
 function _random(max: number): number
 {
@@ -19,12 +19,13 @@ export default class DataTable extends CustomElement
 
     private start(): void
     {
+        this.message = "Processing...";
         this.started = performance.now();
     }
 
     private stop(): void
     {
-        void whenDone().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        void scheduler.whenDone().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]
@@ -34,6 +35,8 @@ export default class DataTable extends CustomElement
         const nouns      = ["table", "chair", "house", "bbq", "desk", "car", "pony", "cookie", "sandwich", "burger", "pizza", "mouse", "keyboard"];
         const data       = [];
 
+        console.time();
+
         for (let i = 0; i < count; i++)
         {
             data.push
@@ -42,6 +45,8 @@ export default class DataTable extends CustomElement
                 label: `${adjectives[_random(adjectives.length)]} ${colours[_random(colours.length)]} ${nouns[_random(nouns.length)]}`,
             });
         }
+
+        console.timeEnd();
 
         return data;
     }

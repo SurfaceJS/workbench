@@ -45,14 +45,11 @@
     ],
     "tasks": [
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js clean; node ./node_modules/@surface/compiler/cli.js analyze",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js analyze",
             "isBackground": true,
             "label": "Client Project - Analyze",
             "options": {
                 "cwd": "${workspaceFolder}/client",
-                "env": {
-                    "SURFACE_ENVIRONMENT": "development"
-                }
             },
             "problemMatcher": [],
             "type": "shell"
@@ -63,9 +60,6 @@
             "label": "Client Project - Build",
             "options": {
                 "cwd": "${workspaceFolder}/client",
-                "env": {
-                    "SURFACE_ENVIRONMENT": "development"
-                }
             },
             "problemMatcher": [],
             "type": "shell"
@@ -76,22 +70,16 @@
             "label": "Client Project - Serve",
             "options": {
                 "cwd": "${workspaceFolder}/client",
-                // "env": {
-                //     "SURFACE_ENVIRONMENT": "development"
-                // }
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ./node_modules/@surface/compiler/cli.js build --watch --mode development",
+            "command": "driveup; node ${workspaceFolder}/modules/source/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode development --watch",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {
                 "cwd": "${workspaceFolder}/client",
-                "env": {
-                    "SURFACE_ENVIRONMENT": "development"
-                }
             },
             "problemMatcher": [],
             "type": "shell"

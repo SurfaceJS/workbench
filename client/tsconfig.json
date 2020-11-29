@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-        "incremental": false,
+        "incremental": true,
         "lib": [
             "dom",
             "esnext"
         ],
         "module": "ESNext",
-        "noEmit": true
+        "noEmit": true,
     },
     "exclude": [
         "node_modules"
