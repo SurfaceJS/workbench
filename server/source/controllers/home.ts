@@ -1,30 +1,25 @@
-import { Indexer } from "@surface/core";
-import ActionResult      from "@surface/web-host/action-result";
-import Controller        from "@surface/web-host/controller";
+import { Indexer }                  from "@surface/core";
+import { ActionResult, Controller } from "@surface/web-host";
 
-export class Home extends Controller
+export default class Home extends Controller
 {
-    public index(inbound?: Indexer): ActionResult
+    public index(_inbound?: Indexer): ActionResult
     {
-        if (super.httpContext.request.method == "GET")
+        if (this.httpContext.request.method == "GET")
         {
-            return super.view();
+            return this.view();
         }
-        else
-        {
-            return super.json(null);
-        }
+
+        return this.json(null);
     }
 
-    public edit(inbound?: Indexer): ActionResult
+    public edit(_inbound?: Indexer): ActionResult
     {
-        if (super.httpContext.request.method == "GET")
+        if (this.httpContext.request.method == "GET")
         {
-            return super.view("edit");
+            return this.view("edit");
         }
-        else
-        {
-            return super.json(null);
-        }
+
+        return this.json(null);
     }
 }

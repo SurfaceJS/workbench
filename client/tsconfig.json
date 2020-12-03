@@ -1,12 +1,18 @@
 {
-    "extends": "../modules/tsconfig.json",
-    "compilerOptions":
-    {
-        "incremental": false,
-        "lib":         ["dom", "esnext"],
-        "module":      "esnext",
-        "noEmit":      true,
-        "types":       ["file-extensions"],
+    "compilerOptions": {
+        "incremental": true,
+        "lib": [
+            "dom",
+            "esnext"
+        ],
+        "module": "ESNext",
+        "noEmit": true,
     },
-    "exclude": ["node_modules"]
+    "exclude": [
+        "node_modules"
+    ],
+    "extends": "../modules/tsconfig.json",
+    "include": [
+        "./source"
+    ]
 }

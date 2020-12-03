@@ -1,11 +1,10 @@
-import { hexToHsva } from "@surface/color";
-import { element }   from "@surface/custom-element/decorators";
-import View          from "@surface/view";
-import template      from "./index.html";
-import style         from "./index.scss";
+import { hexToHsva }              from "@surface/color";
+import CustomElement, { element } from "@surface/custom-element";
+import template                   from "./index.html";
+import style                      from "./index.scss";
 
 @element("colors-view", template, style)
-export default class Colors extends View
+export default class Colors extends CustomElement
 {
     private readonly cssVariables = document.head.querySelector<HTMLStyleElement>("#smd-css-variables")!;
 
@@ -44,7 +43,7 @@ export default class Colors extends View
         "blue-grey",
         "grey",
         "black",
-        "white"
+        "white",
     ];
 
     protected readonly weights =
@@ -65,15 +64,10 @@ export default class Colors extends View
         "A700",
     ];
 
-    public constructor()
-    {
-        super();
-        this.viewName = "Colors";
-    }
-
     protected isDark(variable: string): boolean
     {
-        // tslint:disable-next-line:no-any
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const color = ((this.cssVariables.sheet as CSSStyleSheet).cssRules[0] as any).styleMap.getAll(variable)?.[0]?.[0]?.trim() ?? "#000000";
 
         const hsv = hexToHsva(color);
@@ -83,7 +77,7 @@ export default class Colors extends View
 
     protected getCssVariable(theme: string, name: string, weight?: string): string
     {
-        return "--smd-" + this.getName(theme, name, weight);
+        return `--smd-${this.getName(theme, name, weight)}`;
     }
 
     protected getClass(theme: string, name: string, weight?: string): Record<string, boolean>

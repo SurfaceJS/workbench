@@ -1,95 +1,199 @@
 {
-    "version": "0.2.0",
     "configurations":
     [
-        
         {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Compiler",
-            "program":  "${workspaceFolder}/client/node_modules/@surface/compiler/cli",
-            "args":     ["-c", "client"],
-            "cwd":      "${workspaceFolder}",
-            "protocol": "inspector",
-            "outFiles": ["${workspaceFolder}/**/*.js"],
-        },
-        {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Server",
-            "program":  "${workspaceFolder}/server/source/index.js",
-            "cwd":      "${workspaceFolder}/server/source",
-            "outFiles": ["${workspaceFolder}/server/source/**/*.js"],
-        },
-        {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Modules Tasks Cli",
-            "program":  "${workspaceFolder}/modules/tasks/cli",
-            "args":     ["relink"],
-            "cwd":      "${workspaceFolder}/modules/tasks"
-        },
-        {
-            "type":     "node",
-            "request":  "launch",
-            "name":     "Launch Workbench Tasks Cli",
-            "program":  "${workspaceFolder}/tasks/cli",
-            "args":     ["relink"],
-            "cwd":      "${workspaceFolder}/tasks"
-        },
-        {
-            "type":       "chrome",
-            "request":    "launch",
-            "name":       "Launch Chrome",
-            "url":        "http://localhost:1337",
-            "webRoot":    "${workspaceFolder}/client/source",
-            "sourceMaps": true
-        },
-        {
-            "type":    "node",
+            "name": "Launch Edge",
             "request": "launch",
-            "name":    "Launch Test",
-            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
-            "cwd":     "${fileDirname}",
+            "sourceMaps": true,
+            "type": "vscode-edge-devtools.debug",
+            "url": "http://localhost:8080/",
+            "webRoot": "${workspaceFolder}/client/source"
+        },
+        {
             "args":
             [
-                "-u", "tdd",
-                "--timeout", "9999999",
+                "build",
+                "-p", "./client",
+                // "--eslintrc", "./client/.eslintrc.json"
+                // "build",
+                // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
+                // "-e",  "./source/index.ts",                                  /* "-e|--entry"           */
+                // "-el", "${workspaceFolder}/client/.eslintrc.json",           /* "-el|--eslintrc"       */
+                // "-f",  "[name]/[hash].js",                                   /* "-f|--filename"        */
+                // "-ft", "./node_modules/@surface,../modules/source/@surface", /* "-ft|--force-ts"       */
+                // "-l",  "minimal",                                            /* "-l|--log"             */
+                // "-m",  "production",                                         /* "-m|--mode"            */
+                // "-o",  "${workspaceFolder}/server/wwwroot",                  /* "-o|--output"          */
+                // "-pp", "/",                                                  /* "-pp|--public-path"    */
+                // "-t",  "${workspaceFolder}/client/template.html",            /* "-t|--html-template"   */
+                // "-tc", "${workspaceFolder}/client/tsconfig.json",            /* "-tc|--tsconfig"       */
+                // // "-wc", "${workspaceFolder}/client/webpack-config.js",     /* "-wc|--webpack-config" */
+                // "-w",  "false",                                              /* "-w|--watch"           */
+            ],
+            "cwd":      "${workspaceFolder}",
+            "name":     "Launch Compiler",
+            "outFiles":
+            [
+                "${workspaceFolder}/client/node_modules/eslint/lib/linter/linter.js",
+                "${workspaceFolder}/client/node_modules/eslint/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/compiler/node_modules/fork-ts-checker-webpack-plugin/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js"
+            ],
+            "program":  "${workspaceFolder}/modules/source/@surface/compiler/cli",
+            "protocol": "inspector",
+            "request":  "launch",
+            "skipFiles":
+            [
+                "<node_internals>/**",
+            ],
+            "type": "node"
+        },
+        {
+            "cwd":  "${workspaceFolder}/server/source",
+            "name": "Launch Server",
+            "outFiles":
+            [
+                "${workspaceFolder}/server/source/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js"
+            ],
+            "program": "${workspaceFolder}/server/source/index.js",
+            "request": "launch",
+            "type":    "node"
+        },
+        {
+            "args":
+            [
+                "relink"
+            ],
+            "cwd":     "${workspaceFolder}/modules/tasks",
+            "name":    "Launch Modules Tasks Cli",
+            "program": "${workspaceFolder}/modules/tasks/cli",
+            "request": "launch",
+            "type":    "node"
+        },
+        {
+            "args":
+            [
+                "relink"
+            ],
+            "cwd":     "${workspaceFolder}/tasks",
+            "name":    "Launch Workbench Tasks Cli",
+            "program": "${workspaceFolder}/tasks/cli",
+            "request": "launch",
+            "type":    "node"
+        },
+        {
+            "name":    "Launch Chrome",
+            "request": "launch",
+            "sourceMaps": true,
+            "type":    "chrome",
+            "url":     "http://localhost:8080",
+            "webRoot": "${workspaceFolder}/client/source"
+        },
+        {
+            "cwd":      "${fileDirname}",
+            "name":     "Debug File",
+            "program":  "${fileDirname}/${fileBasenameNoExtension}.js",
+            "protocol": "inspector",
+            "request":  "launch",
+            "runtimeArgs":
+            [
+                "--nolazy"
+            ],
+            "skipFiles":
+            [
+                "<node_internals>/**",
+            ],
+            "sourceMaps": true,
+            "type":       "node"
+        },
+        {
+            "args":
+            [
+                "publish", "https://registry.npmjs.org",
+                "-t"     , "123",
+                "-d"     , "true"
+            ],
+            "cwd":      "${fileDirname}",
+            "name":     "Debug Task Cli",
+            "program":  "${workspaceFolder}/modules/tasks/cli",
+            "protocol": "inspector",
+            "request":  "launch",
+            "runtimeArgs":
+            [
+                "--nolazy"
+            ],
+            "skipFiles":
+            [
+                "<node_internals>/**",
+            ],
+            "sourceMaps": true,
+            "type":       "node"
+        },
+        {
+            "args":
+            [
+                "-u",
+                "tdd",
+                "--timeout",
+                "9999999",
                 "--colors",
                 "${fileBasenameNoExtension}.js"
             ],
-            "protocol": "inspector",
-            "sourceMaps": true,            
-            "runtimeArgs": ["--nolazy"],
+            "cwd":  "${fileDirname}",
+            "name": "Debug Test",
             "outFiles":
             [
-                "${workspaceFolder}/modules/source/@surface/*/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
+                "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
+                "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js",
+                "${workspaceFolder}/modules/tasks/internal/**/*.js",
+                "${workspaceFolder}/modules/tasks/tests/**/*.js",
             ],
+            "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "protocol": "inspector",
+            "request":  "launch",
+            "runtimeArgs":
+            [
+                "--nolazy"
+            ],
+            "sourceMaps": true,
+            "skipFiles":
+            [
+                "${workspaceFolder}/modules/node_modules/**/*.js",
+                "${workspaceFolder}/node_modules/**/*.js",
+                "<node_internals>/**/*.js"
+            ],
+            "type": "node"
         },
         {
-            "type":    "node",
-            "request": "launch",
-            "name":    "Launch Tests",
-            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
-            "cwd":     "${workspaceFolder}/modules",
             "args":
             [
-                "-u", "tdd",
-                "--timeout", "9999999",
+                "-u",
+                "tdd",
+                "--timeout",
+                "9999999",
                 "--colors",
                 "source/@surface/*/tests/*.spec.js"
             ],
-            "console":    "integratedTerminal",
-            "sourceMaps": true,
+            "console": "integratedTerminal",
+            "cwd":     "${workspaceFolder}/modules",
+            "name":    "Launch Tests",
             "outFiles":
             [
                 "${workspaceFolder}/modules/source/@surface/*/*.js",
                 "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
                 "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
             ],
-            "runtimeArgs": ["--nolazy"]
+            "program": "${workspaceFolder}/modules/tasks/node_modules/mocha/bin/_mocha",
+            "request": "launch",
+            "runtimeArgs":
+            [
+                "--nolazy"
+            ],
+            "sourceMaps": true,
+            "type":       "node"
         }
-    ]
+    ],
+    "version": "0.2.0"
 }

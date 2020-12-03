@@ -1,7 +1,7 @@
-import Router        from "@surface/router";
-import WebHost       from "@surface/web-host";
-import Configuration from "@surface/web-host/configuration";
+import Router                     from "@surface/router";
+import WebHost, { Configuration } from "@surface/web-host";
 
+// eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-require-imports
 const configuration = new Configuration(__dirname, require("../server.config.json"));
 
 WebHost.configure(configuration)
@@ -9,8 +9,8 @@ WebHost.configure(configuration)
     .useMvc
     (
         new Router()
-            .mapRoute("api", "api/{controller}/{action=index}/{id?}")
-            .mapRoute("default", "{controller}/{action=index}/{id?}", true)
+            .map("api/{controller}/{action=index}/{id?}")
+            .map("{controller}/{action=index}/{id?}"),
     )
-    .useFallBack("/app")
+    .useFallBack("/")
     .run();
