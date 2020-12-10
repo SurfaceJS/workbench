@@ -45,7 +45,7 @@
     ],
     "tasks": [
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js analyze",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js analyze -p ${workspaceFolder}/client --mode production",
             "isBackground": true,
             "label": "Client Project - Analyze",
             "options": {
@@ -130,11 +130,11 @@
             "type": "shell"
         },
         {
-            "command": "tsc; node ${workspaceFolder}/modules/tasks/cli cover ${file}",
+            "command": "node ${workspaceFolder}/modules/tasks/cli cover ${file}",
             "isBackground": true,
             "label": "Cover File",
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}/modules"
             },
             "presentation": {
                 "reveal": "always"
@@ -155,11 +155,11 @@
             "type": "shell"
         },
         {
-            "command": "tsc; node ${workspaceFolder}/modules/node_modules/mocha/bin/mocha --ui tdd ${fileBasenameNoExtension}.js",
+            "command": "${workspaceFolder}/modules/node_modules/.bin/mocha.cmd --loader=@surface/mock-loader --ui tdd ${fileDirname}/${fileBasenameNoExtension}.js",
             "isBackground": true,
             "label": "Test File",
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}/modules"
             },
             "presentation": {
                 "reveal": "always"

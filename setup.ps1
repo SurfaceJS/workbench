@@ -1,5 +1,5 @@
 # Globals
-npm i -g driveup;
+npm i -g driveup cross-env;
 
 # Modules
 Set-Location "$PSScriptRoot/modules";
