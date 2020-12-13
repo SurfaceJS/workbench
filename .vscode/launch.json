@@ -133,7 +133,6 @@
         {
             "args":
             [
-                "--loader=@surface/mock-loader",
                 "--ui=tdd",
                 "--timeout=9999999",
                 "--colors",
