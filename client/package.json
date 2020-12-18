@@ -6,7 +6,7 @@
     "dependencies": {
         "@surface/compiler": "file:../modules/source/@surface/compiler",
         "@surface/custom-element": "file:../modules/source/@surface/custom-element",
-        "@surface/view-router": "file:../modules/source/@surface/view-router",
+        "@surface/web-router": "file:../modules/source/@surface/web-router",
         "@surface/dependency-injection": "file:../modules/source/@surface/dependency-injection",
         "tslib": "2.0.3"
     },
