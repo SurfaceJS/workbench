@@ -133,27 +133,25 @@
         {
             "args":
             [
-                "-u",
-                "tdd",
-                "--timeout",
-                "9999999",
+                "--ui=tdd",
+                "--timeout=9999999",
                 "--colors",
-                "${fileBasenameNoExtension}.js"
+                "${fileDirname}/${fileBasenameNoExtension}.js"
             ],
-            "cwd":  "${fileDirname}",
+            "cwd":  "${workspaceFolder}/modules",
             "name": "Debug Test",
             "outFiles":
             [
                 "${workspaceFolder}/modules/source/@surface/*/internal/**/*.js",
                 "${workspaceFolder}/modules/source/@surface/*/tests/**/*.js",
-                "${workspaceFolder}/modules/tasks/internal/**/*.js",
-                "${workspaceFolder}/modules/tasks/tests/**/*.js",
+                "${workspaceFolder}/modules/tasks/**/*.js",
             ],
             "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "protocol": "inspector",
             "request":  "launch",
             "runtimeArgs":
             [
+                "--loader=@surface/mock-loader",
                 "--nolazy"
             ],
             "sourceMaps": true,
@@ -165,34 +163,6 @@
             ],
             "type": "node"
         },
-        {
-            "args":
-            [
-                "-u",
-                "tdd",
-                "--timeout",
-                "9999999",
-                "--colors",
-                "source/@surface/*/tests/*.spec.js"
-            ],
-            "console": "integratedTerminal",
-            "cwd":     "${workspaceFolder}/modules",
-            "name":    "Launch Tests",
-            "outFiles":
-            [
-                "${workspaceFolder}/modules/source/@surface/*/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/internal/*.js",
-                "${workspaceFolder}/modules/source/@surface/*/tests/*.js"
-            ],
-            "program": "${workspaceFolder}/modules/tasks/node_modules/mocha/bin/_mocha",
-            "request": "launch",
-            "runtimeArgs":
-            [
-                "--nolazy"
-            ],
-            "sourceMaps": true,
-            "type":       "node"
-        }
     ],
     "version": "0.2.0"
 }
