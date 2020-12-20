@@ -1,8 +1,12 @@
+import fs                         from "fs";
+import path                       from "path";
+import { fileURLToPath }          from "url";
 import Router                     from "@surface/router";
 import WebHost, { Configuration } from "@surface/web-host";
 
-// eslint-disable-next-line import/no-commonjs, @typescript-eslint/no-require-imports
-const configuration = new Configuration(__dirname, require("../server.config.json"));
+const dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const configuration = new Configuration(dirname, JSON.parse(fs.readFileSync("../server.config.json").toString()));
 
 WebHost.configure(configuration)
     .useStatic()
