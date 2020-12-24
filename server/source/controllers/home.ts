@@ -1,5 +1,6 @@
-import { Indexer }                  from "@surface/core";
-import { ActionResult, Controller } from "@surface/web-host";
+import type { Indexer }      from "@surface/core";
+import type { ActionResult } from "@surface/web-host";
+import { Controller }        from "@surface/web-host";
 
 export default class Home extends Controller
 {

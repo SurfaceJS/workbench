@@ -1,6 +1,7 @@
-import { Delegate }                 from "@surface/core";
-import Enumareble                   from "@surface/enumerable";
-import { ActionResult, Controller } from "@surface/web-host";
+import type { Delegate }     from "@surface/core";
+import Enumareble            from "@surface/enumerable";
+import type { ActionResult } from "@surface/web-host";
+import { Controller }        from "@surface/web-host";
 
 export default class User extends Controller
 {
