@@ -1,5 +1,5 @@
 import CustomElement from "@surface/custom-element";
-import ViewRouter    from "@surface/view-router";
+import ViewRouter    from "@surface/web-router";
 import routes        from "./routes";
 
 const router = new ViewRouter("app-root", routes);

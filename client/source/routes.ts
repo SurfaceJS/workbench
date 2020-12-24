@@ -1,4 +1,4 @@
-import { RouteConfiguration } from "@surface/view-router";
+import type { RouteConfiguration } from "@surface/web-router";
 
 const routes: RouteConfiguration[] =
 [

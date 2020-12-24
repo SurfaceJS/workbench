@@ -1,5 +1,12 @@
-// eslint-disable-next-line import/no-unassigned-import
-import "./components";
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unassigned-import */
+import "@surface/material-design/components/app";
+import "@surface/material-design/components/app-bar";
+import "@surface/material-design/components/app-toogle";
+import "@surface/material-design/components/content";
+import "@surface/material-design/components/footer";
+import "@surface/material-design/components/navigation-drawer";
+import "@surface/material-design/components/switch";
 
 import CustomElement, { element } from "@surface/custom-element";
 import MaterialDesign             from "@surface/material-design";
