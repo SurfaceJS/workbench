@@ -1,0 +1,16 @@
+{
+    "$schema":     "http://json.schemastore.org/web-manifest",
+    "description": "Workbench web app",
+    "dir":         "rtl",
+    "display":     "standalone",
+    "icons":
+    [
+        { "sizes": "any", "src": "./source/assets/placeholder.png" }
+    ],
+    "lang":          "pt-BR",
+    "name":          "Workbench",
+    "orientation":   "portrait-primary",
+    "serviceworker": { "src": "/service-worker.js" },
+    "short_name":    "SINM",
+    "start_url":     "/"
+}

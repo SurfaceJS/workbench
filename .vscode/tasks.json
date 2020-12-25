@@ -65,7 +65,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot --use-workbox",
             "isBackground": true,
             "label": "Client Project - Serve",
             "options": {
