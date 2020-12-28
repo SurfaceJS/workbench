@@ -1,0 +1,29 @@
+:host
+{
+    display:        inline-flex;
+    flex: 0 0       auto;
+    flex-direction: column;
+    width:          100%;
+
+    .swatches
+    {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    .color-swatch
+    {
+        display:         inline-flex;
+        align-items:     center;
+        justify-content: center;
+        height:          36px;
+        width:           180px;
+
+        color: black;
+
+        &.dark
+        {
+            color: white;
+        }
+    }
+}

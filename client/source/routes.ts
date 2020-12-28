@@ -2,16 +2,13 @@ import type { RouteConfiguration } from "@surface/web-router";
 
 const routes: RouteConfiguration[] =
 [
-    { component: async () => import("./views/contact"),     path: "/contact" },
+    { component: async () => import("./views/buttons"),     path: "/buttons" },
+    { component: async () => import("./views/colors"),      path: "/colors" },
     { component: async () => import("./views/data-table"),  path: "/data-table" },
     { component: async () => import("./views/directives"),  path: "/directives" },
-    { component: async () => import("./views/home"),        path: "/home" },
-    { component: async () => import("./views/icon"),        path: "/icon" },
-    { component: async () => import("./views/list"),        path: "/list" },
-    { component: async () => import("./views/login"),       path: "/login" },
-    { component: async () => import("./views/menu"),        path: "/menu" },
-    { component: async () => import("./views/modal"),       path: "/modal" },
-    { component: async () => import("./views/stack-panel"), path: "/stack-panel" },
+    { component: async () => import("./views/icons"),       path: "/icons" },
+    { component: async () => import("./views/switches"),    path: "/switches" },
+    { component: async () => import("./views/text-fields"), path: "/text-fields" },
 ];
 
 export default routes;

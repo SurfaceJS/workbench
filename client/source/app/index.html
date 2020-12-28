@@ -1,12 +1,22 @@
-<div>
-    [<a #to="'/data-table'">Data Table</a>]
-    [<a #to="'/directives'">Directives</a>]
-    [<a #to="'/icon'">Icon</a>]
-    [<a #to="'/list'">List</a>]
-    [<a #to="'/menu'">Menu</a>]
-    [<a #to="'/modal'">Modal</a>]
-    [<a #to="'/stack-panel'">Stack Panel</a>]
-    <input id="one" type="text" ::value="host.data" />
-    <input id="two" type="text" ::value="host.data" />
-</div>
-<router-outlet></router-outlet>
+<smd-app>
+    <smd-app-bar>
+        <smd-app-toogle color="white"></smd-app-toogle>
+        <h1 style="color: white;">Surface</h1>
+        <div style="margin-left: auto; margin-right: 20px;">
+            <smd-switch inset label="Dark" ::checked="host.dark" color="white" text-color="dark-text"></smd-switch>
+        </div>
+    </smd-app-bar>
+    <smd-navigation-drawer>
+        <smd-button text #to="'/buttons'"     block>Buttons</smd-button>
+        <smd-button text #to="'/colors'"      block>Colors</smd-button>
+        <smd-button text #to="'/data-table'"  block>Data Table</smd-button>
+        <smd-button text #to="'/directives'"  block>Directives</smd-button>
+        <smd-button text #to="'/icons'"       block>Icons</smd-button>
+        <smd-button text #to="'/switches'"    block>Switches</smd-button>
+        <smd-button text #to="'/text-fields'" block>Text Fields</smd-button>
+    </smd-navigation-drawer>
+    <smd-content>
+        <router-outlet></router-outlet>
+    </smd-content>
+    <smd-footer><p style="color: white;">&copy; 2020 https://github.com/SurfaceJS<p></smd-footer>
+</smd-app>
