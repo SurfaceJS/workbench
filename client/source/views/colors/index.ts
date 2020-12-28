@@ -1,5 +1,5 @@
-import { hexToHsva }              from "@surface/color";
 import CustomElement, { element } from "@surface/custom-element";
+import { hexToHsla }              from "@surface/material-design";
 import template                   from "./index.html";
 import style                      from "./index.scss";
 
@@ -70,9 +70,9 @@ export default class Colors extends CustomElement
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const color = ((this.cssVariables.sheet as CSSStyleSheet).cssRules[0] as any).styleMap.getAll(variable)?.[0]?.[0]?.trim() ?? "#000000";
 
-        const hsv = hexToHsva(color);
+        const hsv = hexToHsla(color);
 
-        return hsv.v < 0.5;
+        return hsv.l < 0.5;
     }
 
     protected getCssVariable(theme: string, name: string, weight?: string): string

@@ -1,0 +1,33 @@
+<div class="stack">
+    <div class="stack">
+        <input type="button" @click="host.increment" value="Increment" />
+        <input type="button" @click="host.random"    value="Random" />
+        <slot></slot>
+        <!-- <template #for="const item of host.items">
+            --------------------
+            <span><b>Some Header</b></span>
+            <template #inject:items="items">
+                <span>Some Default</span>
+            </template>
+            <span><b>Some Footer</b></span>
+            --------------------
+            <br>
+        </template> -->
+        <slot name="value"></slot>
+    </div>
+    <div class="stack">
+        <!-- <dummy-child>
+            <template #inject:child>
+                <template #placeholder:parent></template>
+            </template>
+        </dummy-child> -->
+        <!-- <template #for="const key of [1, 2, 3]" #placeholder:[key]>
+            <h1>Injector Placeholder: {key}</h1>
+        </template> -->
+        <span #for="const item of host.items" #placeholder:items="({ item })">Default {item}</span>
+        <!-- <template #placeholder:reactive="({ items: host.items })">
+            <span #for="const item of host.items">Placeholder {item}</span>
+        </template> -->
+        <!-- <span #placeholder:a>Placeholder</span> -->
+    </div>
+</div>

@@ -1,0 +1,11 @@
+:host
+{
+    display:        inline-flex;
+    flex-direction: column;
+
+    .stack
+    {
+        display:        flex;
+        flex-direction: column;
+    }
+}
