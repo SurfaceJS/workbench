@@ -4,12 +4,12 @@
         "url": "https://github.com/SurfaceJS/workbench/issues"
     },
     "dependencies": {
-        "@surface/color": "file:../modules/source/@surface/color",
-        "@surface/compiler": "file:../modules/source/@surface/compiler",
-        "@surface/custom-element": "file:../modules/source/@surface/custom-element",
-        "@surface/dependency-injection": "file:../modules/source/@surface/dependency-injection",
-        "@surface/material-design": "file:../modules/source/@surface/material-design",
-        "@surface/web-router": "file:../modules/source/@surface/web-router",
+        "@surface/color": "file:../modules/packages/@surface/color",
+        "@surface/compiler": "file:../modules/packages/@surface/compiler",
+        "@surface/custom-element": "file:../modules/packages/@surface/custom-element",
+        "@surface/dependency-injection": "file:../modules/packages/@surface/dependency-injection",
+        "@surface/material-design": "file:../modules/packages/@surface/material-design",
+        "@surface/web-router": "file:../modules/packages/@surface/web-router",
         "tslib": "2.0.3"
     },
     "description": "Basic client to development and testing.",

@@ -1,7 +1,7 @@
 {
     "entry":        "./source/index.ts",
     "filename":     "[name]/[fullhash].js",
-    "forceTs":      ["./node_modules/@surface", "../modules/source/@surface"],
+    "forceTs":      ["./node_modules/@surface", "../modules/packages/@surface"],
     "htmlTemplate": "./template.html",
     "output":       "../server/wwwroot"
 }

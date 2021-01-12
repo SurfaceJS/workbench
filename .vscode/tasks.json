@@ -55,7 +55,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/source/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode production",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode production",
             "isBackground": true,
             "label": "Client Project - Build",
             "options": {
@@ -75,7 +75,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/source/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode development --watch",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode development --watch",
             "isBackground": true,
             "label": "Client Project - Watch",
             "options": {
