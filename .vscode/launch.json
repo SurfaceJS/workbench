@@ -12,7 +12,8 @@
             "args":
             [
                 "build",
-                "-p", "./client",
+                "-p", "./",
+                "--watch"
                 // "--eslintrc", "./client/.eslintrc.json"
                 // "build",
                 // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
@@ -29,7 +30,7 @@
                 // // "-wc", "${workspaceFolder}/client/webpack-config.js",     /* "-wc|--webpack-config" */
                 // "-w",  "false",                                              /* "-w|--watch"           */
             ],
-            "cwd":      "${workspaceFolder}",
+            "cwd":      "${workspaceFolder}/client",
             "name":     "Launch Compiler",
             "outFiles":
             [
@@ -157,8 +158,8 @@
             "sourceMaps": true,
             "skipFiles":
             [
-                "${workspaceFolder}/modules/node_modules/**/*.js",
-                "${workspaceFolder}/node_modules/**/*.js",
+                // "${workspaceFolder}/modules/node_modules/**/*.js",
+                // "${workspaceFolder}/node_modules/**/*.js",
                 "<node_internals>/**/*.js"
             ],
             "type": "node"

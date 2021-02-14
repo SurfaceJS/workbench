@@ -55,7 +55,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode production",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client/surface.json --mode production",
             "isBackground": true,
             "label": "Client Project - Build",
             "options": {
@@ -65,7 +65,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot --use-workbox",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot",
             "isBackground": true,
             "label": "Client Project - Serve",
             "options": {
