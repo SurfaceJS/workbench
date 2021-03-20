@@ -1,7 +1,32 @@
 {
-    "entry":        "./source/index.ts",
-    "filename":     "[name]/[fullhash].js",
-    "forceTs":      ["./node_modules/@surface", "../modules/packages/@surface"],
-    "htmlTemplate": "./template.html",
-    "output":       "../server/wwwroot"
+    "$schema": "../modules/packages/@surface/compiler/schema.json",
+    "compilations": [
+        {
+            "entry": "./source/index.ts",
+            "filename": "[name]/[fullhash].js",
+            "htmlTemplate": "./template.html",
+            "useWorkbox": true
+        },
+        {
+            "entry": {
+                "another-service-worker": "./source/another-service-worker.ts"
+            }
+        }
+    ],
+    "devServer": {
+        "compress": true,
+        "liveReload": false,
+        "open": true,
+        "port": 1337
+    },
+    "forceTs": [
+        "./node_modules/@surface",
+        "../modules/packages/@surface"
+    ],
+    "logging": true,
+    "output": "../server/wwwroot",
+    "webpack": {
+        "configuration": "./webpack.js",
+        "postConfiguration": "./webpack-post-configuration.js"
+    }
 }

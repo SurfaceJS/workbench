@@ -13,7 +13,6 @@
             [
                 "build",
                 "-p", "./",
-                "--watch"
                 // "--eslintrc", "./client/.eslintrc.json"
                 // "build",
                 // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */

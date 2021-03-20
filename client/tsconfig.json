@@ -3,7 +3,8 @@
         "incremental": true,
         "lib": [
             "dom",
-            "esnext"
+            "esnext",
+            "WebWorker",
         ],
         "module": "ESNext",
         "noEmit": true,
