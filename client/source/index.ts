@@ -4,7 +4,7 @@ import routes        from "./routes";
 
 const router = new ViewRouter("app-root", routes);
 
-CustomElement.registerDirective("to", router.asDirectiveHandler());
+CustomElement.registerDirective("to", router.asDirective());
 
 void import("./app").then(() => void router.pushCurrentLocation());
 
