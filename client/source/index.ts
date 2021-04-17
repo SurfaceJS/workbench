@@ -1,10 +1,10 @@
-import CustomElement from "@surface/custom-element";
-import ViewRouter    from "@surface/web-router";
-import routes        from "./routes";
+import CustomElement                       from "@surface/custom-element";
+import ViewRouter, { RouterLinkDirective } from "@surface/web-router";
+import routes                              from "./routes";
 
 const router = new ViewRouter("app-root", routes);
 
-CustomElement.registerDirective("to", router.asDirective());
+CustomElement.registerDirective("to", context => new RouterLinkDirective(router, context));
 
 void import("./app").then(() => void router.pushCurrentLocation());
 

@@ -1,46 +1,46 @@
 <span>
-    <template #for="const theme of ['', 'dark', 'light']">
+    <span #for="const theme of ['', 'dark', 'light']">
         <h1>{theme || "Default"}</h1>
-        <template #for="const color of host.colors">
-            <span class="swatches">
-                <div :style="host.getStyle(theme, color)" :class="host.getClass(theme, color)">{host.getName(theme, color)}</div>
-                <template #for="const weight of host.weights">
-                    <div :style="host.getStyle(theme, color, weight)" :class="host.getClass(theme, color, weight)">{host.getName(theme, color, weight)}</div>
-                </template>
-            </span>
-        </template>
-    </template>
+        <span #for="const color of host.colors" class="swatches" >
+            <div :style="host.getStyle(theme, color)" :class="host.getClass(theme, color)">{host.getName(theme, color)}</div>
+            <div
+                #for="const weight of host.weights"
+                :style="host.getStyle(theme, color, weight)"
+                :class="host.getClass(theme, color, weight)"
+            >{host.getName(theme, color, weight)}</div>
+        </span>
+    </span>
 </span>
 <h1>Material Colors</h1>
 <span>
-    <template #for="const color of host.materialColors.slice(0, 7)">
-        <span class="swatches">
-            <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
-            <template #for="const weight of host.weights">
-                <div :style="host.getStyle('', color, weight)" :class="host.getClass('', color, weight)">{host.getName('', color, weight)}</div>
-            </template>
-        </span>
-    </template>
+    <span #for="const color of host.materialColors.slice(0, 7)" class="swatches">
+        <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
+        <div
+            #for="const weight of host.weights"
+            :style="host.getStyle('', color, weight)"
+            :class="host.getClass('', color, weight)"
+        >{host.getName('', color, weight)}</div>
+    </span>
 </span>
 <span>
-    <template #for="const color of host.materialColors.slice(7, 14)">
-        <span class="swatches">
-            <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
-            <template #for="const weight of host.weights">
-                <div :style="host.getStyle('', color, weight)" :class="host.getClass('', color, weight)">{host.getName('', color, weight)}</div>
-            </template>
-        </span>
-    </template>
+    <span #for="const color of host.materialColors.slice(7, 14)" class="swatches">
+        <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
+            <div
+                #for="const weight of host.weights"
+                :style="host.getStyle('', color, weight)"
+                :class="host.getClass('', color, weight)"
+            >{host.getName('', color, weight)}</div>
+    </span>
 </span>
 <span>
-    <template #for="const color of host.materialColors.slice(14, 19)">
-        <span class="swatches">
-            <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
-            <template #for="const weight of host.weights">
-                <div :style="host.getStyle('', color, weight)" :class="host.getClass('', color, weight)">{host.getName('', color, weight)}</div>
-            </template>
-        </span>
-    </template>
+    <span #for="const color of host.materialColors.slice(14, 19)" class="swatches">
+        <div :style="host.getStyle('', color)" :class="host.getClass('', color)">{host.getName('', color)}</div>
+        <div
+            #for="const weight of host.weights"
+            :style="host.getStyle('', color, weight)"
+            :class="host.getClass('', color, weight)"
+        >{host.getName('', color, weight)}</div>
+    </span>
     <div class="color-swatch dark" style="background-color: var(--smd--black)">black</div>
     <div class="color-swatch"      style="background-color: var(--smd--white)">white</div>
 </span>

@@ -17,7 +17,8 @@
         "compress": true,
         "liveReload": false,
         "open": true,
-        "port": 1337
+        "port": 1337,
+        "writeToDisk": true
     },
     "forceTs": [
         "./node_modules/@surface",
