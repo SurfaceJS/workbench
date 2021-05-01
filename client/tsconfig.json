@@ -4,16 +4,17 @@
         "lib": [
             "dom",
             "esnext",
-            "WebWorker",
+            "WebWorker"
         ],
         "module": "ESNext",
-        "noEmit": true,
+        "noEmit": true
     },
     "exclude": [
         "node_modules"
     ],
     "extends": "../modules/tsconfig.json",
     "include": [
-        "./source"
+        "./source",
+        "./src"
     ]
 }

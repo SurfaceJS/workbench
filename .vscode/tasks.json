@@ -1,85 +1,54 @@
 {
     "inputs": [
         {
-            "default": "default",
-            "description": "Strategy type for dependency sync",
-            "id": "strategy-type",
+            "default": "development",
+            "description": "Build mode",
+            "id": "mode",
             "options": [
-                "default",
-                "force-version",
-                "force-dependent-updates",
-                "ignore-depentends"
-            ],
-            "type": "pickString"
-        },
-        {
-            "default": "*.*.*",
-            "description": "Version for dependency sync",
-            "id": "sync-version",
-            "type": "promptString"
-        },
-        {
-            "default": "@surface/core",
-            "description": "Modules",
-            "id": "modules",
-            "options": [
-                "@surface/cli",
-                "@surface/collection",
-                "@surface/compiler",
-                "@surface/core",
-                "@surface/custom-element",
-                "@surface/dependency-injection",
-                "@surface/enumerable",
-                "@surface/expression",
-                "@surface/io",
-                "@surface/mock",
-                "@surface/reactive",
-                "@surface/reflection",
-                "@surface/router",
-                "@surface/test-suite",
-                "@surface/view-router",
-                "@surface/web-host",
+                "development",
+                "production"
             ],
             "type": "pickString"
         }
     ],
     "tasks": [
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js analyze -p ${workspaceFolder}/client --mode production",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js analyze --mode=${input:mode}",
             "isBackground": true,
-            "label": "Client Project - Analyze",
+            "label": "builder-analyze",
             "options": {
-                "cwd": "${workspaceFolder}/client",
+                "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client/surface.json --mode=production",
+            // "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --config=${workspaceFolder}/client/surface.builder.json --mode=${input:mode}",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build",
             "isBackground": true,
-            "label": "Client Project - Build",
+            "label": "builder-build",
             "options": {
-                "cwd": "${workspaceFolder}/client",
+                "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/compiler/cli.js serve --hot",
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js serve --mode=${input:mode}",
             "isBackground": true,
-            "label": "Client Project - Serve",
+            "label": "builder-serve",
             "options": {
-                "cwd": "${workspaceFolder}/client",
+                "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/compiler/cli.js build -p ${workspaceFolder}/client --mode development --watch",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build -p ${workspaceFolder}/client --mode=${input:mode} --watch",
             "isBackground": true,
-            "label": "Client Project - Watch",
+            "label": "builder-watch",
             "options": {
-                "cwd": "${workspaceFolder}/client",
+                "cwd": "${workspaceFolder}/client"
             },
             "problemMatcher": [],
             "type": "shell"
@@ -91,7 +60,7 @@
                 "kind": "build"
             },
             "isBackground": true,
-            "label": "Compile Modules",
+            "label": "build-all",
             "options": {
                 "cwd": "${workspaceFolder}/modules/tasks/"
             },
@@ -103,7 +72,7 @@
         },
         {
             "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1",
-            "label": "TS Compile File",
+            "label": "tsc",
             "options": {
                 "cwd": "${fileDirname}"
             },
@@ -122,7 +91,7 @@
         {
             "command": "npm run cover",
             "isBackground": true,
-            "label": "Cover Modules",
+            "label": "cover-all",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
@@ -132,7 +101,7 @@
         {
             "command": "node ${workspaceFolder}/modules/tasks/cli cover ${file}",
             "isBackground": true,
-            "label": "Cover File",
+            "label": "cover-file",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
@@ -145,9 +114,19 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org -t ${env:NPM_AUTH_TOKEN} -c development",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --timestamp=${input:timestamp} --debug",
             "isBackground": true,
-            "label": "Publish to NPM - DEV",
+            "label": "publish-nightly",
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=release --debug",
+            "isBackground": true,
+            "label": "publish-release",
             "presentation": {
                 "reveal": "always"
             },
@@ -157,7 +136,7 @@
         {
             "command": "${workspaceFolder}/modules/node_modules/.bin/mocha.cmd --loader=@surface/mock-loader --ui tdd ${fileDirname}/${fileBasenameNoExtension}.js",
             "isBackground": true,
-            "label": "Test File",
+            "label": "test-file",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
             },
@@ -176,7 +155,7 @@
         {
             "command": "npm run test -s",
             "isBackground": true,
-            "label": "Test Modules",
+            "label": "test-all",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
             },

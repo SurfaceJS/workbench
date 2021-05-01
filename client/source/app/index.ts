@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 /* eslint-disable import/no-unassigned-import */
 import "@surface/material-design/components/app";
 import "@surface/material-design/components/app-bar";
@@ -10,6 +9,7 @@ import "@surface/material-design/components/switch";
 
 import CustomElement, { element } from "@surface/custom-element";
 import MaterialDesign             from "@surface/material-design";
+import settings                   from "../enviroments/settings";
 import template                   from "./index.html";
 import style                      from "./index.scss?raw";
 
@@ -28,4 +28,6 @@ export default class App extends CustomElement
 
         value ? MaterialDesign.useDark() : MaterialDesign.useLight();
     }
+
+    public settings = settings;
 }

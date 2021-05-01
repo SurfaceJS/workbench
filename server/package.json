@@ -5,8 +5,8 @@
     },
     "dependencies": {
         "@surface/web-host": "file:../modules/packages/@surface/web-host",
-        "@types/node": "14.14.35",
-        "tslib": "2.1.0"
+        "@types/node": "14.14.41",
+        "tslib": "2.2.0"
     },
     "description": "Basic server to development and testing.",
     "devDependencies": {

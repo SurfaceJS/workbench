@@ -12,7 +12,8 @@
             "args":
             [
                 "build",
-                "-p", "./",
+                "--config=./",
+                // "--mode=development"
                 // "--eslintrc", "./client/.eslintrc.json"
                 // "build",
                 // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
@@ -30,16 +31,16 @@
                 // "-w",  "false",                                              /* "-w|--watch"           */
             ],
             "cwd":      "${workspaceFolder}/client",
-            "name":     "Launch Compiler",
+            "name":     "Launch Builder",
             "outFiles":
             [
                 "${workspaceFolder}/client/node_modules/eslint/lib/linter/linter.js",
                 "${workspaceFolder}/client/node_modules/eslint/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/compiler/node_modules/fork-ts-checker-webpack-plugin/**/*.js",
+                "${workspaceFolder}/modules/packages/@surface/builder/node_modules/fork-ts-checker-webpack-plugin/**/*.js",
                 "${workspaceFolder}/modules/packages/@surface/*/internal/**/*.js",
                 "${workspaceFolder}/modules/packages/@surface/*/tests/**/*.js"
             ],
-            "program":  "${workspaceFolder}/modules/packages/@surface/compiler/cli",
+            "program":  "${workspaceFolder}/modules/packages/@surface/builder/cli",
             "protocol": "inspector",
             "request":  "launch",
             "skipFiles":
