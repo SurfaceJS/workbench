@@ -34,11 +34,7 @@
             "name":     "Launch Builder",
             "outFiles":
             [
-                "${workspaceFolder}/client/node_modules/eslint/lib/linter/linter.js",
-                "${workspaceFolder}/client/node_modules/eslint/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/builder/node_modules/fork-ts-checker-webpack-plugin/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/*/internal/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/*/tests/**/*.js"
+                "${workspaceFolder}/modules/**/*.js"
             ],
             "program":  "${workspaceFolder}/modules/packages/@surface/builder/cli",
             "protocol": "inspector",
@@ -54,8 +50,8 @@
             "name": "Launch Server",
             "outFiles":
             [
-                "${workspaceFolder}/server/source/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/*/internal/**/*.js"
+                "${workspaceFolder}/server/**/*.js",
+                "${workspaceFolder}/modules/**/*.js"
             ],
             "program": "${workspaceFolder}/server/source/index.js",
             "request": "launch",
@@ -143,9 +139,7 @@
             "name": "Debug Test",
             "outFiles":
             [
-                "${workspaceFolder}/modules/packages/@surface/*/internal/**/*.js",
-                "${workspaceFolder}/modules/packages/@surface/*/tests/**/*.js",
-                "${workspaceFolder}/modules/tasks/**/*.js",
+                "${workspaceFolder}/modules/**/*.js",
             ],
             "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "protocol": "inspector",
@@ -158,8 +152,6 @@
             "sourceMaps": true,
             "skipFiles":
             [
-                // "${workspaceFolder}/modules/node_modules/**/*.js",
-                // "${workspaceFolder}/node_modules/**/*.js",
                 "<node_internals>/**/*.js"
             ],
             "type": "node"

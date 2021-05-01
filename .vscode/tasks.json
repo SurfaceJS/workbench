@@ -13,61 +13,46 @@
     ],
     "tasks": [
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js analyze --mode=${input:mode}",
-            "isBackground": true,
-            "label": "builder-analyze",
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build",
+            "label": "build",
             "options": {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            // "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --config=${workspaceFolder}/client/surface.builder.json --mode=${input:mode}",
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build",
-            "isBackground": true,
-            "label": "builder-build",
-            "options": {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js serve --mode=${input:mode}",
-            "isBackground": true,
-            "label": "builder-serve",
-            "options": {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build -p ${workspaceFolder}/client --mode=${input:mode} --watch",
-            "isBackground": true,
-            "label": "builder-watch",
-            "options": {
-                "cwd": "${workspaceFolder}/client"
-            },
-            "problemMatcher": [],
-            "type": "shell"
-        },
-        {
-            "command": "node cli clean; node cli build;",
-            "group": {
-                "isDefault": true,
-                "kind": "build"
-            },
-            "isBackground": true,
-            "label": "build-all",
-            "options": {
-                "cwd": "${workspaceFolder}/modules/tasks/"
+                "cwd": "${workspaceFolder}/modules"
             },
             "presentation": {
                 "reveal": "silent"
             },
-            "problemMatcher": [],
+            "problemMatcher": {
+                "base": "$tsc"
+            },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean",
+            "label": "clean",
+
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "base": "$tsc"
+            },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean --dry",
+            "label": "dry",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "base": "$tsc"
+            },
             "type": "shell"
         },
         {
@@ -89,18 +74,67 @@
             "type": "shell"
         },
         {
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js analyze --mode=${input:mode}",
+            "label": "builder-analyze",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode}",
+            "label": "builder-build",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js serve --mode=${input:mode}",
+            "label": "builder-serve",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build -p ${workspaceFolder}/client --mode=${input:mode} --watch",
+            "label": "builder-watch",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
             "command": "npm run cover",
-            "isBackground": true,
             "label": "cover-all",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "always"
             },
             "problemMatcher": [],
             "type": "shell"
         },
         {
             "command": "node ${workspaceFolder}/modules/tasks/cli cover ${file}",
-            "isBackground": true,
             "label": "cover-file",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
@@ -108,15 +142,15 @@
             "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher": [
-                "$tsc"
-            ],
+            "problemMatcher": [],
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --timestamp=${input:timestamp} --debug",
-            "isBackground": true,
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --debug",
             "label": "publish-nightly",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
             "presentation": {
                 "reveal": "always"
             },
@@ -125,8 +159,22 @@
         },
         {
             "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=release --debug",
-            "isBackground": true,
             "label": "publish-release",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "npm run test -s",
+            "label": "test-all",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
             "presentation": {
                 "reveal": "always"
             },
@@ -135,7 +183,6 @@
         },
         {
             "command": "${workspaceFolder}/modules/node_modules/.bin/mocha.cmd --loader=@surface/mock-loader --ui tdd ${fileDirname}/${fileBasenameNoExtension}.js",
-            "isBackground": true,
             "label": "test-file",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
@@ -143,25 +190,9 @@
             "presentation": {
                 "reveal": "always"
             },
-            "problemMatcher": {
-                "base": "$tsc",
-                "fileLocation": [
-                    "relative",
-                    "${fileDirname}"
-                ]
-            },
-            "type": "shell"
-        },
-        {
-            "command": "npm run test -s",
-            "isBackground": true,
-            "label": "test-all",
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
             "problemMatcher": [],
             "type": "shell"
-        }
+        },
     ],
     "version": "2.0.0"
 }

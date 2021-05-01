@@ -1,11 +1,18 @@
 {
-    "compilerOptions": {
-        "types": [
-            "node"
-        ]
-    },
     "extends": "../modules/tsconfig.json",
-    "include": [
+    "compilerOptions":
+    {
+        "composite": true,
+        "outDir":    ".",
+        "rootDir":   ".",
+        "types":     ["node"]
+    },
+    "include":
+    [
         "./source"
+    ],
+    "references":
+    [
+        { "path": "../modules/packages/@surface/web-host" }
     ]
 }
