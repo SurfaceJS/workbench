@@ -10,7 +10,7 @@
     "lang":          "pt-BR",
     "name":          "Workbench",
     "orientation":   "portrait-primary",
-    "serviceworker": { "src": "/service-worker.js" },
+    "serviceworker": { "src": "/app-service-worker.js" },
     "short_name":    "SINM",
     "start_url":     "/"
 }

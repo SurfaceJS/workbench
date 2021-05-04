@@ -61,6 +61,13 @@ typings/
 wwwroot/
 build/
 *.js
+*.d.ts
 *.js.map
 *.orig
 *.tsbuildinfo
+!environment.d.ts
+!**/cli.js
+!**/cli/index.js
+!**/interfaces/**/*.d.ts
+!**/types/**/*.d.ts
+!**/@types/**/*.d.ts

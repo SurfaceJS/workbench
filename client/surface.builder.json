@@ -1,0 +1,49 @@
+{
+    "$schema": "../modules/packages/@surface/builder/schema.json",
+    "clean": false,
+    "devServer": {
+        "compress": true,
+        "hot": true,
+        "liveReload": false,
+        "open": true,
+        "port": 1337
+    },
+    "projects": {
+        "app": {
+            "dependencies": [
+                "webworker"
+            ],
+            "entry": "./source/index.ts",
+            "environments": {
+                "production": {
+                    "overrides": [
+                        {
+                            "replace": "./source/enviroments/settings.ts",
+                            "with": "./source/enviroments/settings.production.ts"
+                        }
+                    ],
+                    "variables": [
+                        "USERNAME"
+                    ]
+                }
+            },
+            "eslint": {
+                "enabled": true
+            },
+            "filename": "[name]/[fullhash].js",
+            "index": "./index.html",
+            "mode": "production",
+            "output": "../server/wwwroot",
+            "preferTs": [
+                "**/@surface/**"
+            ],
+            "target": "pwa"
+        },
+        "webworker": {
+            "entry": "./source/another-service-worker.ts",
+            "filename": "another-service-worker.js",
+            "output": "../server/wwwroot",
+            "target": "webworker"
+        }
+    }
+}

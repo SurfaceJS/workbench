@@ -3,14 +3,14 @@
   "license": "ISC",
   "name": "workbench",
   "dependencies": {
-    "typescript": "4.2.3"
+    "typescript": "^4.2.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SurfaceJS/workbench.git"
   },
   "scripts": {
-    "build": "tsc -p ./server",
+    "build": "tsc --build ./server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.0.0",
