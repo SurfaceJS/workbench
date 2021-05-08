@@ -7,7 +7,7 @@ export default class DummyParent extends CustomElement
 {
     protected current: number = 0;
 
-    protected items: number[] = [1, 2, 3];
+    protected items: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     protected value: string   = "Scoped Value";
 
     protected increment(): void

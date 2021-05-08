@@ -9,6 +9,16 @@
                 "production"
             ],
             "type": "pickString"
+        },
+        {
+            "default": "true",
+            "description": "Enable debug",
+            "id": "debug",
+            "options": [
+                "true",
+                "false"
+            ],
+            "type": "pickString"
         }
     ],
     "tasks": [
@@ -22,7 +32,11 @@
                 "reveal": "silent"
             },
             "problemMatcher": {
-                "base": "$tsc"
+                "base": "$tsc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}/modules"
+                ]
             },
             "type": "shell"
         },
@@ -146,7 +160,7 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --debug",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --debug=${input:debug}",
             "label": "publish-nightly",
             "options": {
                 "cwd": "${workspaceFolder}/modules"

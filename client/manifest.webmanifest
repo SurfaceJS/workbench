@@ -1,8 +1,9 @@
 {
-    "$schema":     "http://json.schemastore.org/web-manifest",
-    "description": "Workbench web app",
-    "dir":         "rtl",
-    "display":     "standalone",
+    "$schema":         "http://json.schemastore.org/web-manifest",
+    "description":     "Workbench web app",
+    "dir":             "rtl",
+    "display":         "standalone",
+    "offline_enabled": true,
     "icons":
     [
         { "sizes": "225x225", "src": "./source/assets/placeholder.png" }

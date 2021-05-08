@@ -139,7 +139,8 @@
             "name": "Debug Test",
             "outFiles":
             [
-                "${workspaceFolder}/modules/**/*.js",
+                "${workspaceFolder}/modules/packages/*/**/*.js",
+                "${workspaceFolder}/modules/tasks/**/*.js",
             ],
             "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
             "protocol": "inspector",
