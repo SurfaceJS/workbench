@@ -124,7 +124,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build -p ${workspaceFolder}/client --mode=${input:mode} --watch",
+            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode} --watch",
             "label": "builder-watch",
             "options": {
                 "cwd": "${workspaceFolder}/client"

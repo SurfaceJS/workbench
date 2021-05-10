@@ -11,9 +11,6 @@
     },
     "projects": {
         "app": {
-            "dependencies": [
-                "webworker"
-            ],
             "entry": "./source/index.ts",
             "environments": {
                 "production": {
@@ -38,7 +35,7 @@
             "preferTs": [
                 "../**/@surface/**"
             ],
-            "target": "pwa"
+            "target": "web"
         },
         "webworker": {
             "entry": "./source/another-service-worker.ts",
@@ -46,5 +43,6 @@
             "output": "../server/wwwroot",
             "target": "webworker"
         }
-    }
+    },
+    "logging": "minimal"
 }
