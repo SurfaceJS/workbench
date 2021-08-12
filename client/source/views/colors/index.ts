@@ -3,7 +3,7 @@ import { hexToHsla }              from "@surface/material-design";
 import template                   from "./index.html";
 import style                      from "./index.scss";
 
-@element("colors-view", template, style)
+@element("colors-view", { style, template })
 export default class Colors extends CustomElement
 {
     private readonly cssVariables = document.head.querySelector<HTMLStyleElement>("#smd-css-variables")!;

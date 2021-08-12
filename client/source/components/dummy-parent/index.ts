@@ -2,7 +2,7 @@ import CustomElement, { element } from "@surface/custom-element";
 import template                   from "./index.html";
 import style                      from "./index.scss";
 
-@element("dummy-parent", template, style)
+@element("dummy-parent", { style, template })
 export default class DummyParent extends CustomElement
 {
     protected current: number = 0;

@@ -6,7 +6,7 @@ import CustomElement, { element } from "@surface/custom-element";
 import template                   from "./index.html";
 import style                      from "./index.scss";
 
-@element("directives-view", template, style)
+@element("directives-view", { style, template })
 export default class DirectivesView extends CustomElement
 {
     private lastId: number = 0;

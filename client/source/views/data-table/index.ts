@@ -7,7 +7,7 @@ function _random(max: number): number
     return Math.round(Math.random() * 1000) % max;
 }
 
-@element("data-table-view", template)
+@element("data-table-view", { template })
 export default class DataTable extends CustomElement
 {
     private started: number = 0;
@@ -25,7 +25,7 @@ export default class DataTable extends CustomElement
 
     private stop(): void
     {
-        void scheduler.whenDone().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        void scheduler.execution().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]

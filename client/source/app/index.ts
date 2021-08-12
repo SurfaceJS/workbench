@@ -13,7 +13,7 @@ import settings                   from "../enviroments/settings";
 import template                   from "./index.html";
 import style                      from "./index.scss?raw";
 
-@element("app-root", template, style)
+@element("app-root", { style, template })
 export default class App extends CustomElement
 {
     private _dark: boolean = false;
