@@ -6,8 +6,7 @@
         "hot": true,
         "liveReload": false,
         "open": true,
-        "port": 1337,
-        "writeToDisk": true
+        "port": 1337
     },
     "projects": {
         "app": {
