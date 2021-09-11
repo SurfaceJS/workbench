@@ -6,4 +6,9 @@ import style                      from "./index.scss";
 export default class DummyChild extends CustomElement
 {
     protected value: string = "";
+
+    public getDate(): number
+    {
+        return Date.now();
+    }
 }

@@ -8,5 +8,5 @@ CustomElement.registerDirective("to", context => new RouterLinkDirective(router,
 
 void import("./app").then(() => void router.pushCurrentLocation());
 
-window.addEventListener("load", async () => navigator.serviceWorker.register("/app-service-worker.js", { scope: "/" }));
+// window.addEventListener("load", async () => navigator.serviceWorker.register("/app-service-worker.js", { scope: "/" }));
 window.addEventListener("load", async () => navigator.serviceWorker.register("/another-service-worker.js", { scope: "/" }));

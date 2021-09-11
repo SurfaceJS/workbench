@@ -25,7 +25,7 @@ export default class DataTable extends CustomElement
 
     private stop(): void
     {
-        void scheduler.execution().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        void scheduler.execution().then(() => this.message = `Time spent: ${performance.now() - this.started}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]
