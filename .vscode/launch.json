@@ -39,10 +39,10 @@
             "program":  "${workspaceFolder}/modules/packages/@surface/builder/cli",
             "protocol": "inspector",
             "request":  "launch",
-            "skipFiles":
-            [
-                "<node_internals>/**",
-            ],
+            // "skipFiles":
+            // [
+            //     "<node_internals>/**",
+            // ],
             "type": "node"
         },
         {

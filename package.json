@@ -3,7 +3,7 @@
   "license": "ISC",
   "name": "workbench",
   "dependencies": {
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.3"
   },
   "repository": {
     "type": "git",
