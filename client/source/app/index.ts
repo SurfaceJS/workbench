@@ -10,7 +10,7 @@ import "@surface/material-design/components/switch";
 import CustomElement, { element } from "@surface/custom-element";
 import MaterialDesign             from "@surface/material-design";
 import settings                   from "../enviroments/settings";
-import template                   from "./index.html";
+import template                   from "./index.htmx";
 import style                      from "./index.scss?raw";
 
 @element("app-root", { style, template })

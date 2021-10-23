@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import CustomElement, { element, scheduler } from "@surface/custom-element";
-import template                              from "./index.html";
+import template                              from "./index.htmx";
 
 function _random(max: number): number
 {

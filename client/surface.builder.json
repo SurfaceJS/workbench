@@ -8,6 +8,7 @@
         "open": true,
         "port": 1337
     },
+    "logging": "minimal",
     "projects": {
         "app": {
             "entry": "./source/index.ts",
@@ -34,7 +35,8 @@
             "preferTs": [
                 "../**/@surface/**"
             ],
-            "target": "web"
+            "target": "web",
+            "templateExpressionMode": "aot"
         },
         "webworker": {
             "entry": "./source/another-service-worker.ts",
@@ -42,6 +44,5 @@
             "output": "../server/wwwroot",
             "target": "webworker"
         }
-    },
-    "logging": "minimal"
+    }
 }

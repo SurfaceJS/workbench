@@ -1,7 +1,9 @@
 {
-    "compilerOptions": {
-        "incremental": true,
-        "lib": [
+    "extends": "../modules/tsconfig.json",
+    "compilerOptions":
+    {
+        "lib":
+        [
             "dom",
             "esnext",
             "WebWorker"
@@ -9,12 +11,13 @@
         "module": "ESNext",
         "noEmit": true
     },
-    "exclude": [
-        "node_modules"
-    ],
-    "extends": "../modules/tsconfig.json",
-    "include": [
+    "include":
+    [
         "./source",
         "./src"
-    ]
+    ],
+    "exclude":
+    [
+        "node_modules"
+    ],
 }

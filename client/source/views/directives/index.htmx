@@ -5,7 +5,7 @@
     <input id="field" ::value="host.text" />
     <input type="checkbox" ::checked="host.visible" />
     <span>{host.text.length}</span>
-    <!-- <dummy-parent>
+    <dummy-parent>
         <template #if="host.visible" #inject:items="{ item }">
             <span><b>Header</b></span>
             <template #if="item % 2 == 0">
@@ -18,8 +18,8 @@
             <dummy-child :value="host.text"></dummy-child>
         </template>
     </dummy-parent>
-    <h1>Scope destructured</h1> -->
-    <dummy-parent>
+    <h1>Scope destructured</h1>
+    <!-- <dummy-parent>
         <template #if="host.visible" #inject:reactive="{ items }">
             <template #for="const element of items">
                 <span><b>Header</b></span>
@@ -32,5 +32,5 @@
                 <span><b>Footer</b></span>
             </template>
         </template>
-    </dummy-parent>
+    </dummy-parent> -->
 </div>

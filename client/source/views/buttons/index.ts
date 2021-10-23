@@ -4,7 +4,7 @@ import "@surface/material-design/components/button";
 import "@surface/material-design/components/icon";
 
 import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.html";
+import template                   from "./index.htmx";
 import style                      from "./index.scss";
 
 @element("buttons-view", { style, template })

@@ -1,6 +1,6 @@
 import CustomElement, { element } from "@surface/custom-element";
 import { hexToHsla }              from "@surface/material-design";
-import template                   from "./index.html";
+import template                   from "./index.htmx";
 import style                      from "./index.scss";
 
 @element("colors-view", { style, template })
