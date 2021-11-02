@@ -1,10 +1,10 @@
-import CustomElement, { element } from "@surface/custom-element";
-import { hexToHsla }              from "@surface/material-design";
-import template                   from "./index.htmx";
-import style                      from "./index.scss";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import { hexToHsla }             from "@surface/material-design";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("colors-view", { style, template })
-export default class Colors extends CustomElement
+export default class Colors extends HTMLXElement
 {
     private readonly cssVariables = document.head.querySelector<HTMLStyleElement>("#smd-css-variables")!;
 

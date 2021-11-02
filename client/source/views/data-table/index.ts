@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-import CustomElement, { element, scheduler } from "@surface/custom-element";
-import template                              from "./index.htmx";
+import { scheduler }             from "@surface/htmlx";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import template                  from "./index.htmlx";
 
 function _random(max: number): number
 {
@@ -8,7 +9,7 @@ function _random(max: number): number
 }
 
 @element("data-table-view", { template })
-export default class DataTable extends CustomElement
+export default class DataTable extends HTMLXElement
 {
     private started: number = 0;
 

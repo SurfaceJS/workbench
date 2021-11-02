@@ -2,12 +2,12 @@
 import "../../components/dummy-child";
 import "../../components/dummy-parent";
 
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.htmx";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import template                   from "./index.htmlx";
 import style                      from "./index.scss";
 
 @element("directives-view", { style, template })
-export default class DirectivesView extends CustomElement
+export default class DirectivesView extends HTMLXElement
 {
     private lastId: number = 0;
 

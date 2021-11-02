@@ -3,10 +3,10 @@
 import "@surface/material-design/components/button";
 import "@surface/material-design/components/icon";
 
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.htmx";
-import style                      from "./index.scss";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("buttons-view", { style, template })
-export default class Buttons extends CustomElement
+export default class Buttons extends HTMLXElement
 { }

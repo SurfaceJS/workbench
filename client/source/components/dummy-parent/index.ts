@@ -1,9 +1,9 @@
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.htmx";
-import style                      from "./index.scss";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("dummy-parent", { style, template })
-export default class DummyParent extends CustomElement
+export default class DummyParent extends HTMLXElement
 {
     protected current: number = 0;
 

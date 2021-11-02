@@ -28,15 +28,23 @@
             "eslint": {
                 "enabled": true
             },
-            "filename": "[name]/[fullhash].js",
+            "htmlx": {
+                "attributeHandlers": [
+                    {
+                        "attribute": "src",
+                        "tag": "app-img",
+                        "type": "src"
+                    }
+                ],
+                "mode": "aot"
+            },
             "index": "./index.html",
             "mode": "production",
             "output": "../server/wwwroot",
             "preferTs": [
                 "../**/@surface/**"
             ],
-            "target": "web",
-            "templateExpressionMode": "aot"
+            "target": "web"
         },
         "webworker": {
             "entry": "./source/another-service-worker.ts",
