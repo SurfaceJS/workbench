@@ -26,7 +26,7 @@ export default class DataTable extends HTMLXElement
 
     private stop(): void
     {
-        void scheduler.execution().then(() => this.message = `Time spent: ${performance.now() - this.started}ms`);
+        void scheduler.execution().then(() => this.message = `Time spent: ${Math.abs(performance.now() - this.started)}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]

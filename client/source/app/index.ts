@@ -10,7 +10,6 @@ import "@surface/material-design/components/switch";
 import HTMLXElement, { element } from "@surface/htmlx-element";
 import MaterialDesign            from "@surface/material-design";
 import settings                  from "../enviroments/settings";
-import css                       from "./index.css?file";
 import template                  from "./index.htmlx";
 import style                     from "./index.scss";
 
@@ -35,9 +34,5 @@ export default class App extends HTMLXElement
     public constructor()
     {
         super();
-
-        const logo = new URL("../assets/placeholder.png", import.meta.url);
-
-        console.log(logo, css);
     }
 }

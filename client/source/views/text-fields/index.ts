@@ -3,8 +3,8 @@
 import "@surface/material-design/components/text-field";
 
 import HTMLXElement, { element } from "@surface/htmlx-element";
-import template                   from "./index.htmlx";
-import style                      from "./index.scss";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("text-fields-view", { style, template })
 export default class TextFields extends HTMLXElement

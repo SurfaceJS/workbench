@@ -39,7 +39,6 @@
                 "mode": "aot"
             },
             "index": "./index.html",
-            "mode": "production",
             "output": "../server/wwwroot",
             "preferTs": [
                 "../**/@surface/**"
