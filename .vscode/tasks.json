@@ -12,13 +12,19 @@
         },
         {
             "default": "true",
-            "description": "Enable debug",
-            "id": "debug",
+            "description": "Dry mode",
+            "id": "dry",
             "options": [
                 "true",
                 "false"
             ],
             "type": "pickString"
+        },
+        {
+            "default": "",
+            "description": "Timestamp",
+            "id": "timestamp",
+            "type": "promptString"
         }
     ],
     "tasks": [
@@ -88,7 +94,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js analyze --mode=${input:mode}",
+            "command": "node ${workspaceFolder}/node_modules/@surface/builder/cli.js analyze --mode=${input:mode}",
             "label": "builder-analyze",
             "options": {
                 "cwd": "${workspaceFolder}/client"
@@ -100,7 +106,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode}",
+            "command": "node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode}",
             "label": "builder-build",
             "options": {
                 "cwd": "${workspaceFolder}/client"
@@ -112,7 +118,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/node_modules/@surface/builder/cli.js serve --mode=${input:mode}",
+            "command": "node ${workspaceFolder}/node_modules/@surface/builder/cli.js serve --mode=${input:mode}",
             "label": "builder-serve",
             "options": {
                 "cwd": "${workspaceFolder}/client"
@@ -124,7 +130,7 @@
             "type": "shell"
         },
         {
-            "command": "driveup; node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode} --watch",
+            "command": "node ${workspaceFolder}/modules/packages/@surface/builder/cli.js build --mode=${input:mode} --watch",
             "label": "builder-watch",
             "options": {
                 "cwd": "${workspaceFolder}/client"
@@ -160,7 +166,7 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=nightly --debug=${input:debug}",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --mode=nightly --dry=${input:dry} --timestamp=${input:timestamp}",
             "label": "publish-nightly",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
@@ -172,7 +178,7 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --config=release --debug",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --mode=release --dry=${input:dry}",
             "label": "publish-release",
             "options": {
                 "cwd": "${workspaceFolder}/modules"

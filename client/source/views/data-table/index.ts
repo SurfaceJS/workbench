@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
-import CustomElement, { element, scheduler } from "@surface/custom-element";
-import template                              from "./index.html";
+import { scheduler }             from "@surface/htmlx";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import template                  from "./index.htmlx";
 
 function _random(max: number): number
 {
@@ -8,7 +9,7 @@ function _random(max: number): number
 }
 
 @element("data-table-view", { template })
-export default class DataTable extends CustomElement
+export default class DataTable extends HTMLXElement
 {
     private started: number = 0;
 
@@ -25,7 +26,7 @@ export default class DataTable extends CustomElement
 
     private stop(): void
     {
-        void scheduler.execution().then(() => this.message = `Time expended: ${performance.now() - this.started}ms`);
+        void scheduler.execution().then(() => this.message = `Time spent: ${Math.abs(performance.now() - this.started)}ms`);
     }
 
     public buildData(count: number = 1000): { id: number, label: string }[]

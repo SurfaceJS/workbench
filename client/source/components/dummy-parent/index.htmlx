@@ -1,5 +1,6 @@
 <div class="stack">
     <div class="stack">
+        <input readonly :value="'Binded Text: ' + host.text" type="text">
         <input type="button" @click="host.increment" value="Increment" />
         <input type="button" @click="host.random"    value="Random" />
         <slot></slot>
@@ -16,6 +17,7 @@
         <slot name="value"></slot>
     </div>
     <div class="stack">
+        <h1 #placeholder:title>Title</h1>
         <!-- <dummy-child>
             <template #inject:child>
                 <template #placeholder:parent></template>

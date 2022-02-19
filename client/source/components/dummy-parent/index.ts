@@ -1,14 +1,18 @@
-import CustomElement, { element } from "@surface/custom-element";
-import template                   from "./index.html";
-import style                      from "./index.scss";
+import HTMLXElement, { attribute, element } from "@surface/htmlx-element";
+import template                             from "./index.htmlx";
+import style                                from "./index.scss";
 
-@element("dummy-parent", { style, template })
-export default class DummyParent extends CustomElement
+export class DummyBase extends HTMLXElement
 {
     protected current: number = 0;
 
     protected items: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     protected value: string   = "Scoped Value";
+
+    @attribute({ type: Boolean })
+    public red: boolean = false;
+
+    public text: string = "Some Text Here...";
 
     protected increment(): void
     {
@@ -27,3 +31,7 @@ export default class DummyParent extends CustomElement
         this.items = items;
     }
 }
+
+@element("dummy-parent", { style, template })
+export default class DummyParent extends DummyBase
+{ }

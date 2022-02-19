@@ -7,14 +7,14 @@ import "@surface/material-design/components/footer";
 import "@surface/material-design/components/navigation-drawer";
 import "@surface/material-design/components/switch";
 
-import CustomElement, { element } from "@surface/custom-element";
-import MaterialDesign             from "@surface/material-design";
-import settings                   from "../enviroments/settings";
-import template                   from "./index.html";
-import style                      from "./index.scss?raw";
+import HTMLXElement, { element } from "@surface/htmlx-element";
+import MaterialDesign            from "@surface/material-design";
+import settings                  from "../enviroments/settings";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("app-root", { style, template })
-export default class App extends CustomElement
+export default class App extends HTMLXElement
 {
     private _dark: boolean = false;
     public get dark(): boolean
@@ -30,4 +30,9 @@ export default class App extends CustomElement
     }
 
     public settings = settings;
+
+    public constructor()
+    {
+        super();
+    }
 }

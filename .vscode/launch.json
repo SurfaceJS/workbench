@@ -1,6 +1,5 @@
 {
-    "configurations":
-    [
+    "configurations": [
         {
             "name": "Launch Edge",
             "request": "launch",
@@ -9,10 +8,9 @@
             "webRoot": "${workspaceFolder}"
         },
         {
-            "args":
-            [
-                "build",
-                "--config=./",
+            "args": [
+                "serve",
+                "--config=./"
                 // "--mode=development"
                 // "--eslintrc", "./client/.eslintrc.json"
                 // "build",
@@ -30,15 +28,18 @@
                 // // "-wc", "${workspaceFolder}/client/webpack-config.js",     /* "-wc|--webpack-config" */
                 // "-w",  "false",                                              /* "-w|--watch"           */
             ],
-            "cwd":      "${workspaceFolder}/client",
-            "name":     "Launch Builder",
-            "outFiles":
-            [
-                "${workspaceFolder}/modules/**/*.js"
+            "cwd": "${workspaceFolder}/client",
+            "name": "Launch Builder",
+            "restart": true,
+            "outFiles": [
+                "${workspaceFolder}/modules/packages/@surface/builder/**/*.js"
             ],
-            "program":  "${workspaceFolder}/modules/packages/@surface/builder/cli",
-            "protocol": "inspector",
-            "request":  "launch",
+            "program": "${workspaceFolder}/modules/packages/@surface/builder/cli",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "resolveSourceMapLocations": [
+                "!**/node_modules/**"
+            ],
             "skipFiles":
             [
                 "<node_internals>/**",
@@ -46,117 +47,146 @@
             "type": "node"
         },
         {
-            "cwd":  "${workspaceFolder}/server/source",
+            "cwd": "${workspaceFolder}/server/source",
             "name": "Launch Server",
-            "outFiles":
-            [
+            "outFiles": [
                 "${workspaceFolder}/server/**/*.js",
                 "${workspaceFolder}/modules/**/*.js"
             ],
             "program": "${workspaceFolder}/server/source/index.js",
             "request": "launch",
-            "type":    "node"
+            "type": "node"
         },
         {
-            "args":
-            [
-                "relink"
+            "args": [
+                "publish",
+                "https://registry.npmjs.org",
+                "--token=${env:NPM_AUTH_TOKEN}",
+                "--mode=nightly",
+                "--dry=false"
             ],
-            "cwd":     "${workspaceFolder}/modules/tasks",
-            "name":    "Launch Modules Tasks Cli",
+            "cwd": "${workspaceFolder}/modules/tasks",
+            "name": "Launch Modules Tasks Cli",
             "program": "${workspaceFolder}/modules/tasks/cli",
             "request": "launch",
-            "type":    "node"
+            "type": "node"
         },
         {
-            "args":
-            [
+            "args": [
                 "relink"
             ],
-            "cwd":     "${workspaceFolder}/tasks",
-            "name":    "Launch Workbench Tasks Cli",
+            "cwd": "${workspaceFolder}/tasks",
+            "name": "Launch Workbench Tasks Cli",
             "program": "${workspaceFolder}/tasks/cli",
             "request": "launch",
-            "type":    "node"
+            "type": "node"
         },
         {
-            "name":    "Launch Chrome",
+            "name": "Launch Chrome",
             "request": "launch",
             "sourceMaps": true,
-            "type":    "chrome",
-            "url":     "http://localhost:1337",
+            "type": "chrome",
+            "url": "http://localhost:1337",
             "webRoot": "${workspaceFolder}/client/source"
         },
         {
-            "cwd":      "${fileDirname}",
-            "name":     "Debug File",
-            "program":  "${fileDirname}/${fileBasenameNoExtension}.js",
-            "protocol": "inspector",
-            "request":  "launch",
-            "runtimeArgs":
-            [
+            "cwd": "${fileDirname}",
+            "name": "Debug File",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.js",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "runtimeArgs": [
                 "--nolazy"
             ],
-            "skipFiles":
-            [
-                "<node_internals>/**",
+            "skipFiles": [
+                "<node_internals>/**"
             ],
             "sourceMaps": true,
-            "type":       "node"
+            "type": "node"
         },
         {
-            "args":
-            [
-                "publish", "https://registry.npmjs.org",
-                "-t"     , "123",
-                "-d"     , "true"
+            "args": [
+                "publish",
+                "https://registry.npmjs.org",
+                "-t",
+                "123",
+                "-d",
+                "true"
             ],
-            "cwd":      "${fileDirname}",
-            "name":     "Debug Task Cli",
-            "program":  "${workspaceFolder}/modules/tasks/cli",
-            "protocol": "inspector",
-            "request":  "launch",
-            "runtimeArgs":
-            [
+            "cwd": "${fileDirname}",
+            "name": "Debug Task Cli",
+            "program": "${workspaceFolder}/modules/tasks/cli",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "runtimeArgs": [
                 "--nolazy"
             ],
-            "skipFiles":
-            [
-                "<node_internals>/**",
+            "skipFiles": [
+                "<node_internals>/**"
             ],
             "sourceMaps": true,
-            "type":       "node"
+            "type": "node"
         },
         {
-            "args":
-            [
+            "args": [
                 "--ui=tdd",
                 "--timeout=9999999",
                 "--colors",
                 "${fileDirname}/${fileBasenameNoExtension}.js"
             ],
-            "cwd":  "${workspaceFolder}/modules",
+            "cwd": "${workspaceFolder}/modules",
             "name": "Debug Test",
-            "outFiles":
-            [
-                "${workspaceFolder}/modules/packages/*/**/*.js",
-                "${workspaceFolder}/modules/tasks/**/*.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js",
+                "!**/node_modules",
             ],
-            "program":  "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
-            "protocol": "inspector",
-            "request":  "launch",
-            "runtimeArgs":
-            [
+            "resolveSourceMapLocations": [
+                "!**/node_modules/**"
+            ],
+            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "runtimeArgs": [
+                "--experimental-json-modules",
                 "--loader=@surface/mock-loader",
                 "--nolazy"
             ],
-            "sourceMaps": true,
-            "skipFiles":
-            [
-                "<node_internals>/**/*.js"
+            "skipFiles": [
+                "<node_internals>/**",
             ],
+            "sourceMaps": true,
             "type": "node"
         },
+        {
+            "args": [
+                "--ui=tdd",
+                "--timeout=9999999",
+                "--colors",
+                "**/packages/@surface/*/tests/**/*.spec.js"
+            ],
+            "cwd": "${workspaceFolder}/modules",
+            "name": "Debug All Tests",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js",
+                "!**/node_modules",
+            ],
+            "resolveSourceMapLocations": [
+                "!**/node_modules/**"
+            ],
+            "program": "${workspaceFolder}/modules/node_modules/mocha/bin/_mocha",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "runtimeArgs": [
+                "--experimental-json-modules",
+                "--loader=@surface/mock-loader",
+                "--nolazy"
+            ],
+            "skipFiles": [
+                "<node_internals>/**",
+            ],
+            "sourceMaps": true,
+            "type": "node"
+        }
     ],
     "version": "0.2.0"
 }

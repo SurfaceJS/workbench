@@ -1,0 +1,3 @@
+<h1>Child value: <u>{host.value}</u></h1>
+<span><b>Timestamp: </b>{host.getDate()}</span>
+<template #placeholder:child>Child</template>

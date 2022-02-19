@@ -1,0 +1,52 @@
+<div style="display: flex; flex-direction: column;" >
+    <span #if="host.visible" style="color: green">I'm ON :)</span>
+    <span #else style="color: red">I'm OFF :(</span>
+    <button @click="host.toogle">Toggle visibility</button>
+    <input id="field" ::value="host.text" />
+    <input type="checkbox" ::checked="host.visible" />
+    <span>{host.text.length}</span>
+    <dummy-child>
+        <span #inject:child part="child">Injected child content with external style</span>
+    </dummy-child>
+    <dummy-wrapper red ::text="host.text" :style="{ border: 'solid 1px black', padding: '2px' }">
+        <h2 #inject:title>Injected Title</h2>
+        <template #if="host.visible" #inject:items="{ item }">
+            <span><b>Header</b></span>
+            <!-- <template #if="item % 2 == 0">
+                <span>Id: { item }</span>&nbsp;Even
+            </template>
+            <template #else-if="item % 2 == 1">
+                <span>Id: { item }</span>&nbsp;Odd
+            </template> -->
+            <span><b>Footer</b></span>
+            <dummy-child :value="host.text"></dummy-child>
+        </template>
+    </dummy-wrapper>
+    <!-- <dummy-parent>
+        <template #if="host.visible" #inject:items="{ item }">
+            <span><b>Header</b></span>
+            <template #if="item % 2 == 0">
+                <span>Id: { item }</span>&nbsp;Even
+            </template>
+            <template #else-if="item % 2 == 1">
+                <span>Id: { item }</span>&nbsp;Odd
+            </template>
+            <span><b>Footer</b></span>
+            <dummy-child :value="host.text"></dummy-child>
+        </template>
+    </dummy-parent> -->
+    <!-- <dummy-parent>
+        <template #if="host.visible" #inject:reactive="{ items }">
+            <template #for="const element of items">
+                <span><b>Header</b></span>
+                <template #if="element % 2 == 0">
+                    <span>Id: {element}</span>&nbsp;Even
+                </template>
+                <template #else-if="element % 2 == 1">
+                    <span>Id: {element}</span>&nbsp;Odd
+                </template>
+                <span><b>Footer</b></span>
+            </template>
+        </template>
+    </dummy-parent> -->
+</div>
