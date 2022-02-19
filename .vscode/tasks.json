@@ -19,6 +19,12 @@
                 "false"
             ],
             "type": "pickString"
+        },
+        {
+            "default": "",
+            "description": "Timestamp",
+            "id": "timestamp",
+            "type": "promptString"
         }
     ],
     "tasks": [
@@ -160,7 +166,7 @@
             "type": "shell"
         },
         {
-            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --mode=nightly --dry=${input:dry}",
+            "command": "node ${workspaceFolder}/modules/tasks/cli publish https://registry.npmjs.org --token=${env:NPM_AUTH_TOKEN} --mode=nightly --dry=${input:dry} --timestamp=${input:timestamp}",
             "label": "publish-nightly",
             "options": {
                 "cwd": "${workspaceFolder}/modules"
