@@ -1,5 +1,5 @@
 {
-    "extends": "../modules/.eslintrc.json",
+    "extends": "../../modules/.eslintrc.json",
     "ignorePatterns": "*.js",
     "parserOptions": {
         "ecmaVersion": 11,

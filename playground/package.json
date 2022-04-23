@@ -1,9 +1,9 @@
 {
   "author": "HitalloExiled",
   "license": "ISC",
-  "name": "workbench",
+  "name": "playground",
   "dependencies": {
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.3"
   },
   "repository": {
     "type": "git",
@@ -11,12 +11,14 @@
   },
   "scripts": {
     "build": "tsc --build ./server",
+    "surface-analyze": "surface-builder analyze --context=client --config=client",
+    "surface-build": "surface-builder build --context=client --config=client",
+    "surface-serve": "surface-builder serve --context=client --config=client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.0.0",
   "workspaces": [
     "./client",
-    "./server",
-    "./tasks"
+    "./server"
   ]
 }

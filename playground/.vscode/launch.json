@@ -1,0 +1,78 @@
+{
+    "configurations": [
+        {
+            "args": [
+                "serve",
+                "--config=./"
+                // "--mode=development"
+                // "--eslintrc", "./client/.eslintrc.json"
+                // "build",
+                // "-c",  "${workspaceFolder}/client",                          /* "-c|--context"         */
+                // "-e",  "./source/index.ts",                                  /* "-e|--entry"           */
+                // "-el", "${workspaceFolder}/client/.eslintrc.json",           /* "-el|--eslintrc"       */
+                // "-f",  "[name]/[hash].js",                                   /* "-f|--filename"        */
+                // "-ft", "./node_modules/@surface,../modules/packages/@surface", /* "-ft|--force-ts"       */
+                // "-l",  "minimal",                                            /* "-l|--log"             */
+                // "-m",  "production",                                         /* "-m|--mode"            */
+                // "-o",  "${workspaceFolder}/server/wwwroot",                  /* "-o|--output"          */
+                // "-pp", "/",                                                  /* "-pp|--public-path"    */
+                // "-t",  "${workspaceFolder}/client/template.html",            /* "-t|--html-template"   */
+                // "-tc", "${workspaceFolder}/client/tsconfig.json",            /* "-tc|--tsconfig"       */
+                // // "-wc", "${workspaceFolder}/client/webpack-config.js",     /* "-wc|--webpack-config" */
+                // "-w",  "false",                                              /* "-w|--watch"           */
+            ],
+            "cwd": "${workspaceFolder}/client",
+            "name": "Launch Builder",
+            "restart": true,
+            "outFiles": [
+                "${workspaceFolder}/node_modules/@surface/builder/**/*.js"
+            ],
+            "program": "${workspaceFolder}/node_modules/@surface/builder/cli",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "resolveSourceMapLocations": [
+                "!**/node_modules/**"
+            ],
+            "skipFiles":
+            [
+                "<node_internals>/**",
+            ],
+            "type": "node"
+        },
+        {
+            "cwd": "${workspaceFolder}/server/source",
+            "name": "Launch Server",
+            "outFiles": [
+                "${workspaceFolder}/server/**/*.js",
+                "${workspaceFolder}/node_modules/@surface/**/*.js"
+            ],
+            "program": "${workspaceFolder}/server/source/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "sourceMaps": true,
+            "type": "chrome",
+            "url": "http://localhost:1337",
+            "webRoot": "${workspaceFolder}/client/source"
+        },
+        {
+            "cwd": "${fileDirname}",
+            "name": "Debug File",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.js",
+            "protocol": "pwa-node",
+            "request": "launch",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "sourceMaps": true,
+            "type": "node"
+        },
+    ],
+    "version": "0.2.0"
+}

@@ -1,0 +1,145 @@
+{
+    "inputs": [
+        {
+            "default": "development",
+            "description": "Build mode",
+            "id": "mode",
+            "options": [
+                "development",
+                "production"
+            ],
+            "type": "pickString"
+        },
+        {
+            "default": "true",
+            "description": "Dry mode",
+            "id": "dry",
+            "options": [
+                "true",
+                "false"
+            ],
+            "type": "pickString"
+        },
+        {
+            "default": "",
+            "description": "Timestamp",
+            "id": "timestamp",
+            "type": "promptString"
+        }
+    ],
+    "tasks": [
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build",
+            "label": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "base": "$tsc",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}/modules"
+                ]
+            },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean",
+            "label": "clean",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "base": "$tsc"
+            },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean --dry",
+            "label": "dry",
+            "options": {
+                "cwd": "${workspaceFolder}/modules"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": {
+                "base": "$tsc"
+            },
+            "type": "shell"
+        },
+        {
+            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1",
+            "label": "tsc",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": {
+                "base": "$tsc",
+                "fileLocation": [
+                    "relative",
+                    "${fileDirname}"
+                ]
+            },
+            "type": "shell"
+        },
+        {
+            "command": "npm run surface-analyze -- --mode=${input:mode}",
+            "label": "builder-analyze",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "npm run surface-build -- --mode=${input:mode}",
+            "label": "builder-build",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "npm run surface-serve -- --mode=${input:mode}",
+            "label": "builder-serve",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        },
+        {
+            "command": "npm run surface-build -- --mode=${input:mode} --watch",
+            "label": "builder-watch",
+            "options": {
+                "cwd": "${workspaceFolder}/client"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": [],
+            "type": "shell"
+        }
+    ],
+    "version": "2.0.0"
+}
