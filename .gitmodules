@@ -3,7 +3,7 @@
 	url = https://github.com/SurfaceJS/surface.git
 [submodule "vscode-htmlx-language-features"]
 	path = vscode-htmlx-language-features
-	url = git@github.com:SurfaceJS/vscode-htmlx-language-features.git
+	url = https://github.com/SurfaceJS/vscode-htmlx-language-features.git
 [submodule "template-generator"]
 	path = template-generator
 	url = https://github.com/SurfaceJS/template-generator.git
