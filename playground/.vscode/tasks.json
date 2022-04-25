@@ -47,11 +47,8 @@
             "type": "shell"
         },
         {
-            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean",
+            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1 --build --clean",
             "label": "clean",
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
             "presentation": {
                 "reveal": "silent"
             },
@@ -61,11 +58,8 @@
             "type": "shell"
         },
         {
-            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build --clean --dry",
+            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1 --build --clean --dry",
             "label": "dry",
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
             "presentation": {
                 "reveal": "always"
             },
@@ -75,7 +69,7 @@
             "type": "shell"
         },
         {
-            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1",
+            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1",
             "label": "tsc",
             "options": {
                 "cwd": "${fileDirname}"

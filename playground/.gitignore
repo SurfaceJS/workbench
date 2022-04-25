@@ -66,6 +66,8 @@ build/
 *.orig
 *.tsbuildinfo
 !shim.d.ts
+!**/*.config.js
+!**/*.builder.js
 !**/cli.js
 !**/cli/index.js
 !**/interfaces/**/*.d.ts
