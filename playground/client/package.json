@@ -1,0 +1,41 @@
+{
+    "author": "HitalloExiled",
+    "bugs": {
+        "url": "https://github.com/SurfaceJS/workbench/issues"
+    },
+    "dependencies": {
+        "@surface/builder": "file:../../modules/packages/@surface/builder",
+        "@surface/core": "file:../../modules/packages/@surface/core",
+        "@surface/dependency-injection": "file:../../modules/packages/@surface/dependency-injection",
+        "@surface/htmlx": "file:../../modules/packages/@surface/htmlx",
+        "@surface/htmlx-element": "file:../../modules/packages/@surface/htmlx-element",
+        "@surface/htmlx-loader": "file:../../modules/packages/@surface/htmlx-loader",
+        "@surface/material-design": "file:../../modules/packages/@surface/material-design",
+        "@surface/web-router": "file:../../modules/packages/@surface/web-router",
+        "tslib": "^2.4.0"
+    },
+    "description": "Basic client to development and testing.",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.21.0",
+        "@typescript-eslint/parser": "^5.21.0",
+        "eslint": "^8.14.0",
+        "eslint-plugin-import": "^2.26.0",
+        "typescript": "^4.6.3"
+    },
+    "homepage": "https://github.com/SurfaceJS/workbench#readme",
+    "license": "MIT",
+    "name": "client",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SurfaceJS/workbench.git"
+    },
+    "scripts": {
+        "lint": "eslint . --ext .ts",
+        "surface-analyze": "surface-builder analyze",
+        "surface-build": "surface-builder build",
+        "surface-serve": "surface-builder serve"
+    },
+    "sideEffects": true,
+    "type": "module",
+    "version": "0.0.0"
+}

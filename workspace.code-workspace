@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "playground"
+		},
+		{
+			"path": "modules"
+		},
+		{
+			"path": "template-generator"
+		},
+		{
+			"path": "vscode-htmlx-language-features"
+		},
+	],
+	"settings": {}
+}
