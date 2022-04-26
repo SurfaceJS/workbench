@@ -88,7 +88,7 @@
         },
         {
             "command": "npm run surface-analyze -- --mode=${input:mode}",
-            "label": "builder-analyze",
+            "label": "surface-analyze",
             "options": {
                 "cwd": "${workspaceFolder}/client"
             },
@@ -100,7 +100,7 @@
         },
         {
             "command": "npm run surface-build -- --mode=${input:mode}",
-            "label": "builder-build",
+            "label": "surface-build",
             "options": {
                 "cwd": "${workspaceFolder}/client"
             },
@@ -112,7 +112,7 @@
         },
         {
             "command": "npm run surface-serve -- --mode=${input:mode}",
-            "label": "builder-serve",
+            "label": "surface-serve",
             "options": {
                 "cwd": "${workspaceFolder}/client"
             },
@@ -124,7 +124,7 @@
         },
         {
             "command": "npm run surface-build -- --mode=${input:mode} --watch",
-            "label": "builder-watch",
+            "label": "surface-watch",
             "options": {
                 "cwd": "${workspaceFolder}/client"
             },

@@ -1,6 +1,6 @@
 {
   "author": "HitalloExiled",
-  "license": "ISC",
+  "license": "MIT",
   "name": "playground",
   "dependencies": {
     "typescript": "^4.6.3"
