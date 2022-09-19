@@ -13,8 +13,8 @@ WebHost.configure(configuration)
     .useMvc
     (
         new Router()
-            .map("api/{controller}/{action=index}/{id?}")
-            .map("{controller}/{action=index}/{id?}"),
+            .map({ pattern: "api/{controller}/{action=index}/{id?}" })
+            .map({ pattern: "{controller}/{action=index}/{id?}" }),
     )
     .useFallBack("/")
     .run();

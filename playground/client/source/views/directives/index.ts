@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unassigned-import */
-import "../../components/dummy-child";
-import "../../components/dummy-parent";
-import "../../components/dummy-wrapper";
+import "../../components/dummy-child/index.js";
+import "../../components/dummy-parent/index.js";
+import "../../components/dummy-wrapper/index.js";
 
 import HTMLXElement, { element } from "@surface/htmlx-element";
 import template                   from "./index.htmlx";

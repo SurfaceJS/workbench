@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unassigned-import */
 import "@surface/material-design/components/app";
 import "@surface/material-design/components/app-bar";
-import "@surface/material-design/components/app-toogle";
+import "@surface/material-design/components/app-toggle";
 import "@surface/material-design/components/content";
 import "@surface/material-design/components/footer";
 import "@surface/material-design/components/navigation-drawer";
@@ -9,7 +9,7 @@ import "@surface/material-design/components/switch";
 
 import HTMLXElement, { element } from "@surface/htmlx-element";
 import MaterialDesign            from "@surface/material-design";
-import settings                  from "../enviroments/settings";
+import settings                  from "../enviroments/settings.js";
 import template                  from "./index.htmlx";
 import style                     from "./index.scss";
 

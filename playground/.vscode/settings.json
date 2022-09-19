@@ -65,5 +65,9 @@
             "icon": "tools"
         }
     ],
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "cSpell.words": [
+        "Hitallo",
+        "htmlx"
+    ]
 }

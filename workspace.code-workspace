@@ -13,5 +13,7 @@
 			"path": "vscode-htmlx-language-features"
 		},
 	],
-	"settings": {}
+	"settings": {
+		"typescript.tsdk": "modules\\node_modules\\typescript\\lib"
+	}
 }

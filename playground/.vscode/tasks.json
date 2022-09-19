@@ -29,64 +29,6 @@
     ],
     "tasks": [
         {
-            "command": "${workspaceFolder}/modules/node_modules/.bin/tsc.ps1 --build",
-            "label": "build",
-            "options": {
-                "cwd": "${workspaceFolder}/modules"
-            },
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": {
-                "base": "$tsc",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceFolder}/modules"
-                ]
-            },
-            "type": "shell"
-        },
-        {
-            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1 --build --clean",
-            "label": "clean",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": {
-                "base": "$tsc"
-            },
-            "type": "shell"
-        },
-        {
-            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1 --build --clean --dry",
-            "label": "dry",
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": {
-                "base": "$tsc"
-            },
-            "type": "shell"
-        },
-        {
-            "command": "${workspaceFolder}/node_modules/.bin/tsc.ps1",
-            "label": "tsc",
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": {
-                "base": "$tsc",
-                "fileLocation": [
-                    "relative",
-                    "${fileDirname}"
-                ]
-            },
-            "type": "shell"
-        },
-        {
             "command": "npm run surface-analyze -- --mode=${input:mode}",
             "label": "surface-analyze",
             "options": {

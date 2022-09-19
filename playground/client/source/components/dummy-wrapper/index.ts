@@ -1,5 +1,5 @@
 import { element }   from "@surface/htmlx-element";
-import { DummyBase } from "../dummy-parent";
+import { DummyBase } from "../dummy-parent/index.js";
 import template      from "./index.htmlx";
 
 @element("dummy-wrapper", { template })

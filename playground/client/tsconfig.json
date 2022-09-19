@@ -1,5 +1,5 @@
 {
-    "extends": "../../modules/tsconfig.json",
+    "extends": "@surface/tsconfig",
     "compilerOptions":
     {
         "lib":
@@ -9,6 +9,7 @@
             "WebWorker"
         ],
         "module": "ESNext",
+        "moduleResolution": "Node",
         "noEmit": true
     },
     "include":

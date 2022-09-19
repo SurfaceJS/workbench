@@ -13,6 +13,6 @@
     ],
     "references":
     [
-        { "path": "../../modules/packages/@surface/web-host" }
+        { "path": "../../modules/packages/web-host" }
     ]
 }

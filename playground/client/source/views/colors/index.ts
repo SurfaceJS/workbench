@@ -9,60 +9,60 @@ export default class Colors extends HTMLXElement
     private readonly cssVariables = document.head.querySelector<HTMLStyleElement>("#smd-css-variables")!;
 
     protected readonly colors =
-    [
-        "primary",
-        "secondary",
-        "text",
-        "background",
-        "accent",
-        "error",
-        "info",
-        "success",
-        "warning",
-    ];
+        [
+            "primary",
+            "secondary",
+            "text",
+            "background",
+            "accent",
+            "error",
+            "info",
+            "success",
+            "warning",
+        ];
 
     protected readonly materialColors =
-    [
-        "red",
-        "pink",
-        "purple",
-        "deep-purple",
-        "indigo",
-        "blue",
-        "light-blue",
-        "cyan",
-        "teal",
-        "green",
-        "light-green",
-        "lime",
-        "yellow",
-        "amber",
-        "orange",
-        "deep-orange",
-        "brown",
-        "blue-grey",
-        "grey",
-        "black",
-        "white",
-    ];
+        [
+            "red",
+            "pink",
+            "purple",
+            "deep-purple",
+            "indigo",
+            "blue",
+            "light-blue",
+            "cyan",
+            "teal",
+            "green",
+            "light-green",
+            "lime",
+            "yellow",
+            "amber",
+            "orange",
+            "deep-orange",
+            "brown",
+            "blue-grey",
+            "grey",
+            "black",
+            "white",
+        ];
 
     protected readonly weights =
-    [
-        "50",
-        "100",
-        "200",
-        "300",
-        "400",
-        "500",
-        "600",
-        "700",
-        "800",
-        "900",
-        "A100",
-        "A200",
-        "A400",
-        "A700",
-    ];
+        [
+            "50",
+            "100",
+            "200",
+            "300",
+            "400",
+            "500",
+            "600",
+            "700",
+            "800",
+            "900",
+            "A100",
+            "A200",
+            "A400",
+            "A700",
+        ];
 
     protected isDark(variable: string): boolean
     {

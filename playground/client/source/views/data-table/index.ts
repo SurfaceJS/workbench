@@ -56,7 +56,7 @@ export default class DataTable extends HTMLXElement
     {
         for (let i = 0; i < this.data.length; i += 10)
         {
-            this.data[i].label += " !!!";
+            this.data[i]!.label += " !!!";
         }
     }
 
@@ -131,8 +131,8 @@ export default class DataTable extends HTMLXElement
         {
             const newData = [...this.data];
 
-            const d1   = newData[1];
-            const d998 = newData[998];
+            const d1   = newData[1]!;
+            const d998 = newData[998]!;
 
             newData[998] = d1;
             newData[1]   = d998;

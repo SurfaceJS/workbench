@@ -1,5 +1,5 @@
 import type { Delegate }     from "@surface/core";
-import Enumareble            from "@surface/enumerable";
+import Enumerable            from "@surface/enumerable";
 import type { ActionResult } from "@surface/web-host";
 import { Controller }        from "@surface/web-host";
 
@@ -55,7 +55,7 @@ export default class User extends Controller
             ]);
         }
 
-        let sequence = Enumareble.from(data);
+        let sequence = Enumerable.from(data);
 
         if (inbound.sorting.length > 0)
         {

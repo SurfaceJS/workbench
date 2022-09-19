@@ -1,6 +1,7 @@
-
+// @ts-nocheck
 import path              from "path";
 import { fileURLToPath } from "url";
+import PathMatcher       from "@surface/path-matcher";
 
 const DIRNAME = path.dirname(fileURLToPath(import.meta.url));
 
@@ -59,7 +60,7 @@ const configuration =
             output: path.resolve(DIRNAME, "../server/wwwroot"),
             preferTs:
             [
-                path.resolve(DIRNAME, "../**/@surface/**"),
+                PathMatcher.resolve(DIRNAME, "../../modules/packages/**").fullPattern,
             ],
             target: "web"
         },

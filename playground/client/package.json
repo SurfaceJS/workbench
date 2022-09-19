@@ -4,23 +4,25 @@
         "url": "https://github.com/SurfaceJS/workbench/issues"
     },
     "dependencies": {
-        "@surface/builder": "file:../../modules/packages/@surface/builder",
-        "@surface/core": "file:../../modules/packages/@surface/core",
-        "@surface/dependency-injection": "file:../../modules/packages/@surface/dependency-injection",
-        "@surface/htmlx": "file:../../modules/packages/@surface/htmlx",
-        "@surface/htmlx-element": "file:../../modules/packages/@surface/htmlx-element",
-        "@surface/htmlx-loader": "file:../../modules/packages/@surface/htmlx-loader",
-        "@surface/material-design": "file:../../modules/packages/@surface/material-design",
-        "@surface/web-router": "file:../../modules/packages/@surface/web-router",
+        "@surface/builder": "file:../../modules/packages/builder",
+        "@surface/core": "file:../../modules/packages/core",
+        "@surface/dependency-injection": "file:../../modules/packages/dependency-injection",
+        "@surface/htmlx": "file:../../modules/packages/htmlx",
+        "@surface/htmlx-element": "file:../../modules/packages/htmlx-element",
+        "@surface/htmlx-loader": "file:../../modules/packages/htmlx-loader",
+        "@surface/material-design": "file:../../modules/packages/material-design",
+        "@surface/path-matcher": "file:../../modules/packages/path-matcher",
+        "@surface/tsconfig": "file:../../modules/packages/tsconfig",
+        "@surface/web-router": "file:../../modules/packages/web-router",
         "tslib": "^2.4.0"
     },
     "description": "Basic client to development and testing.",
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.21.0",
-        "@typescript-eslint/parser": "^5.21.0",
-        "eslint": "^8.14.0",
+        "@typescript-eslint/eslint-plugin": "^5.37.0",
+        "@typescript-eslint/parser": "^5.37.0",
+        "eslint": "^8.23.1",
         "eslint-plugin-import": "^2.26.0",
-        "typescript": "^4.6.3"
+        "typescript": "^4.8.3"
     },
     "homepage": "https://github.com/SurfaceJS/workbench#readme",
     "license": "MIT",

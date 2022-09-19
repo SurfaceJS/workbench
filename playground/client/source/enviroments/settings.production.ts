@@ -1,5 +1,5 @@
 import type { Indexer } from "@surface/core";
-import type Settings    from "../types/settings";
+import type Settings    from "../types/settings.js";
 
 declare let process: { env: Indexer<string> };
 
