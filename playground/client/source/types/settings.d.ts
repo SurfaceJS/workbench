@@ -1,7 +1,7 @@
 type Settings =
 {
-    enviroment: "development" | "production",
-    dev:      string,
+    dev:         string,
+    environment: "development" | "production",
 };
 
 export default Settings;

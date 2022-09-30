@@ -4,8 +4,8 @@ import "../../components/dummy-parent/index.js";
 import "../../components/dummy-wrapper/index.js";
 
 import HTMLXElement, { element } from "@surface/htmlx-element";
-import template                   from "./index.htmlx";
-import style                      from "./index.scss";
+import template                  from "./index.htmlx";
+import style                     from "./index.scss";
 
 @element("directives-view", { style, template })
 export default class DirectivesView extends HTMLXElement
@@ -13,11 +13,11 @@ export default class DirectivesView extends HTMLXElement
     private lastId: number = 0;
 
     protected text:    string  = "";
-    protected visible: boolean = true;
+    protected visible: boolean = false;
 
     protected items: number[] = [];
 
-    public toogle(): void
+    public toggle(): void
     {
         this.visible = !this.visible;
     }

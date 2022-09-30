@@ -67,7 +67,12 @@
     ],
     "workbench.iconTheme": "vscode-icons",
     "cSpell.words": [
+        "Binded",
         "Hitallo",
+        "htmlx",
+        "nbsp"
+    ],
+    "cSpell.enableFiletypes": [
         "htmlx"
     ]
 }

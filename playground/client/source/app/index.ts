@@ -9,7 +9,7 @@ import "@surface/material-design/components/switch";
 
 import HTMLXElement, { element } from "@surface/htmlx-element";
 import MaterialDesign            from "@surface/material-design";
-import settings                  from "../enviroments/settings.js";
+import settings                  from "../environments/settings.js";
 import template                  from "./index.htmlx";
 import style                     from "./index.scss";
 
@@ -30,9 +30,4 @@ export default class App extends HTMLXElement
     }
 
     public settings = settings;
-
-    public constructor()
-    {
-        super();
-    }
 }

@@ -4,96 +4,96 @@
     <smd-text-field hint="Hint"></smd-text-field>
     <smd-text-field hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field counter></smd-text-field>
-    <smd-text-field counter max-lenght="10"></smd-text-field>
+    <smd-text-field counter max-length="10"></smd-text-field>
     <smd-text-field value="Value"></smd-text-field>
     <smd-text-field value="Value" hint="Hint"></smd-text-field>
     <smd-text-field value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field value="Value" counter></smd-text-field>
-    <smd-text-field value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field label="Label"></smd-text-field>
     <smd-text-field label="Label" hint="Hint"></smd-text-field>
     <smd-text-field label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field label="Label" counter></smd-text-field>
-    <smd-text-field label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field label="Label" counter max-length="10"></smd-text-field>
     <smd-text-field label="Label" value="Value"></smd-text-field>
     <smd-text-field label="Label" value="Value" hint="Hint"></smd-text-field>
     <smd-text-field label="Label" value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field label="Label" value="Value" counter></smd-text-field>
-    <smd-text-field label="Label" value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field label="Label" value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field placeholder="Placeholder"></smd-text-field>
     <smd-text-field placeholder="Placeholder" hint="Hint"></smd-text-field>
     <smd-text-field placeholder="Placeholder" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field placeholder="Placeholder" counter></smd-text-field>
-    <smd-text-field placeholder="Placeholder" counter max-lenght="10"></smd-text-field>
+    <smd-text-field placeholder="Placeholder" counter max-length="10"></smd-text-field>
     <smd-text-field placeholder="Placeholder" label="Label"></smd-text-field>
     <smd-text-field placeholder="Placeholder" label="Label" hint="Hint"></smd-text-field>
     <smd-text-field placeholder="Placeholder" label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field placeholder="Placeholder" label="Label" counter></smd-text-field>
-    <smd-text-field placeholder="Placeholder" label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field placeholder="Placeholder" label="Label" counter max-length="10"></smd-text-field>
 </span>
 <span>
     <smd-text-field filled></smd-text-field>
     <smd-text-field filled hint="Hint"></smd-text-field>
     <smd-text-field filled hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled counter></smd-text-field>
-    <smd-text-field filled counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled counter max-length="10"></smd-text-field>
     <smd-text-field filled value="Value"></smd-text-field>
     <smd-text-field filled value="Value" hint="Hint"></smd-text-field>
     <smd-text-field filled value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled value="Value" counter></smd-text-field>
-    <smd-text-field filled value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field filled label="Label"></smd-text-field>
     <smd-text-field filled label="Label" hint="Hint"></smd-text-field>
     <smd-text-field filled label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled label="Label" counter></smd-text-field>
-    <smd-text-field filled label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled label="Label" counter max-length="10"></smd-text-field>
     <smd-text-field filled label="Label" value="Value"></smd-text-field>
     <smd-text-field filled label="Label" value="Value" hint="Hint"></smd-text-field>
     <smd-text-field filled label="Label" value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled label="Label" value="Value" counter></smd-text-field>
-    <smd-text-field filled label="Label" value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled label="Label" value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" hint="Hint"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" counter></smd-text-field>
-    <smd-text-field filled placeholder="Placeholder" counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled placeholder="Placeholder" counter max-length="10"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" label="Label"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" label="Label" hint="Hint"></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field filled placeholder="Placeholder" label="Label" counter></smd-text-field>
-    <smd-text-field filled placeholder="Placeholder" label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field filled placeholder="Placeholder" label="Label" counter max-length="10"></smd-text-field>
 </span>
 <span>
     <smd-text-field outlined></smd-text-field>
     <smd-text-field outlined hint="Hint"></smd-text-field>
     <smd-text-field outlined hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined counter></smd-text-field>
-    <smd-text-field outlined counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined counter max-length="10"></smd-text-field>
     <smd-text-field outlined value="Value"></smd-text-field>
     <smd-text-field outlined value="Value" hint="Hint"></smd-text-field>
     <smd-text-field outlined value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined value="Value" counter></smd-text-field>
-    <smd-text-field outlined value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field outlined label="Label"></smd-text-field>
     <smd-text-field outlined label="Label" hint="Hint"></smd-text-field>
     <smd-text-field outlined label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined label="Label" counter></smd-text-field>
-    <smd-text-field outlined label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined label="Label" counter max-length="10"></smd-text-field>
     <smd-text-field outlined label="Label" value="Value"></smd-text-field>
     <smd-text-field outlined label="Label" value="Value" hint="Hint"></smd-text-field>
     <smd-text-field outlined label="Label" value="Value" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined label="Label" value="Value" counter></smd-text-field>
-    <smd-text-field outlined label="Label" value="Value" counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined label="Label" value="Value" counter max-length="10"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" hint="Hint"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" counter></smd-text-field>
-    <smd-text-field outlined placeholder="Placeholder" counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined placeholder="Placeholder" counter max-length="10"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" label="Label"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" label="Label" hint="Hint"></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" label="Label" hint="Hint" persistent-hint></smd-text-field>
     <smd-text-field outlined placeholder="Placeholder" label="Label" counter></smd-text-field>
-    <smd-text-field outlined placeholder="Placeholder" label="Label" counter max-lenght="10"></smd-text-field>
+    <smd-text-field outlined placeholder="Placeholder" label="Label" counter max-length="10"></smd-text-field>
 </span>
 <h1>Light</h1>
 <span style="background-color: var(--smd-light-background)">

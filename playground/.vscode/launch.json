@@ -28,7 +28,7 @@
                 "${workspaceFolder}/node_modules/@surface/builder/**/*.js"
             ],
             "program": "${workspaceFolder}/node_modules/@surface/builder/cli",
-            "protocol": "pwa-node",
+            "protocol": "node",
             "request": "launch",
             "resolveSourceMapLocations": [
                 "!**/node_modules/**"

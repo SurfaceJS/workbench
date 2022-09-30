@@ -8,8 +8,6 @@
             "esnext",
             "WebWorker"
         ],
-        "module": "ESNext",
-        "moduleResolution": "Node",
         "noEmit": true
     },
     "include":

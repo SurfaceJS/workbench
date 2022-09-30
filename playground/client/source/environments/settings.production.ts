@@ -5,7 +5,7 @@ declare let process: { env: Indexer<string> };
 
 const settings: Settings =
 {
-    dev:        process.env.USERNAME!,
-    enviroment: "production",
+    dev:          process.env.USERNAME!,
+    environment: "production",
 };
 export default settings;
