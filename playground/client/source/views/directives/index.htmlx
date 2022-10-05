@@ -8,7 +8,7 @@
     <dummy-child>
         <span #inject:child part="child">Injected child content with external style</span>
     </dummy-child>
-    <dummy-wrapper red ::text="host.text" :style="{ border: 'solid 1px black', padding: '2px' }">
+    <!-- <dummy-wrapper red ::text="host.text" :style="{ border: 'solid 1px black', padding: '2px' }">
         <h2 #inject:title>Injected Title</h2>
         <template #if="host.visible" #inject:item="{ item }">
             <span><b>Header</b></span>
@@ -21,7 +21,7 @@
             <span><b>Footer</b></span>
             <dummy-child :value="host.text"></dummy-child>
         </template>
-    </dummy-wrapper>
+    </dummy-wrapper> -->
     <!-- <dummy-parent>
         <template #if="host.visible" #inject:items="{ item }">
             <span><b>Header</b></span>
@@ -35,7 +35,7 @@
             <dummy-child :value="host.text"></dummy-child>
         </template>
     </dummy-parent> -->
-    <!-- <dummy-parent>
+    <dummy-wrapper>
         <template #if="host.visible" #inject:reactive="{ items }">
             <template #for="const element of items">
                 <span><b>Header</b></span>
@@ -48,5 +48,5 @@
                 <span><b>Footer</b></span>
             </template>
         </template>
-    </dummy-parent> -->
+    </dummy-wrapper>
 </div>

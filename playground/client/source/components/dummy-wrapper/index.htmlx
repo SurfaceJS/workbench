@@ -1,1 +1,10 @@
-<dummy-parent ...attributes|binds|injections|listeners="host"></dummy-parent>
+<dummy-parent ...attributes|properties|listeners="host">
+    <template
+        #for="key of host.$injections"
+        #inject.key="key"
+        #inject.scope="scope"
+        #placeholder.key="key"
+        #placeholder.scope="scope"
+    >
+    </template>
+</dummy-parent>
